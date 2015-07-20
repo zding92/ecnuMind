@@ -68,7 +68,11 @@ return  array(
     'DB_RW_SEPARATE'        =>  false,       // 数据库读写是否分离 主从式有效
     'DB_MASTER_NUM'         =>  1, // 读写分离后 主服务器数量
     'DB_SLAVE_NO'           =>  '', // 指定从服务器序号
-
+	'DB_LIKE_FIELDS'		=>  '',
+		
+		
+		
+		
     /* 数据缓存设置 */
     'DATA_CACHE_TIME'       =>  0,      // 数据缓存有效期 0表示永久缓存
     'DATA_CACHE_COMPRESS'   =>  false,   // 数据缓存是否压缩缓存

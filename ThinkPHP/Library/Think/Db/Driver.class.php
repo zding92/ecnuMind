@@ -52,7 +52,7 @@ abstract class Driver {
         'rw_separate'       =>  false,       // 数据库读写是否分离 主从式有效
         'master_num'        =>  1, // 读写分离后 主服务器数量
         'slave_no'          =>  '', // 指定从服务器序号
-        'db_like_fields'    =>  '', 
+        'DB_LIKE_FIELDS'    =>  '', 
     );
     // 数据库表达式
     protected $exp = array('eq'=>'=','neq'=>'<>','gt'=>'>','egt'=>'>=','lt'=>'<','elt'=>'<=','notlike'=>'NOT LIKE','like'=>'LIKE','in'=>'IN','notin'=>'NOT IN','not in'=>'NOT IN','between'=>'BETWEEN','not between'=>'NOT BETWEEN','notbetween'=>'NOT BETWEEN');
@@ -593,8 +593,8 @@ abstract class Driver {
             }
         }else {
             //对字符串类型字段采用模糊匹配
-            $likeFields   =   $this->config['db_like_fields'];
-            if($likeFields && preg_match('/^('.$likeFields.')$/i',$key)) {
+            $likeFields   =   $this->config['DB_LIKE_FIELDS'];
+            if($likeFields && preg_match('/^(`'.$likeFields.'`)$/i',$key)) {
                 $whereStr .= $key.' LIKE '.$this->parseValue('%'.$val.'%');
             }else {
                 $whereStr .= $key.' = '.$this->parseValue($val);
