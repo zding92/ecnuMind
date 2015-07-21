@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Test</title>
+    <title>ECNU Mind</title>
     <link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
