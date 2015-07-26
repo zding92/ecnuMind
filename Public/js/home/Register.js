@@ -57,7 +57,7 @@ $("#register_user").blur(function () {
         return;
     }
     $.ajax({
-        url: register_url, //请求验证页面 
+        url: login_url, //请求验证页面 
         type: "POST", //请求方式,
         data: "username=" + $("#register_user").val() + "&password=" + "", 
         success: function (data) { //请求成功时执行操作
