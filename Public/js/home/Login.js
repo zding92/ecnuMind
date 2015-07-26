@@ -9,7 +9,7 @@ window.onload = function () {
         if (!user.value.match(/^[a-zA-Z0-9\u4E00-\u9FA5][0-9a-zA-Z\u4E00-\u9FA5]{3,15}/)) {
             tips.innerHTML = '<font color="red">账号格式不符合，请重新输入</font>';
             return;
-        } elfse {
+        } else {
             isValidate = true;
         }
         if (!password.value.match(/^.{6,20}$/)) {
@@ -20,7 +20,7 @@ window.onload = function () {
         }
         if (isValidate) {
             $.ajax({
-                url: "./PHP/Login.php", //请求验证页面 
+                url: 'Home/Index/login', //请求验证页面 
                 type: "POST", //请求方式
                 data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val(),
                 success: function (call) {
