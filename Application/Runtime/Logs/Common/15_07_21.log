@@ -1,0 +1,42 @@
+[ 2015-07-21T19:56:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Test
+
+[ 2015-07-21T19:57:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Test
+
+[ 2015-07-21T19:57:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载模块:Test
+
+[ 2015-07-21T19:59:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Test
+
+[ 2015-07-21T21:36:38+08:00 ] ::1 /webprj/ecnu_mind/index.php/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Index.php
+
+[ 2015-07-21T21:36:57+08:00 ] ::1 /webprj/ecnu_mind/index.php/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Index.php
+
+[ 2015-07-21T22:11:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/LoginSuccess/10112110128/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:LoginSuccess
+

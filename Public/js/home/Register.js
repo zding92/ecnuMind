@@ -9,18 +9,18 @@ function retry(){
 
 function safe(safe_level){
     if (safe_level == 2) {
-        $("#pwd_tips").html('<img src="./img/high.png" style="margin-left:-30px;position:absolute" alt="noimg">');
+        $("#pwd_tips").html('<img src="'+ public_url +'/img/high.png" style="margin-left:-30px;position:absolute" alt="noimg">');
         $("#safe_tips").html('<span style="color:#00ff00">安全性高</span>');
     }
     else if (safe_level == 1) {
-        $("#pwd_tips").html('<img src="./img/mid.png" style="margin-left:-30px;position:absolute" alt="noimg">');
+        $("#pwd_tips").html('<img src="'+ public_url +'./img/mid.png" style="margin-left:-30px;position:absolute" alt="noimg">');
         $("#safe_tips").html('<span style="color:#fbc926">安全性中</span>');
     }
     else if (safe_level == 0) {
-        $("#pwd_tips").html('<img src="./img/low.png" style="margin-left:-30px;position:absolute" alt="noimg">');
+        $("#pwd_tips").html('<img src="'+ public_url +'/img/low.png" style="margin-left:-30px;position:absolute" alt="noimg">');
         $("#safe_tips").html('<span style="color:#ff0000">安全性低</span>');
     }
-    $("#chk_pwd_yes").html('<img src="./img/YES.png" alt="noimg">');
+    $("#chk_pwd_yes").html('<img src="'+ public_url +'/img/YES.png" alt="noimg">');
     $("#chk_pwd_no").html("");
 }
 
@@ -45,13 +45,13 @@ $("#register_user").blur(function () {
             $("#register_pwd").animate({ marginTop: '+=35px' }, "fast");
             $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
                 $("#user_tips").html("请输入4~16位的账号/学号/昵称");
-                $("#chk_user_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_user_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
             });
             flag_log = true;
         }
         else {
             $("#user_tips").html("请输入4~16位的账号/学号/昵称");
-            $("#chk_user_no").html('<img src="./img/NO.png" alt="noimg">');
+            $("#chk_user_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
         }
         valid = false;
         return;
@@ -68,11 +68,11 @@ $("#register_user").blur(function () {
                     $("#user_tips").html("");
                     $("#register_pwd").animate({ marginTop: '-=35px' }, "fast");
                     $("#lgn_body").animate({ height: '-=35px' }, "fast", function () {
-                        $("#chk_user_yes").html('<img src="./img/YES.png" alt="noimg">');
+                        $("#chk_user_yes").html('<img src="'+ public_url +'/img/YES.png" alt="noimg">');
                     });
                     flag_log = false;
                 } else {
-                    $("#chk_user_yes").html('<img src="./img/YES.png" alt="noimg">');
+                    $("#chk_user_yes").html('<img src="'+ public_url +'/img/YES.png" alt="noimg">');
                 }
                 return;
             }
@@ -82,12 +82,12 @@ $("#register_user").blur(function () {
                     $("#register_pwd").animate({ marginTop: '+=35px' }, "fast");
                     $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
                         $("#user_tips").html("此用户已存在");
-                        $("#chk_user_no").html('<img src="./img/NO.png" alt="noimg">');
+                        $("#chk_user_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                     });
                     flag_log = true;
                 } else {
                     $("#user_tips").html("此用户已存在");
-                    $("#chk_user_no").html('<img src="./img/NO.png" alt="noimg">');
+                    $("#chk_user_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                 }
                 valid = false;
                 return;
@@ -122,13 +122,13 @@ $("#register_pwdre").blur(function () {
             $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
                 retry();
                 $("#pwd_tips").html("两次输入的密码不一致，请重新输入");
-                $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_pwd_no").html('img src="'+ public_url +'/img/NO.png" alt="noimg">');
             });
             flag_reg = true;
         } else {
             retry();
             $("#pwd_tips").html("两次输入的密码不一致，请重新输入");
-            $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+            $("#chk_pwd_no").html('img src="'+ public_url +'/img/NO.png" alt="noimg">');
         }
         valid = false;
         return;
@@ -140,13 +140,13 @@ $("#register_pwdre").blur(function () {
         if (!flag_reg) {
             $("#btn_reg").animate({ marginTop: '+=35px' }, "fast");
             $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
-                $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                 $("#pwd_tips").html("请输入6~20位密码");
                 retry();
             })
             flag_reg = true;
         } else {
-            $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+            $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
             $("#pwd_tips").html("请输入6~20位密码");
             retry();
         }
@@ -160,13 +160,13 @@ $("#register_pwdre").blur(function () {
         if (!flag_reg) {
             $("#btn_reg").animate({ marginTop: '+=35px' }, "fast");
             $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
-                $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                 $("#pwd_tips").html("密码不得与用户名相同");
                 retry();
             })
             flag_reg = true;
         } else {
-            $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+            $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
             $("#pwd_tips").html("密码不得与用户名相同");
             retry();
         }
@@ -206,13 +206,13 @@ $("#register_pwdre").keyup(function () {
                 $("#btn_reg").animate({ marginTop: '+=35px' }, "fast");
                 $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
                     $("#pwd_tips").html("密码不得与用户名相同");
-                    $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                    $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                     retry();
                 });
                 flag_reg = true;
             } else {
                 $("#pwd_tips").html("密码不得与用户名相同");
-                $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                 retry();
             }
             valid = false;
@@ -224,13 +224,13 @@ $("#register_pwdre").keyup(function () {
                 $("#btn_reg").animate({ marginTop: '+=35px' }, "fast");
                 $("#lgn_body").animate({ height: '+=35px' }, "fast", function () {
                     $("#pwd_tips").html("密码必须同时包含数字以及英文字符");
-                    $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                    $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                     retry();
                 });
                 flag_reg = true;
             } else {
                 $("#pwd_tips").html("密码必须同时包含数字以及英文字符");
-                $("#chk_pwd_no").html('<img src="./img/NO.png" alt="noimg">');
+                $("#chk_pwd_no").html('<img src="'+ public_url +'/img/NO.png" alt="noimg">');
                 retry();
             }
             valid = false;
@@ -252,6 +252,7 @@ $("#register_pwdre").keyup(function () {
 
 $("#btn_reg").click(function () {
     $("#register_user").blur();
+    alert("hello");
     $("#register_pwdre").blur()
     if ( valid ) {
         $.ajax({

@@ -6,9 +6,8 @@
     <link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
     <script> 
-    	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
-    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
-    	var public_url = '/webprj/ecnu_mind/Public';
+    	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/Index/login'; 
+    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/Index/Register';
     </script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
