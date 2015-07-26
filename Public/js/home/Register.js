@@ -57,7 +57,7 @@ $("#register_user").blur(function () {
         return;
     }
     $.ajax({
-        url: "./PHP/Login.php", //请求验证页面 
+        url: register_url, //请求验证页面 
         type: "POST", //请求方式,
         data: "username=" + $("#register_user").val() + "&password=" + "", 
         success: function (data) { //请求成功时执行操作
@@ -255,7 +255,7 @@ $("#btn_reg").click(function () {
     $("#register_pwdre").blur()
     if ( valid ) {
         $.ajax({
-            url: "./PHP/Register.php", //请求验证页面 
+            url: register_url, //请求验证页面 
             type: "POST", //请求方式
             data: "username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val(), 
             success: function (data) { //请求成功时执行操作

@@ -5,6 +5,10 @@
     <title>ECNU Mind</title>
     <link href="__PUBLIC__/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/HomePages.css" /> 
+    <script> 
+    	var login_url = '__URL__/login'; 
+    	var register_url = '__URL__/Register';
+    </script>
     <script src="__PUBLIC__/jsLib/jquery/jquery.js"></script>
     <script src="__PUBLIC__/jsLib/jquery_ui/jquery-ui.js"></script>
     <script src="__PUBLIC__/js/home/HomeScript.js"></script>
@@ -45,7 +49,7 @@
        <div id="tips" style="height: 10px"></div>
        <a href="http://www.qq.com" style="color: rgba(30,30,30,0.8);font-size: 12px;margin: -10px 0px 0px 90px;position: absolute">忘记密码？</a>
     </form>
-    <form id="Register" action="./PHPPage.php" method="post" style="visibility: hidden">
+    <form id="Register" method="post" style="visibility: hidden">
        <div style="margin-top: 30px">
          <p><input id="register_user" type="text" name="user" style="text-align: left;margin-top: -1px" placeholder="账号/学号/昵称"/></p>
          <div id="chk_user_no" style="margin: 12px 0px 0px 5px;position: absolute"></div>

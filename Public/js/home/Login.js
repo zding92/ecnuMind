@@ -20,7 +20,7 @@ window.onload = function () {
         }
         if (isValidate) {
             $.ajax({
-                url: 'Home/Index/login', //请求验证页面 
+                url: login_url, //请求验证页面 
                 type: "POST", //请求方式
                 data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val(),
                 success: function (call) {

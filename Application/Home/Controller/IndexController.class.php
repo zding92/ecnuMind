@@ -24,5 +24,9 @@ class IndexController extends Controller {
     	}
     }
     
+    public function  register() {
+    	echo "hello";
+    }
+    
     
 }
