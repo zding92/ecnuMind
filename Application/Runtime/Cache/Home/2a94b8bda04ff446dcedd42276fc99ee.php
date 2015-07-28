@@ -12,7 +12,7 @@
     </script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
-    <script src="/webprj/ecnu_mind/Public/js/home/HomeScript.js"></script>
+    <script src="/webprj/ecnu_mind/Public/js/index/HomeScript.js"></script>
 </head>
 
 <body>
@@ -68,8 +68,8 @@
   </div>
 </div>
 
-<script src="/webprj/ecnu_mind/Public/js/home/Login.js"></script>
-<script src="/webprj/ecnu_mind/Public/js/home/Register.js"></script>
+<script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>
+<script src="/webprj/ecnu_mind/Public/js/index/Register.js"></script>
 </body>
 
 </html>
