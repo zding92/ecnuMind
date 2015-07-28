@@ -9,6 +9,7 @@
     	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
     	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
     	var public_url = '/webprj/ecnu_mind/Public';
+  		var home_url = '/webprj/ecnu_mind/index.php/Home/home/home'
     </script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>

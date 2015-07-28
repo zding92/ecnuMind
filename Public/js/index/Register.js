@@ -262,7 +262,7 @@ $("#btn_reg").click(function () {
             success: function (data) { //请求成功时执行操作
                 eval(data);
                 if (reg_success) {
-                    location = 'LoginSuccess/' + $("#register_user").val() +'/';
+                    location = home_url;
                 }
                 else {
                     var str="username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val();                   
