@@ -252,7 +252,6 @@ $("#register_pwdre").keyup(function () {
 
 $("#btn_reg").click(function () {
     $("#register_user").blur();
-    alert("hello");
     $("#register_pwdre").blur()
     if ( valid ) {
         $.ajax({
