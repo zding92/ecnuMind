@@ -1,0 +1,39 @@
+body{
+    font-family:  "微软雅黑";
+    background-color: #F5F5F5;
+    height: auto;
+    
+}
+thead th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+thead tr {
+    color: #757575;
+    text-align: left;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+table{
+    background-color: #fff;
+    border-spacing: 0px;
+    display: block;
+    position: relative;
+}
+tr{
+    height: 62px;
+}
+td{
+    padding-left: 5px;
+}
+#c1{
+    width: 101px;
+}
+#c2{
+    width: 507px;
+}
+#c3{
+    width: 128px;
+}
+#c4{
+    width: 224px;
+}
