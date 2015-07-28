@@ -23,8 +23,8 @@ var init_js;
         if ($(this).attr('class') !== 'clickble select') {
             if ($(this).attr("id") == 'btn_info') {
                 if ($(".info_child").css('display') == 'block')
-                    $("#btn_info div img").attr('src', '/img/icon/down.png');
-                else $("#btn_info div img").attr('src', '/img/icon/up.png');
+                    $("#btn_info div img").attr('src', public_url + '/img/icon/down.png');
+                else $("#btn_info div img").attr('src', public_url + '/img/icon/up.png');
                 $(".info_child").slideToggle("100");
             } else {
                 $(".nav a,.info_child a").removeClass("select");
@@ -104,41 +104,41 @@ var init_js;
     }
 
     function icon_change($obj) {
-        $("#btn_main div img").attr('src', '/img/icon/home.png');
-        $("#btn_base_info div img").attr('src', '/img/icon/base.png');
-        $("#btn_ability div img").attr('src', '/img/icon/ability.png');
-        $("#btn_safe div img").attr('src', '/img/icon/safe.png');
-        $("#btn_comp div img").attr('src', '/img/icon/apply.png');
-        $("#btn_pro div img").attr('src', '/img/icon/prjinfo.png');
-        $("#btn_find div img").attr('src', '/img/icon/find.png');
-        $("#btn_help div img").attr('src', '/img/icon/help.png');
+        $("#btn_main div img").attr('src', public_url + '/img/icon/home.png');
+        $("#btn_base_info div img").attr('src', public_url + '/img/icon/base.png');
+        $("#btn_ability div img").attr('src', public_url + '/img/icon/ability.png');
+        $("#btn_safe div img").attr('src', public_url + '/img/icon/safe.png');
+        $("#btn_comp div img").attr('src', public_url + '/img/icon/apply.png');
+        $("#btn_pro div img").attr('src', public_url + '/img/icon/prjinfo.png');
+        $("#btn_find div img").attr('src', public_url + '/img/icon/find.png');
+        $("#btn_help div img").attr('src', public_url + '/img/icon/help.png');
         switch ($obj.attr('id')) {
             case "btn_main":
-                $("#btn_main div img").attr('src', '/img/icon/home_c.png');
+                $("#btn_main div img").attr('src', public_url + '/img/icon/home_c.png');
                 break;
             case "btn_info":
-                $("#btn_info div img").attr('src', '/img/icon/home.png');
+                $("#btn_info div img").attr('src', public_url + '/img/icon/home.png');
                 break;
             case "btn_base_info":
-                $("#btn_base_info div img").attr('src', '/img/icon/base_c.png');
+                $("#btn_base_info div img").attr('src', public_url + '/img/icon/base_c.png');
                 break;
             case "btn_ability":
-                $("#btn_ability div img").attr('src', '/img/icon/ability_c.png');
+                $("#btn_ability div img").attr('src', public_url + '/img/icon/ability_c.png');
                 break;
             case "btn_safe":
-                $("#btn_safe div img").attr('src', '/img/icon/safe_c.png');
+                $("#btn_safe div img").attr('src', public_url + '/img/icon/safe_c.png');
                 break;
             case "btn_comp":
-                $("#btn_comp div img").attr('src', '/img/icon/apply_c.png');
+                $("#btn_comp div img").attr('src', public_url + '/img/icon/apply_c.png');
                 break;
             case "btn_pro":
-                $("#btn_pro div img").attr('src', '/img/icon/prjinfo_c.png');
+                $("#btn_pro div img").attr('src', public_url + '/img/icon/prjinfo_c.png');
                 break;
             case "btn_find":
-                $("#btn_find div img").attr('src', '/img/icon/find_c.png');
+                $("#btn_find div img").attr('src', public_url + '/img/icon/find_c.png');
                 break;
             case "btn_help":
-                $("#btn_help div img").attr('src', '/img/icon/help_c.png');
+                $("#btn_help div img").attr('src', public_url + '/img/icon/help_c.png');
                 break;
 
         }
@@ -157,13 +157,13 @@ var init_js;
                   .append("<p style='display: inline-block;position: relative;left: 120px;font-size: 14px;top: -59px;border-bottom: 2px solid #ddd;width: 90px;text-align: center;'>个人简介</p>")
                   .append("<p class='person_intro'></p>");
 
-        $(".box1 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src='/img/icon/myinfo.png'></div>")
+        $(".box1 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/myinfo.png'></div>")
                        .append("我的信息");
 
         $(".box2").append("<div class='title_box'></div>")
                   .append("<div class='Chart'></div>");
 
-        $(".box2 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src='/img/icon/myinfo.png'></div>")
+        $(".box2 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src=" + public_url + "'/img/icon/myinfo.png'></div>")
                              .append("能力概览");
 
         $(".box2 .Chart").append("<div class='Chart_info'></div>")
@@ -190,7 +190,7 @@ var init_js;
 
         $(".box3").append("<div class='title_box' style='margin-bottom:20px'></div>");
 
-        $(".box3 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src='/img/icon/message.png'></div>")
+        $(".box3 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/message.png'></div>")
                              .append("站内通知");
     }
 
@@ -199,7 +199,7 @@ var init_js;
         $(".info_container").append("<div class='title_box'></div>")
                             .append("<div id='ChangePage' class='Two-box clearfix'></div>");
 
-        $(".title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src='/img/icon/base.png'></div>")
+        $(".title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/base.png'></div>")
                        .append("基础信息编辑");
 
         $("#ChangePage").append("<div class='Page-box clearfix' id='Page1'></div>")
