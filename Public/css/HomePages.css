@@ -3,8 +3,11 @@
         min-width: 800px; 
         min-height: 640px; 
         margin: 0px 0px 0px 0px;
-        overflow: hidden;   
+        overflow: hidden;  
+        width : 100%;
+        height : 100%; 
       }
+    html{width:100%; height:100%; overflow:hidden;}
     input{
           height: 40px;
           width: 305px;
@@ -83,10 +86,11 @@
       } 
     #formbackground{
           margin: auto;
-          height: auto;
-          width: auto;
+          height: 100%;
+          width: 100%;
           z-index: -1;
           position: absolute;
+          background-size:contain;           
       }
     #logo{
           min-width: 800px;

@@ -8,6 +8,7 @@
 	<link href="/webprj/ecnu_mind/Public/css/IndexRoll.css" rel="stylesheet">
 	<link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
+    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/IndexSection2.css" /> 
     <script> 
     	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
     	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
@@ -16,6 +17,7 @@
     </script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
+	<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
     <script src="/webprj/ecnu_mind/Public/js/index/HomeScript.js"></script>
 	<!--[if lte IE 8]>
 	<style type="text/css">
@@ -82,23 +84,27 @@
 
 		</div>
 		<div class="section section-2">
-			<div class="title">
-				<p class="tit">随便写写意思下!</p>
+			<div class="section2">
+				<div class="sectionTitle">寻找项目的伙伴</div>
+				<div class="sectionSubTitle">智库汇聚了众多拥有梦想、能力、激情的人，并且这个圈子不断随着智库项目的推进而发展壮大</br>无论想要怎样的团队都能在智库找到志同道合的人</div>
 			</div>
 		</div>
 		<div class="section section-3">
-			<div class="title">
-				<p class="tit">随便写写意思下</p>
+			<div class="section3">
+				<div class="sectionTitle">为你的项目找到更多的机会</div>
+				<div class="sectionSubTitle">智库内入驻了众多的比赛报名，你的项目可以通过智库脱颖而出</br>更有许许多多的HR以及投资人使用智库发觉你和你项目的潜力</div>
 			</div>
 		</div>
 		<div class="section section-4">
-			<div class="title">
-				<p class="tit">随便写写意思下</p>
+			<div class="section4">
+				<div class="sectionTitle">让更多的机会来找你</div>
+				<div class="sectionSubTitle">众多优秀的项目通过智库来寻找意向的合作者</br>你不再需要寻寻觅觅那些机会，而那些优秀的项目机会通过智库来找你</div>
 			</div>
 		</div>
 		<div class="section section-5">
-			<div class="title">
-				<p class="tit">随便写写意思下</p>
+			<div class="section5">
+				<div class="finalTitle">智库 - 每个人享有机会的热土</div>
+				<div class="tryNow" id="toTop">立即体验</div>
 			</div>
 		</div>
 	</section>

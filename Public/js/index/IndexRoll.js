@@ -8,6 +8,7 @@
 		var $btn = $('.section-btn li'),
 			$wrap = $('.section-wrap'),
 			$arrow = $('.arrow');
+			$tryNow = $('.tryNow');
 		
 		/*当前页面赋值*/
 		function up(){i++;if(i==$btn.length){i=0};}
@@ -32,6 +33,12 @@
 		function go(){
 			up();run();	
 			setTimeout(function(){$arrow.one('click',go)},1000)
+		};
+		/*立即体验按钮点击*/
+		$tryNow.one('click',go);
+		function go(){
+			up();run();	
+			setTimeout(function(){$tryNow.one('click',go)},1000)
 		};
 		
 		/*响应鼠标*/

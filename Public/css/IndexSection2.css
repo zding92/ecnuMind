@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+.sectionTitle {
+	color : #444444;
+	text-align: center;
+	font-family: "微软雅黑";
+	padding: 100px 0 16px;
+	font-size: 46px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	line-height: 56px;
+	width: 100%;
+}
+.sectionSubTitle{
+	text-align: center;
+	font-family: "微软雅黑";
+	color : #444444;
+	padding: 0 0 69px;
+	font-size: 18px;
+	line-height: 36px;
+	width: 960px;
+	margin: 50px auto;
+}
+.finalTitle{
+	color : #444444;
+	text-align: center;
+	font-family: "微软雅黑";
+	padding: 100px 0 16px;
+	font-size: 46px;
+	font-weight: normal;
+	letter-spacing: 2px;
+	line-height: 56px;
+	width: 100%;
+	margin-top: 200px;
+}
+.tryNow{
+	padding: 10px 0px 0px 20px;
+	vertical-align: central;
+	vertical-align: center;
+	text-align: center;
+	letter-spacing: 20px;
+	border: 0px;
+	outline: none;
+	margin: 75px auto;
+	width: 305px;
+	height: 50px;
+	font-size: 20px;
+	color: #fff;
+	font-weight: 100;
+	font-family: "微软雅黑";
+	background: #0080FF;
+	border-radius: 0px;
+	cursor: pointer;
+}
