@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <title>ECNU Mind</title>
+        <link rel="shortcut icon" href="/webprj/ecnu_mind/Public/img/favicon.ico">
+		<link rel="bookmark"  type="image/x-icon"  href="/webprj/ecnu_mind/Public/img/favicon.ico">
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/nav.css" /> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Person.css" />
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />   

@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
 	<meta name="renderer" content="webkit">
 	<title>ECNU Mind</title>
+	<link rel="shortcut icon" href="/webprj/ecnu_mind/Public/img/favicon.ico">
+	<link rel="bookmark"  type="image/x-icon"  href="/webprj/ecnu_mind/Public/img/favicon.ico"/>
 	<link href="/webprj/ecnu_mind/Public/css/IndexRoll.css" rel="stylesheet">
 	<link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
