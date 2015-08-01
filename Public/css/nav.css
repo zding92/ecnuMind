@@ -1,6 +1,8 @@
   body{
       color: #45484d;
-      background:#fff url(../img/back2.jpg) no-repeat;
+/*      background:#fff url(../img/back2.jpg) no-repeat;
+*/      
+	  background-color: #2d6d7a;
       margin: 0px;
       padding: 0px;
       overflow: auto;
@@ -154,3 +156,16 @@
           z-index: -1;
           position: absolute;
       }
+      
+.homeHead{
+	width: 100%;
+	height: 90px;
+    background-color:  #cdcdcd;
+
+}
+#logo2{
+	width: 960px;
+	position: relative;
+	margin: 0 auto;	
+	padding-top: 10px;
+}

@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>ECNU Mind</title>
+        <title>ECNU Inspiration</title>
         <link rel="shortcut icon" href="/webprj/ecnu_mind/Public/img/favicon.ico">
+        <!-- <link rel="shortcut icon" href="favicon.ico"> -->
 		<link rel="bookmark"  type="image/x-icon"  href="/webprj/ecnu_mind/Public/img/favicon.ico">
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/nav.css" /> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Person.css" />
@@ -21,12 +22,20 @@
     </head>
     <body>
     <div class="Part">
+   	<div class="homeHead">
+	    <!-- <div id="logo">
+		     <div id="logo_1">ECNU</div>
+		     <div id="logo_2">华师</div>
+		     <div id="logo_3">人才项目智库</div>
+	    </div> -->
+	    <div id="logo2">
+			<img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png">
+	    </div>
+	    
+   </div>
     <div class="Part_inner clearfix">
-       <div id="logo">
-         <div id="logo_1">ECNU</div>
-         <div id="logo_2">华师</div>
-         <div id="logo_3">人才项目智库</div>
-       </div>
+	       
+	    
        <div class="nav">
            <p>功能列表</p>
            <a href="#main" id="btn_main" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/home.png" alt="error"></div>个人首页</a>
