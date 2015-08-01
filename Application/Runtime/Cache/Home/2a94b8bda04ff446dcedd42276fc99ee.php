@@ -121,7 +121,7 @@
 
 <script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>
 <script src="/webprj/ecnu_mind/Public/js/index/Register.js"></script>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
 <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
 <script src="/webprj/ecnu_mind/Public/js/index/IndexRoll.js"></script> <!-- 整体网页的上下滑动翻转，包括立即体验点击返回顶部 -->
 

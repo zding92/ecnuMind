@@ -12,7 +12,8 @@
 		.section-wrap .section .title p{ padding:0 4%;opacity:0}
 		.section-wrap .section .title.active .tit{ opacity:1;transform:translateY(-25px);-webkit-transform:translateY(-25px);transition:all 2s cubic-bezier(0.86,0,0.8,1);-webkit-transition:all 2s cubic-bezier(0.86,0,0.8,1);}
 		/*.section-wrap .section-1{ background-color:#337ab7}*/
-		.section-wrap .section-2{ background-color:#F7F7F7}
+		/*.section-wrap .section-2{ background-color:#F7F7F7}*/
+		.section-wrap .section-2{ background-color:#FFFFFF}
 		.section-wrap .section-3{ background-color:#5cb85c}
 		.section-wrap .section-4{ background-color:#f0ad4e}
 		.section-wrap .section-5{ background-color:#ffffff}
