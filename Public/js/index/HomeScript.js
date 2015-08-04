@@ -1,7 +1,7 @@
-$(function() {
-    $( "input[type=submit]" )
-      .button()
-});
+//$(function() {
+//    $( "input[type=submit]" )
+//      .button()
+//});
  function DisplayLogin() {
    document.getElementById('Register').style.visibility = "hidden";
    document.getElementById('Login').style.visibility = "visible";

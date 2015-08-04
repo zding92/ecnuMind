@@ -33,14 +33,14 @@ var init_js;
                 $(".info_container").empty();
 
                 $.ajax({
-                    url: "/User/Change.php", //请求验证页面 
+                    url: model_url + "/loadPage", //请求验证页面 
                     type: "GET", //请求方式
                     async:false,
                     data: "action=" + $(this).attr('id'),
                     beforeSend: function(){              
                     },
                     success: function (result) {
-                        eval(result);
+                    	eval(result);
                         switch (action) {
                             case 'btn_main':                     
                                 MainHtml();
@@ -157,13 +157,13 @@ var init_js;
                   .append("<p style='display: inline-block;position: relative;left: 120px;font-size: 14px;top: -59px;border-bottom: 2px solid #ddd;width: 90px;text-align: center;'>个人简介</p>")
                   .append("<p class='person_intro'></p>");
 
-        $(".box1 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/myinfo.png'></div>")
+        $(".box1 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "/img/icon/myinfo.png></div>")
                        .append("我的信息");
 
         $(".box2").append("<div class='title_box'></div>")
                   .append("<div class='Chart'></div>");
 
-        $(".box2 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src=" + public_url + "'/img/icon/myinfo.png'></div>")
+        $(".box2 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src=" + public_url + "/img/icon/myinfo.png></div>")
                              .append("能力概览");
 
         $(".box2 .Chart").append("<div class='Chart_info'></div>")
@@ -190,7 +190,7 @@ var init_js;
 
         $(".box3").append("<div class='title_box' style='margin-bottom:20px'></div>");
 
-        $(".box3 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/message.png'></div>")
+        $(".box3 .title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "/img/icon/message.png></div>")
                              .append("站内通知");
     }
 
@@ -199,7 +199,7 @@ var init_js;
         $(".info_container").append("<div class='title_box'></div>")
                             .append("<div id='ChangePage' class='Two-box clearfix'></div>");
 
-        $(".title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "'/img/icon/base.png'></div>")
+        $(".title_box").append("<div style='display:inline-block;width:15px;height:15px;'><img style='width:15px;height:15px;margin-left: -10px;' src= " + public_url + "/img/icon/base.png></div>")
                        .append("基础信息编辑");
 
         $("#ChangePage").append("<div class='Page-box clearfix' id='Page1'></div>")
@@ -259,7 +259,7 @@ var init_js;
                              .append("<div class='New'></div>");
 
         $("#Page2 .Old").append("<p>当前使用</p>")
-                        .append("<div class='photo' style='width: 120px;height: 120px;left: 82px;top: 167px;'><img src='/photo/face.png' alt='照片载入失败'></div>");
+                        .append("<div class='photo' style='width: 120px;height: 120px;left: 82px;top: 167px;'><img src='" + public_url + "/img/photo/face.png' alt='照片载入失败'></div>");
 
         $("#Page2 .New").append("<form id='upload_form' enctype='multipart/form-data' method='post' action='upload.php' onsubmit='return checkForm()'>\
                                    <!-- hidden crop params -->\
@@ -324,12 +324,12 @@ var init_js;
                        .append("<p>" + init_js.name + "</p>")
                        .append("<p>" + init_js.major + "</p>");
 
-        $(".box1 .photo").append("<img src='/photo/face.png' alt='照片载入失败'>");
+        $(".box1 .photo").append("<img src='" + public_url + "/img/photo/face.png' alt='照片载入失败'>");
 
         $(".box1 .person_intro").append(init_js.brief);
 
         $(".box3").append("<div class='message'>\
-                          <div class='from_face'><img src='/photo/face.png' alt='载入失败'></div>\
+                          <div class='from_face'><img src='" + public_url + "/img/photo/face.png' alt='载入失败'></div>\
                           <div class='from'>Admin:</div>                   \
                           <p class='content'>我想请你吃饭~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>\
                        </div>");
