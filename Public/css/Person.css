@@ -5,7 +5,7 @@
 
 
 .Part_inner{
-   width: 960px;
+   width: 1190px;
    margin: 0px auto;
 } 
 
@@ -27,16 +27,16 @@ font-size: 0px;
     border: 1px solid #000;
     min-height: 640px;
     height: auto;
-    width: 800px;
+    width: 1030px;
     background-color: #fdfdfd;
     display: block;
     overflow: hidden;
 
-    font-family:  "微软雅黑";
-    -moz-user-select: none; /*火狐*/
-    -webkit-user-select: none; /*webkit浏览器*/
+    font-family:  "寰蒋闆呴粦";
+    -moz-user-select: none; /*鐏嫄*/
+    -webkit-user-select: none; /*webkit娴忚鍣�*/
     -ms-user-select: none; /*IE10*/
-    -khtml-user-select: none; /*早期浏览器*/
+    -khtml-user-select: none; /*鏃╂湡娴忚鍣�*/
     user-select: none;
 }
 
@@ -187,7 +187,7 @@ font-size: 0px;
     margin: 5px 10px 5px 10px;
     padding: 3px 10px 2px 10px;
     width: auto;
-    font-family: Arial '微软雅黑';
+    font-family: Arial '寰蒋闆呴粦';
     font-weight: 700;
     font-size: 14px;
     color: #fff;
@@ -203,7 +203,7 @@ font-size: 0px;
     height: 100%;
     width: 100%;
     display: block;
-    font-family: "微软雅黑";
+    font-family: "寰蒋闆呴粦";
     font-size: 35px;
     text-align: center;
     color: rgba(120,120,120,0.5);
@@ -218,7 +218,7 @@ font-size: 0px;
     margin: 0px 25px 30px 25px;
     width: 710px;
     height: 60px;
-    font-family: '微软雅黑' Arial;    
+    font-family: '寰蒋闆呴粦' Arial;    
     font-weight: 300;
     padding: 8px 20px 8px 20px;
     border-bottom: 1px dashed #ccc;
@@ -319,7 +319,7 @@ font-size: 0px;
 
 
 .info_container .form-box .form-group .form-control {
-    font-family: "微软雅黑" Arial;
+    font-family: "寰蒋闆呴粦" Arial;
     font-size: 12px;
     font-weight: 400;
     padding: 10px 20px 10px 20px;
@@ -368,7 +368,7 @@ font-size: 0px;
     color: #fff;
     border: none;
     background: #2b99ce;
-    font-family: '微软雅黑';
+    font-family: '寰蒋闆呴粦';
     font-weight: 700;
     letter-spacing: 10px;
     text-align: center;
@@ -409,7 +409,7 @@ font-size: 0px;
     color: #fff;
     border: none;
     background: #2b99ce;
-    font-family: '微软雅黑';
+    font-family: '寰蒋闆呴粦';
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 5px;
@@ -520,7 +520,7 @@ font-size: 0px;
 .info_container .ability_head p {
     font-size: 30px;
     margin: 0px auto;
-    font-family: 微软雅黑;
+    font-family: 寰蒋闆呴粦;
     color: #aaa;
     position: relative;
     display: inline-block;
