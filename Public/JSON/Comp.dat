@@ -1,0 +1,6 @@
+var json_string=
+[
+	{"no":"TZ2015","name":"2015年挑战杯报名","link":"/Tiaozhan/Tiaozhan.html","status":"Open"},
+	{"no":"DX2015","name":"2015年大夏杯报名","link":"http://www.baidu.com","status":"In Progress"},
+	{"no":"TZ2014","name":"2014年挑战杯报名","link":"","status":"Closed"},
+]
