@@ -18,6 +18,7 @@ table{
     border-spacing: 0px;
     display: block;
     position: relative;
+    width: 1030px;
 }
 tr{
     height: 62px;

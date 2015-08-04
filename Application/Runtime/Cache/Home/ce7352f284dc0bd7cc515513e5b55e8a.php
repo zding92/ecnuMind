@@ -11,13 +11,17 @@
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />   
         <link href="/webprj/ecnu_mind/Public/css/icheck/flat/blue.css" rel="stylesheet">
         <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">
-        <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
+        <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.icheck.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/Chart.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/modernizr.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.mixitup.min.js"></script>
-        <script>var public_url = "/webprj/ecnu_mind/Public";</script>
+        <script>
+        	var public_url = "/webprj/ecnu_mind/Public";
+        	var model_url = "/webprj/ecnu_mind/index.php/Home/Home";
+        	var app_url = "/webprj/ecnu_mind/index.php";
+        </script>
         <!--<script src="/HtmlJS/Page.js"></script>-->
     </head>
     <body>
