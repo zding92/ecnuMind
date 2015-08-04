@@ -371,7 +371,7 @@ var init_js;
     function CompHtml()
     {
         $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-         src='/subHtml/Competition.html' seamless='seamless' scrolling='no'   \
+         src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
          onload='this.height=Comp_frame.document.body.scrollHeight' \
          onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
     }
