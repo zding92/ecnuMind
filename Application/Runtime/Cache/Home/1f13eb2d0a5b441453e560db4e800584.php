@@ -1,14 +1,14 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <title>竞赛报名系统</title>
   <script>
-  	var compJSON = '__PUBLIC__/JSON/Comp.txt'
+  	var compJSON = '/webprj/ecnu_mind/Public/JSON/Comp.txt'
   </script>
-  <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
-  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Competition.css" />
-  <script src="__PUBLIC__/js/Comp/Comp.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Competition.css" />
+  <script src="/webprj/ecnu_mind/Public/js/Comp/Comp.js"></script>
 </head>
 
 <body style="background-color: #fff">

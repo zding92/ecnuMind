@@ -2,14 +2,14 @@
  * 
  */
 $(document).ready(function () {
-	alert('into the function');
+	//alert('into the function');
     $.ajax({
         url: compJSON,
         async: false,
         success: function (result) {
+        	//alert('In to json ajax');
             $("tbody tr").detach();
             eval(result);
-            alert('In to json ajax');
             for (var i = 0; i < json_string.length; i++) {
                 if (json_string[i].link !== "")
                     $("tbody").append("<tr><td data-title='ID'>" + json_string[i].no +
@@ -28,9 +28,10 @@ $(document).ready(function () {
     });
 
     parent.document.getElementById("Comp_frame").height = document.body.scrollHeight;
+    $("tbody tr").mouseenter(function(){$(this).css("background-color","#B3E5FC");});
+    $("tbody tr").mouseleave(function(){$(this).css("background-color","#fff");});
 });
 
 $(document).ready(function(){
-    $("tbody tr").mouseenter(function(){$(this).css("background-color","#B3E5FC");});
-    $("tbody tr").mouseleave(function(){$(this).css("background-color","#fff");});
+
 }); 
