@@ -25,13 +25,9 @@ $(document).ready(function () {
             }
 
         }
-    });
-
-    parent.document.getElementById("Comp_frame").height = document.body.scrollHeight;
+    });    
     $("tbody tr").mouseenter(function(){$(this).css("background-color","#B3E5FC");});
     $("tbody tr").mouseleave(function(){$(this).css("background-color","#fff");});
+    parent.document.getElementById("Comp_frame").height = document.body.scrollHeight;
 });
 
-$(document).ready(function(){
-
-}); 
