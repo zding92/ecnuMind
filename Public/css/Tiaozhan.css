@@ -2,10 +2,23 @@ body { font: 62.5% "Arial", sans-serif;
         min-width: 800px; 
         min-height: 640px; 
         margin: 0px 0px 0px 0px;
+        background-color: #188989;
+        overflow: auto;
+}
+.homeHead{
+	width: 100%;
+	height: 90px;
+    background-color:  #e5e5e5;
+}
+#logo2{
+	width: 1190px;
+	position: relative;
+	margin: 0 auto;	
+	padding-top: 10px;
 }
 .info_container{
     float: page;
-    margin: 20px auto;
+    margin: 10px auto;
     border: 1px solid #000;
     min-height: 640px;
     height: auto;
@@ -15,10 +28,10 @@ body { font: 62.5% "Arial", sans-serif;
     overflow: hidden;
 
     font-family:  "微软雅黑";
-    -moz-user-select: none; /*火狐*/
-    -webkit-user-select: none; /*webkit浏览器*/
+    -moz-user-select: none; /*鐏嫄*/
+    -webkit-user-select: none; /*webkit娴忚鍣�*/
     -ms-user-select: none; /*IE10*/
-    -khtml-user-select: none; /*早期浏览器*/
+    -khtml-user-select: none; /*鏃╂湡娴忚鍣�*/
     user-select: none;
 }
 .step1{
