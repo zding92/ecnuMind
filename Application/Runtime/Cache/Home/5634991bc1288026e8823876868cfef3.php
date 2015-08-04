@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>挑战杯报名信息录入系统</title>
-        <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Tiaozhan.css" />
-        <script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
-        <script src="__PUBLIC__/js/Tiaozhan/tiaozhan.js"></script>
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Tiaozhan.css" />
+        <script src="__Public__/jsLib/jquery/jquery.min.js"></script> 
+        <script src="__Public__/js/Tiaozhan/tiaozhan.js"></script>
     </head>
     <body>
 		<div class="homeHead">
@@ -16,7 +16,7 @@
 				     <div id="logo_3">人才项目智库</div>
 			    </div> -->
 			    <div id="logo2">
-					<img alt="Logo" src="__PUBLIC__/img/logo.png">
+					<img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png">
 			    </div>
 			    
 		</div>
