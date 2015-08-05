@@ -12,7 +12,22 @@ class HomeController extends Controller {
 	/**
 	 * 载入个人主页时提交Ajax数据的Target
 	 */
-	public function loadPage() {
+	public function loadPage($action) {
+		switch ($action) {
+			case "btn_main" : 
+				$this->showMain();						
+				break;
+			case "btn_base_info" :
+				$this->showBaseInfo();
+				break;
+			default : break;
+		}
+	}
+	
+	/**
+	 * 返回主界面初始化所需要的数据。
+	 */
+	private function showMain() {
 		$initJs = $this->returnBaseinfo();
 		$chartData = $this->returnChartData();
 		$this->ajaxReturn($initJs.$chartData, "EVAL");
@@ -77,5 +92,14 @@ class HomeController extends Controller {
 				    }
 			    ];';
 		return $DoughnutData.$tabs_script;
+	}
+	
+	/**
+	 * 显示个人信息界面
+	 */
+	private function showBaseInfo() {
+		// 刷新个人信息Json数据。并返回
+		$initJs = $this->returnBaseinfo();
+		$this->ajaxReturn($initJs,"EVAL");
 	}
 }

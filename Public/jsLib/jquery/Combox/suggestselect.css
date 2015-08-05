@@ -1,0 +1,11 @@
+.kitjs-form-suggestselect-wrapper {
+    margin-bottom: 10px;
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+    font-family: "微软雅黑" Arial;
+}
+.kitjs-form-suggestselect-wrapper.suggesting .kitjs-form-suggestselect-input {
+	background: url("loading.gif") right no-repeat;
+}

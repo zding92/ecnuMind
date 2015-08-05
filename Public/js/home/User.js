@@ -42,7 +42,7 @@ var init_js;
                     success: function (result) {
                     	eval(result);
                         switch (action) {
-                            case 'btn_main':                     
+                            case 'btn_main':                   
                                 MainHtml();
                                 MainData();
                                 RefreshChart(doughnutData, tabs);
@@ -231,8 +231,8 @@ var init_js;
                                         .append("<div class='form-group'><label class='label1' for='phone'>联系电话</label><input type='text' name='phone' class='form-control' id='phone' placeholder='请输入手机号码'></div>")
                                         .append("<div class='form-tip' id='phone-tip' style='display:none'></div>")
                                         .append("<div class='form-group' style='text-align:center;font-size: 15px;font-weight: 700;color: rgba(120,120,120,0.9)'><label class='label1'>性别</label><input type='radio' class='sexbox' id='male' value='male' name='gender'><span>汉纸</span><input type='radio' class='sexbox' id='female' value='female' name='gender'><span>妹纸</span></div>")
-                                        .append("<link rel='stylesheet' href='/JQ/Combox/css.css'>\
-                                                 <link rel='stylesheet' href='/JQ/Combox/form.css'>")                                       
+                                        .append("<link rel='stylesheet' href='"+public_url+"/jsLib/jquery/Combox/css.css'>\
+                                                 <link rel='stylesheet' href='"+public_url+"/jsLib/jquery/Combox/form.css'>")                                       
                                         .append("<div class='combobox'><ul><li></li></ul></div>")
                                         .append("<div class='form-tip' id='combobox-tip' style='display:none'></div>")
                                         .append("<div class='form-group' style='height:190px'><label class='label1' for='brief'>个人简介</label><textarea type='text' name='brief' class='form-control' id='brief' placeholder='请在100字内简单介绍一下自己吧。可以说明一下自己擅长哪些技术~当然也可以谈谈兴趣爱好~'></textarea></div>")
@@ -285,14 +285,14 @@ var init_js;
         });
 
         if (!script_load_finished.base_info) {
-            $("body").append("<link rel='Stylesheet' type='text/css' href='/css/jquery.Jcrop.min.css'>\
-                                         <script src='/JQ/Combox/json-data.js'></script>\
-                                         <script src='/JQ/Combox/Combox.js'></script>\
-                                         <script src='/JQ/Checkbox.js'></script>\
-                                         <script src='/JQ/ChangePage.js'></script>\
-                                         <script src='/JQ/Jcrop/jquery.Jcrop.min.js'></script>\
-                                         <script src='/JQ/Jcrop/Jcrop.js'></script>\
-                                         <script src='/JQ/Checkform.js'></script>");
+            $("body").append("<link rel='Stylesheet' type='text/css' href='"+public_url+"/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>\
+                                         <script src='"+public_url+"/JSON/ComboxData.js'></script>\
+                                         <script src='"+public_url+"/jsLib/jquery/Combox/Combox.js'></script>\
+                                         <script src='"+public_url+"/js/home/Checkbox.js'></script>\
+                                         <script src='"+public_url+"/js/home/ChangePage.js'></script>\
+                                         <script src='"+public_url+"/jsLib/jquery/Jcrop/jquery.Jcrop.min.js'></script>\
+                                         <script src='"+public_url+"/jsLib/jquery/Jcrop/Jcrop.js'></script>\
+                                         <script src='"+public_url+"/js/home/Checkform.js'></script>");
             script_load_finished.base_info = true;
             Combobox();
             Jcrop();

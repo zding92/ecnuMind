@@ -30,12 +30,14 @@ class IndexController extends Controller {
 		}
 		// 如果查询成功，且密码正确，返回下列js变量，利用eval脚本解析器运行获取变量。
 		else if ($result['password'] == md5($password)) {
+			// 将username放入session，作为后续用户操作身份句柄
+			session('username', $username);
+			
+			// 返回参数。
 	    	$this->ajaxReturn("var login=true;
         		  						  var user_noexist=false;
         	  	                          var pwd_error=false;",
 	    								"EVAL");
-	    	// 将username放入session，作为后续用户操作身份句柄
-     		session('username', $username);
     	}
     	// 否则代表存在用户，但是密码错误，返回下列js变量，利用eval脚本解析器获取变量
     	else	$this->ajaxReturn("var login=false;
