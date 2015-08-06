@@ -257,7 +257,7 @@ function Timer1_fun() {
     }
     else {
         document.getElementById("author1_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
@@ -331,7 +331,7 @@ function Timer2_fun() {
     }
     else {
         document.getElementById("author2_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
@@ -405,7 +405,7 @@ function Timer3_fun() {
     }
     else {
         document.getElementById("author3_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
@@ -479,7 +479,7 @@ function Timer4_fun() {
     }
     else {
         document.getElementById("author4_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
@@ -553,7 +553,7 @@ function Timer5_fun() {
     }
     else {
         document.getElementById("author5_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
@@ -627,7 +627,7 @@ function Timer6_fun() {
     }
     else {
         document.getElementById("author6_num_check").innerHTML = '';
-        $.ajax({ url: "json_text.txt", async: false, success: function (result) {
+        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
             var find = 0;
             eval(result);
             for (var i = 0; i < json_string.length; i++)
