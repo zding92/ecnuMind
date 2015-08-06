@@ -1,13 +1,16 @@
 /**
  * 
  */
+//鼠标经过颜色
 function OverColor(obj) {
   obj.style.backgroundColor='#56cbf3';
 }
-
+//鼠标移出颜色
 function Outcolor(obj){
+	//如果是非选中状态
     if (obj.className == "tiaozhan_navoff")
         obj.style.backgroundColor = '#808080';
+    //如果是选中的状态
     else obj.style.backgroundColor = '#2b99ce';
 }
 
@@ -16,6 +19,9 @@ function change_type()
     
 }
 
+/**
+ * 根据作品类型，显示不同的作品类型细分
+ */
 function Gettext(){
     selector = document.getElementById("type_selector");
 var val=selector.options[selector.options.selectedIndex].value;
@@ -102,6 +108,11 @@ function ShowStep3()
 }
 
 var ratio_value = "A1";
+/**
+ * 如果是个人作品，在第二步中不显示extra_partner
+ * 如果是团队作品，在第二步中显示extra_partner
+ * @param a 项目类型读入的值，默认为A1，个人作品
+ */
 function change_ratio_value(a)
 {
     ratio_value = a;
