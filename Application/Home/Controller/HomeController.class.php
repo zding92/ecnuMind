@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
+use Home\Common\MyFunc\CheckForm;
 class HomeController extends Controller {
 	/**
 	 * 显示home界面
@@ -12,7 +13,8 @@ class HomeController extends Controller {
 	/**
 	 * 载入个人主页时提交Ajax数据的Target
 	 */
-	public function loadPage($action) {
+	public function loadPage() {
+		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
 		switch ($action) {
 			case "btn_main" : 
 				$this->showMain();						
@@ -22,6 +24,40 @@ class HomeController extends Controller {
 				break;
 			default : break;
 		}
+	}
+	
+	/**
+	 * 个人信息维护后台验证。
+	 */
+	public function  checkForm() {
+		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
+		$value = I('value', 0, 'strip_tags,htmlspecialchars,trim');
+		$checkForm = new \Home\Common\MyFunc\CheckForm();
+		$checkForm->checkOne($action, $value);
+		
+		// 根据验证结果返回Js变量。
+		if ($checkForm->isRepeat()) $this->ajaxReturn('var repeat=true;', "EVAL");
+		elseif($checkForm->isIllegal() && $checkForm->illegalInfo == "") 
+			$this->ajaxReturn('var repeat=false;
+										 var illegal = true;', 
+				                         "EVAL");
+		elseif($checkForm->illegalInfo != "") 
+			$this->ajaxReturn('var illegal = "'.$checkForm->illegalInfo.'";', "EVAL");
+		else 	$this->ajaxReturn('var repeat=false;
+											 var illegal = false;', 
+				       		                 "EVAL");
+	}
+	
+	/**
+	 * 个人信息维护修改提交。
+	 */
+	public function  submitModify() {
+		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
+		$value = I('value', 0, 'strip_tags,htmlspecialchars,trim');
+		$checkForm = new \Home\Common\MyFunc\CheckForm();
+		$allData = I('get.');
+		$allData['username'] = session('username');
+		$checkForm->checkAll($allData);
 	}
 	
 	/**

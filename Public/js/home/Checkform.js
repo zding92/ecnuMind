@@ -4,10 +4,10 @@ function Check_Ajax(action,items,value)
 {
     var check_result;
     $.ajax({
-        url: "/PHP/Checkform.php", //请求验证页面 
+        url: model_url + "/checkForm", //请求验证页面 
         type: "GET", //请求方式
         async: false,
-        data: "action=" + action + "&" + items + "=" + value,
+        data: "action=" + action + "&" + "value" + "=" + value,
         success: function (call) {
             check_result = call;     
         }
@@ -173,7 +173,7 @@ Checkform_Combobox=function(){
                 $("#combobox-tip").html('请填写正确专业（应与选择框中的待选项完全一致）');
                 $("#combobox-tip").slideDown("fast");
                 break;
-            case 'legal':
+            case false:
                 $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
                 $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
                 $("#major").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
@@ -285,7 +285,7 @@ $("#form_base").submit(function (ev) {
     })
     if (changed == true) {
         $.ajax({
-            url: "/PHP/Submit.php", //请求验证页面 
+            url: model_url + "/submitModify", //请求验证页面 
             type: "GET", //请求方式
             async: false,
             data: submit_value,
