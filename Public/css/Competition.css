@@ -38,3 +38,5 @@ td{
 #c4{
     width: 224px;
 }
+
+a:visited {color:#0000FF;}  /* visited link */
