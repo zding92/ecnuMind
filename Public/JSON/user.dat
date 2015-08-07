@@ -1,0 +1,7 @@
+var json_string=
+[
+	{"no":"10112140253","name":"张鼎","gender":"男","degree":"本科","grade":"研一","college":"信息学院","major":"通信工程",
+		"year":"1992","campus":"闵行","mobile":"13764051838","phone":"13764051838","addr1":"SH","addr2":"SH"	},
+	{"no":"11111111111","name":"Peter","gender":"Male"},
+
+]
