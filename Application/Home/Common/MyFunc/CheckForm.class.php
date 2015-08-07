@@ -2,49 +2,46 @@
 namespace Home\Common\MyFunc;
 class CheckForm {
 	
-	private $action, $value, $queryResult;
-    private  $repeat, $illegal;
+	private $queryResult;
+    private $repeat, $illegal;
 	public $illegalInfo;
 	/**
 	 * 验证当前单个输入。
 	 */
 	public function checkOne($action, $value) {
-		
-		$this->action = $action;
-		$this->value = $value;
-		
+				
 		$model = M('info');
-		if($this->action=='nickname' || $this->action=='ID'||
-				$this->action=='Email' || $this->action=='phone') {
+		if($action=='nickname' || $action=='ID'||
+				$action=='Email' || $action=='phone') {
 			// sql查询： SELECT actionName from user_info where actionName = actionValue;		
-			$this->queryResult = $model->field($this->action)->where($this->action."='".$this->value."'")->find();	
+			$this->queryResult = $model->field($action)->where($action."='".$value."'")->find();	
 		}
 		
-		switch($this->action)
+		switch($action)
 		{
 			case 'nickname':
-				$this->CheckNickFromDB();
+				$this->CheckNickFromDB($value);
 				break;
 			case 'name':
-				$this->CheckNameFromDB();
+				$this->CheckNameFromDB($value);
 				break;
 			case 'ID':
-				$this->CheckIDFromDB();
+				$this->CheckIDFromDB($value);
 				break;
 			case 'Email':
-				$this->CheckEmailFromDB();
+				$this->CheckEmailFromDB($value);
 				break;
 			case 'address':
-				$this->CheckAddressFromDB();
+				$this->CheckAddressFromDB($value);
 				break;
 			case 'phone':
-				$this->CheckPhoneFromDB();
+				$this->CheckPhoneFromDB($value);
 				break;
 			case 'combobox':
-				$this->CheckCombobox();
+				$this->CheckCombobox($value);
 				break;
 			case 'brief':
-				$this->CheckBriefFromDB();
+				$this->CheckBriefFromDB($value);
 				break;
 			default:break;
 		}
@@ -54,16 +51,45 @@ class CheckForm {
 	 * 验证多个输入
 	 */
 	public function checkAll($allData) {
+		// 验证各个变量是否合法，如果存在任何的不合法，
+		// 返回false，若全部合法返回true.
+		$this->CheckNickFromDB($allData['nickname']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
+		$this->CheckNameFromDB($allData['name']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		$this->CheckIDFromDB($allData['ID']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		$this->CheckEmailFromDB($allData['email']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		$this->CheckAddressFromDB($allData['address']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		$this->CheckPhoneFromDB($allData['phone']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		// 装配学院系别专业信息。
+		$comboxValue=$allData['academy']."|".$allData['department']."|".$allData['major'];
+		$this->CheckCombobox($comboxValue);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		$this->CheckBriefFromDB($allData['brief']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
+		// 全部验证通过，返回true.
+		return true;
 	}
 	
-	private function CheckNickFromDB(){
+	private function CheckNickFromDB($value){
 		if($this->queryResult != "")
 		{
 			$this->repeat = true;
 			$this->repeat = true;
 		} else{
-			if(preg_match('/[ .,]+?/',$this->value))
+			if(preg_match('/[ .,]+?/',$value))
 			{
 				
 				$this->illegal = true;
@@ -75,8 +101,8 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckNameFromDB(){
-		if(!preg_match("/^[\x{4e00}-\x{9fa5}]{2,4}$/u",$this->value))
+	private function CheckNameFromDB($value){
+		if(!preg_match("/^[\x{4e00}-\x{9fa5}]{2,4}$/u",$value))
 		{
 			$this->illegal = true;
 		}else{
@@ -84,12 +110,12 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckIDFromDB(){
+	private function CheckIDFromDB($value) {
 		if($this->queryResult != "")
 		{
 			$this->repeat = true;
 		} else{
-			if(!preg_match('/^101[0-9]{8}?/',$this->value))
+			if(!preg_match('/^101[0-9]{8}?/',$value))
 			{
 				$this->illegal = true;
 			}else{
@@ -99,12 +125,12 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckEmailFromDB(){
+	private function CheckEmailFromDB($value) {
 		if($this->queryResult != "")
 		{
 			$this->repeat = true;
 		} else{
-			if(!preg_match('/^.+@[0-9a-zA-Z]+\.[a-zA-Z\.]+$/',$this->value))
+			if(!preg_match('/^.+@[0-9a-zA-Z]+\.[a-zA-Z\.]+$/',$value))
 			{
 				$this->illegal = true;
 			}else{
@@ -114,8 +140,8 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckAddressFromDB(){
-		if(strlen($this->value)>30)
+	private function CheckAddressFromDB($value) {
+		if(strlen($value)>30)
 		{
 			$this->illegal = true;
 		}else{
@@ -123,13 +149,12 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckPhoneFromDB(){
-		global $value,$row;
+	private function CheckPhoneFromDB($value) {
 		if($this->queryResult != "")
 		{
 			$this->repeat = true;
 		} else{
-			if(!preg_match('/^1[0-9]{10}$/',$this->value))
+			if(!preg_match('/^1[0-9]{10}$/',$value))
 			{
 				$this->illegal = true;
 			}else{
@@ -139,10 +164,9 @@ class CheckForm {
 		}
 	}
 	
-	private function CheckCombobox()
-	{
+	private function CheckCombobox($value) {
 		// 拆分value为三个值。
-		$token=strtok($this->value,"|");
+		$token=strtok($value,"|");
 		$academy=$token;
 		$token=strtok("|");
 		$department=$token;
@@ -169,8 +193,8 @@ class CheckForm {
 		else 	$this->illegal = false;
 	}
 	
-	private function CheckBriefFromDB(){
-		if(!preg_match('/^.{0,300}$/',$this->value))
+	private function CheckBriefFromDB($value) {
+		if(!preg_match('/^.{0,300}$/',$value))
 		{
 			$this->illegal = true;
 		}
@@ -179,7 +203,7 @@ class CheckForm {
 	
 	// 临时获取，以后应当从配置文件或者数据库中获取
 	private function getJson() {
-		require 'ComboxData.php';
+		require_once 'ComboxData.php';
 		$json_obj = json_decode($json_string,TRUE);
 		if(!is_array($json_obj)) return false;
 		return $json_obj;

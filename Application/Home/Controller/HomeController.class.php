@@ -56,8 +56,25 @@ class HomeController extends Controller {
 		$value = I('value', 0, 'strip_tags,htmlspecialchars,trim');
 		$checkForm = new \Home\Common\MyFunc\CheckForm();
 		$allData = I('get.');
-		$allData['username'] = session('username');
-		$checkForm->checkAll($allData);
+		if (isset($_SESSION['username'])) {
+			// 如果存在会话，才开始校验，否则直接退出。
+			$allData['username'] = session('username');
+			if ($checkForm->checkAll($allData)) {
+				if ($this->updateInfo($allData)) {
+					// 写入数据库成功
+					$this->ajaxReturn('var compelete = true;');
+				} else {
+					// 写入数据库失败
+					$this->ajaxReturn('var compelete = false;');
+				}
+			} else {
+				// 后台校验不通过，暂时都通过compelete变量回馈。
+				// 日后应当细分错误信息。
+				$this->ajaxReturn('var compelete = false;');
+			}
+		} else {
+			$this->ajaxReturn('var compelete = false;');
+		}
 	}
 	
 	/**
@@ -80,7 +97,7 @@ class HomeController extends Controller {
 		// sql语句：SELECT nickname,email,phone,address,name,department,academy,
 		//					major,grade,gender,brief,hiddenname FROM user_info where username='username';
 		$condition['username'] = $username;
-		$model->field("nickname,email,phone,address,name,department,academy,major,grade,gender,brief,hiddenname,message")->
+		$model->field("nickname,email,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
 		where($condition)->find();
 		// 构造json，并返回数据
 		return "init_js = ".json_encode($model->data()).";";
@@ -137,5 +154,18 @@ class HomeController extends Controller {
 		// 刷新个人信息Json数据。并返回
 		$initJs = $this->returnBaseinfo();
 		$this->ajaxReturn($initJs,"EVAL");
+	}
+	
+	/**
+	 * 更新数据库
+	 */
+	private function updateInfo($allData) {
+		// sql查询: update user_table set nickname = 'nickname',name = 'name',
+		// ID = 'id',email = 'email', address = 'address', phone = 'phone', gender = 'gender',
+		// academy = 'academy', department = 'department', major = 'major', brief = 'brief',
+		// hidden_name = 'hidden_name' where username = 'username';
+		$username = array_pop($allData);
+		$model = M('info');
+		return $model->where("username = '".$username."'")->save($allData);
 	}
 }
