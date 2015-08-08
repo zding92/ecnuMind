@@ -7,7 +7,7 @@ function OverColor(obj) {
 }
 //鼠标移出颜色
 function Outcolor(obj){
-	//如果是非选中状态
+    //如果是非选中状态
     if (obj.className == "tiaozhan_navoff")
         obj.style.backgroundColor = '#808080';
     //如果是选中的状态
@@ -141,7 +141,6 @@ function step1_check()
         step1_finished = 1;
     else
         step1_finished = 0;
-    //alert(step1_finished);
 }
 
 var data_string;
@@ -155,7 +154,7 @@ $(document).ready(function () {
                     (document.getElementById("project_name").value == document.getElementById("project_name_B2").value) ||
                     (document.getElementById("project_name").value == document.getElementById("project_name_B3").value)
                    ) {
-                    alert("已成功保存");
+                    
                     $("input,select,textarea").each(function () {
                         if (($(this).attr("type") != "radio") && ($(this).attr("type") != "button")&&($(this).attr("type") != "checkbox"))
                             data_string = data_string + $(this).attr("id") + "=" + $(this).val() + "&";
@@ -172,19 +171,17 @@ $(document).ready(function () {
 
                     });
                      $.ajax({
-                            url: "../PHP/NewTiaozhan.php", //请求验证页面 
+                            url: TiaozhanAddDataURL, //请求验证页面 
                             type: "POST", //请求方式
                             async: false,
                             data: data_string,
                             success: function (call) 
                             {
                                  alert(call);
-                                //eval(call);
-                                //if (!compelete) alert('表单有误，请仔细检查后再提交！');
-                                //else {
-                                 //   alert('修改成功！');
-                                    //location = 'LoginSuccess/' + user + '/#main';
-                                  //  }
+                                 //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
+                                 if (tiaozhanDataWri==true) alert("已成功保存");
+                                 else alert("数据写入数据库失败");
+
                             }
                         });
                 }
@@ -200,7 +197,6 @@ $(document).ready(function () {
 var myTimer;
 $(document).ready(function () {
     $("#author1_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer1_fun() }, 1000);
     });
     $("#author1_num").blur(function () {
@@ -208,7 +204,6 @@ $(document).ready(function () {
         Timer_fun1();
     });
     $("#author2_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer2_fun() }, 1000);
     });
     $("#author2_num").blur(function () {
@@ -216,7 +211,6 @@ $(document).ready(function () {
         Timer2_fun();
     });
     $("#author3_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer3_fun() }, 1000);
     });
     $("#author3_num").blur(function () {
@@ -224,7 +218,6 @@ $(document).ready(function () {
         Timer3_fun();
     });
     $("#author4_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer4_fun() }, 1000);
     });
     $("#author4_num").blur(function () {
@@ -232,7 +225,6 @@ $(document).ready(function () {
         Timer4_fun();
     });
     $("#author5_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer5_fun() }, 1000);
     });
     $("#author5_num").blur(function () {
@@ -240,7 +232,6 @@ $(document).ready(function () {
         Timer5_fun();
     });
     $("#author6_num").focus(function () {
-        //alert("Text on focus");
         myTimer = setInterval(function () { Timer6_fun() }, 1000);
     });
     $("#author6_num").blur(function () {
