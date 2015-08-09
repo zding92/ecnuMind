@@ -1,3 +1,4 @@
+html { overflow: scroll; }/*强制显示浏览器滚动条*/
 .Part{
    width: 100%;
    overflow: auto;
