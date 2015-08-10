@@ -97,7 +97,7 @@ class HomeController extends Controller {
 		// sql语句：SELECT nickname,email,phone,address,name,department,academy,
 		//					major,grade,gender,brief,hiddenname FROM user_info where username='username';
 		$condition['username'] = $username;
-		$model->field("nickname,email,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
+		$model->field("nickname,email,studentID,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
 		where($condition)->find();
 		// 构造json，并返回数据
 		return "init_js = ".json_encode($model->data()).";";

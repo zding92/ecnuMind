@@ -63,28 +63,28 @@ function Checkform_name(obj){
     };
 }
 
-function Checkform_ID(obj){
+function Checkform_studentID(obj){
     if (obj.val().length!=11) {
-        $("#ID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-        $("#ID-tip").html('请输入11位学号');
-        $("#ID-tip").slideDown("fast");
+        $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+        $("#studentID-tip").html('请输入11位学号');
+        $("#studentID-tip").slideDown("fast");
     }else {
-        var script = Check_Ajax("ID", "ID", $("#ID").val());
+        var script = Check_Ajax("studentID", "studentID", $("#studentID").val());
         eval(script);
         if (repeat) {
-            $("#ID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-            $("#ID-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');
-            $("#ID-tip").slideDown("fast");
+            $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+            $("#studentID-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');
+            $("#studentID-tip").slideDown("fast");
         }else{
             if(illegal)
             {
-                $("#ID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-                $("#ID-tip").html('请输入正确的学号');
-                $("#ID-tip").slideDown("fast");                  
+                $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+                $("#studentID-tip").html('请输入正确的学号');
+                $("#studentID-tip").slideDown("fast");                  
             }else{
-                $("#ID").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
-                $("#ID-tip").slideUp("fast");               
-                $("#ID-tip").html("");
+                $("#studentID").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
+                $("#studentID-tip").slideUp("fast");               
+                $("#studentID-tip").html("");
             }
         }
     };
@@ -208,8 +208,8 @@ function Checkform(obj){
         case 'name':
             Checkform_name(obj);
             break;
-        case 'ID':
-            Checkform_ID(obj);
+        case 'studentID':
+            Checkform_studentID(obj);
             break;
         case 'Email':
             Checkform_Email();
@@ -294,7 +294,8 @@ $("#form_base").submit(function (ev) {
                 if (!compelete) alert('表单有误，请仔细检查后再提交！');
                 else {
                     alert('修改成功！');
-                    location = 'LoginSuccess/' + user + '/#main';
+                    // 跳转回主页，待修改。
+                    //location = 'LoginSuccess/' + user + '/#main';
                 }
             }
         });

@@ -39,7 +39,7 @@ var init_js;
                     data: "action=" + $(this).attr('id'),
                     beforeSend: function(){              
                     },
-                    success: function (result) {
+                    success: function (result) {            	
                     	eval(result);
                         switch (action) {
                             case 'btn_main':                   
@@ -222,8 +222,8 @@ var init_js;
                                         .append("<div class='form-tip' id='nickname-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='name'>姓名</label><input type='text' name='name' class='form-control' id='name' placeholder='请输入真实姓名'><input type='checkbox' name='hidden_name' id='checkbox-11-2'><label for='checkbox-11-2'></label></div>")
                                         .append("<div class='form-tip' id='name-tip' style='display:none'></div>")
-                                        .append("<div class='form-group'><label class='label1' for='ID'>学号</label><input type='text' name='ID' class='form-control' id='ID' placeholder='请输入学号'></div>")
-                                        .append("<div class='form-tip' id='ID-tip' style='display:none'></div>")
+                                        .append("<div class='form-group'><label class='label1' for='studentID'>学号</label><input type='text' name='studentID' class='form-control' id='studentID' placeholder='请输入学号'></div>")
+                                        .append("<div class='form-tip' id='studentID-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='Email'>电子邮件</label><input type='text' name='email' class='form-control' id='Email' placeholder='example@qq.com'></div>")
                                         .append("<div class='form-tip' id='Email-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='address'>地址</label><input type='text' name='address' class='form-control' id='address' placeholder='请输入你在学校的联系地址'></div>")
@@ -354,7 +354,7 @@ var init_js;
         //普通Input输入框及按钮初始化值
         $("#nickname").val(init_js.nickname);
         $("#name").val(init_js.name);
-        $("#ID").val(init_js.ID);
+        $("#studentID").val(init_js.studentid);
         $("#Email").val(init_js.email);
         $("#address").val(init_js.address);
         $("#phone").val(init_js.phone);
