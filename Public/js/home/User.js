@@ -1,4 +1,4 @@
-var init_js;
+var user_json;
 
 (function () {
 
@@ -222,8 +222,8 @@ var init_js;
                                         .append("<div class='form-tip' id='nickname-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='name'>姓名</label><input type='text' name='name' class='form-control' id='name' placeholder='请输入真实姓名'><input type='checkbox' name='hidden_name' id='checkbox-11-2'><label for='checkbox-11-2'></label></div>")
                                         .append("<div class='form-tip' id='name-tip' style='display:none'></div>")
-                                        .append("<div class='form-group'><label class='label1' for='studentID'>学号</label><input type='text' name='studentID' class='form-control' id='studentID' placeholder='请输入学号'></div>")
-                                        .append("<div class='form-tip' id='studentID-tip' style='display:none'></div>")
+                                        .append("<div class='form-group'><label class='label1' for='studentid'>学号</label><input type='text' name='studentid' class='form-control' id='studentid' placeholder='请输入学号'></div>")
+                                        .append("<div class='form-tip' id='studentid-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='Email'>电子邮件</label><input type='text' name='email' class='form-control' id='Email' placeholder='example@qq.com'></div>")
                                         .append("<div class='form-tip' id='Email-tip' style='display:none'></div>")
                                         .append("<div class='form-group'><label class='label1' for='address'>地址</label><input type='text' name='address' class='form-control' id='address' placeholder='请输入你在学校的联系地址'></div>")
@@ -320,13 +320,13 @@ var init_js;
     }
 
     function MainData() {
-        $(".box1 .welcome").append("<p>" + init_js.nickname + "</p>")
-                       .append("<p>" + init_js.name + "</p>")
-                       .append("<p>" + init_js.major + "</p>");
+        $(".box1 .welcome").append("<p>" + user_json.nickname + "</p>")
+                       .append("<p>" + user_json.name + "</p>")
+                       .append("<p>" + user_json.major + "</p>");
 
         $(".box1 .photo").append("<img src='" + public_url + "/img/photo/face.png' alt='照片载入失败'>");
 
-        $(".box1 .person_intro").append(init_js.brief);
+        $(".box1 .person_intro").append(user_json.brief);
 
         $(".box3").append("<div class='message'>\
                           <div class='from_face'><img src='" + public_url + "/img/photo/face.png' alt='载入失败'></div>\
@@ -340,27 +340,27 @@ var init_js;
         b3.transform();
 	    b1.formEl.name = 'academy';
         b1.formEl.id = 'academy';
-        b1.inputEl.value = init_js.academy;
-        b1.formEl.value = init_js.academy;
+        b1.inputEl.value = user_json.academy;
+        b1.formEl.value = user_json.academy;
         b2.formEl.name = 'department';
         b2.formEl.id = 'department';
-        b2.inputEl.value = init_js.department;
-        b2.formEl.value = init_js.department;
+        b2.inputEl.value = user_json.department;
+        b2.formEl.value = user_json.department;
         b3.formEl.name = 'major';
         b3.formEl.id = 'major';
-        b3.formEl.value = init_js.major;
-        b3.inputEl.value = init_js.major;
+        b3.formEl.value = user_json.major;
+        b3.inputEl.value = user_json.major;
 
         //普通Input输入框及按钮初始化值
-        $("#nickname").val(init_js.nickname);
-        $("#name").val(init_js.name);
-        $("#studentID").val(init_js.studentid);
-        $("#Email").val(init_js.email);
-        $("#address").val(init_js.address);
-        $("#phone").val(init_js.phone);
-        $("#brief").val(init_js.brief);
-        $("#" + init_js.gender).iCheck('check');
-        if(init_js.hidden_name=='true' ? true : false)
+        $("#nickname").val(user_json.nickname);
+        $("#name").val(user_json.name);
+        $("#studentid").val(user_json.studentid);
+        $("#Email").val(user_json.email);
+        $("#address").val(user_json.address);
+        $("#phone").val(user_json.phone);
+        $("#brief").val(user_json.brief);
+        $("#" + user_json.gender).iCheck('check');
+        if(user_json.hidden_name=='true' ? true : false)
             $("#checkbox-11-2").val(true);
         else{
             $("#checkbox-11-2").val(false);

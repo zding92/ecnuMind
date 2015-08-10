@@ -1,5 +1,5 @@
 var Checkform = function() {
-   
+ 
 function Check_Ajax(action,items,value)
 {
     var check_result;
@@ -63,28 +63,28 @@ function Checkform_name(obj){
     };
 }
 
-function Checkform_studentID(obj){
+function Checkform_studentid(obj){
     if (obj.val().length!=11) {
-        $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-        $("#studentID-tip").html('请输入11位学号');
-        $("#studentID-tip").slideDown("fast");
+        $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+        $("#studentid-tip").html('请输入11位学号');
+        $("#studentid-tip").slideDown("fast");
     }else {
-        var script = Check_Ajax("studentID", "studentID", $("#studentID").val());
+        var script = Check_Ajax("studentid", "studentid", $("#studentid").val());
         eval(script);
         if (repeat) {
-            $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-            $("#studentID-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');
-            $("#studentID-tip").slideDown("fast");
+            $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+            $("#studentid-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');
+            $("#studentid-tip").slideDown("fast");
         }else{
             if(illegal)
             {
-                $("#studentID").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-                $("#studentID-tip").html('请输入正确的学号');
-                $("#studentID-tip").slideDown("fast");                  
+                $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+                $("#studentid-tip").html('请输入正确的学号');
+                $("#studentid-tip").slideDown("fast");                  
             }else{
-                $("#studentID").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
-                $("#studentID-tip").slideUp("fast");               
-                $("#studentID-tip").html("");
+                $("#studentid").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
+                $("#studentid-tip").slideUp("fast");               
+                $("#studentid-tip").html("");
             }
         }
     };
@@ -208,8 +208,8 @@ function Checkform(obj){
         case 'name':
             Checkform_name(obj);
             break;
-        case 'studentID':
-            Checkform_studentID(obj);
+        case 'studentid':
+            Checkform_studentid(obj);
             break;
         case 'Email':
             Checkform_Email();
@@ -228,8 +228,7 @@ function Checkform(obj){
 }  
 
 function isChanged($obj){
-    var script = "var init_data=init_js." + $obj.attr('name') + ";";
-    
+    var script = "var init_data=user_json." + $obj.attr('name') + ";";
     eval(script);
     return init_data == $obj.val() ? false : true;
 }
@@ -279,9 +278,9 @@ $("#form_base").submit(function (ev) {
             return;
         if (isChanged(Items)) {
             changed = true;
+            alert($(this).attr('id'));
         }
         submit_value = submit_value + $(this).attr('name') + "=" + $(this).val() + "&";
-        
     })
     if (changed == true) {
         $.ajax({

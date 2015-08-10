@@ -11,7 +11,7 @@ class CheckForm {
 	public function checkOne($action, $value) {
 				
 		$model = M('info');
-		if($action=='nickname' || $action=='studentID'||
+		if($action=='nickname' || $action=='studentid'||
 				$action=='Email' || $action=='phone') {
 			// sql查询： SELECT actionName from user_info where actionName = actionValue;		
 			$this->queryResult = $model->field($action)->where($action."='".$value."'")->find();	
@@ -25,7 +25,7 @@ class CheckForm {
 			case 'name':
 				$this->CheckNameFromDB($value);
 				break;
-			case 'studentID':
+			case 'studentid':
 				$this->CheckStuIDFromDB($value);
 				break;
 			case 'Email':
@@ -59,7 +59,7 @@ class CheckForm {
 		$this->CheckNameFromDB($allData['name']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
-		$this->CheckStuIDFromDB($allData['studentID']);
+		$this->CheckStuIDFromDB($allData['studentid']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
 		$this->CheckEmailFromDB($allData['email']);

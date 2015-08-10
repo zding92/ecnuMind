@@ -62,18 +62,20 @@ class HomeController extends Controller {
 			if ($checkForm->checkAll($allData)) {
 				if ($this->updateInfo($allData)) {
 					// 写入数据库成功
-					$this->ajaxReturn('var compelete = true;');
+					$returnValue = 'var compelete = true;
+											 user_json = '.json_encode($allData).';';
+					$this->ajaxReturn($returnValue, "EVAL");
 				} else {
 					// 写入数据库失败
-					$this->ajaxReturn('var compelete = false;');
+					$this->ajaxReturn('var compelete = false;', "EVAL");
 				}
 			} else {
 				// 后台校验不通过，暂时都通过compelete变量回馈。
 				// 日后应当细分错误信息。
-				$this->ajaxReturn('var compelete = false;');
+				$this->ajaxReturn('var compelete = false;', "EVAL");
 			}
 		} else {
-			$this->ajaxReturn('var compelete = false;');
+			$this->ajaxReturn('var compelete = false;', "EVAL");
 		}
 	}
 	
@@ -97,10 +99,10 @@ class HomeController extends Controller {
 		// sql语句：SELECT nickname,email,phone,address,name,department,academy,
 		//					major,grade,gender,brief,hiddenname FROM user_info where username='username';
 		$condition['username'] = $username;
-		$model->field("nickname,email,studentID,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
+		$model->field("nickname,email,studentid,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
 		where($condition)->find();
 		// 构造json，并返回数据
-		return "init_js = ".json_encode($model->data()).";";
+		$this->ajaxReturn("user_json = ".json_encode($model->data()).";", "EVAL");
 	}
 	
 	private function returnChartData() {
