@@ -102,7 +102,7 @@ class HomeController extends Controller {
 		$model->field("nickname,email,studentid,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
 		where($condition)->find();
 		// 构造json，并返回数据
-		$this->ajaxReturn("user_json = ".json_encode($model->data()).";", "EVAL");
+		return "user_json = ".json_encode($model->data()).";";
 	}
 	
 	private function returnChartData() {

@@ -56,6 +56,8 @@ class IndexController extends Controller {
     	$password = I('post.password', 0, 'strip_tags,htmlspecialchars,trim');
     	// 自动利用表单构建D对象
     	if ($Data->create()) {
+    		// 设置session
+    		session('username', $Data->username);
     		// 初始化用户昵称加上前缀"ecnu_"
     		$Data->nickname = "ecnu_".$Data->username;
     		// 操作数据库->添加数据
