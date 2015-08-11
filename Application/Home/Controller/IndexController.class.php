@@ -60,6 +60,8 @@ class IndexController extends Controller {
     		session('username', $Data->username);
     		// 初始化用户昵称加上前缀"ecnu_"
     		// $Data->nickname = "ecnu_".$Data->username;
+            // 初始化用户昵称（nickname）为username
+        	$Data->nickname = $Data->username;
     		// 操作数据库->添加数据
      		$Data->add();
      		// 返回操作结果。利用js的eval脚本解析功能读取数据。
