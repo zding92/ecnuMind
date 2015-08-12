@@ -54,8 +54,8 @@ var user_json;
                             case 'btn_comp':
                                 CompHtml();
                                 break;
-                            case 'btn_pro':
-                            	ProHtml();
+                            case 'btn_ability':
+                            	AbilityInfo();
                             default: break;
                         }
                     }
@@ -378,8 +378,8 @@ var user_json;
          onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
     }
     
-    function ProHtml() {
-    	$(".info_container").load("test.html");
+    function AbilityInfo() {
+    	$(".info_container").load("ability.html");
     }
 
 })();
