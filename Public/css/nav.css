@@ -159,12 +159,31 @@
       
 .homeHead{
 	width: 100%;
+	min-width: 1190px;
 	height: 90px;
+	float: left;
+	margin: 0;
+	padding: 0;
     background-color:  #e5e5e5;
 }
-#logo2{
+.homeHead ul{
+	list-style: none;
 	width: 1190px;
+	margin: 0 auto;
+	padding: 0;
+}
+#logo2{
 	position: relative;
-	margin: 0 auto;	
+	float: left;
+	margin: 0 auto;
 	padding-top: 10px;
+}
+#welcome_user{
+	position: relative;
+	float: right;
+	margin: 0 auto;
+	padding-top: 35px;
+	color: #777;
+	font-family: SimHei;
+	font-size: 25px;
 }

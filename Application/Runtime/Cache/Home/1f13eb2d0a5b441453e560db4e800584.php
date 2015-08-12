@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>竞赛报名系统</title>
   <script>
-  	var compJSON = '/webprj/ecnu_mind/Public/JSON/Comp.dat'
+  	var compJSON = '/webprj/ecnu_mind/Public/JSON/Comp.dat';
   </script>
   <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
   <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Competition.css" />
