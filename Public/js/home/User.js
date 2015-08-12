@@ -54,6 +54,8 @@ var user_json;
                             case 'btn_comp':
                                 CompHtml();
                                 break;
+                            case 'btn_pro':
+                            	ProHtml();
                             default: break;
                         }
                     }
@@ -374,6 +376,10 @@ var user_json;
          src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
          onload='this.height=Comp_frame.document.body.scrollHeight' \
          onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
+    }
+    
+    function ProHtml() {
+    	$(".info_container").load("test.html");
     }
 
 })();
