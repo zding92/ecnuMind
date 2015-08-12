@@ -5,6 +5,12 @@
         <meta charset="utf-8" />
         <title>挑战杯报名信息录入系统</title>
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Tiaozhan.css" />
+        <script>
+        //返回作者用户的JSON数据地址
+  			var tiaozhanJSON = '/webprj/ecnu_mind/Public/JSON/user.dat';
+         //挑战杯数据写入数据库PHP相应地址
+            var TiaozhanAddDataURL = '/webprj/ecnu_mind/index.php/Home/Tiaozhan/TiaozhanAddData'
+  		</script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script> 
         <script src="/webprj/ecnu_mind/Public/js/Tiaozhan/tiaozhan.js"></script>
     </head>
@@ -16,7 +22,7 @@
 				     <div id="logo_3">人才项目智库</div>
 			    </div> -->
 			    <div id="logo2">
-					<img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png">
+					<a href="/webprj/ecnu_mind/index.php/Home/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png"></a>
 			    </div>
 			    
 		</div>
