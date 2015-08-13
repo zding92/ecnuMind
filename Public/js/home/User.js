@@ -54,6 +54,8 @@ var user_json;
                             case 'btn_comp':
                                 CompHtml();
                                 break;
+                            case 'btn_pro':
+                            	ProHtml();
                             default: break;
                         }
                     }
@@ -370,10 +372,17 @@ var user_json;
 
     function CompHtml()
     {
-        $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
+    	/*
+         $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
          src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
          onload='this.height=Comp_frame.document.body.scrollHeight' \
-         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
+         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")
+    	 */
+    	$(".info_container").load("../Comp/Comp.html");
+    }
+    
+    function ProHtml() {
+    	$(".info_container").load("test.html");
     }
 
 })();
