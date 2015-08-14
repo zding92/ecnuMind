@@ -43,9 +43,12 @@ var user_json;
                     	eval(result);
                         switch (action) {
                             case 'btn_main':                   
-                                MainHtml();
+                                
+                            	MainHtml();
                                 MainData();
                                 RefreshChart(doughnutData, tabs);
+                                
+                            	//$(".info_container").load("personal_main.html");
                                 break;
                             case 'btn_base_info':
                                 InfoHtml();
@@ -372,13 +375,10 @@ var user_json;
 
     function CompHtml()
     {
-    	/*
-         $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
+        $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
          src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
          onload='this.height=Comp_frame.document.body.scrollHeight' \
-         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")
-    	 */
-    	$(".info_container").load("../Comp/Comp.html");
+         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
     }
     
     function ProHtml() {
