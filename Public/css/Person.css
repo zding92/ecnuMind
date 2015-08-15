@@ -505,8 +505,14 @@ font-size: 0px;
     max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin-bottom: 50px;
     min-height: 250px;
+}
+.info_container #L4 {
+    max-height: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 250px;
+    margin-bottom: 50px;
 }
 
 
@@ -521,7 +527,7 @@ font-size: 0px;
 .info_container .ability_head p {
     font-size: 30px;
     margin: 0px auto;
-    font-family: 寰蒋闆呴粦;
+    font-family: 微软雅黑;
     color: #aaa;
     position: relative;
     display: inline-block;
