@@ -1,4 +1,7 @@
 html { overflow: scroll; }/*强制显示浏览器滚动条*/
+body{
+	font-family: 微软雅黑;
+}
 .Part{
    width: 100%;
    overflow: auto;
@@ -33,7 +36,7 @@ font-size: 0px;
     display: block;
     overflow: hidden;
 
-    font-family:  "寰蒋闆呴粦";
+    font-family:  微软雅黑;
     -moz-user-select: none; /*鐏嫄*/
     -webkit-user-select: none; /*webkit娴忚鍣�*/
     -ms-user-select: none; /*IE10*/
@@ -188,7 +191,7 @@ font-size: 0px;
     margin: 5px 10px 5px 10px;
     padding: 3px 10px 2px 10px;
     width: auto;
-    font-family: Arial '寰蒋闆呴粦';
+    font-family: Arial '微软雅黑';
     font-weight: 700;
     font-size: 14px;
     color: #fff;
@@ -204,7 +207,7 @@ font-size: 0px;
     height: 100%;
     width: 100%;
     display: block;
-    font-family: "寰蒋闆呴粦";
+    font-family: "微软雅黑";
     font-size: 35px;
     text-align: center;
     color: rgba(120,120,120,0.5);
@@ -219,7 +222,7 @@ font-size: 0px;
     margin: 0px 25px 30px 25px;
     width: 900px;
     height: 60px;
-    font-family: '寰蒋闆呴粦' Arial;    
+    font-family: '微软雅黑' Arial;    
     font-weight: 300;
     padding: 8px 20px 8px 20px;
     border-bottom: 1px dashed #ccc;
@@ -320,7 +323,7 @@ font-size: 0px;
 
 
 .info_container .form-box .form-group .form-control {
-    font-family: "寰蒋闆呴粦" Arial;
+    font-family: "微软雅黑" Arial;
     font-size: 12px;
     font-weight: 400;
     padding: 10px 20px 10px 20px;
@@ -369,7 +372,7 @@ font-size: 0px;
     color: #fff;
     border: none;
     background: #2b99ce;
-    font-family: '寰蒋闆呴粦';
+    font-family: '微软雅黑';
     font-weight: 700;
     letter-spacing: 10px;
     text-align: center;
@@ -410,7 +413,7 @@ font-size: 0px;
     color: #fff;
     border: none;
     background: #2b99ce;
-    font-family: '寰蒋闆呴粦';
+    font-family: '微软雅黑';
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 5px;
@@ -509,7 +512,6 @@ font-size: 0px;
 }
 .info_container #L4 {
     max-height: 250px;
-    overflow-y: scroll;
     overflow-x: hidden;
     min-height: 250px;
     margin-bottom: 50px;
@@ -580,4 +582,8 @@ font-size: 0px;
 .iframe {
     border: 0px;
     width: 1032px;     
+}
+.abilityDetail{
+	min-width: 680px;
+	height: 200px;
 }
