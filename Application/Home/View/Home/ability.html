@@ -45,7 +45,7 @@
           <div class="ability_head"><p>选择能力</p></div> 
           <form>
             <div id="L3" class="ability_box">
-              <input type="checkbox" class="abilitybox hvr-radial-out" id="abilityTag"data-cat="L1_1_1"><label>前台脚本语言</label>
+              <input type="checkbox" class="abilitybox hvr-radial-out" data-cat="L1_1_1"><label>前台脚本语言</label>
               <input type="checkbox" class="abilitybox hvr-radial-out" data-cat="L1_1_1"><label>前台界面编辑</label>
               <input type="checkbox" class="abilitybox hvr-radial-out" data-cat="L1_1_1"><label>UI设计</label>
               <input type="checkbox" class="abilitybox hvr-radial-out" data-cat="L1_1_2"><label>后台脚本语言</label>
@@ -99,10 +99,11 @@
             <div class="ability_head"><p>能力说明</p></div> 
             <div id="L4" class="ability_box">
               <!-- <input type="text" placeholder="可在此添加经历或认证，来进一步说明此项能力"> -->
-              <div class="headAbilityDetail">为您的能力添加详细说明</div>
-              <textarea class="abilityDetail" id="abilityDetail" onfocus="if(value=='可在此添加经历或认证，来进一步说明此项能力'){value=''}"    
-              			onblur="if (value ==''){value='可在此添加经历或认证，来进一步说明此项能力'}">可在此添加经历或认证，来进一步说明此项能力</textarea>
+              <div class="headAbilityDetail"></div>
+              <textarea class="abilityDetail" id="abilityDetail" onfocus="if(value=='在此添加经历或认证，进一步说明此项能力'){value=''}"    
+              			onblur="if (value ==''){value='在此添加经历或认证，进一步说明此项能力'}" disabled=true>在此添加经历或认证，进一步说明此项能力</textarea>
             </div>
+            <input type="submit" value="保存" class="save_button">
            </form>  
 
           <script src="__PUBLIC__/js/home/Mix.js"></script>

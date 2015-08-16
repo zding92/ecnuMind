@@ -514,7 +514,7 @@ font-size: 0px;
     max-height: 250px;
     overflow-x: hidden;
     min-height: 250px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 
@@ -589,4 +589,23 @@ font-size: 0px;
 }
 .headAbilityDetail{
 	margin-bottom: 5px;
+}
+.save_button{
+          padding: 0px 0px 0px 20px;
+          vertical-align: central;
+          text-align: center;
+          letter-spacing:20px;
+          border: 0px;
+          outline: none;          
+          width: 150px;
+          height: 40px;
+          font-size: 20px;
+          color: #fff; 
+          font-weight: 100;
+          font-family: "微软雅黑";
+          background: #0080FF; 
+          border-radius: 0px;  
+          cursor: pointer;
+          margin-left: 420px;
+          margin-bottom: 50px;
 }
