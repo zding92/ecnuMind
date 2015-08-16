@@ -166,24 +166,47 @@
 	padding: 0;
     background-color:  #e5e5e5;
 }
-.homeHead ul{
+.homeHead > ul{
 	list-style: none;
 	width: 1190px;
 	margin: 0 auto;
 	padding: 0;
 }
-#logo2{
+#left-li{
 	position: relative;
 	float: left;
 	margin: 0 auto;
 	padding-top: 10px;
 }
-#welcome_user{
+#right-li{
 	position: relative;
 	float: right;
 	margin: 0 auto;
-	padding-top: 35px;
+	padding-top: 10px;
+}
+#sub-right-ul{
+	list-style: none;
+	width: 170px;
+	margin: 0 auto;
+	padding: 0;
+}
+#welcome-user{
+	position: relative;
+	float: left;
+	margin: 0 auto;
+	padding-top: 27px;
 	color: #777;
+<<<<<<< HEAD
 	font-family: Î¢ÈíÑÅºÚ;
 	font-size: 20px;
+=======
+	font-family: Microsoft Yahei;
+	font-size: 20px;
+}
+#exit-icon{
+	position: relative;
+	float: right;
+	margin: 0 auto;
+	padding-top: 25px;
+>>>>>>> refs/heads/ChrisLiu
 }

@@ -22,8 +22,8 @@
         	var model_url = "/webprj/ecnu_mind/index.php/Home/Home";
         	var app_url = "/webprj/ecnu_mind/index.php";
         	function showname() {
-	    		document.getElementById("welcome_user").innerHTML =
-				"欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name);
+	    		document.getElementById("welcome-user").innerHTML =
+				"<div>欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name) + "</div>";
 	    	}
         </script>
         <!--<script src="/HtmlJS/Page.js"></script>-->
@@ -38,10 +38,17 @@
 				     <div id="logo_3">人才项目智库</div>
 			    </div> -->
 			    <ul>
-				    <li id="logo2">
+				    <li id="left-li">
 					    <a href="/webprj/ecnu_mind/index.php/Home/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png"></a>
 				    </li>
-				    <li id="welcome_user">
+				    <li id="right-li">
+					    <ul id="sub-right-ul">
+						    <li id="welcome-user">
+						    </li>
+						    <li id="exit-icon">
+						    	<a href="/webprj/ecnu_mind/index.php/Home/Index/index.html"><img alt="Exit" src="/webprj/ecnu_mind/Public/img/icon/myinfo.png" title="退出登录"></a>
+						    </li>
+					    </ul>
 				    </li>
 			    </ul>
 		   </div>
