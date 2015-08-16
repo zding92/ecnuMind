@@ -92,5 +92,14 @@ $(function () {
             }
         })
     });
+
+    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
+    $(function(){//将获取最新的标签文字以及说明添加至页面中
+        $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
+            lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
+            //alert(lastPickedCheckbox);
+            $(".headAbilityDetail").text("为您的"+lastPickedCheckbox+"能力添加详细说明");//将获取最新的标签文字以及说明添加至页面中
+        });
+    })
     
 })();
