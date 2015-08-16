@@ -32,6 +32,10 @@ var user_json;
                 icon_change(img_handle);
                 $(".info_container").empty();
 
+                if (action == 'btn_main') {
+                	$(".info_container").load("personal_main.html");
+                }
+                
                 $.ajax({
                     url: model_url + "/loadPage", //请求验证页面 
                     type: "GET", //请求方式
@@ -43,13 +47,13 @@ var user_json;
                     	eval(result);
                         switch (action) {
                             case 'btn_main':                   
-                                
+                                /*
                             	MainHtml();
                                 MainData();
-                                RefreshChart(doughnutData, tabs);
-                                
-                            	//$(".info_container").load("personal_main.html");
-                                break;
+                                */
+                            	$(".info_container").load("personal_main.html",
+                            						function(){RefreshChart(doughnutData, tabs)});
+                            	break;
                             case 'btn_base_info':
                                 InfoHtml();
                                 InfoData();

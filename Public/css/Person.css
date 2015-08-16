@@ -138,11 +138,11 @@ font-size: 0px;
 
 .Chart .tips{
     border: 1px solid #ddd;
-    padding: 5px 10px 5px 10px;
-    top:-235px;
-    left: 300px;
+    padding: 5px 2px 5px 8px;
+    top: -235px;
+    left: 290px;
     height: 20px;
-    width: 285px;
+    width: 305px;
     position: relative;
     display: inline-block;
 }
