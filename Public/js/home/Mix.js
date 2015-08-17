@@ -23,11 +23,19 @@ $(function () {
         var filterList = {
         init: function () {
             // MixItUp plugin
-            $('#L2').mixitup({
-                targetSelector: '.tags_1',
-                filterSelector: '#L1 .filter',
-                effects: ['fade'],
-                easing: 'snap'
+            $('#L2').mixItUp({
+            	selectors: {
+            		target: '.tags_1',
+            		//filter: '#L1 .filter'
+            	},
+            	load: {
+            		filter: 'all'
+            	},
+                animation: {
+            		duration: 200,
+            		effects: 'fade',
+            		easing: 'ease'
+            }
             });
         }
     }.init();
@@ -35,11 +43,19 @@ $(function () {
     var filterList2 = {
         init: function () {
             // MixItUp plugin
-            $('#L3').mixitup({
-                targetSelector: '.icheckbox_line-blue',
-                filterSelector: '#L2 .filter',
-                effects: ['fade'],
-                easing: 'snap'
+            $('#L3').mixItUp({
+            	selectors: {
+            		target: '.icheckbox_line-blue',
+            		//filter: '#L2 .filter'
+            	},
+            	load: {
+            		filter: 'all'
+            	},
+                animation: {
+            		duration: 200,
+            		effects: 'fade',
+            		easing: 'ease'
+                }
             });
         }
     }.init();
@@ -54,10 +70,11 @@ $(function () {
             filters = filters.replace(/all/, "");
             $("#L1_all").removeClass('active');
             $(this).toggleClass('active');
-            filters = $(this).hasClass('active') ? (filters + " " + $(this).attr('id')) : filters.replace(eval("/" + $(this).attr('id') + " */"), "");
+            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/." + $(this).attr('id') + ",*/"), "");
         }
-        $("#index").attr('data-filter', filters);
-        setTimeout('$("#index").click()', 500);
+        $('#L2').mixItUp('filter', filters);
+        //$("#index").attr('data-filter', filters);
+        //setTimeout('$("#index").click()', 500);
     })
 
     var filters_2 = "";
@@ -70,10 +87,13 @@ $(function () {
             filters_2 = filters_2.replace(/all/, "");
             $("#L2_all").removeClass('active');
             $(this).toggleClass('active');
-            filters_2 = $(this).hasClass('active') ? (filters_2 + " " + $(this).attr('id')) : filters_2.replace(eval("/" + $(this).attr('id') + " */"), "");
+            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id') + ",") : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
         }
-        $("#index2").attr('data-filter', filters_2);
-        setTimeout('$("#index2").click()', 500);
+        alert(123);
+        $('#L3').mixItUp('filter', filters_2);
+        //调试用div，可查看filters内容
+        //$("#index2").attr('data-filter', filters_2);
+//        setTimeout('$("#index2").click()', 500);
     })
 
     var index = 1;
