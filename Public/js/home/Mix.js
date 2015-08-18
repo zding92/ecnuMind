@@ -19,8 +19,8 @@ $(function () {
             $(this).parent().css('display', 'inline-block');
         })
     })
-    
-        var filterList = {
+       
+    var filterList = {
         init: function () {
             // MixItUp plugin
             $('#L2').mixItUp({
@@ -28,14 +28,9 @@ $(function () {
             		target: '.tags_1',
             		//filter: '#L1 .filter'
             	},
-            	load: {
-            		filter: 'all'
-            	},
                 animation: {
-            		duration: 200,
-            		effects: 'fade',
-            		easing: 'ease'
-            }
+            		duration: 300,
+                }
             });
         }
     }.init();
@@ -48,13 +43,8 @@ $(function () {
             		target: '.icheckbox_line-blue',
             		//filter: '#L2 .filter'
             	},
-            	load: {
-            		filter: 'all'
-            	},
                 animation: {
-            		duration: 200,
-            		effects: 'fade',
-            		easing: 'ease'
+            		duration: 300
                 }
             });
         }
@@ -89,13 +79,12 @@ $(function () {
             $(this).toggleClass('active');
             filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id') + ",") : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
         }
-        alert(123);
         $('#L3').mixItUp('filter', filters_2);
         //调试用div，可查看filters内容
         //$("#index2").attr('data-filter', filters_2);
-//        setTimeout('$("#index2").click()', 500);
-    })
-
+        //        setTimeout('$("#index2").click()', 500);
+    });
+    
     var index = 1;
     var last = 1;
     $(function () {

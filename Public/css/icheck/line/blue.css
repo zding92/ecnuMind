@@ -19,11 +19,7 @@
     cursor: pointer;
     height: 18px;
     width: auto;
-    max-width: 200px;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    max-width: 200px
 }
     .icheckbox_line-blue .icheck_line-icon,
     .iradio_line-blue .icheck_line-icon {

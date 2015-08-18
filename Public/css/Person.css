@@ -566,18 +566,13 @@ font-size: 0px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative;
-    overflow: hidden;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    overflow: hidden
 }
 
 .hvr-radial-out:hover {
     cursor: pointer;
     background: #ddd;
 }
-
     
 .iframe {
     border: 0px;
