@@ -17,6 +17,7 @@
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.icheck.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.mixitup.min.js"></script>
+
 		<script type="text/javascript">
         	var public_url = "/webprj/ecnu_mind/Public";
         	var model_url = "/webprj/ecnu_mind/index.php/Home/Home";
@@ -46,7 +47,7 @@
 						    <li id="welcome-user">
 						    </li>
 						    <li id="exit-icon">
-						    	<a href="/webprj/ecnu_mind/index.php/Home/Index/index.html"><img alt="Exit" src="/webprj/ecnu_mind/Public/img/icon/myinfo.png" title="退出登录"></a>
+						    	<a href="/webprj/ecnu_mind/index.php/Home/Index/index.html"><img alt="Exit" src="/webprj/ecnu_mind/Public/img/icon/exit.png" title="退出登录"></a>
 						    </li>
 					    </ul>
 				    </li>
@@ -56,10 +57,11 @@
 		       <div class="nav">
 		           <p>功能列表</p>
 		           <a href="#main" id="btn_main" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/home.png" alt="error"></div>个人首页</a>
+		           <a href="#ability" id="btn_ability" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/ability.png" alt="error"></div>个人能力</a>
 		           <a href="#information" id="btn_info" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/down.png" alt="error"></div>信息管理</a>
 		           <div class="info_child">
 		             <a href="#base_info" id="btn_base_info" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/base.png" alt="error"></div>基本信息</a>
-		             <a href="#ability" id="btn_ability" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/ability.png" alt="error"></div>个人能力</a>
+		            
 		             <a href="#safe" id="btn_safe" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/safe.png" alt="error"></div>安全设置</a>
 		           </div>
 		           <a href="#competitions" id="btn_comp" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/apply.png" alt="error"></div>竞赛报名</a>
