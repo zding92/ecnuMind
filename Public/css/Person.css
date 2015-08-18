@@ -518,7 +518,6 @@ font-size: 0px;
 .info_container #L5 {
     max-height: 200px;
     overflow-x: hidden;
-    min-height: 200px;
     margin-bottom: 20px;
 }
 
@@ -613,4 +612,9 @@ font-size: 0px;
           cursor: pointer;
           margin-left: 420px;
           margin-bottom: 50px;
+}
+.abilityStar{
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-bottom: 10px;
 }

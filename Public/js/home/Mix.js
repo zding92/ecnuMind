@@ -98,11 +98,11 @@ $(function () {
         $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
             if($(this).parent().children("input").attr("checked") == 'checked'){//若选择了该项能力
-                $(".headAbilityDetail").text("在此添加经历或认证,为您的"+lastPickedCheckbox+"能力添加详细说明");//将获取最新的标签文字以及说明添加至页面中
+                $(".headAbilityDetail").html("在此添加经历或认证,为您的<b>"+lastPickedCheckbox+"</b>能力添加详细说明");//将获取最新的标签文字以及说明添加至页面中
                 document.getElementById("abilityDetail").disabled=false;//使能输入框
             }
             else{//若未选择该项能力
-               	$(".headAbilityDetail").text("请先添加"+lastPickedCheckbox+"能力，再添加详细说明");//将获取最新的标签文字以及说明添加至页面中
+               	$(".headAbilityDetail").html("请先添加<b>"+lastPickedCheckbox+"</b>能力，再添加详细说明");//将获取最新的标签文字以及说明添加至页面中
                	document.getElementById("abilityDetail").disabled=true;//禁用输入框
             } 
         });
