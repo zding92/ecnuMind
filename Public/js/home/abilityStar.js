@@ -8,7 +8,6 @@ $(function () {
 		  starOff  : starOffIcon,
 		  starOn   : starOnIcon,
 		  starHalf : starHalfIcon,
-		  readOnly : true,
-		  
+		  readOnly : true,		  
 	});
 })
