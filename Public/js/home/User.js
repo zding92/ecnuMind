@@ -36,6 +36,7 @@ var user_json;
                 	$(".info_container").load("personal_main.html");
                 }
                 
+                
                 $.ajax({
                     url: model_url + "/loadPage", //请求验证页面 
                     type: "GET", //请求方式
@@ -63,6 +64,8 @@ var user_json;
                                 break;
                             case 'btn_ability':
                             	AbilityInfo();
+                            case 'btn_find':
+                            	searchPeople();
                             default: break;
                         }
                     }
@@ -387,6 +390,9 @@ var user_json;
     
     function AbilityInfo() {
     	$(".info_container").load("ability.html");
+    } 
+    function searchPeople() {//在info_container中显示searchPeople.html
+    	$(".info_container").load("searchPeople.html");
     }
 
 })();

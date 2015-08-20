@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+html { overflow: scroll; }/*强制显示浏览器滚动条*/
+body{
+	font-family: 微软雅黑;
+	width: 1030px;
+}
