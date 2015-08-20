@@ -2,5 +2,27 @@
 html { overflow: scroll; }/*强制显示浏览器滚动条*/
 body{
 	font-family: 微软雅黑;
-	width: 1030px;
+}
+.typeSearch{
+	margin: 0 auto;
+	width: 450px;
+	height: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #2b99ce;
+	
+}
+.addConstraint{
+	height: 36px;
+	background: #2b99ce;
+	border: none;
+	line-height: 1;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: -5px;
+}
+.ui-widget{
+	margin-top: 50px;
+	margin-left: 210px;
 }

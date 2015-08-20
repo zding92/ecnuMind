@@ -64,8 +64,10 @@ var user_json;
                                 break;
                             case 'btn_ability':
                             	AbilityInfo();
+                            	break;
                             case 'btn_find':
-                            	searchPeople();
+                            	searchPeople();//点击左侧寻找队友
+                            	break;
                             default: break;
                         }
                     }
