@@ -8,7 +8,8 @@
 		<link rel="bookmark"  type="image/x-icon"  href="__PUBLIC__/img/favicon.ico">
         <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/nav.css" /> 
         <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Person.css" />
-        <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/radios.min.css" />   
+        <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/radios.min.css" />
+        <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/jquery_ui/jquery-ui.css"/>   
         <link href="__PUBLIC__/css/icheck/flat/blue.css" rel="stylesheet">
         <link href="__PUBLIC__/css/icheck/line/blue.css" rel="stylesheet">
         <script src="__PUBLIC__/jsLib/jquery/Chart.js"></script>
@@ -17,11 +18,15 @@
         <script src="__PUBLIC__/jsLib/jquery_ui/jquery-ui.js"></script>
         <script src="__PUBLIC__/jsLib/jquery/jquery.icheck.js"></script>
         <script src="__PUBLIC__/jsLib/jquery/jquery.mixitup.min.js"></script>
+        <script src="__PUBLIC__/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
 
 		<script type="text/javascript">
         	var public_url = "__PUBLIC__";
         	var model_url = "__URL__";
         	var app_url = "__APP__";
+    		var starOnIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-on.png"
+    		var starOffIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-off.png"
+    		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png"	
         	function showname() {
 	    		document.getElementById("welcome-user").innerHTML =
 				"<div>欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name) + "</div>";
