@@ -3,14 +3,24 @@ html { overflow: scroll; }/*强制显示浏览器滚动条*/
 body{
 	font-family: 微软雅黑;
 }
-.typeSearch{
+/*.typeSearch{
 	margin: 0 auto;
 	width: 450px;
 	height: 30px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: #2b99ce;
-	
+	border-color: #2b99ce;	
+}*/
+.typeSearch{
+	margin: 0 auto;
+	width: 250px;
+	height: 18px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #aeabab;
+	float: right;
+	margin-right: 50px;
+	margin-top: 4px;	
 }
 .addConstraint{
 	height: 36px;
@@ -35,7 +45,6 @@ body{
 	height: 34px;
 	overflow: hidden;
 	zoom: 1;
-	margin-top: 10px;
 	font-size: 17px;
 	padding-left: 25px;
 }
@@ -79,4 +88,7 @@ body{
 	margin-right: 50px;
 	font-size: 14px;
 	line-height: 20px;
+}
+input[type=checkbox]+label{
+	font-size: 14px;
 }
