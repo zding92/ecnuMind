@@ -28,19 +28,19 @@ body{
 	margin-left: 220px;
 }
 .s-title {
-border-bottom: 1px solid #DDD;
-border-top: 1px solid #DDD;
-background: #F1F1F1;
-line-height: 34px;
-height: 34px;
-overflow: hidden;
-zoom: 1;
-margin-top: 10px;
-font-size: 17px;
-padding-left: 25px;
+	border-bottom: 1px solid #DDD;
+	border-top: 1px solid #DDD;
+	background: #F1F1F1;
+	line-height: 34px;
+	height: 34px;
+	overflow: hidden;
+	zoom: 1;
+	margin-top: 10px;
+	font-size: 17px;
+	padding-left: 25px;
 }
 .s-title p{
-	font-size: 13px;
+	font-size: 14px;
 	font-familiy: "微软雅黑";
 	display: inline;
 }
@@ -55,4 +55,25 @@ padding-left: 25px;
 	position: relative;
 	line-height: 34px;
 	border-bottom: 1px solid #DDD;
+	height: auto;
+
+}
+.searchPeoplePart2C1{
+	width: 100px;
+	padding-left: 25px;
+	font-size: 14px;
+	position: relative;
+	display: inline;
+	line-height: 34px;
+}
+.searchPeopleTags{
+	display: inline;
+	margin-left: 25px;
+}
+.searchPeopleTag{
+	display: inline;
+	width: 100px;
+	margin-right: 50px;
+	font-size: 14px;
+	line-height: 34px;
 }
