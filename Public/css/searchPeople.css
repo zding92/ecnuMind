@@ -56,24 +56,36 @@ body{
 	line-height: 34px;
 	border-bottom: 1px solid #DDD;
 	height: auto;
+	width: 1030px;
+	padding-left: 25px;
 
 }
+/*.searchPeoplePart2C1{
+	width: 100px;
+}
+.searchPeopleTags{
+	width: 800px;
+}
+.searchPeopleTag{
+	width: 100px;
+	font-size: 14px;
+}*/
 .searchPeoplePart2C1{
 	width: 100px;
 	padding-left: 25px;
 	font-size: 14px;
 	position: relative;
-	display: inline;
+	display: inline-flex;
 	line-height: 34px;
 }
 .searchPeopleTags{
-	display: inline;
+	display: inline-table;
 	margin-left: 25px;
 }
 .searchPeopleTag{
-	display: inline;
-	width: 100px;
+	display: inline-flex;
+	width: 80px;
 	margin-right: 50px;
 	font-size: 14px;
-	line-height: 34px;
+	line-height: 20px;
 }
