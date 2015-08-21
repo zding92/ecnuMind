@@ -20,9 +20,39 @@ body{
 	color: #fff;
 	font-size: 16px;
 	cursor: pointer;
-	margin-left: -5px;
+	margin-left: -6px;
+	font-family: "微软雅黑";
 }
 .ui-widget{
 	margin-top: 50px;
 	margin-left: 220px;
+}
+.s-title {
+border-bottom: 1px solid #DDD;
+border-top: 1px solid #DDD;
+background: #F1F1F1;
+line-height: 34px;
+height: 34px;
+overflow: hidden;
+zoom: 1;
+margin-top: 10px;
+font-size: 17px;
+padding-left: 25px;
+}
+.s-title p{
+	font-size: 13px;
+	font-familiy: "微软雅黑";
+	display: inline;
+}
+.s-title p b{
+	font-size: 1.2em;
+	font-familiy: "微软雅黑";
+	display: inline;
+	color: #e60000;
+	margin-right: 20px;
+}
+.searchPeoplePart2Row{
+	position: relative;
+	line-height: 34px;
+	border-bottom: 1px solid #DDD;
 }

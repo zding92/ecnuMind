@@ -613,3 +613,9 @@ font-size: 0px;
 	margin-left: 25px;
 	margin-bottom: 10px;
 }
+.homeBottom{
+	height: 50px;
+	text-align: center;
+	margin-left: 160px;
+	font-size: 14px;
+}
