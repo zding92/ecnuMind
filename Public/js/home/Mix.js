@@ -1,5 +1,4 @@
 $(function () {
-	
     $('#L3 :input').each(function () {
         var self = $(this),
         label = self.next(),
@@ -18,11 +17,13 @@ $(function () {
             $(this).parent().attr('data-cat', $(this).attr('data-cat'));
             $(this).parent().css('display', 'inline-block');
         })
-    })
+    });
        
     var filterList = {
         init: function () {
             // MixItUp plugin
+        	if ($('#L2').mixItUp('isLoaded'))
+        		$('#L2').mixItUp("destroy");
             $('#L2').mixItUp({
             	selectors: {
             		target: '.tags_1',
@@ -38,6 +39,8 @@ $(function () {
     var filterList2 = {
         init: function () {
             // MixItUp plugin
+        	if ($('#L3').mixItUp('isLoaded'))
+        		$('#L3').mixItUp("destroy");
             $('#L3').mixItUp({
             	selectors: {
             		target: '.icheckbox_line-blue',
