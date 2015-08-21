@@ -60,16 +60,6 @@ body{
 	padding-left: 25px;
 
 }
-/*.searchPeoplePart2C1{
-	width: 100px;
-}
-.searchPeopleTags{
-	width: 800px;
-}
-.searchPeopleTag{
-	width: 100px;
-	font-size: 14px;
-}*/
 .searchPeoplePart2C1{
 	width: 100px;
 	padding-left: 25px;
@@ -84,7 +74,8 @@ body{
 }
 .searchPeopleTag{
 	display: inline-flex;
-	width: 80px;
+	width: auto;
+	min-width: 80px;
 	margin-right: 50px;
 	font-size: 14px;
 	line-height: 20px;
