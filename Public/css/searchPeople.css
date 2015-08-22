@@ -64,8 +64,11 @@ body{
 	position: relative;
 	line-height: 34px;
 	border-bottom: 1px solid #DDD;
+	height: 200px;
+	max-height: 200px;
 	height: auto;
-	width: 1030px;
+	overflow-y: scroll;
+	width: 1000px;
 	padding-left: 25px;
 
 }
@@ -90,5 +93,13 @@ body{
 	line-height: 20px;
 }
 input[type=checkbox]+label{
+	font-size: 14px;
+}
+.searchPeoplePart2RowHead{
+	position: relative;
+	line-height: 34px;
+	height: auto;
+	width: 1030px;
+	padding-left: 25px;
 	font-size: 14px;
 }
