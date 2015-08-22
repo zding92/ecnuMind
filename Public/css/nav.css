@@ -1,8 +1,10 @@
   body{
       color: #45484d;
-/*      background:#fff url(../img/back2.jpg) no-repeat;
-*/      
-	  background-color: #188989;
+      /*background:#fff url(../img/homeBG.jpg) no-repeat;*/
+      background-image:url(../img/homeBG.jpg);
+	  background-repeat:no-repeat;
+	  background-attachment:fixed;      
+	  /*background-color: #188989;*/
       margin: 0px;
       padding: 0px;
       overflow: auto;
