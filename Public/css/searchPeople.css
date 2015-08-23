@@ -109,19 +109,26 @@ input[type=checkbox]+label{
 	display: inline-table;
 }
 .selectedTag{
+	background-color: white;
 	position: relative;
 	width:auto;
-	height:30px;
+	height:28px;
 	border-style: solid;
-	border-width: 2px;
-	border-color: #2b99ce;
+	border-width: 1px;
+	border-color: #9b9b9b;
 	text-align: center;
-	color: #2b99ce;
-	vertical-align：middle;
+	font-size: 12px;
+	vertical-align: middle;
 	margin-top: 5px;
+	margin-bottom: 5px;
 	margin-right: 20px;
+	padding-top: 0px;
 	padding-left: 3px;
 	padding-right: 3px;
+	padding-bottom: 3px;
 	cursor: pointer;
 	display: inline-flex;
+}
+.selectedTag:hover{
+	border-color: #2b99ce;
 }
