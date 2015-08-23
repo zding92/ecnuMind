@@ -20,7 +20,16 @@ $(document).ready(function() {
 		});
 
 		/*If the Tag just clicked has not appeared, then display it*/
-		if (TagHasClicked == 0)	$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');
+		if (TagHasClicked == 0)	{
+			$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');
+			var $w = $(".selectedTag:last").width();
+			var $h = $(".selectedTag:last").height();
+			var $w2 = $w+20;
+			var $h2 = $h+20;
+			$(".selectedTag:last").stop().animate({height:$h2,width:$w2},500,
+				function(){$(".selectedTag:last").stop().animate({height:$h,width:$w+3},500);});
+			
+		}
 		else alert(clickedText+"已经在筛选条件中了");
 
 		$('.selectedTag').click(function() {
