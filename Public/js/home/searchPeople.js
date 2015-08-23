@@ -12,9 +12,14 @@ $(document).ready(function() {
 		var clickedText = $(this).text();
 
 		/*get the offset of the Brower*/
+		/*xPositon是点击位置的div相对浏览器位置*/
 		var xPosition=$($(this)).offset(); 
+
+		/*xParent是已选能力框位置的div相对浏览器位置*/
 		var xParent =  $(".selectedTags").offset();
     	alert("Top: " + xPosition.top + " Left: " + xPosition.left);
+
+    	/*xLeft、xTop是能力筛选池标签相对于此筛选池的位置，也是使用的left和top*/
     	var xLeft = xPosition.left-xParent.left;
     	var xTop = xPosition.top-xParent.top;
 
@@ -29,9 +34,10 @@ $(document).ready(function() {
 		if (TagHasClicked == 0)	{
 			$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件" style="left:'+xLeft+'px;top:'+xTop+'px;">'+$(this).text()+'  ×</div>',
 										function(){
-											$(".selectedTags").css(	"left":"0","top":"0");
+
 										});
-			
+			alert("abc");
+			$(".selectedTag").css({"left":"0","top":"0"});
 			//$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');		
 		}
 		else alert(clickedText+"已经在筛选条件中了");
