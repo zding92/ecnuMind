@@ -43,7 +43,7 @@ body{
 	background: #F1F1F1;
 	line-height: 34px;
 	height: auto;
-	overflow: hidden;
+	width: 1000px;
 	zoom: 1;
 	font-size: 17px;
 	padding-left: 25px;
@@ -105,13 +105,13 @@ input[type=checkbox]+label{
 	font-size: 14px;
 }
 .selectedTags{
-	display: inline-flex;
+	position: relative;
+	display: inline-table;
 }
 .selectedTag{
 	position: relative;
 	width:auto;
 	height:30px;
-	min-width:100px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: #2b99ce;
@@ -120,5 +120,8 @@ input[type=checkbox]+label{
 	vertical-align：middle;
 	margin-top: 5px;
 	margin-right: 20px;
+	padding-left: 3px;
+	padding-right: 3px;
 	cursor: pointer;
+	display: inline-flex;
 }
