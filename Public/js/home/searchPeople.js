@@ -11,9 +11,12 @@ $(document).ready(function() {
 		/*take out the text of the tag just clicked*/
 		var clickedText = $(this).text();
 
-		var x=$($(this)).offset();
-    	alert("Top: " + x.top + " Left: " + x.left);
-
+		/*get the offset of the Brower*/
+		var xPosition=$($(this)).offset(); 
+		var xParent =  $(".selectedTags").offset();
+    	alert("Top: " + xPosition.top + " Left: " + xPosition.left);
+    	var xLeft = xPosition.left-xParent.left;
+    	var xTop = xPosition.top-xParent.top;
 
 		/*Judge each clickedText whether has appeared in the SelectedTags*/
 		$(".selectedTag").each(function() {
@@ -24,14 +27,12 @@ $(document).ready(function() {
 
 		/*If the Tag just clicked has not appeared, then display it*/
 		if (TagHasClicked == 0)	{
-			$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');
-			// var $w = $(".selectedTag:last").width();
-			// var $h = $(".selectedTag:last").height();
-			// var $w2 = $w+20;
-			// var $h2 = $h+20;
-			// $(".selectedTag:last").stop().animate({height:$h2,width:$w2},500,
-			// 	function(){$(".selectedTag:last").stop().animate({height:$h,width:$w+3},500);});
+			$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件" style="left:'+xLeft+'px;top:'+xTop+'px;">'+$(this).text()+'  ×</div>',
+										function(){
+											$(".selectedTags").css(	"left":"0","top":"0");
+										});
 			
+			//$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');		
 		}
 		else alert(clickedText+"已经在筛选条件中了");
 
@@ -41,3 +42,4 @@ $(document).ready(function() {
 		});
 	});
 });
+
