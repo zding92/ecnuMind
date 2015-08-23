@@ -125,9 +125,9 @@ input[type=checkbox]+label{
 	padding-top: 0px;
 	padding-left: 3px;
 	padding-right: 3px;
-	padding-bottom: 3px;
 	cursor: pointer;
 	display: inline-flex;
+	line-height: 28px;
 }
 .selectedTag:hover{
 	border-color: #2b99ce;
