@@ -109,8 +109,6 @@ input[type=checkbox]+label{
 	display: inline-table;
 }
 .selectedTag{
-	left: 0;
-	top: 0;
 	background-color: white;
 	position: relative;
 	width:auto;
@@ -131,9 +129,9 @@ input[type=checkbox]+label{
 	display: inline-flex;
 	line-height: 28px;
 
-	transition:all 2s ease-in-out ;
+	transition:all 0.3s ease-in-out ;
 	-moz-transition:width 2s; /* Firefox 4 */
-	-webkit-transition:all 2s ease-in-out; /* Safari and Chrome */
+	-webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
 	-o-transition:width 2s; /* Opera */
 }
 .selectedTag:hover{
