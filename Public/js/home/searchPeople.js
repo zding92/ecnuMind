@@ -15,16 +15,17 @@ $(document).ready(function() {
 		$(".selectedTag").each(function() {
 			if ($(this).text() == (clickedText+'  ×')) {
 				TagHasClicked = 1;
-				alert(clickedText+"已经在筛选条件中了");
+				
 			};
 		});
 
 		/*If the Tag just clicked has not appeared, then display it*/
 		if (TagHasClicked == 0)	$(".selectedTags").append('<div class="selectedTag" title="点击删除该条件">'+$(this).text()+'  ×</div>');
-	});
+		else alert(clickedText+"已经在筛选条件中了");
 
-	$(".selectedTag").click(function() {
-		/* Act on the click event,点击能力池中的标签，取消此筛选条件 */
-		$(this).remove();
+		$('.selectedTag').click(function() {
+			/* Act on the click event,点击能力池中的标签，取消此筛选条件 */
+			$(this).remove();
+		});
 	});
 });
