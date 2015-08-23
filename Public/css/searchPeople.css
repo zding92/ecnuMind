@@ -42,11 +42,12 @@ body{
 	border-top: 1px solid #DDD;
 	background: #F1F1F1;
 	line-height: 34px;
-	height: 34px;
+	height: auto;
 	overflow: hidden;
 	zoom: 1;
 	font-size: 17px;
 	padding-left: 25px;
+	vertical-align：middle;
 }
 .s-title p{
 	font-size: 14px;
@@ -57,7 +58,7 @@ body{
 	font-size: 1.2em;
 	font-familiy: "微软雅黑";
 	display: inline;
-	color: #e60000;
+	color:#2b99ce;
 	margin-right: 20px;
 }
 .searchPeoplePart2Row{
@@ -102,4 +103,22 @@ input[type=checkbox]+label{
 	width: 1030px;
 	padding-left: 25px;
 	font-size: 14px;
+}
+.selectedTags{
+	display: inline-flex;
+}
+.selectedTag{
+	position: relative;
+	width:auto;
+	height:30px;
+	min-width:100px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #2b99ce;
+	text-align: center;
+	color: #2b99ce;
+	vertical-align：middle;
+	margin-top: 5px;
+	margin-right: 20px;
+	cursor: pointer;
 }
