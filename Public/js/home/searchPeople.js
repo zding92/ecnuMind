@@ -16,12 +16,12 @@ $(document).ready(function() {
 		var xPosition=$($(this)).offset(); 
 
 		/*xParent是已选能力框位置的div相对浏览器位置*/
-		var xParent =  $(".selectedTags").offset();
+		var xParent =  $(".tagPosition:last").offset();
 
     	/*xLeft、xTop是能力筛选池标签相对于此筛选池的位置，也是使用的left和top*/
-    	var xLeft = xPosition.left-xParent.left;
+    	var xLeft = xPosition.left-xParent.left-$(".tagPosition:last").width();;
     	var xTop = xPosition.top-xParent.top;
-
+    	
 		/*Judge each clickedText whether has appeared in the SelectedTags*/
 		$(".selectedTag").each(function() {
 			if ($(this).text() == (clickedText+'  ×')) {
@@ -31,7 +31,8 @@ $(document).ready(function() {
 
 		/*If the Tag just clicked has not appeared, then display it*/
 		if (TagHasClicked == 0)	{
-			$(".selectedTags").append('<div class="selectedTag tag_'+ $(this).text() +'" title="点击删除该条件" style="-webkit-transform:translate('+xLeft+'px,'+xTop+'px);">'+$(this).text()+'  ×</div>');
+			$(".selectedTags").append('<div class="selectedTag tagPosition tag_'+ $(this).text() +'" title="点击删除该条件" style="-webkit-transform:translate('+xLeft+'px,'+xTop+'px);">'+$(this).text()+'  ×</div>');
+			//$(".selectedTags").append('<div class="selectedTag tag_'+ $(this).text() +'" title="点击删除该条件" style="left:'+xLeft+'px;top:'+xTop+'px;">'+$(this).text()+'  ×</div>');
 			var tagsName = ".tag_" + $(this).text();
 			$(tagsName).ready(function(){
 				setTimeout(function(){
