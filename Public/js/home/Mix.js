@@ -109,6 +109,21 @@ $(function () {
     $(function(){//将获取最新的标签文字以及说明添加至页面中
         $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
+            var json2selfCommentPHP = '?User_username='+user_json.nickname+'&Ability_name='+lastPickedCheckbox;
+            
+            $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
+                url: selfCommentJSON,//处理此功能的PHP地址，其值在ability.html中全局引用
+                data : json2selfCommentPHP,//交给PHP处理的输入数据
+                type: "POST", //请求方式
+                async: false,
+                success: function (result) {
+                	eval(result);
+                	$(".abilityDetail").val(selfCommentData.selfComment);
+                	//alert(selfCommentData.selfComment);
+
+                }
+            });
+            
             if($(this).parent().children("input").attr("checked") == 'checked'){//若选择了该项能力
                 $(".headAbilityDetail").html("在此添加经历或认证,为您的<b>"+lastPickedCheckbox+"</b>能力添加详细说明");//将获取最新的标签文字以及说明添加至页面中
                 document.getElementById("abilityDetail").disabled=false;//使能输入框
