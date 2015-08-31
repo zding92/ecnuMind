@@ -109,7 +109,7 @@ $(function () {
     $(function(){//将获取最新的标签文字以及说明添加至页面中
         $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
-            var json2selfCommentPHP = '?User_username='+user_json.nickname+'&Ability_name='+lastPickedCheckbox;
+            var json2selfCommentPHP = 'User_username='+user_json.nickname+'&Ability_name='+lastPickedCheckbox;
             
             $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
                 url: selfCommentJSON,//处理此功能的PHP地址，其值在ability.html中全局引用

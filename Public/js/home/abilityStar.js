@@ -21,6 +21,8 @@ $(function () {
             //判断其是否为默认值，若是默认值，则能力说明框中的值为null
             if (abilityDetail == "在此添加经历或认证，进一步说明此项能力")
                 abilityDetail = null;
+
+            //此处lastPickedCheckbox为上一个点击过的标签
             var ajaxData = 'User_username='+user_json.nickname+'&'+lastPickedCheckbox+'='+checked+'&selfcomment='+abilityDetail;
             // $.ajax({
             //                 url: TiaozhanAddDataURL, //请求验证页面 
