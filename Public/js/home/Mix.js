@@ -109,10 +109,20 @@ $(function () {
     $(function(){//将获取最新的标签文字以及说明添加至页面中
         $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
-            var json2selfCommentPHP = 'User_username='+user_json.nickname+'&Ability_name='+lastPickedCheckbox;
+            
+          //取出能力说明框中的内容
+            var abilityDetail = $(".abilityDetail").val();
+
+            //判断其是否为默认值，若是默认值，则能力说明框中的值为null
+            if (abilityDetail == "在此添加经历或认证，进一步说明此项能力")
+                abilityDetail = "";
+            
+            var json2selfCommentPHP = 'abilityName='+lastPickedCheckbox +'&selfComment='+abilityDetail;
+            
+//            alert(app_url);
             
             $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
-                url: selfCommentJSON,//处理此功能的PHP地址，其值在ability.html中全局引用
+                url: app_url + "/home/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
                 data : json2selfCommentPHP,//交给PHP处理的输入数据
                 type: "POST", //请求方式
                 async: false,
@@ -120,7 +130,6 @@ $(function () {
                 	eval(result);
                 	$(".abilityDetail").val(selfCommentData.selfComment);
                 	//alert(selfCommentData.selfComment);
-
                 }
             });
             

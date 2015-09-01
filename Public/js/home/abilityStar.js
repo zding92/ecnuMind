@@ -23,7 +23,7 @@ $(function () {
                 abilityDetail = null;
 
             //此处lastPickedCheckbox为上一个点击过的标签
-            var ajaxData = 'User_username='+user_json.nickname+'&'+lastPickedCheckbox+'='+checked+'&selfcomment='+abilityDetail;
+            var ajaxData = lastPickedCheckbox+'='+checked+'&selfcomment='+abilityDetail;
             // $.ajax({
             //                 url: TiaozhanAddDataURL, //请求验证页面 
             //                 type: "POST", //请求方式
@@ -38,8 +38,6 @@ $(function () {
 
             //                 }
             //             });
-            alert(ajaxData);
-
 
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
             if($(this).parent().children("input").attr("checked") == 'checked'){//若选择了该项能力
