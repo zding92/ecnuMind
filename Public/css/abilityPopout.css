@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+.theme-popover-mask {
+	z-index: 9998;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	display:none
+}
+.theme-popover {
+	z-index:9999;
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:800px;
+	height:500px;
+	margin:-250px 0 0 -400px;
+	border-radius:5px;
+	border:solid 2px #666;
+	background-color:#fff;
+	display:none;
+	box-shadow: 0 0 10px #666;
+}
+.popoutLine1{
+	height: 75px;
+	width: 100%;
+	background-color: #2b99ce;
+}
+.popoutLine2{
+	height: 120px;
+	width: 100%;
+	background-color: #d2d2d2;
+}
+.popoutLine3{
+	height: 65px;
+	width: 100%;
+	background-color: white;
+}
+.popoutLine4{
+	height: 240px;
+	width: 100%;
+	background-color: #fff;
+} 
+.popoutAblityName{
+	color:  #fff;
+	font-size: 30px;
+	width: 500px;
+	margin-left: 30px;
+	margin-top: 16px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+}
+.popoutLine1 img{
+	display: inline;
+	width: auto;
+	height: 75px;
+	margin-left: 0px;
+}
+.popoutLine1Right{
+	height: 75px;
+	width: 186px;
+	background-color: #1f749d;
+	display: inline-block;
+	margin-left: -5px;
+	vertical-align: top;
+	color: white;
+}
+.theme-popover .close{
+	display: inline;
+	font-size: 18px;
+	line-height: 18px;
+	cursor: pointer;
+	color: white;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.theme-popover .close:hover{
+	color: #6fbce1;
+}
+.popoutLine1Text{
+	margin-top: 25px;
+	margin-left: 45px;
+}
+.popoutLine3Green{
+	display: inline-block;
+	width: 100px;
+	height: 65px;
+	position: absolute;
+	background-color: #2bce61;
+}
+.popoutLine3Red{
+	display: inline-block;
+	width: 100%;
+	height: 65px;
+	position: static;
+	background-color: #fd5d32;
+}
+.popoutLine3{
+	color: white;
+	font-size: 30px;
+}
+.popoutLine3RedText{
+	float: right;
+}
+.line3Selected{
+	color: white;
+	font-size: 11px;
+}
+.line3Selected b{
+	font-size: 30px;
+}
+.line3RedSelected{
+	margin-right: 120px;
+	margin-top: 10px;
+}
+.line3RedUnselected{
+	margin-right: 35px;
+	margin-top: 10px;
+}
+.line3GreenUnselected{
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.line3GreenSelected{
+	margin-left: 185px;
+	margin-top: 10px;
+}
+
+
+
+
+

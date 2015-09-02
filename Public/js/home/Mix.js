@@ -128,7 +128,7 @@ $(function () {
                 async: false,
                 success: function (result) {
                 	eval(result);
-                	$(".abilityDetail").val(selfCommentData.selfComment);
+                	//$(".abilityDetail").val(selfCommentData.selfComment);
                 	//alert(selfCommentData.selfComment);
                 }
             });
@@ -143,5 +143,45 @@ $(function () {
             } 
         });
     })
+    
+    //以下函数为，点击选择能力的标签，出现弹出框
+	$("ins").click(function(){
+		$('.popoutAblityName').text($(this).parent().text());
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	
+	$('.theme-popover .close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+	
+	//点击绿色区域，绿色区域滚动放大
+	$('.popoutLine3Green').click(function(){
+		$('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
+		$('.popoutLine3GreenText').addClass("line3GreenSelected");//表明绿色选中
+		$('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
+		$('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
+		$('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中			
+		
+		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");	
+		$('.popoutLine3RedText').html("×");
+		$('.popoutLine3Green').animate({width:'700px'},"middle");
+	})
+	
+	//点击红色区域，红色区域滚动放大
+	$('.popoutLine3Red').click(function(){
+		$('.popoutLine3RedText').addClass("line3Selected");
+		$('.popoutLine3RedText').addClass("line3RedSelected");
+		$('.popoutLine3GreenText').removeClass("line3Selected");
+		$('.popoutLine3RedText').removeClass("line3RedUnselected");
+		$('.popoutLine3GreenText').removeClass("line3GreenSelected");
+		
+		$('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");		
+		$('.popoutLine3GreenText').html("√");
+		$('.popoutLine3Green').animate({width:'100px'},"middle");
+	})
+	
+
     
 })();
