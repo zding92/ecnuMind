@@ -5,7 +5,8 @@
 	<script>
 		var starOnIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-on.png"
 		var starOffIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-off.png"
-		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png"		
+		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png"
+		var selfCommentJSON = '__PUBLIC__/JSON/selfComment.dat';
 	</script>
 </head>
 <body>
@@ -115,9 +116,9 @@
             	<div class="abilityStar"></div>
             	<div class="abilityRemarkNum">在此查看能力获评次数</div>
             </div>
-            <input type="submit" value="保存" class="save_button">
+            <input type="button" value="保存" class="save_button abilitySave">
            </form>  
-
+		  <script src="__PUBLIC__/js/home/abilitySave.js"></script>
           <script src="__PUBLIC__/js/home/Mix.js"></script>
           <script src="__PUBLIC__/js/home/abilityStar.js"></script>
 	</body>

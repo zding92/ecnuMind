@@ -22,7 +22,7 @@ class IndexController extends Controller {
     	$password = I('post.password', 0, 'strip_tags,htmlspecialchars,trim');
     	// sql查询： SELECT password,username FROM user_info where username='username';
     	$condition['username'] = $username;
-    	$result = $Data->where($condition)->field('PASSWORD,USERNAME')->find();
+    	$result = $Data->where($condition)->field('PASSWORD,USERNAME,ID')->find();
     	// 如果查询失败，代表user不存在，返回下列js变量，利用eval脚本解析器运行获取变量。
 		if ($result == null){
 			$this->ajaxReturn( "var user_noexist=true; var login=false;",
@@ -32,6 +32,7 @@ class IndexController extends Controller {
 		else if ($result['password'] == md5($password)) {
 			// 将username放入session，作为后续用户操作身份句柄
 			session('username', $username);
+			session('userid', $Data->id);
 			
 			// 返回参数。
 	    	$this->ajaxReturn("var login=true;
