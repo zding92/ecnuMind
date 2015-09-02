@@ -8,7 +8,8 @@
 		<link rel="bookmark"  type="image/x-icon"  href="/webprj/ecnu_mind/Public/img/favicon.ico">
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/nav.css" /> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Person.css" />
-        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />   
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.css"/>   
         <link href="/webprj/ecnu_mind/Public/css/icheck/flat/blue.css" rel="stylesheet">
         <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/Chart.js"></script>
@@ -17,11 +18,15 @@
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.icheck.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.mixitup.min.js"></script>
+        <script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
 
 		<script type="text/javascript">
         	var public_url = "/webprj/ecnu_mind/Public";
         	var model_url = "/webprj/ecnu_mind/index.php/Home/Home";
         	var app_url = "/webprj/ecnu_mind/index.php";
+    		var starOnIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
+    		var starOffIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
+    		var starHalfIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"	
         	function showname() {
 	    		document.getElementById("welcome-user").innerHTML =
 				"<div>欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name) + "</div>";
@@ -70,9 +75,12 @@
 		           <a href="#help" id="btn_help" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/help.png" alt="error"></div>发布求助</a>
 		       </div>
 		       <div class="info_container">
-		       </div>
+		       </div>		       
 		    </div>
 	    </div>
+	    <div class="homeBottom">
+		       		联系我们|智库团队版权所有 ©2015-2016
+		</div>
 	    <script src="/webprj/ecnu_mind/Public/js/home/User.js"></script>
     </body>
 

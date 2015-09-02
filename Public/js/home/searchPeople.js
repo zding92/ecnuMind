@@ -1,8 +1,40 @@
 /**
  * This js is for the using of searchPeople Page
  */
+
+var ability_json;
+
 $(document).ready(function() {
-	$("#searchPeoplePart2Row3 .searchPeopleTag").click(function() {
+	
+	$.ajax({url: model_url + "/genDB",
+            type: "GET", //请求方式
+            async:false,
+            dataType: "json",
+            success: function() {alert("ok!")}
+		   })
+//	alert(model_url + "/genDB");
+		   
+	var filter = {
+        init: function () {
+            if ($('#L2').mixItUp('isLoaded'))
+        		$('#L2').mixItUp("destroy");
+            $('#L2').mixItUp({
+            	selectors: {
+            		target: '#L2 .searchPeopletag',
+            	},
+                animation: {
+            		duration: 300,
+                }
+            });
+        }
+    }.init();
+
+    $('#L2 .searchPeopleTag').click(function () {
+        $('#L2').mixItUp('filter', '.L1_1');
+    })
+
+    $("#searchPeoplePart2Row3 .searchPeopleTag").click(function() {
+		
 		/* Act on the click event,点击能力标签，添加至筛选池 */
 
 		/* TagHasClicked = 0 means the tag has not been clicked; TagHasClicked = 1 means the tag has been clicked*/

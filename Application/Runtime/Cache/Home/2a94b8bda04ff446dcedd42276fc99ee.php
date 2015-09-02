@@ -31,7 +31,7 @@
 <body>
 	<section class="section-wrap">
 		<div class="section section-1">
-			<div id="formbackground">
+			<div id="formbackground">  
 			<img src="/webprj/ecnu_mind/Public/img/back_large.jpg" style="width: auto;height: auto" alt="图片载入失败">
 			</div> 
 			
