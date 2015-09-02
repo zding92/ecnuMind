@@ -6,13 +6,17 @@ var ability_json;
 
 $(document).ready(function() {
 	
-	$.ajax({url: model_url + "/genDB",
+	$.ajax({url: app_url + "/Home/ability/genDB",
             type: "GET", //请求方式
             async:false,
             dataType: "json",
-            success: function() {alert("ok!")}
-		   })
-//	alert(model_url + "/genDB");
+            //beforeSend: function() {alert("start!")},
+            //complete: function() {alert("finish!")},
+            success: function(data) {
+            		ability_json = eval("("+data+")");
+            		alert("json ok!");
+            	}
+			})
 		   
 	var filter = {
         init: function () {

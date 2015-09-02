@@ -8,58 +8,7 @@ class HomeController extends Controller {
 	 */
 	public function home(){
 		$this->display();
-	}
-	
-	/**
-	 * 生成数据库内的三级能力的json格式数据
-	 */
-	public function genDB() {
-		// 连接数据库
-		$conn = new mysqli("localhost:3306", "ecnu_mind", "hello world", "EcnuMind");
-		
-		if ($conn->connect_errno) {
-			exit();
-		}
-
-		// 定义ability_json数据
-		$ability = "ability_json = {";
-
-		// 生成json格式数据
-		$result = $conn->query("select * from field");
-		
-		for ($i = 0; $i < $result->num_rows; ++$i)
-		{
-			$row = mysqli_fetch_assoc($result);
-			$ability = $ability.'"'.$row['name'].'":{';
-			$res2 = $conn->query('select * from direction where Field_id = '.$row['id']);
-			for ($j = 0; $j < $res2->num_rows; ++$j)
-			{
-				$row2 = mysqli_fetch_assoc($res2);
-				$ability = $ability.'"'.$row2['name'].'":{';
-				$res3 = $conn->query('select * from ability where Direction_id = '.$row2['id']);
-				for ($k = 0; $k < $res3->num_rows; ++$k)
-				{
-					$row3 = mysqli_fetch_assoc($res3);
-					$ability = $ability.'"'.$row3['name'].'"';
-					if ($k < $res3->num_rows - 1)
-						$ability = $ability.',';
-				}
-				$ability = $ability.'}';
-				if ($j < $res2->num_rows - 1)
-					$ability = $ability.',';
-			}
-			$ability = $ability.'}';
-			if ($i < $result->num_rows - 1)
-				$ability = $ability.',';
-		}
-		
-		$ability = $ability.'};';
-		
-		// 返回json格式数据
-		$this->ajaxReturn($ability, "EVAL");
-		mysqli_close($conn);
-	}
-	
+	}	
 	
 	/**
 	 * 载入个人主页时提交Ajax数据的Target

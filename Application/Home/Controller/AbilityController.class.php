@@ -3,6 +3,56 @@ namespace Home\Controller;
 use Think\Controller;
 class AbilityController extends Controller {
 	
+	/**
+	 * 生成数据库内的三级能力的json格式数据
+	 */
+	public function genDB() {
+		// 连接数据库
+		$conn = new \mysqli("localhost", "ecnu_mind_admin", "hello world", "ecnu_mind", "3306");
+	
+		if ($conn->connect_errno) {
+			exit();
+		}
+	
+		// 定义ability_json数据
+		$ability = "{";
+	
+		// 生成json格式数据
+		$result = $conn->query("select * from field");
+	
+		for ($i = 0; $i < $result->num_rows; ++$i)
+		{
+			$row = mysqli_fetch_assoc($result);
+			$ability = $ability.'"'.$row['name'].'":{';
+			$res2 = $conn->query('select * from direction where Field_id = '.$row['id']);
+			for ($j = 0; $j < $res2->num_rows; ++$j)
+			{
+				$row2 = mysqli_fetch_assoc($res2);
+				$ability = $ability.'"'.$row2['name'].'":{';
+				$res3 = $conn->query('select * from ability where Direction_id = '.$row2['id']);
+				for ($k = 0; $k < $res3->num_rows; ++$k)
+				{
+					$row3 = mysqli_fetch_assoc($res3);
+					$ability = $ability.'"'.$row3['name'].'"';
+					if ($k < $res3->num_rows - 1)
+						$ability = $ability.',';
+				}
+				$ability = $ability.'}';
+				if ($j < $res2->num_rows - 1)
+					$ability = $ability.',';
+			}
+			$ability = $ability.'}';
+			if ($i < $result->num_rows - 1)
+				$ability = $ability.',';
+		}
+	
+		$ability = $ability.'};';
+	
+		// 关闭数据库连接并返回json格式数据
+		mysqli_close($conn);
+		$this->ajaxReturn($ability, "EVAL");
+	}
+	
 	public function checkAbility() {
 		$abilityName = I('abilityName', 0, 'strip_tags,htmlspecialchars,trim');
 		$selfComment = I('selfComment', 0, 'strip_tags,htmlspecialchars,trim');
