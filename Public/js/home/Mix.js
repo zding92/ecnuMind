@@ -1,4 +1,4 @@
-$(function () {
+var mix = function () {
     $('#L3 :input').each(function () {
         var self = $(this),
         label = self.next(),
@@ -142,6 +142,5 @@ $(function () {
                	document.getElementById("abilityDetail").disabled=true;//禁用输入框
             } 
         });
-    })
-    
-})();
+    })   
+};

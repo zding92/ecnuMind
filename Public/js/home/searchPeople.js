@@ -11,20 +11,20 @@ $(document).ready(function() {
             async:false,
             dataType: "json",
             //beforeSend: function() {alert("start!")},
-            //complete: function() {alert("finish!");},            
-            success: function(result) {
+            //complete: function() {alert("finish!")},
+            success: function(data) {
+            		ability_json = eval("("+data+")");
             		alert("json ok!");
-            		eval(result);
             	}
 			})
-			
+		   
 	var filter = {
         init: function () {
             if ($('#L2').mixItUp('isLoaded'))
         		$('#L2').mixItUp("destroy");
             $('#L2').mixItUp({
             	selectors: {
-            		target: '.searchPeopleTag',
+            		target: '#L2 .searchPeopletag',
             	},
                 animation: {
             		duration: 300,
@@ -32,12 +32,11 @@ $(document).ready(function() {
             });
         }
     }.init();
-	
-    $('.searchPeopleTag').click(function () {
-    	//$(this).toggleClass('active');
+
+    $('#L2 .searchPeopleTag').click(function () {
         $('#L2').mixItUp('filter', '.L1_1');
     })
-    
+
     $("#searchPeoplePart2Row3 .searchPeopleTag").click(function() {
 		
 		/* Act on the click event,点击能力标签，添加至筛选池 */

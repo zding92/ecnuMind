@@ -1,0 +1,74 @@
+[
+	{
+	  "no":"TZ2015",
+	  "name":"2015年挑战杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"Open"
+	},
+	{
+	  "no":"DX2015",
+	  "name":"2015年大夏杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"In Progress"
+	},
+	{
+      "no":"TZ2014",
+	  "name":"2014年挑战杯报名",
+	  "link":"<a style='color:#aaa;margin:0px auto;'>点此报名</a>",
+	  "status":"Closed"
+	},
+	{
+	  "no":"TZ2015",
+	  "name":"2015年挑战杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"Open"
+	},
+	{
+	  "no":"DX2015",
+	  "name":"2015年大夏杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"In Progress"
+	},
+	{
+      "no":"TZ2014",
+	  "name":"2014年挑战杯报名",
+	  "link":"<a style='color:#aaa;margin:0px auto;'>点此报名</a>",
+	  "status":"Closed"
+	},
+	{
+	  "no":"TZ2015",
+	  "name":"2015年挑战杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"Open"
+	},
+	{
+	  "no":"DX2015",
+	  "name":"2015年大夏杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"In Progress"
+	},
+	{
+      "no":"TZ2014",
+	  "name":"2014年挑战杯报名",
+	  "link":"<a style='color:#aaa;margin:0px auto;'>点此报名</a>",
+	  "status":"Closed"
+	},
+	{
+	  "no":"TZ2015",
+	  "name":"2015年挑战杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"Open"
+	},
+	{
+	  "no":"DX2015",
+	  "name":"2015年大夏杯报名",
+	  "link":"<a href='../Tiaozhan/Tiaozhan.html'>点此报名</a>",
+	  "status":"In Progress"
+	},
+	{
+      "no":"TZ2014",
+	  "name":"2014年挑战杯报名",
+	  "link":"<a style='color:#aaa;margin:0px auto;'>点此报名</a>",
+	  "status":"Closed"
+	}
+]

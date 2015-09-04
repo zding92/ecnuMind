@@ -1,13 +1,13 @@
-<html>
+<?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script src="__PUBLIC__/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
-    <script src="__PUBLIC__/js/home/Mix.js"></script>
+	<script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
+    <script src="/webprj/ecnu_mind/Public/js/home/Mix.js"></script>
 	<script>
-		var starOnIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-on.png"
-		var starOffIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-off.png"
-		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png"
-		var selfCommentJSON = '__PUBLIC__/JSON/selfComment.dat';
+		var starOnIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
+		var starOffIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
+		var starHalfIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"
+		var selfCommentJSON = '/webprj/ecnu_mind/Public/JSON/selfComment.dat';
 	</script>
 </head>
 <body>
@@ -119,12 +119,10 @@
             </div>
             <input type="button" value="保存" class="save_button abilitySave">
            </form>  
-		  <script src="__PUBLIC__/js/home/abilitySave.js"></script>
-          <script src="__PUBLIC__/js/home/abilityStar.js"></script>
+		  <script src="/webprj/ecnu_mind/Public/js/home/abilitySave.js"></script>
+          <script src="/webprj/ecnu_mind/Public/js/home/abilityStar.js"></script>
           <script type="text/javascript">
           	mix();
           </script>
 	</body>
-</html>         
-         
-          
+</html>

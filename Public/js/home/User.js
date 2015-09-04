@@ -1,6 +1,6 @@
 var user_json;
 
-(function () {
+$(document).ready(function () {
 
     var script_load_finished = new function () {
         this.base_info = false;
@@ -66,7 +66,7 @@ var user_json;
                             	AbilityInfo();
                             	break;
                             case 'btn_find':
-                            	searchPeople();//点击左侧寻找队友
+                            	searchPeople();
                             	break;
                             default: break;
                         }
@@ -393,11 +393,12 @@ var user_json;
     function AbilityInfo() {
     	$(".info_container").load("ability.html");
     } 
+    
     function searchPeople() {//在info_container中显示searchPeople.html
     	$(".info_container").load("searchPeople.html");
     }
 
-})();
+});
 
 
  /*$('#chart-area').mouseover = function (evt) {

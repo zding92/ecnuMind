@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>竞赛报名系统</title>
-  <script>
-  	var compJSON = '/webprj/ecnu_mind/Public/JSON/Comp.dat';
-  </script>
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
   <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
-  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Competition.css" />
-  <script src="/webprj/ecnu_mind/Public/js/Comp/Comp.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
 </head>
 
 <body style="background-color: #fff">
-    <table id="table" class="table table-hover table-mc-light-blue" >
+  <div style="margin:10px 15px 15px;">
+    <table data-toggle="table" data-url="/webprj/ecnu_mind/Public/JSON/Comp.json" data-height="620" data-pagination="true" data-search="true" >
       <thead>
         <tr>
-          <th id="c1">ID</th>
-          <th id="c2">竞赛名称</th>
-          <th id="c3">报名链接</th>
-          <th id="c4">报名状态</th>
+          <th data-field="no">ID</th>
+          <th data-field="name">竞赛名称</th>
+          <th data-field="link">报名链接</th>
+          <th data-field="status">报名状态</th>
         </tr>
       </thead>
-      <tbody>
-        
-      </tbody>
     </table>
+  </div>
 </body>
 
 </html>
