@@ -6,18 +6,48 @@ var ability_json;
 
 $(document).ready(function() {
 	
+	// 请求后台生成json格式的数据
 	$.ajax({url: app_url + "/Home/ability/genDB",
-            type: "GET", //请求方式
+            type: "GET",
             async:false,
             dataType: "json",
-            //beforeSend: function() {alert("start!")},
-            //complete: function() {alert("finish!");},            
             success: function(result) {
-            		alert("json ok!");
-            		eval(result);
+            		ability_json = result;
+            		var cnt1 = new Number(1);
+            		for (l1 in ability_json) {
+            			
+            			var obj1 = $("<div></div>");
+            			obj1.attr("id", "L1_" + cnt1.toString());
+            			obj1.addClass("searchPeopleTag");
+            			obj1.html(l1);
+            			obj1.appendTo("#L1");
+            			
+            			var cnt2 = new Number(1);
+            			for (l2 in ability_json[l1]) {
+            				
+            				var obj2 = $("<div></div>");
+            				obj2.attr("id", "L1_" + cnt1.toString() + "_" + cnt2.toString());
+            				obj2.addClass("searchPeopleTag " + "L1_" + cnt1.toString());
+            				obj2.html(l2);
+            				obj2.appendTo("#L2");
+            				
+            				for (l3 in ability_json[l1][l2]) {
+            					var obj3 = $("<input type='checkbox' class='searchPeopleTag'>");
+            					obj3.addClass("L1_" + cnt1.toString() + "_" + cnt2.toString());
+            					obj3.appendTo("#L3");
+            					var label = $("<label></label>");
+            					label.addClass("searchPeopleTag");
+            					label.html(ability_json[l1][l2][l3]["name"]);
+            					label.appendTo("#L3");
+            				}
+            				cnt2 = cnt2 + 1;
+            			}
+            			cnt1 = cnt1 + 1;
+            		}
             	}
 			})
-			
+	
+	// 实例化mixitup
 	var filter = {
         init: function () {
             if ($('#L2').mixItUp('isLoaded'))
@@ -33,11 +63,12 @@ $(document).ready(function() {
         }
     }.init();
 	
+	// 定义mixitup的过滤规则
     $('.searchPeopleTag').click(function () {
     	//$(this).toggleClass('active');
         $('#L2').mixItUp('filter', '.L1_1');
     })
-    
+	
     $("#searchPeoplePart2Row3 .searchPeopleTag").click(function() {
 		
 		/* Act on the click event,点击能力标签，添加至筛选池 */

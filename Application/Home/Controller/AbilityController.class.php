@@ -37,7 +37,7 @@ class AbilityController extends Controller {
 		// 调试
 		//$str1 = urldecode(json_encode($list1).";");
 		// 返回json格式的数据
-		return $this->ajaxReturn(urldecode("ability_json = ".json_encode($list1).";"), "EVAL");
+		return $this->ajaxReturn(urldecode(json_encode($list1)), "EVAL");
 	}
 	
 	public function checkAbility() {
