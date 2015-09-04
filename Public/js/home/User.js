@@ -1,11 +1,15 @@
 var user_json;
 
 $(document).ready(function () {
-
     var script_load_finished = new function () {
         this.base_info = false;
         this.ability = false;
     };
+    
+    function showname() {
+		document.getElementById("welcome-user").innerHTML =
+		"<div>欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name) + "</div>";
+	}
 
     $(document).ready(function () {
         $("#btn_main").trigger("click");
@@ -54,6 +58,7 @@ $(document).ready(function () {
                                 */
                             	$(".info_container").load("personal_main.html",
                             						function(){RefreshChart(doughnutData, tabs)});
+                            	showname();
                             	break;
                             case 'btn_base_info':
                                 InfoHtml();
