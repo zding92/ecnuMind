@@ -35,6 +35,17 @@ if (val=="NULL")
         document.getElementById("B2_form").style.display = "none";
         document.getElementById("B3_form").style.display = "none";
         document.getElementById("NULL_B").style.display = "block";
+        
+        //仅使用B1表中的input或textarea，其他表中的禁用
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",false);
+        })
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
     }
 if (val=="B1")
     {
@@ -45,6 +56,17 @@ if (val=="B1")
         document.getElementById("B2_form").style.display = "none";
         document.getElementById("B3_form").style.display = "none";
         document.getElementById("NULL_B").style.display = "none";
+        
+      //仅使用B1表中的input或textarea，其他表中的禁用
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",false);
+        })
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
+        $("B1_form:input,B1_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
     }
 if (val=="B2")
     {
@@ -55,6 +77,17 @@ if (val=="B2")
         document.getElementById("B2_form").style.display = "block";
         document.getElementById("B3_form").style.display = "none";
         document.getElementById("NULL_B").style.display = "none";
+        
+      //仅使用B2表中的input或textarea，其他表中的禁用
+        $("B2_form:input,B2_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
+        $("B2_form:input,B2_form:textarea").each(function(){
+        	$(this).attr("disabled",false);
+        })
+        $("B2_form:input,B2_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
     }
 if (val=="B3")
     {
@@ -65,6 +98,17 @@ if (val=="B3")
         document.getElementById("B2_form").style.display = "none";
         document.getElementById("B3_form").style.display = "block";
         document.getElementById("NULL_B").style.display = "none";
+        
+        //仅使用B3表中的input或textarea，其他表中的禁用
+        $("B3_form:input,B3_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
+        $("B3_form:input,B3_form:textarea").each(function(){
+        	$(this).attr("disabled",true);
+        })
+        $("B3_form:input,B3_form:textarea").each(function(){
+        	$(this).attr("disabled",false);
+        })
     }
 
 }
