@@ -9,14 +9,14 @@
         //返回作者用户的JSON数据地址
   			var tiaozhanJSON = '__PUBLIC__/JSON/user.dat';
          //挑战杯数据写入数据库PHP相应地址
-            var TiaozhanAddDataURL = '__URL__/TiaozhanAddData'
+            var TiaozhanAddDataURL = '__APP__/Home/Tiaozhan/test';
   		</script>
         <script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
         <script src="__PUBLIC__/js/Tiaozhan/tiaozhan.js"></script>
     </head>
     <body>
         <div class="info_container">
-        <form method="post">
+        <form id="tiaozhanForm">
             <h1 class="head">挑战杯报名信息录入系统</h1>         
             <div class="tiaozhan_nav">
                 <div id="tiaozhan_nav1" class="tiaozhan_navon" onclick="ShowStep1()" onmouseover="OverColor(this)" onmouseout="Outcolor(this)"><p>第一步：项目基本信息</p></div>
@@ -87,7 +87,7 @@
                         <h2>单位电话</h2><input type="text" class="teacher_workphone" id="referee_workphone">
                         <h2>住宅电话</h2><input type="text" class="teacher_homephone" id="referee_homephone">
                         <br>
-                        <input type="submit" value="保存" class="save_button">
+                        <input type="button" value="保存" class="save_button">
                         <input type="button" value="下一步" class="next_button" onclick="ShowStep2()"> 
                         
                     </div>
@@ -269,7 +269,7 @@
                             </select>
                         <br><br>
                         <input type="button" value="上一步" class="pre_button2" onclick="ShowStep1()">
-                        <input type="submit" value="保存" class="save_button" >
+                        <input type="button" value="保存" class="save_button" >
                         <input type="button" value="下一步" class="next_button2" onclick="ShowStep3()">
                         <br><br>
                     
@@ -332,7 +332,7 @@
                    <h1>当前国内外同类课题研究水平概述:</h1><br><br><textarea class="B1_form" id="B1_form_10"></textarea>
                    <br><br>
                    <input type="button" value="上一步" class="pre_button2" onclick="ShowStep2()">
-                   <input type="submit" value="保存" class="save_button">
+                   <input type="button" value="保存" class="save_button">
                    <input type="button" value="提交" class="next_button2">
                </div>
                 
@@ -407,7 +407,7 @@
                    <h1>当前国内外同类课题研究水平概述:</h1><br><br><textarea class="B2_form" id="B2_form_11"></textarea>
                    <br><br>
                    <input type="button" value="上一步" class="pre_button2" onclick="ShowStep2()">
-                   <input type="submit" value="保存" class="save_button">
+                   <input type="button" value="保存" class="save_button">
                    <input type="button" value="提交" class="next_button2">                        
                </div>
                <div id="B3_form">
@@ -482,7 +482,7 @@
                    <h1>当前国内外同类课题研究水平概述:</h1><br><br><textarea class="B3_form" id="B3_form_9"></textarea>
                    <br><br>
                    <input type="button" value="上一步" class="pre_button2" onclick="ShowStep2()">
-                   <input type="submit" value="保存" class="save_button">
+                   <input type="button" value="保存" class="save_button">
                    <input type="button" value="提交" class="next_button2">
                    <br><br>
                </div>

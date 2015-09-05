@@ -37,15 +37,15 @@ if (val=="NULL")
         document.getElementById("NULL_B").style.display = "block";
         
         //仅使用B1表中的input或textarea，其他表中的禁用
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",false);
-        })
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
+//        $("B1_form:input,B1_form:textarea").each(function(){
+//        	$(this).attr("disabled",false);
+//        })
+//        $("B2_form:input,B2_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
+//        $("B3_form:input,B3_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
     }
 if (val=="B1")
     {
@@ -58,15 +58,15 @@ if (val=="B1")
         document.getElementById("NULL_B").style.display = "none";
         
       //仅使用B1表中的input或textarea，其他表中的禁用
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",false);
-        })
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
-        $("B1_form:input,B1_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
+//        $("B1_form:input,B1_form:textarea").each(function(){
+//        	$(this).attr("disabled",false);
+//        })
+//        $("B2_form:input,B2_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
+//        $("B3_form:input,B3_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
     }
 if (val=="B2")
     {
@@ -79,15 +79,15 @@ if (val=="B2")
         document.getElementById("NULL_B").style.display = "none";
         
       //仅使用B2表中的input或textarea，其他表中的禁用
-        $("B2_form:input,B2_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
-        $("B2_form:input,B2_form:textarea").each(function(){
-        	$(this).attr("disabled",false);
-        })
-        $("B2_form:input,B2_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
+//        $("B1_form:input,B1_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
+//        $("B2_form:input,B2_form:textarea").each(function(){
+//        	$(this).attr("disabled",false);
+//        })
+//        $("B3_form:input,B3_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
     }
 if (val=="B3")
     {
@@ -100,15 +100,15 @@ if (val=="B3")
         document.getElementById("NULL_B").style.display = "none";
         
         //仅使用B3表中的input或textarea，其他表中的禁用
-        $("B3_form:input,B3_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
-        $("B3_form:input,B3_form:textarea").each(function(){
-        	$(this).attr("disabled",true);
-        })
-        $("B3_form:input,B3_form:textarea").each(function(){
-        	$(this).attr("disabled",false);
-        })
+//        $("B1_form:input,B1_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
+//        $("B2_form:input,B2_form:textarea").each(function(){
+//        	$(this).attr("disabled",true);
+//        })
+//        $("B3_form:input,B3_form:textarea").each(function(){
+//        	$(this).attr("disabled",false);
+//        })
     }
 
 }
@@ -214,6 +214,7 @@ $(document).ready(function () {
                             }
 
                     });
+                    alert($('#tiaozhanForm').serialize());
                      $.ajax({
                             url: TiaozhanAddDataURL, //请求验证页面 
                             type: "POST", //请求方式
@@ -221,10 +222,10 @@ $(document).ready(function () {
                             data: data_string,
                             success: function (call) 
                             {
-                                 alert(call);
-                                 //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
-                                 if (tiaozhanDataWri==true) alert("已成功保存");
-                                 else alert("数据写入数据库失败");
+//                                 alert(call);
+//                                 //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
+//                                 if (tiaozhanDataWri==true) alert("已成功保存");
+//                                 else alert("数据写入数据库失败");
 
                             }
                         });
@@ -232,7 +233,7 @@ $(document).ready(function () {
                 else alert("请检查第一步与第三步中项目名称是否一致");
             }
             else alert("请完整填写第一步报名信息");
-            alert(data_string);
+            //alert(data_string);
         });
     });
 });
@@ -728,3 +729,4 @@ function Timer6_fun() {
         });
     }
 }
+
