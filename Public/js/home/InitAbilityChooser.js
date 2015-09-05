@@ -1,4 +1,4 @@
-var mix = function () {
+function InitAbilityChooser() {
     $('#L3 :input').each(function () {
         var self = $(this),
         label = self.next(),

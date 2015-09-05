@@ -4027,64 +4027,65 @@ hide: function () {
 });
 
     var a = $kit.els8cls($kit.ui.Form.ComboBox.Select.defaultConfig.transformCls), a1 = [];
-			     for(var i = 0; i < a.length; i++) {
-				   a1.push(a[i])
-			     }
-			     a = a1;
-			     b1 = new $kit.ui.Form.ComboBox.Select({
-				 el : a[0],
-				 data : (function() {
-					var academyTree = new TreeDict();
-					for(var academy in SchoolJSON) {
-						academyTree.ad(academy, academy);					  
-                    }
-                    return academyTree;
-				    })()
-			    });
-			    b1.transform();
-			    b1.ev({
-				ev : 'change',
-				fn : function() {
-					
-					if(SchoolJSON[b1.inputEl.value] == null) {
-						return;
-					}
-                    var academy = SchoolJSON[b1.inputEl.value];
-					var departmentTree = new TreeDict();
-					for(var department in academy) {
-						departmentTree.ad(department, department);
-					}
-					b2.inputEl.value = '';
-					b2.formEl.value = '';
-					b2.config.data = departmentTree;
-					b2.list.buildList(departmentTree.search(''));
-				}
-			  });
-			  b2 = new $kit.ui.Form.ComboBox.Select({
-				el : a[1],
-				data : undefined
-			   });
-		       b2.transform();
-		       b2.ev({
-			   ev : 'change',
-			   fn : function() {				
-					if(SchoolJSON[b1.inputEl.value][b2.inputEl.value] == null) {
-						return;
-					}
-                    var department = SchoolJSON[b1.inputEl.value][b2.inputEl.value];
 
-					var majorTree = new TreeDict();
-					for(var major in department) {
-						majorTree.ad(major, department[major]);
-					}
-					b3.inputEl.value = '';
-					b3.formEl.value = '';
-					b3.config.data = majorTree;
-					b3.list.buildList(majorTree.search(''));
-				}
-			});
-			b3 = new $kit.ui.Form.ComboBox.Select({
-				el : a[2],
-				data : undefined
-			});
+     for(var i = 0; i < a.length; i++) {
+	   a1.push(a[i])
+     }
+     a = a1;
+     b1 = new $kit.ui.Form.ComboBox.Select({
+	 el : a[0],
+	 data : (function() {
+		var academyTree = new TreeDict();
+		for(var academy in SchoolJSON) {
+			academyTree.ad(academy, academy);					  
+        }
+        return academyTree;
+	    })()
+    });
+    b1.transform();
+    b1.ev({
+	ev : 'change',
+	fn : function() {
+		
+		if(SchoolJSON[b1.inputEl.value] == null) {
+			return;
+		}
+        var academy = SchoolJSON[b1.inputEl.value];
+		var departmentTree = new TreeDict();
+		for(var department in academy) {
+			departmentTree.ad(department, department);
+		}
+		b2.inputEl.value = '';
+		b2.formEl.value = '';
+		b2.config.data = departmentTree;
+		b2.list.buildList(departmentTree.search(''));
+	}
+  });
+  b2 = new $kit.ui.Form.ComboBox.Select({
+	el : a[1],
+	data : undefined
+   });
+   b2.transform();
+   b2.ev({
+   ev : 'change',
+   fn : function() {				
+		if(SchoolJSON[b1.inputEl.value][b2.inputEl.value] == null) {
+			return;
+		}
+        var department = SchoolJSON[b1.inputEl.value][b2.inputEl.value];
+
+		var majorTree = new TreeDict();
+		for(var major in department) {
+			majorTree.ad(major, department[major]);
+		}
+		b3.inputEl.value = '';
+		b3.formEl.value = '';
+		b3.config.data = majorTree;
+		b3.list.buildList(majorTree.search(''));
+	}
+	});
+	b3 = new $kit.ui.Form.ComboBox.Select({
+		el : a[2],
+		data : undefined
+	});
 };

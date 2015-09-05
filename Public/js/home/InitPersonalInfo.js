@@ -1,5 +1,132 @@
-var Checkform = function() {
- 
+function InitPersonalInfo() {
+///\根据user_json初始化数据
+///----------------------
+//Combobox初始化值
+b3.transform();
+b1.formEl.name = 'academy';
+b1.formEl.id = 'academy';
+b1.inputEl.value = user_json.academy;
+b1.formEl.value = user_json.academy;
+b2.formEl.name = 'department';
+b2.formEl.id = 'department';
+b2.inputEl.value = user_json.department;
+b2.formEl.value = user_json.department;
+b3.formEl.name = 'major';
+b3.formEl.id = 'major';
+b3.formEl.value = user_json.major;
+b3.inputEl.value = user_json.major;
+
+//普通Input输入框及按钮初始化值
+$("#nickname").val(user_json.nickname);
+$("#name").val(user_json.name);
+$("#studentid").val(user_json.studentid);
+$("#Email").val(user_json.email);
+$("#address").val(user_json.address);
+$("#phone").val(user_json.phone);
+$("#brief").val(user_json.brief);
+$("#" + user_json.gender).iCheck('check');
+
+if(user_json.hidden_name=='true' ? true : false)
+    $("#checkbox-11-2").val(true);
+else{
+    $("#checkbox-11-2").val(false);
+    $("#checkbox-11-2").attr('checked','checked');
+}
+///----------------------
+///\结束数据初始化
+	
+	
+///\ 初始化相关事件响应函数
+///---------------------
+$("#checkName").click(function () {
+  $("#checkName").val($("#checkName").val() == "false" ? "true" : "false");
+});
+
+var btn_valid = true;
+
+$('.sexbox').iCheck({
+    checkboxClass: 'icheckbox_flat-blue',
+    radioClass: 'iradio_flat-blue'
+});
+
+$("#btn_edit").click(function () {
+    if (btn_valid) {
+        btn_valid = false;
+        $("#Page2").css('display', 'inline-block');
+        $("#ChangePage").animate({
+            right: "800px"
+        }, 300, function () {
+            $("#Page2").css('left', '800px');
+            $("#Page1").css('display', 'none');
+            btn_valid = true;
+        });
+    }
+});
+
+$("#btn_photo").click(function () {
+    if (btn_valid) {
+        btn_valid = false;
+        $("#Page1").css('display', 'inline-block');
+        $("#Page2").css('left', '0px');
+        $("#ChangePage").animate({
+            right: "0px"
+        }, 300, function () {
+            $("#Page2").css('display', 'none');
+            btn_valid = true;
+        });
+    }
+});
+
+$("#image_file").hover(function(){
+    $("#btn_upload").css("background","rgb(59,169,222)");
+})
+
+$("#image_file").mouseout(function(){
+    $("#btn_upload").css("background","#2b99ce");
+})
+
+
+
+//表单提交事件。
+$("#form_base").submit(function (ev) {
+    ev.preventDefault();
+    var submit_value = "";
+    var changed = false;
+    $("#form_base input[class!='kitjs-form-suggestselect-input'],textarea").each(function () {
+        var Items = $(this);
+        if ($(this).attr('name') == 'gender' && !$(this).parent().hasClass('checked'))
+            return;
+        if (isChanged(Items)) {
+            changed = true;
+            alert($(this).attr('id'));
+        }
+        submit_value = submit_value + $(this).attr('name') + "=" + $(this).val() + "&";
+    })
+    // 如何相对于一开始没有改变，则不提交。
+    if (changed == true) {
+        $.ajax({
+            url: model_url + "/submitModify", //请求验证页面 
+            type: "GET", //请求方式
+            async: false,
+            data: submit_value,
+            success: function (call) {
+                eval(call);
+                if (!compelete) alert('表单有误，请仔细检查后再提交！');
+                else {
+                    alert('修改成功！');
+                    // 跳转回主页，待修改。
+                    //location = 'LoginSuccess/' + user + '/#main';
+                }
+            }
+        });
+    }
+    return false;
+})
+///-----------------------
+///\初始化结束
+
+///\表单验证方法
+///\-----------------------------------
 function Check_Ajax(action,items,value)
 {
     var check_result;
@@ -267,40 +394,8 @@ $('#form_base .form-group input,textarea').blur(function () {
         $(tips).html("");
     }
 })
-
-$("#form_base").submit(function (ev) {
-    ev.preventDefault();
-    var submit_value = "";
-    var changed = false;
-    $("#form_base input[class!='kitjs-form-suggestselect-input'],textarea").each(function () {
-        var Items = $(this);
-        if ($(this).attr('name') == 'gender' && !$(this).parent().hasClass('checked'))
-            return;
-        if (isChanged(Items)) {
-            changed = true;
-            alert($(this).attr('id'));
-        }
-        submit_value = submit_value + $(this).attr('name') + "=" + $(this).val() + "&";
-    })
-    if (changed == true) {
-        $.ajax({
-            url: model_url + "/submitModify", //请求验证页面 
-            type: "GET", //请求方式
-            async: false,
-            data: submit_value,
-            success: function (call) {
-                eval(call);
-                if (!compelete) alert('表单有误，请仔细检查后再提交！');
-                else {
-                    alert('修改成功！');
-                    // 跳转回主页，待修改。
-                    //location = 'LoginSuccess/' + user + '/#main';
-                }
-            }
-        });
-    }
-    return false;
-})
+///-----------------------------------
+///\表单验证方法声明结束
 };
 
 

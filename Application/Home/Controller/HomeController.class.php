@@ -16,11 +16,14 @@ class HomeController extends Controller {
 	public function loadPage() {
 		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
 		switch ($action) {
+			case "getUserJson" :
+				$this->returnBaseinfo();
+				break;
 			case "btn_main" : 
-				$this->showMain();						
+				$this->getMainData();						
 				break;
 			case "btn_base_info" :
-				$this->showBaseInfo();
+				$this->getBaseInfoData();
 				break;
 			default : break;
 		}
@@ -82,8 +85,7 @@ class HomeController extends Controller {
 	/**
 	 * 返回主界面初始化所需要的数据。
 	 */
-	private function showMain() {
-		$initJs = $this->returnBaseinfo();
+	private function getMainData() {
 		$chartData = $this->returnChartData();
 		$this->ajaxReturn($initJs.$chartData, "EVAL");
 	}
@@ -102,7 +104,8 @@ class HomeController extends Controller {
 		$model->field("nickname,email,studentid,phone,address,name,department,academy,major,grade,gender,brief,hidden_name,message")->
 		where($condition)->find();
 		// 构造json，并返回数据
-		return "user_json = ".json_encode($model->data()).";";
+		$this->ajaxReturn(json_encode($model->data()), "EVAL");
+
 	}
 	
 	private function returnChartData() {
@@ -152,7 +155,7 @@ class HomeController extends Controller {
 	/**
 	 * 显示个人信息界面
 	 */
-	private function showBaseInfo() {
+	private function getBaseInfoData() {
 		// 刷新个人信息Json数据。并返回
 		$initJs = $this->returnBaseinfo();
 		$this->ajaxReturn($initJs,"EVAL");
