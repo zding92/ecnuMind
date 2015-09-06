@@ -1548,3 +1548,11 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+
+function checkNull($id) {
+	if ($id === '') {
+		return 'null';
+	} else {
+		return id;
+	}
+}

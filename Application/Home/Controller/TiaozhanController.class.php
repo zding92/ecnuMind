@@ -11,36 +11,80 @@ class TiaozhanController extends Controller {
 	 * 将挑战杯的数据录入数据库
 	 */
 	public function TiaozhanAddData(){
-		// 将comp_Tiaozhan数据表实例化
-		$Data = M('ecnu_mind.tiaozhan_basic_info',null);
+		// 添加教师信息。
+		$TeacherId = $this->addTeacherInfo();
 		
-		// 设置自动完成规则。检查如果学号为空字符''，则设置其为null.
-		$auto = array (
-            array('author2_id','$this->checkNull',1,'function'),
-            array('author3_id','$this->checkNull',1,'function'),
-			array('author4_id','$this->checkNull',1,'function'),
-			array('author5_id','$this->checkNull',1,'function'),
-			array('author6_id','$this->checkNull',1,'function')
-		);
-		$Data->setProperty("_auto", $auto);
-		// 根据表单提交的POST数据创建数据对象
-		$Data->create();
-		// 获取具体表格b1,b2 or b3
-		$bn = strtolower($Data->type_selector);
-		$prj_id = $Data->add();
-		$BnTable = M('ecnu_mind.tiaozhan_'.$bn,null);
-		$BnTable->create();
-		$array = $BnTable->data();
-		$array['prj_id'] = $prj_id;
-		$BnTable->add($array);
-
-		// 根据条件保存修改的数据
-		if ($Data->save()) $this->ajaxReturn("var tiaozhanDataWri=true;","EVAL"); 	
+		// 添加推荐人信息。
+		$RefereeId = $this->addRefereeInfo();
+		
+		// 添加基本信息
+		$BasicReturnArray = $this->addBasicInfo($TeacherId, $RefereeId);
+		
+		// 添加表格说明（长文本）
+		$this->addTableInfo($BasicReturnArray['prj_id'], $BasicReturnArray['bn']);
+		
 	}
 	
-	private function checkNull($id) {
-		if ($id === '') {
-			return null;
-		}
+	private function addTeacherInfo() {
+		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
+		// 根据表单提交的POST数据创建数据对象
+		$TeacherModel->create();
+		// 添加到teacher表并返回主键。
+		return $TeacherModel->filter('strip_tags')->add();
+	}
+	
+	private function addRefereeInfo() {
+		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
+		// 根据表单提交的POST数据创建数据对象
+		$TeacherModel->create();
+		// 载入所有referee的属性。
+		$refereeData['referee_id'] = $TeacherModel->referee_id;
+		$refereeData['referee_name'] = $TeacherModel->referee_name;
+		$refereeData['referee_gender'] = $TeacherModel->referee_gender;
+		$refereeData['referee_age'] = $TeacherModel->referee_age;
+		$refereeData['referee_job'] = $TeacherModel->referee_job;
+		$refereeData['referee_add'] = $TeacherModel->referee_add;
+		$refereeData['referee_zipcode'] = $TeacherModel->referee_zipcode;
+		$refereeData['referee_workphone'] = $TeacherModel->referee_workphone;
+		$refereeData['referee_homephone'] = $TeacherModel->referee_homephone;
+		// 添加到teacher表并返回主键。
+		return $TeacherModel->data($refereeData)->filter('strip_tags')->add();
+	}
+	
+	private function addBasicInfo($TeacherId, $RefereeId) {
+		$BasicModel = M('ecnu_mind.tiaozhan_basic_info',null);
+		
+		$auto = array (
+				array('author2_id','checkNull',1,'function'),
+				array('author3_id','checkNull',1,'function'),
+				array('author4_id','checkNull',1,'function'),
+				array('author5_id','checkNull',1,'function'),
+				array('author6_id','checkNull',1,'function'),
+				array('prj_date','date',3,'function',array('Y-m-d'))
+		);
+		// 根据表单提交的POST数据创建数据对象
+ 		$BasicModel->auto($auto)->create();
+// 		$BasicModel->create();
+		$BasicData = $BasicModel->data();
+		$BasicData['teacher_id'] = $TeacherId;
+		$BasicData['referee_id'] = $RefereeId;
+		
+		// 获取具体表格b1,b2 or b3
+		$bn = strtolower($BasicModel->type_selector);
+		
+		// 入库并返回project id.
+		$prj_id = $BasicModel->data($BasicData)->filter('strip_tags')->add();
+	
+		$returnArray['bn'] = $bn;
+		$returnArray['prj_id'] = $prj_id;
+		return $returnArray;
+	}
+	
+	private function addTableInfo($prj_id, $bn) {
+		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
+		$TableModel->create();
+		$TableData = $TableModel->data();
+		$TableData['prj_id'] = $prj_id;
+		$TableModel->data($TableData)->filter('strip_tags')->add();
 	}
 }
