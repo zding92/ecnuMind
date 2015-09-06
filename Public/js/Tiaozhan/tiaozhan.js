@@ -214,12 +214,11 @@ $(document).ready(function () {
                             }
 
                     });
-                    alert($('#tiaozhanForm').serialize());
                      $.ajax({
                             url: TiaozhanAddDataURL, //请求验证页面 
                             type: "POST", //请求方式
                             async: false,
-                            data: data_string,
+                            data: $('#tiaozhanForm').serialize(),
                             success: function (call) 
                             {
 //                                 alert(call);
@@ -246,7 +245,7 @@ $(document).ready(function () {
     });
     $("#author1_num").blur(function () {
         clearInterval(myTimer);
-        Timer_fun1();
+        Timer1_fun();
     });
     $("#author2_num").focus(function () {
         myTimer = setInterval(function () { Timer2_fun() }, 1000);

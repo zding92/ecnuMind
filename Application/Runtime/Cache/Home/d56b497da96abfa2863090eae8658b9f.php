@@ -2,7 +2,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
-    <script src="/webprj/ecnu_mind/Public/js/home/Mix.js"></script>
+    <script src="/webprj/ecnu_mind/Public/js/home/InitAbilityChooser.js"></script>
 	<script>
 		var starOnIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
 		var starOffIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
@@ -122,7 +122,7 @@
 		  <script src="/webprj/ecnu_mind/Public/js/home/abilitySave.js"></script>
           <script src="/webprj/ecnu_mind/Public/js/home/abilityStar.js"></script>
           <script type="text/javascript">
-          	mix();
+          	InitAbilityChooser();
           </script>
 	</body>
 </html>

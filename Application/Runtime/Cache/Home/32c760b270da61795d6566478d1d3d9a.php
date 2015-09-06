@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Personal Main Page</title>
 <script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/hoverTag.js"> </script>
+<script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/home.js"> </script>
 </head>
 <body>
 
@@ -62,15 +63,7 @@
 	</div>
 
 	<script type="text/javascript">
-        $(".box1 .welcome").append("<p>" + user_json.nickname + "</p>")
-        .append("<p>" + user_json.name + "</p>")
-        .append("<p>" + user_json.major + "</p>");
-
-		$(".box1 .photo").append("<img src='" + public_url + "/img/photo/face.png' alt='照片载入失败'>");
-
-		$(".box1 .person_intro").append(user_json.brief);
-
-		$(".box3").append("<div class='message'><div class='from_face'><img src='" + public_url + "/img/photo/face.png' alt='载入失败'></div><div class='from'>Admin:</div><p class='content'>我想请你吃饭~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>");
+	  getDataFromServer()
 	</script>
 	
 </body>
