@@ -27,10 +27,12 @@ class TiaozhanController extends Controller {
 		$Data->create();
 		// 获取具体表格b1,b2 or b3
 		$bn = strtolower($Data->type_selector);
-		$Data->add();
+		$prj_id = $Data->add();
 		$BnTable = M('ecnu_mind.tiaozhan_'.$bn,null);
 		$BnTable->create();
-		$BnTable->add();
+		$array = $BnTable->data();
+		$array['prj_id'] = $prj_id;
+		$BnTable->add($array);
 
 		// 根据条件保存修改的数据
 		if ($Data->save()) $this->ajaxReturn("var tiaozhanDataWri=true;","EVAL"); 	
