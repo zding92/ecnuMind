@@ -1,6 +1,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/css/abilityPopout.css" rel="stylesheet">
 	<script src="__PUBLIC__/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
     <script src="__PUBLIC__/js/home/InitAbilityChooser.js"></script>
 	<script>
@@ -104,9 +105,8 @@
               <input type="checkbox" class="hvr-radial-out" data-cat="L1_4_5"><label>素描</label>
               <input type="checkbox" class="hvr-radial-out" data-cat="L1_4_5"><label>油彩</label>     
             </div>
-            <div class="ability_head"><p>能力说明</p></div> 
+            <!-- <div class="ability_head"><p>能力说明</p></div> 
             <div id="L4" class="ability_box">
-              <!-- <input type="text" placeholder="可在此添加经历或认证，来进一步说明此项能力"> -->
               <div class="headAbilityDetail"></div>
               <textarea class="abilityDetail" id="abilityDetail" onfocus="if(value=='在此添加经历或认证，进一步说明此项能力'){value=''}"    
               			onblur="if (value ==''){value='在此添加经历或认证，进一步说明此项能力'}" disabled=true>在此添加经历或认证，进一步说明此项能力</textarea>
@@ -117,8 +117,56 @@
             	<div class="abilityStar"></div>
             	<div class="abilityRemarkNum">在此查看能力获评次数</div>
             </div>
-            <input type="button" value="保存" class="save_button abilitySave">
-           </form>  
+            <input type="button" value="保存" class="save_button abilitySave"> -->
+           </form> 
+           
+          <div class="theme-popover"> <!-- 此DIV为弹出窗口 -->
+		  	<div class="popoutLine1">
+		  		<p class="popoutAblityName">高速PCB设计</p>
+		  		<img src="__PUBLIC__/img/popout/popoutLine1Right.png" alt="error">
+		  		<div class="popoutLine1Right"> 
+		  			<div class="popoutLine1Text">
+			  			<div class="close popoutLine1Save">保存</div> |
+			  			<div class="close popoutLine1Cancel">取消</div>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="popoutLine2">
+		  		<div class="popoutLine2Line1">
+		  			<b>668人</b>会这项能力
+		  		</div>
+		  		<div class="popoutLine2Line2">
+		  			能力相关技术：<b>通信工程、电子工程、数字电路</b>
+		  		</div>
+		  	</div>
+		  	<div class="popoutLine3">
+		  		<div class="popoutLine3Green">
+		  			<div class="popoutLine3GreenText line3GreenUnselected">√</div>
+		  		</div>
+		  		<div class="popoutLine3Red">
+		  			<div class="popoutLine3RedText line3Selected line3RedSelected"><b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）</div>
+		  		</div>
+		  		
+		  	</div>
+		  	<div class="popoutLine4">
+		  		<div class="abilityDetailHead">
+		  			<img src="__PUBLIC__/img/popout/abilityDetailHead.png" alt="error">
+		  			<h1>能力详细说明</h1>
+		  		</div>
+		  		<div class="abilityDetailContainer" style="z-index:99">
+			  		<div class="abilityDetailCover">
+			  			<img src="__PUBLIC__/img/popout/abilityDetailCover.png" alt="error">	
+			  			<h1>点击以编辑此能力的详细说明</h1>	  			
+			  		</div>
+			  		<form>
+			  			 <textarea class="abilityDetail" id="abilityDetail" placeholder="在此添加经历或认证，进一步说明此项能力"></textarea>
+			  		</form>
+		  		</div>
+
+		  	</div>
+		  </div>
+          <div class="theme-popover-mask"></div>  <!-- 此DIV为弹出窗口之下的遮罩 -->
+          
 		  <script src="__PUBLIC__/js/home/abilitySave.js"></script>
           <script src="__PUBLIC__/js/home/abilityStar.js"></script>
           <script type="text/javascript">
