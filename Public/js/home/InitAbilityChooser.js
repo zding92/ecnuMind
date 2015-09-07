@@ -11,12 +11,10 @@ function InitAbilityChooser() {
         });
     });
     
-    $(function () {
-        $('#L3 :input').each(function () {
-            $(this).parent().addClass($(this).attr('data-cat'));
-            $(this).parent().attr('data-cat', $(this).attr('data-cat'));
-            $(this).parent().css('display', 'inline-block');
-        })
+    $('#L3 :input').each(function () {
+        $(this).parent().addClass($(this).attr('data-cat'));
+        $(this).parent().attr('data-cat', $(this).attr('data-cat'));
+        $(this).parent().css('display', 'inline-block');
     });
        
     var filterList = {
@@ -63,9 +61,15 @@ function InitAbilityChooser() {
             filters = filters.replace(/all/, "");
             $("#L1_all").removeClass('active');
             $(this).toggleClass('active');
-            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/." + $(this).attr('id') + ",*/"), "");
+            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/,*." + $(this).attr('id') + ",*/"), "");
+            if (filters.charAt(filters.length - 1) === ',') {
+            	filters = filters.substring(0, filters.length-1);
+            }; 
         }
         $('#L2').mixItUp('filter', filters);
+        if (filters !== 'all' && filters !== '') {
+        	filters = filters + ',';
+        }
         //$("#index").attr('data-filter', filters);
         //setTimeout('$("#index").click()', 500);
     })
@@ -80,9 +84,15 @@ function InitAbilityChooser() {
             filters_2 = filters_2.replace(/all/, "");
             $("#L2_all").removeClass('active');
             $(this).toggleClass('active');
-            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id') + ",") : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
+            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id')) : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
+            if (filters_2.charAt(filters_2.length - 1) === ',') {
+            	filters_2 = filters_2.substring(0, filters_2.length-1);
+            };  
         }
         $('#L3').mixItUp('filter', filters_2);
+        if (filters_2 !== 'all' && filters_2 !== '') {
+        	filters_2 = filters_2 + ',';
+        }
         //调试用div，可查看filters内容
         //$("#index2").attr('data-filter', filters_2);
         //        setTimeout('$("#index2").click()', 500);
