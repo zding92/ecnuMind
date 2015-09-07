@@ -115,9 +115,36 @@ function InitAbilityChooser() {
         })
     });
 
+    var hasAbility = true;
     var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
     $(function(){//将获取最新的标签文字以及说明添加至页面中
         $("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
+            if (hasAbility == false){
+                $('.popoutLine3RedText').addClass("line3Selected");
+                $('.popoutLine3RedText').addClass("line3RedSelected");
+                $('.popoutLine3GreenText').removeClass("line3Selected");
+                $('.popoutLine3RedText').removeClass("line3RedUnselected");
+                $('.popoutLine3GreenText').removeClass("line3GreenSelected");               
+                $('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");     
+                $('.popoutLine3GreenText').html("√");
+                $('.popoutLine3Green').animate({width:'100px'},"middle");
+            }
+            else{
+                $('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
+                $('.popoutLine3GreenText').addClass("line3GreenSelected");//表明绿色选中
+                $('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
+                $('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
+                $('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中                           
+                $('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");   
+                $('.popoutLine3RedText').html("×");
+                $('.popoutLine3Green').animate({width:'700px'},"middle");
+            }
+            
+            //点击选择能力的标签，出现弹出框
+            $('.popoutAblityName').text($(this).parent().text());
+            $('.theme-popover-mask').fadeIn(100);
+            $('.theme-popover').slideDown(200);
+
             lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
             
           //取出能力说明框中的内容
@@ -141,16 +168,70 @@ function InitAbilityChooser() {
                 	$(".abilityDetail").val(selfCommentData.selfComment);
                 	//alert(selfCommentData.selfComment);
                 }
-            });
-            
-            if($(this).parent().children("input").attr("checked") == 'checked'){//若选择了该项能力
-                $(".headAbilityDetail").html("在此添加经历或认证,为您的<b>"+lastPickedCheckbox+"</b>能力添加详细说明");//将获取最新的标签文字以及说明添加至页面中
-                document.getElementById("abilityDetail").disabled=false;//使能输入框
-            }
-            else{//若未选择该项能力
-               	$(".headAbilityDetail").html("请先添加<b>"+lastPickedCheckbox+"</b>能力，再添加详细说明");//将获取最新的标签文字以及说明添加至页面中
-               	document.getElementById("abilityDetail").disabled=true;//禁用输入框
-            } 
+            });      
+    
         });
-    })   
+
+    });
+    $('.theme-popover .close').click(function(){
+        $('.theme-popover-mask').fadeOut(100);
+        $('.theme-popover').slideUp(200);
+    })
+    
+    //点击绿色区域，绿色区域滚动放大
+    $('.popoutLine3Green').click(function(){
+        hasAbility = true;
+        $('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
+        $('.popoutLine3GreenText').addClass("line3GreenSelected");//表明绿色选中
+        $('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
+        $('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
+        $('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中                   
+        $('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");   
+        $('.popoutLine3RedText').html("×");
+        $('.popoutLine3Green').animate({width:'700px'},"middle");
+        document.getElementById("abilityDetail").disabled=false;//使能输入框     
+    })
+    
+    //点击红色区域，红色区域滚动放大
+    $('.popoutLine3Red').click(function(){
+        hasAbility = false;
+        $('.popoutLine3RedText').addClass("line3Selected");
+        $('.popoutLine3RedText').addClass("line3RedSelected");
+        $('.popoutLine3GreenText').removeClass("line3Selected");
+        $('.popoutLine3RedText').removeClass("line3RedUnselected");
+        $('.popoutLine3GreenText').removeClass("line3GreenSelected");       
+        $('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");     
+        $('.popoutLine3GreenText').html("√");
+        $('.popoutLine3Green').animate({width:'100px'},"middle");
+        document.getElementById("abilityDetail").disabled=true;//禁用输入框
+        $('.abilityDetailCover').css("display","none");//不显示遮罩
+    })
+    
+    //点击弹窗详细能力遮罩，激活textarea开始编辑
+    $('.abilityDetailCover').click(function(){
+        //点击弹窗之后，使弹窗消失
+        $('.abilityDetailCover').css("display","none");
+        
+        //弹窗消失之后，textarea获得焦点
+        document.getElementById("abilityDetail").focus();       
+        if(hasAbility == true){//若选择了该项能力
+            document.getElementById("abilityDetail").disabled=false;//使能输入框
+        }
+        else{//若未选择该项能力      
+            document.getElementById("abilityDetail").disabled=true;//禁用输入框
+        } 
+    })
+    
+    
+    //鼠标移入textarea，显示遮罩提示
+    $('.abilityDetailContainer').mouseenter(function(){ 
+        //若能力激活，且textarea没有在编辑状态下，显示提示遮罩
+        if ((hasAbility == true)&&(!$(":focus").hasClass('abilityDetail'))) $('.abilityDetailCover').css("display","block");
+    })
+    
+    $('.abilityDetailCover').mouseleave(function(){
+        //鼠标立刻能力说明范围，提示遮罩消失
+        $('.abilityDetailCover').css("display","none");
+    })
+
 };
