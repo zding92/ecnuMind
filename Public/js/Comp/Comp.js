@@ -1,4 +1,3 @@
-
 function starSorter(a, b) {
 	if (a.length > b.length) return 1;
 	if (a.length < b.length) return -1;
@@ -10,16 +9,14 @@ function starSorter(a, b) {
 	return 0;
 }
 
-$table = $$table = $('#comp-table').bootstrapTable();
-
-$('.bootstrap-table').click(function(){
-	var ts = $table.bootstrapTable('getThis');
-	ts.searchText = '大挑';
-    ts.options.pageNumber = 1;
-    ts.initSearch();
-    ts.updatePagination();
-	ts.trigger('search','大挑');
-})
-
-
+$(function(){
+	$table = $("#comp-table").bootstrapTable({
+		striped: true,
+		pagination: true,
+		height: 500
+	}).on('load-success.bs.table', function (e, data) {
+		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
+    });
+	
+});
 
