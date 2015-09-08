@@ -1038,11 +1038,12 @@
             return;
         }
         this.searchText = text;
-
+        alert(this.toString());
         this.options.pageNumber = 1;
         this.initSearch();
         this.updatePagination();
         this.trigger('search', text);
+        
     };
 
     BootstrapTable.prototype.initSearch = function () {
@@ -2431,6 +2432,10 @@
         $search.val(text || '');
         this.onSearch({currentTarget: $search});
     };
+    
+    BootstrapTable.prototype.getThis = function () {
+        return this;
+    };
 
     // BOOTSTRAP TABLE PLUGIN DEFINITION
     // =======================
@@ -2458,7 +2463,8 @@
         'togglePagination',
         'toggleView',
         'refreshOptions',
-        'resetSearch'
+        'resetSearch',
+        'getThis'
     ];
 
     $.fn.bootstrapTable = function (option) {

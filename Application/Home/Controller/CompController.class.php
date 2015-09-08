@@ -22,7 +22,7 @@ class CompController extends Controller {
 			$compStartDay = strtotime($comp['comp_apply_start_date']);
 			$compEndDay = strtotime($comp['comp_apply_end_date']);
 			if ($today < $compStartDay) {
-				$comp['apply_state'] = '未开始';
+				$comp['apply_state'] = '未开始(开始时间'.$comp['comp_apply_start_date'].')';
 				$comp['comp_template'] = "<a style='color:#aaa;margin:0px auto;'>报名未开始，请耐心等待</a>";
 			} elseif ($today > $compStartDay && $today < $compEndDay) {
 				$comp['apply_state'] = '正在报名(截止日期：'.$comp['comp_apply_end_date'].')';

@@ -11,13 +11,15 @@
 
 <body style="background-color: #fff">
   <div style="margin:10px 15px 15px;">
-    <table data-toggle="table" data-url="__URL__/getCompInfo" data-height="620" data-pagination="true" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1">
+    <table id="comp-table" data-url="__URL__/getCompInfo" data-height="620" data-pagination="true" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1">
       <thead>
         <tr>
           <th data-field="comp_importance" data-sortable="true" data-sorter="starSorter">竞赛评级</th>
           <th data-field="comp_name">竞赛名称</th>
+          <th data-field="comp_field">竞赛类型</th>
           <th data-field="comp_template">报名链接</th>
           <th data-field="apply_state">报名状态</th>
+          <th data-field="comp_brief" data-switchable="false" data-visible="false">竞赛简介</th>
         </tr>
       </thead>
     </table>
