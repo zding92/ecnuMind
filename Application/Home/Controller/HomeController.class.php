@@ -1,8 +1,9 @@
 <?php
 namespace Home\Controller;
-use Think\Controller;
+use Home\Common\Controller\CommonController;
 use Home\Common\MyFunc\CheckForm;
-class HomeController extends Controller {
+
+class HomeController extends CommonController {
 	/**
 	 * 显示home界面
 	 */

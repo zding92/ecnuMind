@@ -1,7 +1,7 @@
 <?php
 namespace Home\Controller;
-use Think\Controller;
-class AbilityController extends Controller {
+use Home\Common\Controller\CommonController;
+class AbilityController extends CommonController{
 	
 	/**
 	 * 生成数据库内的三级能力的json格式数据
