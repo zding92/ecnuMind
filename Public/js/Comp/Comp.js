@@ -17,6 +17,11 @@ $(function(){
 	}).on('load-success.bs.table', function (e, data) {
 		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
 		table_filter.bootstrapTableFilter('enableFilter', 'apply_state');
+		
+		//点击下拉选择的整体，能够选中勾选框
+		$('.dropdown-menu li a').click(function(){
+			$(this).children().click();
+		});
     });
 	
 });
