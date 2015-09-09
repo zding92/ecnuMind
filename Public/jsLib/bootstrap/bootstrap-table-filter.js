@@ -163,11 +163,6 @@
             '<div class="btn-toolbar">',
                 '<div class="btn-group btn-group-filters">',
                 '</div>',
-                '<div class="btn-group btn-group-filter-refresh">',
-                    '<button type="button" class="btn btn-default btn-primary btn-refresh" data-toggle="dropdown">',
-                        '<span class="glyphicon glyphicon-repeat"></span>',
-                    '</button>',
-                '</div>',
             '</div>'
         ].join(''));
         this.$toolbar.appendTo(this.$el);
@@ -429,6 +424,7 @@
             filter.selectedOptions._values.push(option);
         }
         this.trigger('select-filter-option', field, option, data);
+        this.trigger('submit', this.getData());
     };
 
     BootstrapTableFilter.prototype.unselectFilterOption = function(field, option) {
@@ -448,6 +444,7 @@
             }
         }
         this.trigger('unselect-filter-option', field, option);
+        this.trigger('submit', this.getData());
     };
 
     BootstrapTableFilter.prototype.isSelected = function(field, option, value) {
@@ -479,11 +476,6 @@
         });
         return ret;
     };
-    
-    BootstrapTableFilter.prototype.refresh = function() {
-    	var that = this;
-        that.trigger('submit', that.getData());
-    };
 
     // BOOTSTRAP FILTER TABLE PLUGIN DEFINITION
     // =======================
@@ -496,7 +488,7 @@
             'enableFilter', 'disableFilter',
             'selectFilterOption', 'unselectFilterOption',
             'getData', 'isSelected',
-            'resetView', 'refresh'
+            'resetView'
         ],
         value;
 

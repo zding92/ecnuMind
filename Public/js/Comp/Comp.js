@@ -16,6 +16,10 @@ $(function(){
 		height: 500
 	}).on('load-success.bs.table', function (e, data) {
 		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
+		
+		$('.dropdown-menu li a').mouseup(function(){
+			table_filter.bootstrapTableFilter('refresh');
+		});
     });
 	
 });
