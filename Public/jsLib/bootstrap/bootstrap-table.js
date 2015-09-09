@@ -1428,7 +1428,8 @@
         'resetView',
         'destroy',
         'showLoading', 'hideLoading',
-        'showColumn', 'hideColumn'
+        'showColumn', 'hideColumn',
+        'toggleColumn'
     ];
 
     $.fn.bootstrapTable = function (option, _relatedTarget) {
