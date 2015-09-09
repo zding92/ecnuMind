@@ -479,6 +479,11 @@
         });
         return ret;
     };
+    
+    BootstrapTableFilter.prototype.refresh = function() {
+    	var that = this;
+        that.trigger('submit', that.getData());
+    };
 
     // BOOTSTRAP FILTER TABLE PLUGIN DEFINITION
     // =======================
@@ -491,7 +496,7 @@
             'enableFilter', 'disableFilter',
             'selectFilterOption', 'unselectFilterOption',
             'getData', 'isSelected',
-            'resetView'
+            'resetView', 'refresh'
         ],
         value;
 

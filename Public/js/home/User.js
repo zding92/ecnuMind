@@ -20,7 +20,6 @@ $(document).ready(function () {
     	    success: function (result) {
     	      user_json = eval("(" + result + ")");
     	      showname();
-    	      
     	      $("#btn_main").trigger("click");
     	      location = '#main';
     	    }
@@ -125,27 +124,48 @@ $(document).ready(function () {
     }
 
     function loadMainPage() {
-      $(".info_container").load("personal_main.html");     
+    	if (checkCookies()) {
+    		$(".info_container").load("personal_main.html");
+    	}
     }
 
     function loadPersonalPage() {
-        $(".info_container").load("personal_info.html")
+    	if (checkCookies()) {
+    		$(".info_container").load("personal_info.html")
+    
+    	}
     }
 
     function loadCompetetionPage()
     {
-        $(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-         src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
-         onload='this.height=Comp_frame.document.body.scrollHeight' \
-         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")                    
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
+    		         src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=Comp_frame.document.body.scrollHeight' \
+    		         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
+    	}                         
     }
     
     function loadAbilityPage() {
-    	$(".info_container").load("ability.html");
+    	if (checkCookies()) {
+    		$(".info_container").load("ability.html");		
+    	}
+    
     } 
     
     function loadSearchPage() {//在info_container中显示searchPeople.html
-    	$(".info_container").load("searchPeople.html");
+    	if (checkCookies()) {
+    		$(".info_container").load("searchPeople.html");
+    	}
+    }
+    
+    function checkCookies() {
+    	if (document.cookie.indexOf("PHPSESSID", 0) < 0) {
+    		alert("登录超时，请重新登录");
+    		location="/webprj/ecnu_mind/index.php";
+    		return false;
+    	} 
+    	return true
     }
 
 });

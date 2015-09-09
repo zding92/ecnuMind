@@ -5,6 +5,7 @@ function getDataFromServer() {
     async:false,
     data: "action=btn_main",
     success: function (result) {
+  
       eval(result);
       InitPersonalData(doughnutData, tabs);
     }
