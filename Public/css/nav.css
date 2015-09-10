@@ -104,12 +104,43 @@
       color: #fff;
   }
   
+.nav_child{
+      border-top: 1px;
+      border-bottom: 1px;
+      border-left-width: 0px;
+      border-right-width: 0px;
+      border-style: solid;
+      border-color: #ddd; 
+      display: none;
+      -moz-transition: color backgroud-color 0.2s ease-in-out;
+      -o-transition: color backgroud-color 0.2s ease-in-out;
+      -webkit-transition: color backgroud-color 0.2s ease-in-out;
+      transition: color backgroud-color 0.2s ease-in-out;
+  }
+.nav_child a{
+      width: 120px;
+      padding: 12px 5px 3px 25px;
+      font-size: 14px;
+      letter-spacing: 1px;
+  }
+.nav_child a.clickble{
+      background-color: #f5f5f5;
+      color: #45484d;
+  }
+.nav_child a.select{
+      background-color: #2b99ce;
+      color: #fff;
+  }
+
   
   .nav a:hover{
       background-color: #f3f3f3;
   }
   
   .info_child a:hover{
+      background-color: #dadada;
+  }
+  .nav_child a:hover{
       background-color: #dadada;
   }
   

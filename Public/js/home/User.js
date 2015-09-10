@@ -40,7 +40,14 @@ $(document).ready(function () {
                     $("#btn_info div img").attr('src', public_url + '/img/icon/down.png');
                 else $("#btn_info div img").attr('src', public_url + '/img/icon/up.png');
                 $(".info_child").slideToggle("100");
-            } else {
+            } 
+            else  if ($(this).attr("id") == 'btn_comp') {//此if，点击竞赛管理，下拉/回收竞赛管理菜单，改变竞赛管理图标
+	            	if ($(".comp_child").css('display') == 'block')
+	                    $("#btn_comp div img").attr('src', public_url + '/img/icon/down.png');
+	                else $("#btn_comp div img").attr('src', public_url + '/img/icon/up.png');
+	                $(".comp_child").slideToggle("100");
+            	}
+            else {
                 $(".nav a,.info_child a").removeClass("select");
                 $(this).addClass("select");
                 icon_change(img_handle);
@@ -55,7 +62,7 @@ $(document).ready(function () {
 	                case 'btn_base_info':
 	                  loadPersonalPage();
 	                break;
-	                case 'btn_comp':
+	                case 'comp_apply':
 	                  loadCompetetionPage();
 	                break;
 	                case 'btn_ability':
@@ -67,6 +74,8 @@ $(document).ready(function () {
 	                default: break;
               }
             }
+            
+
         }
     })
 
@@ -87,7 +96,7 @@ $(document).ready(function () {
         $("#btn_base_info div img").attr('src', public_url + '/img/icon/base.png');
         $("#btn_ability div img").attr('src', public_url + '/img/icon/ability.png');
         $("#btn_safe div img").attr('src', public_url + '/img/icon/safe.png');
-        $("#btn_comp div img").attr('src', public_url + '/img/icon/apply.png');
+        //$("#btn_comp div img").attr('src', public_url + '/img/icon/apply.png');
         $("#btn_pro div img").attr('src', public_url + '/img/icon/prjinfo.png');
         $("#btn_find div img").attr('src', public_url + '/img/icon/find.png');
         $("#btn_help div img").attr('src', public_url + '/img/icon/help.png');
