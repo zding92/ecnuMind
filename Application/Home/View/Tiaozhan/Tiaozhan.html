@@ -10,6 +10,8 @@
   			var tiaozhanJSON = '__PUBLIC__/JSON/user.dat';
          //挑战杯数据写入数据库PHP相应地址
             var TiaozhanAddDataURL = '__APP__/Home/Tiaozhan/TiaozhanAddData';
+         //当前页面所属竞赛ID
+            var CompId = {$compId};
   		</script>
         <script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
         <script src="__PUBLIC__/js/Tiaozhan/tiaozhan.js"></script>
@@ -27,7 +29,7 @@
                 <div class="info_container_step1">
                     <div class="tiaozhan1_form">
                         <h1>作品全称：</h1>  
-                        <input type="text" class="project_name" id="project_name" name="prj_name" placeholder="请输入作品全称">
+                        <input type="text" class="project_name" id="project_name" name="comp_item_name" placeholder="请输入作品全称">
                         <br>
                         <br>
                         <h1>项目类型：</h1>

@@ -10,6 +10,8 @@
   			var tiaozhanJSON = '/webprj/ecnu_mind/Public/JSON/user.dat';
          //挑战杯数据写入数据库PHP相应地址
             var TiaozhanAddDataURL = '/webprj/ecnu_mind/index.php/Home/Tiaozhan/TiaozhanAddData';
+         //当前页面所属竞赛ID
+            var CompId = <?php echo ($compId); ?>;
   		</script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script> 
         <script src="/webprj/ecnu_mind/Public/js/Tiaozhan/tiaozhan.js"></script>
@@ -27,7 +29,7 @@
                 <div class="info_container_step1">
                     <div class="tiaozhan1_form">
                         <h1>作品全称：</h1>  
-                        <input type="text" class="project_name" id="project_name" name="prj_name" placeholder="请输入作品全称">
+                        <input type="text" class="project_name" id="project_name" name="comp_item_name" placeholder="请输入作品全称">
                         <br>
                         <br>
                         <h1>项目类型：</h1>
@@ -37,9 +39,9 @@
                         <h1>作品类型：</h1>
                         <select id="type_selector" name="type_selector" onchange="Gettext()">
                           <option value="NULL" selected = "selected">请选择作品类型</option> 
-                          <option value="b1">自然科学类学术论文B1</option>
-                          <option value="b2">哲学社会科学类社会调查报告和学术论文B2</option>
-                          <option value="b3">科技发明制作B3</option>
+                          <option value="B1">自然科学类学术论文B1</option>
+                          <option value="B2">哲学社会科学类社会调查报告和学术论文B2</option>
+                          <option value="B3">科技发明制作B3</option>
                         </select>
                        <!--<div id="dis"></div>--> 
                         <br>

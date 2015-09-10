@@ -9,4 +9,5 @@ return array(
 	'DB_PORT'=>3306,// 端口
 	'DB_PREFIX'=>'user_',// 数据库表前缀
 	'DB_CHARSET'=>'utf8',// 数据库字符集	
+	'VAR_FILTERS'=>'stripslashes,strip_tags,trim',
 );

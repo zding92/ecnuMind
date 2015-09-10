@@ -15,7 +15,7 @@ class HomeController extends CommonController {
 	 * 载入个人主页时提交Ajax数据的Target
 	 */
 	public function loadPage() {
-		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
+		$action = I('action');
 		switch ($action) {
 			case "getUserJson" :
 				$this->returnBaseinfo();
@@ -34,8 +34,8 @@ class HomeController extends CommonController {
 	 * 个人信息维护后台验证。
 	 */
 	public function  checkForm() {
-		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
-		$value = I('value', 0, 'strip_tags,htmlspecialchars,trim');
+		$action = I('action');
+		$value = I('value');
 		$checkForm = new \Home\Common\MyFunc\CheckForm();
 		$checkForm->checkOne($action, $value);
 		
@@ -56,8 +56,8 @@ class HomeController extends CommonController {
 	 * 个人信息维护修改提交。
 	 */
 	public function  submitModify() {
-		$action = I('action', 0, 'strip_tags,htmlspecialchars,trim');
-		$value = I('value', 0, 'strip_tags,htmlspecialchars,trim');
+		$action = I('action');
+		$value = I('value');
 		$checkForm = new \Home\Common\MyFunc\CheckForm();
 		$allData = I('get.');
 		if (isset($_SESSION['username'])) {

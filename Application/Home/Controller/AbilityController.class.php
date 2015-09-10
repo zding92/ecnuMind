@@ -54,8 +54,8 @@ class AbilityController extends CommonController{
 	}
 	
 	public function checkAbility() {
-		$abilityName = I('abilityName', 0, 'strip_tags,htmlspecialchars,trim');
-		$selfComment = I('selfComment', 0, 'strip_tags,htmlspecialchars,trim');
+		$abilityName = I('abilityName');
+		$selfComment = I('selfComment');
 		$userAbility = M('ecnu_mind.user_has_ability', null);
 		$abilityTable = M('ecnu_mind.ability', null);
 		
@@ -80,8 +80,8 @@ class AbilityController extends CommonController{
 	}
 	
 	public function addAbility() {
-		$abilityName = I('abilityName', 0, 'strip_tags,htmlspecialchars,trim');
-		$directionName = I('directionName', 0, 'strip_tags,htmlspecialchars,trim');
+		$abilityName = I('abilityName');
+		$directionName = I('directionName');
 
 		$abilityTable = M('ecnu_mind.ability', null);
 		$directionTable = M('ecnu_mind.direction', null);

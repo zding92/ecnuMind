@@ -167,8 +167,8 @@
 		  </div>
           <div class="theme-popover-mask"></div>  <!-- 此DIV为弹出窗口之下的遮罩 -->
           
-		  <script src="/webprj/ecnu_mind/Public/js/home/abilitySave.js"></script>
-          <script src="/webprj/ecnu_mind/Public/js/home/abilityStar.js"></script>
+		  <!-- <script src="/webprj/ecnu_mind/Public/js/home/abilitySave.js"></script>
+          <script src="/webprj/ecnu_mind/Public/js/home/abilityStar.js"></script> -->
           <script type="text/javascript">
           	InitAbilityChooser();
           </script>

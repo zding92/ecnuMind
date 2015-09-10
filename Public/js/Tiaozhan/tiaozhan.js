@@ -218,7 +218,7 @@ $(document).ready(function () {
                             url: TiaozhanAddDataURL, //请求验证页面 
                             type: "POST", //请求方式
                             async: false,
-                            data: $('#tiaozhanForm').serialize(),
+                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
                             success: function (call) 
                             {
 //                                 alert(call);

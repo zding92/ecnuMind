@@ -1,8 +1,9 @@
 <?php
 namespace Home\Controller;
-use Home\Common\Controller\CommonController;
-class TiaozhanController extends CommonController {
-    public function Tiaozhan() {
+use Home\Controller\CompController;
+class TiaozhanController extends CompController {
+    public function Tiaozhan($compId) {
+    	$this->assign('compId',$compId);
 		//显示__app__/home/Tiaozhan/Tiaozhan页面
 		$this->display();
 	}
@@ -11,6 +12,9 @@ class TiaozhanController extends CommonController {
 	 * 将挑战杯的数据录入数据库
 	 */
 	public function TiaozhanAddData(){
+		// 向竞赛主表添加竞赛信息，并返回唯一竞赛item的ID
+		$compItemID = $this->registerComp();
+		
 		// 添加教师信息。
 		$TeacherId = $this->addTeacherInfo();
 		
@@ -18,10 +22,10 @@ class TiaozhanController extends CommonController {
 		$RefereeId = $this->addRefereeInfo();
 		
 		// 添加基本信息
-		$BasicReturnArray = $this->addBasicInfo($TeacherId, $RefereeId);
+		$this->addBasicInfo($compItemID, $TeacherId, $RefereeId);
 		
 		// 添加表格说明（长文本）
-		$this->addTableInfo($BasicReturnArray['prj_id'], $BasicReturnArray['bn']);
+		$this->addTableInfo($compItemID, I('post.type_selector'));
 		
 	}
 	
@@ -30,7 +34,7 @@ class TiaozhanController extends CommonController {
 		// 根据表单提交的POST数据创建数据对象
 		$TeacherModel->create();
 		// 添加到teacher表并返回主键。
-		return $TeacherModel->filter('strip_tags')->add();
+		return $TeacherModel->add();
 	}
 	
 	private function addRefereeInfo() {
@@ -48,12 +52,14 @@ class TiaozhanController extends CommonController {
 		$refereeData['referee_workphone'] = $TeacherModel->referee_workphone;
 		$refereeData['referee_homephone'] = $TeacherModel->referee_homephone;
 		// 添加到teacher表并返回主键。
-		return $TeacherModel->data($refereeData)->filter('strip_tags')->add();
+		return $TeacherModel->data($refereeData)->add();
 	}
 	
-	private function addBasicInfo($TeacherId, $RefereeId) {
+	private function addBasicInfo($compItemID, $TeacherId, $RefereeId) {
 		$BasicModel = M('ecnu_mind.tiaozhan_basic_info',null);
 		
+		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
+		// 另外自动添加报名日期
 		$auto = array (
 				array('author2_id','checkNull',1,'function'),
 				array('author3_id','checkNull',1,'function'),
@@ -62,29 +68,26 @@ class TiaozhanController extends CommonController {
 				array('author6_id','checkNull',1,'function'),
 				array('prj_date','date',3,'function',array('Y-m-d'))
 		);
+		
 		// 根据表单提交的POST数据创建数据对象
  		$BasicModel->auto($auto)->create();
 // 		$BasicModel->create();
 		$BasicData = $BasicModel->data();
+		
+		// 将竞赛项ID，导师ID和推荐人ID三个外键加入数组
+		$BasicData['comp_item_id'] = $compItemID;
 		$BasicData['teacher_id'] = $TeacherId;
 		$BasicData['referee_id'] = $RefereeId;
 		
-		// 获取具体表格b1,b2 or b3
-		$bn = strtolower($BasicModel->type_selector);
-		
-		// 入库并返回project id.
-		$prj_id = $BasicModel->data($BasicData)->filter('strip_tags')->add();
-	
-		$returnArray['bn'] = $bn;
-		$returnArray['prj_id'] = $prj_id;
-		return $returnArray;
+		$BasicModel->data($BasicData)->add();
 	}
 	
-	private function addTableInfo($prj_id, $bn) {
+	private function addTableInfo($compItemID, $bn) {
+		$bn = strtolower($bn);
 		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
 		$TableModel->create();
 		$TableData = $TableModel->data();
-		$TableData['prj_id'] = $prj_id;
-		$TableModel->data($TableData)->filter('strip_tags')->add();
+		$TableData['comp_item_id'] = $compItemID;
+		$TableModel->data($TableData)->add();
 	}
 }

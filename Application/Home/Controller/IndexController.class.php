@@ -18,8 +18,8 @@ class IndexController extends Controller {
         // 启动session。
     	session_start();
     	// 获取post方式传来的username和password
-    	$username = I('post.username', 0, 'strip_tags,htmlspecialchars,trim');
-    	$password = I('post.password', 0, 'strip_tags,htmlspecialchars,trim');
+    	$username = I('post.username');
+    	$password = I('post.password');
     	// sql查询： SELECT password,username FROM user_info where username='username';
     	$condition['username'] = $username;
     	$result = $Data->where($condition)->field('PASSWORD,USERNAME,ID')->find();
@@ -54,7 +54,7 @@ class IndexController extends Controller {
     	// 利用Model类，快速设置约束条件，并创建D对象
     	$Data = D('info');
     	// 获取post方式传来的password
-    	$password = I('post.password', 0, 'strip_tags,htmlspecialchars,trim');
+    	$password = I('post.password');
     	// 自动利用表单构建D对象
     	if ($Data->create()) {
     		// 设置session
