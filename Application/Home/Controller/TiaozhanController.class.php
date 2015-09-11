@@ -56,7 +56,7 @@ class TiaozhanController extends CompController {
 	}
 	
 	private function addBasicInfo($compItemID, $TeacherId, $RefereeId) {
-		$BasicModel = M('ecnu_mind.tiaozhan_basic_info',null);
+		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
 		
 		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
 		// 另外自动添加报名日期
@@ -66,7 +66,7 @@ class TiaozhanController extends CompController {
 				array('author4_id','checkNull',1,'function'),
 				array('author5_id','checkNull',1,'function'),
 				array('author6_id','checkNull',1,'function'),
-				array('prj_date','date',3,'function',array('Y-m-d'))
+				array('apply_date','date',3,'function',array('Y-m-d'))
 		);
 		
 		// 根据表单提交的POST数据创建数据对象

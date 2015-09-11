@@ -65,6 +65,9 @@ $(document).ready(function () {
 	                case 'comp_apply':
 	                  loadCompetetionPage();
 	                break;
+	                case 'my_comp':
+		              loadMyCompPage();
+		            break;
 	                case 'btn_ability':
 	                  loadAbilityPage();
 	                break;
@@ -153,6 +156,15 @@ $(document).ready(function () {
     		         onload='this.height=Comp_frame.document.body.scrollHeight' \
     		         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
     	}                         
+    }
+    
+    function loadMyCompPage(){
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
+   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless' scrolling='no'   \
+   		         onload='this.height=Comp_frame.document.body.scrollHeight' \
+   		         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
+    	}
     }
     
     function loadAbilityPage() {

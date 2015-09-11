@@ -7,28 +7,59 @@ class CompController extends CommonController {
 		$this->display();
 	}
 	
+	public function myComp(){
+		//显示__app__/home/comp/myComp页面
+		$this->display();
+	}
+	
 	public function getCompInfo() {
 		$compModel = M('ecnu_mind.competition_info', null);
 		$allComp = $compModel->select();
 			
 		$allComp = $this->assignTemplate($allComp);
-		$allComp = $this->checkDate($allComp);
+		$allComp = $this->checkDate($allComp);	
 		$this->ajaxReturn(json_encode($allComp), "EVAL");
 	}
 	
+	/**
+	 * 获取个人竞赛信息（不包含具体内容，仅返回竞赛名称等最基本信息）
+	 */
 	public function getCompItem() {
 		$compItemModel = M('ecnu_mind.competition_main', null);
 		$compInfoModel = M('ecnu_mind.competition_info', null);
 		
-		$userCompsTypeId = $compItemModel
-		                   ->where('comp_user_id='.session('userid'))
-						   ->field('comp_type_id')
-		                   ->select();
+		$userCompIds = $compItemModel
+		               ->where("comp_user_id=".session('userid'))
+					   ->field('comp_type_id, comp_item_id')
+		               ->select();
 		
-		foreach ($userCompsTypeId as $compTypeId) {
+		foreach ($userCompIds as $compId) {
 			// 获得该项竞赛的基本信息
-			//$compModel = 
+			$compinfo =	$compInfoModel
+						->where('comp_id='.$compId['comp_type_id'])
+						->field("comp_name, comp_template")
+						->find();
+			
+			// 根据模板名称和竞赛报名ID获得详细信息
+			$compDetailModel = M('ecnu_mind.'.$compinfo['comp_template'].'_info',null);
+			$returnItem = $compDetailModel
+			              ->where("comp_item_id=".$compId['comp_item_id'])
+			              ->field("comp_item_name, apply_date")
+			              ->find();
+			$returnItem['comp_name'] = $compinfo['comp_name'];
+			
+			// 装配template的url
+			$compTmp = $compinfo['comp_template'];			
+			$returnItem['comp_template'] = 
+				'<a href="'.U("Home/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"").'" target="_blank">点此修改</a>';
+			
+			$returnItem['comp_view'] = "abcdefg";
+			
+			$result[] = $returnItem; 
 		}
+		
+		$this->ajaxReturn(json_encode($result), "EVAL");
+		
 	}
 	
 	protected function registerComp() {
