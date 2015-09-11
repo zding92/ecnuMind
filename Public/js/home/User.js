@@ -69,7 +69,7 @@ $(document).ready(function () {
 	                  loadAbilityPage();
 	                break;
 	                case 'btn_find':
-	                      loadSearchPage();
+	                  loadSearchPage();
 	                break;
 	                default: break;
               }

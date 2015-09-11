@@ -214,20 +214,21 @@ $(document).ready(function () {
                             }
 
                     });
-                     $.ajax({
-                            url: TiaozhanAddDataURL, //请求验证页面 
-                            type: "POST", //请求方式
-                            async: false,
-                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
-                            success: function (call) 
-                            {
-//                                 alert(call);
-//                                 //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
-//                                 if (tiaozhanDataWri==true) alert("已成功保存");
-//                                 else alert("数据写入数据库失败");
 
-                            }
-                        });
+//                    $.ajax({
+//                        url: TiaozhanAddDataURL, //请求验证页面 
+//                        type: "POST", //请求方式
+//                        async: false,
+//                        data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
+//                        success: function (call) 
+//                        {
+////                                 alert(call);
+////                                 //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
+////                                 if (tiaozhanDataWri==true) alert("已成功保存");
+////                                 else alert("数据写入数据库失败");
+//
+//                        }
+//                    });
                 }
                 else alert("请检查第一步与第三步中项目名称是否一致");
             }

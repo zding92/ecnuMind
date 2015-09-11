@@ -16,8 +16,23 @@ class CompController extends CommonController {
 		$this->ajaxReturn(json_encode($allComp), "EVAL");
 	}
 	
+	public function getCompItem() {
+		$compItemModel = M('ecnu_mind.competition_main', null);
+		$compInfoModel = M('ecnu_mind.competition_info', null);
+		
+		$userCompsTypeId = $compItemModel
+		                   ->where('comp_user_id='.session('userid'))
+						   ->field('comp_type_id')
+		                   ->select();
+		
+		foreach ($userCompsTypeId as $compTypeId) {
+			// 获得该项竞赛的基本信息
+			//$compModel = 
+		}
+	}
+	
 	protected function registerComp() {
-		$compItemModel = M('ecnu_mind.competition_main',null);
+		$compItemModel = M('ecnu_mind.competition_main', null);
 		$regValue = I('post.');
 		
 		// 构造竞赛报名主表所需要的两个外键
