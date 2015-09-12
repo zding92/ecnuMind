@@ -178,7 +178,7 @@ CREATE TABLE `tiaozhan_b1` (
   `b1_8` mediumtext,
   `b1_9` mediumtext,
   PRIMARY KEY (`prj_id`),
-  CONSTRAINT `Tiaozhan_b1_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_basic_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `Tiaozhan_b1_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -225,7 +225,7 @@ CREATE TABLE `tiaozhan_b2` (
   `b2_c_14` tinyint(1) NOT NULL DEFAULT '0',
   `b2_c_15` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`prj_id`),
-  CONSTRAINT `tiaozhan_b2_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_basic_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `tiaozhan_b2_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -265,7 +265,7 @@ CREATE TABLE `tiaozhan_b3` (
   `b3_c_7` tinyint(1) DEFAULT NULL,
   `b3_c_8` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`prj_id`),
-  CONSTRAINT `tiaozhan_b3_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_basic_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `tiaozhan_b3_FK_1` FOREIGN KEY (`prj_id`) REFERENCES `tiaozhan_info` (`prj_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -279,13 +279,13 @@ LOCK TABLES `tiaozhan_b3` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tiaozhan_basic_info`
+-- Table structure for table `tiaozhan_info`
 --
 
-DROP TABLE IF EXISTS `tiaozhan_basic_info`;
+DROP TABLE IF EXISTS `tiaozhan_info`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tiaozhan_basic_info` (
+CREATE TABLE `tiaozhan_info` (
   `prj_id` int(5) NOT NULL AUTO_INCREMENT,
   `prj_name` varchar(80) NOT NULL,
   `group_type` varchar(2) NOT NULL,
@@ -322,13 +322,13 @@ CREATE TABLE `tiaozhan_basic_info` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tiaozhan_basic_info`
+-- Dumping data for table `tiaozhan_info`
 --
 
-LOCK TABLES `tiaozhan_basic_info` WRITE;
-/*!40000 ALTER TABLE `tiaozhan_basic_info` DISABLE KEYS */;
-INSERT INTO `tiaozhan_basic_info` VALUES (1,'1','1','1','1',1,'10112140253',NULL,NULL,NULL,NULL,NULL,1,1,'2015-02-15'),(41,'a','A1','B2','B2B',42,'10112140253','null','null','null','null','null',1,41,NULL),(43,'a','A1','B2','B2B',48,'10112140253','null','null','null','null','null',1,47,NULL),(44,'a','A1','B2','B2B',50,'10112140253','null','null','null','null','null',1,49,NULL),(45,'A','A1','B1','B1A',54,'10112140253','null','null','null','null','null',1,53,NULL),(46,'A','A1','B1','B1A',56,'10112140253','null','null','null','null','null',1,55,'2015-09-06'),(47,'A','A1','B1','B1A',58,'10112140253','null','null','null','null','null',1,57,'2015-09-06');
-/*!40000 ALTER TABLE `tiaozhan_basic_info` ENABLE KEYS */;
+LOCK TABLES `tiaozhan_info` WRITE;
+/*!40000 ALTER TABLE `tiaozhan_info` DISABLE KEYS */;
+INSERT INTO `tiaozhan_info` VALUES (1,'1','1','1','1',1,'10112140253',NULL,NULL,NULL,NULL,NULL,1,1,'2015-02-15'),(41,'a','A1','B2','B2B',42,'10112140253','null','null','null','null','null',1,41,NULL),(43,'a','A1','B2','B2B',48,'10112140253','null','null','null','null','null',1,47,NULL),(44,'a','A1','B2','B2B',50,'10112140253','null','null','null','null','null',1,49,NULL),(45,'A','A1','B1','B1A',54,'10112140253','null','null','null','null','null',1,53,NULL),(46,'A','A1','B1','B1A',56,'10112140253','null','null','null','null','null',1,55,'2015-09-06'),(47,'A','A1','B1','B1A',58,'10112140253','null','null','null','null','null',1,57,'2015-09-06');
+/*!40000 ALTER TABLE `tiaozhan_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

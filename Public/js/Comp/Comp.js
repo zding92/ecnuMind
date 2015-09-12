@@ -21,8 +21,12 @@ $(function(){
 		$table.bootstrapTable('toggleColumn', 4, false, true);
 		
 		//点击下拉选择的整体，能够选中勾选框
-		$('.dropdown-menu li a').click(function(){
-			$(this).children().click();
+		$('.dropdown-menu li a :input').click(function(e){
+			if($(this).prop('checked')){
+				$(this).prop('checked',false);
+			} else {
+				$(this).prop('checked',true);
+			}
 		});
     });
 	

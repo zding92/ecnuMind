@@ -168,20 +168,22 @@
         this.$toolbar.appendTo(this.$el);
         this.$filters = this.$toolbar.find('.btn-group-filters');
 
-        this.$toolbar.delegate('.btn-group-filters li', 'click', function (e) {
-            e.stopImmediatePropagation();
-        });
+//        this.$toolbar.delegate('.btn-group-filters li', 'click', function (e) {
+//            e.stopImmediatePropagation();
+//        });
 
-        this.$toolbar.delegate('.btn-group-filters li .filter-enabled', 'click', function(e) {
-            var $chck = $(this);
+        this.$toolbar.delegate('.btn-group-filters li a', 'click', function(e) {
+            var $chck = $(this).children();
             var field = $chck.closest('[data-filter-field]').attr('data-filter-field');
             var $option = $chck.closest('[data-val]');
             var option = $option.attr('data-val');
-            if ($chck.prop('checked')) {
-                var data = getOptionData($option);
+            if (!$chck.prop('checked')) {
+            	$chck.prop("checked",true);
+            	var data = getOptionData($option);
                 that.selectFilterOption(field, option, data);
             }
             else {
+            	$chck.prop("checked",false);
                 that.unselectFilterOption(field, option);
             }
             e.stopImmediatePropagation();
