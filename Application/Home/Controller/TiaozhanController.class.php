@@ -8,6 +8,11 @@ class TiaozhanController extends CompController {
 		$this->display();
 	}
 	
+	public function tiaozhanView() {
+		//显示__app__/home/Tiaozhan/tiaozhanView页面
+		$this->display();
+	}
+	
 	/**
 	 * 将挑战杯的数据录入数据库
 	 */
