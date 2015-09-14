@@ -5,6 +5,7 @@
 function OverColor(obj) {
   obj.style.backgroundColor='#56cbf3';
 }
+
 //鼠标移出颜色
 function Outcolor(obj){
     //如果是非选中状态
@@ -14,19 +15,15 @@ function Outcolor(obj){
     else obj.style.backgroundColor = '#2b99ce';
 }
 
-function change_type()
-{
-    
-}
 
 /**
  * 根据作品类型，显示不同的作品类型细分
  */
-function Gettext(){
+function Gettext() {
     selector = document.getElementById("type_selector");
-var val=selector.options[selector.options.selectedIndex].value;
-//document.getElementById("dis").innerHTML = val;
-if (val=="NULL")
+    var val=selector.options[selector.options.selectedIndex].value;
+    //document.getElementById("dis").innerHTML = val;
+    if (val=="NULL")
     {
         document.getElementById("B1").style.display = "none";
         document.getElementById("B2").style.display = "none";
@@ -47,8 +44,7 @@ if (val=="NULL")
 //        	$(this).attr("disabled",true);
 //        })
     }
-if (val=="B1")
-    {
+    if (val=="B1") {
         document.getElementById("B1").style.display = "";
         document.getElementById("B2").style.display = "none";
         document.getElementById("B3").style.display = "none";
@@ -68,8 +64,7 @@ if (val=="B1")
 //        	$(this).attr("disabled",true);
 //        })
     }
-if (val=="B2")
-    {
+    if (val=="B2") {
         document.getElementById("B1").style.display = "none";
         document.getElementById("B2").style.display = "";
         document.getElementById("B3").style.display = "none";
@@ -89,8 +84,7 @@ if (val=="B2")
 //        	$(this).attr("disabled",true);
 //        })
     }
-if (val=="B3")
-    {
+    if (val=="B3") {
         document.getElementById("B1").style.display = "none";
         document.getElementById("B2").style.display = "none";
         document.getElementById("B3").style.display = "";
@@ -188,6 +182,7 @@ function step1_check()
 }
 
 var data_string;
+
 $(document).ready(function () {
     $(".save_button").each(function () {
         $(this).click(function () {
@@ -214,9 +209,9 @@ $(document).ready(function () {
                             }
 
                     });
-
+                    alert($('#tiaozhanForm').serialize());
                     $.ajax({
-                        url: TiaozhanAddDataURL, //请求验证页面 
+                        url: submitUrl, //请求验证页面 
                         type: "POST", //请求方式
                         async: false,
                         data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
@@ -238,495 +233,86 @@ $(document).ready(function () {
     });
 });
 
+
 //var counter=1;
-var myTimer;
+var checkTask;
 $(document).ready(function () {
-    $("#author1_num").focus(function () {
-        myTimer = setInterval(function () { Timer1_fun() }, 1000);
-    });
-    $("#author1_num").blur(function () {
-        clearInterval(myTimer);
-        Timer1_fun();
-    });
-    $("#author2_num").focus(function () {
-        myTimer = setInterval(function () { Timer2_fun() }, 1000);
-    });
-    $("#author2_num").blur(function () {
-        clearInterval(myTimer);
-        Timer2_fun();
-    });
-    $("#author3_num").focus(function () {
-        myTimer = setInterval(function () { Timer3_fun() }, 1000);
-    });
-    $("#author3_num").blur(function () {
-        clearInterval(myTimer);
-        Timer3_fun();
-    });
-    $("#author4_num").focus(function () {
-        myTimer = setInterval(function () { Timer4_fun() }, 1000);
-    });
-    $("#author4_num").blur(function () {
-        clearInterval(myTimer);
-        Timer4_fun();
-    });
-    $("#author5_num").focus(function () {
-        myTimer = setInterval(function () { Timer5_fun() }, 1000);
-    });
-    $("#author5_num").blur(function () {
-        clearInterval(myTimer);
-        Timer5_fun();
-    });
-    $("#author6_num").focus(function () {
-        myTimer = setInterval(function () { Timer6_fun() }, 1000);
-    });
-    $("#author6_num").blur(function () {
-        clearInterval(myTimer);
-        Timer6_fun();
-    });
+	$(".author_num").keyup(function() {
+		if (checkTask != undefined) {
+			clearTimeout(checkTask);
+		}
+		if ($(this).val() != "") {
+			var id = $(this).attr('id');
+			checkTask = setTimeout(function () { checkStuid(id) }, 1000);
+		}	  
+	});
+	
+	$(".author_num").blur(function() {
+		if (checkTask != undefined) {
+			clearTimeout(checkTask);
+		}
+		if ($(this).val() != "") {
+			checkStuid($(this).attr('id'));
+		}	  
+	});
 });
 
-function Timer1_fun() {
-    if (document.getElementById("author1_num").value.length != 11) {
-        document.getElementById("author1_num_check").innerHTML = "输入正确格式学号";
-        $("#author1_info").slideUp("slow");
-        document.getElementById("author1_name").innerHTML = '';
-        document.getElementById("author1_gender").innerHTML = '';
-        document.getElementById("author1_degree").innerHTML = '';
-        document.getElementById("author1_grade").innerHTML = '';
-        document.getElementById("author1_college").innerHTML = '';
-        document.getElementById("author1_major").innerHTML = '';
-        document.getElementById("author1_year").innerHTML = '';
-        document.getElementById("author1_campus").innerHTML = '';
-        document.getElementById("author1_mobile").innerHTML = '';
-        document.getElementById("author1_phone").innerHTML = '';
-        document.getElementById("author1_addr1").innerHTML = '';
-        document.getElementById("author1_addr2").innerHTML = '';
+function showPerson(author, userData) {
+	$('#'+ author +'_name').text(userData.name);
+	$('#'+ author +'_degree').text(userData.degree);
+	$('#'+ author +'_gender').text(userData.gender);
+	$('#'+ author +'_grade').text(userData.grade);
+	$('#'+ author +'_college').text(userData.department);
+	$('#'+ author +'_major').text(userData.major);
+	$('#'+ author +'_year').text(userData.year);
+	$('#'+ author +'_campus').text(userData.campus);
+	$('#'+ author +'_mobile').text(userData.mobile);
+	$('#'+ author +'_phone').text(userData.phone);
+	$('#'+ author +'_addr1').text(userData.addr1);
+	$('#'+ author +'_addr2').text(userData.addr2);
+	
+	$('#'+ author +'_info').slideDown("fast");
+}
+
+function hidePerson(author, errorInfo) {
+	$('#'+ author +'_name').text('');
+	$('#'+ author +'_degree').text('');
+	$('#'+ author +'_gender').text('');
+	$('#'+ author +'_grade').text('');
+	$('#'+ author +'_college').text('');
+	$('#'+ author +'_major').text('');
+	$('#'+ author +'_year').text('');
+	$('#'+ author +'_campus').text('');
+	$('#'+ author +'_mobile').text('');
+	$('#'+ author +'_phone').text('');
+	$('#'+ author +'_addr1').text('');
+	$('#'+ author +'_addr2').text('');
+	$('#'+ author +'_num_check').text(errorInfo);
+	
+	$('#'+ author +'_info').slideUp("fast");
+}
+
+function checkStuid(authorNum) {
+    if ($("#"+authorNum).val().length !== 11) {
+        hidePerson(authorNum);
     }
     else {
-        document.getElementById("author1_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author1_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author1_name").innerHTML = name;
-                document.getElementById("author1_gender").innerHTML = gender;
-                document.getElementById("author1_degree").innerHTML = degree;
-                document.getElementById("author1_grade").innerHTML = grade;
-                document.getElementById("author1_college").innerHTML = college;
-                document.getElementById("author1_major").innerHTML = major;
-                document.getElementById("author1_year").innerHTML = year;
-                document.getElementById("author1_campus").innerHTML = campus;
-                document.getElementById("author1_mobile").innerHTML = mobile;
-                document.getElementById("author1_phone").innerHTML = phone;
-                document.getElementById("author1_addr1").innerHTML = addr1;
-                document.getElementById("author1_addr2").innerHTML = addr2;
-                $("#author1_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author1_info").slideUp("slow");
-                document.getElementById("author1_name").innerHTML = '';
-                document.getElementById("author1_gender").innerHTML = '';
-                document.getElementById("author1_degree").innerHTML = '';
-                document.getElementById("author1_grade").innerHTML = '';
-                document.getElementById("author1_college").innerHTML = '';
-                document.getElementById("author1_major").innerHTML = '';
-                document.getElementById("author1_year").innerHTML = '';
-                document.getElementById("author1_campus").innerHTML = '';
-                document.getElementById("author1_mobile").innerHTML = '';
-                document.getElementById("author1_phone").innerHTML = '';
-                document.getElementById("author1_addr1").innerHTML = '';
-                document.getElementById("author1_addr2").innerHTML = '';
-                document.getElementById("author1_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
+    	$("#" + authorNum + "_check").text('');
+    	var author = authorNum.substring(0,7);
+        $.ajax({ 
+        	url: checkUrl, 
+        	async: false, 
+        	data: 'studentid=' + $("#" + authorNum).val(), 
+        	success: function (result) {
+        		if (result == '0') {
+        			hidePerson(author, '未找到匹配此学号的用户，请先注册');
+        		} else {
+        			var userData = eval('(' + result + ')')
+        			showPerson(author, userData);
+        		}
+        	}
         });
     }
 }
-function Timer2_fun() {
-    if (document.getElementById("author2_num").value.length != 11) {
-        document.getElementById("author2_num_check").innerHTML = "输入正确格式学号";
-        $("#author2_info").slideUp("slow");
-        document.getElementById("author2_name").innerHTML = '';
-        document.getElementById("author2_gender").innerHTML = '';
-        document.getElementById("author2_degree").innerHTML = '';
-        document.getElementById("author2_grade").innerHTML = '';
-        document.getElementById("author2_college").innerHTML = '';
-        document.getElementById("author2_major").innerHTML = '';
-        document.getElementById("author2_year").innerHTML = '';
-        document.getElementById("author2_campus").innerHTML = '';
-        document.getElementById("author2_mobile").innerHTML = '';
-        document.getElementById("author2_phone").innerHTML = '';
-        document.getElementById("author2_addr1").innerHTML = '';
-        document.getElementById("author2_addr2").innerHTML = '';
-    }
-    else {
-        document.getElementById("author2_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author2_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author2_name").innerHTML = name;
-                document.getElementById("author2_gender").innerHTML = gender;
-                document.getElementById("author2_degree").innerHTML = degree;
-                document.getElementById("author2_grade").innerHTML = grade;
-                document.getElementById("author2_college").innerHTML = college;
-                document.getElementById("author2_major").innerHTML = major;
-                document.getElementById("author2_year").innerHTML = year;
-                document.getElementById("author2_campus").innerHTML = campus;
-                document.getElementById("author2_mobile").innerHTML = mobile;
-                document.getElementById("author2_phone").innerHTML = phone;
-                document.getElementById("author2_addr1").innerHTML = addr1;
-                document.getElementById("author2_addr2").innerHTML = addr2;
-                $("#author2_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author2_info").slideUp("slow");
-                document.getElementById("author2_name").innerHTML = '';
-                document.getElementById("author2_gender").innerHTML = '';
-                document.getElementById("author2_degree").innerHTML = '';
-                document.getElementById("author2_grade").innerHTML = '';
-                document.getElementById("author2_college").innerHTML = '';
-                document.getElementById("author2_major").innerHTML = '';
-                document.getElementById("author2_year").innerHTML = '';
-                document.getElementById("author2_campus").innerHTML = '';
-                document.getElementById("author2_mobile").innerHTML = '';
-                document.getElementById("author2_phone").innerHTML = '';
-                document.getElementById("author2_addr1").innerHTML = '';
-                document.getElementById("author2_addr2").innerHTML = '';
-                document.getElementById("author2_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
-        });
-    }
-}
-function Timer3_fun() {
-    if (document.getElementById("author3_num").value.length != 11) {
-        document.getElementById("author3_num_check").innerHTML = "输入正确格式学号";
-        $("#author3_info").slideUp("slow");
-        document.getElementById("author3_name").innerHTML = '';
-        document.getElementById("author3_gender").innerHTML = '';
-        document.getElementById("author3_degree").innerHTML = '';
-        document.getElementById("author3_grade").innerHTML = '';
-        document.getElementById("author3_college").innerHTML = '';
-        document.getElementById("author3_major").innerHTML = '';
-        document.getElementById("author3_year").innerHTML = '';
-        document.getElementById("author3_campus").innerHTML = '';
-        document.getElementById("author3_mobile").innerHTML = '';
-        document.getElementById("author3_phone").innerHTML = '';
-        document.getElementById("author3_addr1").innerHTML = '';
-        document.getElementById("author3_addr2").innerHTML = '';
-    }
-    else {
-        document.getElementById("author3_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author3_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author3_name").innerHTML = name;
-                document.getElementById("author3_gender").innerHTML = gender;
-                document.getElementById("author3_degree").innerHTML = degree;
-                document.getElementById("author3_grade").innerHTML = grade;
-                document.getElementById("author3_college").innerHTML = college;
-                document.getElementById("author3_major").innerHTML = major;
-                document.getElementById("author3_year").innerHTML = year;
-                document.getElementById("author3_campus").innerHTML = campus;
-                document.getElementById("author3_mobile").innerHTML = mobile;
-                document.getElementById("author3_phone").innerHTML = phone;
-                document.getElementById("author3_addr1").innerHTML = addr1;
-                document.getElementById("author3_addr2").innerHTML = addr2;
-                $("#author3_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author3_info").slideUp("slow");
-                document.getElementById("author3_name").innerHTML = '';
-                document.getElementById("author3_gender").innerHTML = '';
-                document.getElementById("author3_degree").innerHTML = '';
-                document.getElementById("author3_grade").innerHTML = '';
-                document.getElementById("author3_college").innerHTML = '';
-                document.getElementById("author3_major").innerHTML = '';
-                document.getElementById("author3_year").innerHTML = '';
-                document.getElementById("author3_campus").innerHTML = '';
-                document.getElementById("author3_mobile").innerHTML = '';
-                document.getElementById("author3_phone").innerHTML = '';
-                document.getElementById("author3_addr1").innerHTML = '';
-                document.getElementById("author3_addr2").innerHTML = '';
-                document.getElementById("author3_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
-        });
-    }
-}
-function Timer4_fun() {
-    if (document.getElementById("author4_num").value.length != 11) {
-        document.getElementById("author4_num_check").innerHTML = "输入正确格式学号";
-        $("#author4_info").slideUp("slow");
-        document.getElementById("author4_name").innerHTML = '';
-        document.getElementById("author4_gender").innerHTML = '';
-        document.getElementById("author4_degree").innerHTML = '';
-        document.getElementById("author4_grade").innerHTML = '';
-        document.getElementById("author4_college").innerHTML = '';
-        document.getElementById("author4_major").innerHTML = '';
-        document.getElementById("author4_year").innerHTML = '';
-        document.getElementById("author4_campus").innerHTML = '';
-        document.getElementById("author4_mobile").innerHTML = '';
-        document.getElementById("author4_phone").innerHTML = '';
-        document.getElementById("author4_addr1").innerHTML = '';
-        document.getElementById("author4_addr2").innerHTML = '';
-    }
-    else {
-        document.getElementById("author4_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author4_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author4_name").innerHTML = name;
-                document.getElementById("author4_gender").innerHTML = gender;
-                document.getElementById("author4_degree").innerHTML = degree;
-                document.getElementById("author4_grade").innerHTML = grade;
-                document.getElementById("author4_college").innerHTML = college;
-                document.getElementById("author4_major").innerHTML = major;
-                document.getElementById("author4_year").innerHTML = year;
-                document.getElementById("author4_campus").innerHTML = campus;
-                document.getElementById("author4_mobile").innerHTML = mobile;
-                document.getElementById("author4_phone").innerHTML = phone;
-                document.getElementById("author4_addr1").innerHTML = addr1;
-                document.getElementById("author4_addr2").innerHTML = addr2;
-                $("#author4_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author4_info").slideUp("slow");
-                document.getElementById("author4_name").innerHTML = '';
-                document.getElementById("author4_gender").innerHTML = '';
-                document.getElementById("author4_degree").innerHTML = '';
-                document.getElementById("author4_grade").innerHTML = '';
-                document.getElementById("author4_college").innerHTML = '';
-                document.getElementById("author4_major").innerHTML = '';
-                document.getElementById("author4_year").innerHTML = '';
-                document.getElementById("author4_campus").innerHTML = '';
-                document.getElementById("author4_mobile").innerHTML = '';
-                document.getElementById("author4_phone").innerHTML = '';
-                document.getElementById("author4_addr1").innerHTML = '';
-                document.getElementById("author4_addr2").innerHTML = '';
-                document.getElementById("author4_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
-        });
-    }
-}
-function Timer5_fun() {
-    if (document.getElementById("author5_num").value.length != 11) {
-        document.getElementById("author5_num_check").innerHTML = "输入正确格式学号";
-        $("#author5_info").slideUp("slow");
-        document.getElementById("author5_name").innerHTML = '';
-        document.getElementById("author5_gender").innerHTML = '';
-        document.getElementById("author5_degree").innerHTML = '';
-        document.getElementById("author5_grade").innerHTML = '';
-        document.getElementById("author5_college").innerHTML = '';
-        document.getElementById("author5_major").innerHTML = '';
-        document.getElementById("author5_year").innerHTML = '';
-        document.getElementById("author5_campus").innerHTML = '';
-        document.getElementById("author5_mobile").innerHTML = '';
-        document.getElementById("author5_phone").innerHTML = '';
-        document.getElementById("author5_addr1").innerHTML = '';
-        document.getElementById("author5_addr2").innerHTML = '';
-    }
-    else {
-        document.getElementById("author5_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author5_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author5_name").innerHTML = name;
-                document.getElementById("author5_gender").innerHTML = gender;
-                document.getElementById("author5_degree").innerHTML = degree;
-                document.getElementById("author5_grade").innerHTML = grade;
-                document.getElementById("author5_college").innerHTML = college;
-                document.getElementById("author5_major").innerHTML = major;
-                document.getElementById("author5_year").innerHTML = year;
-                document.getElementById("author5_campus").innerHTML = campus;
-                document.getElementById("author5_mobile").innerHTML = mobile;
-                document.getElementById("author5_phone").innerHTML = phone;
-                document.getElementById("author5_addr1").innerHTML = addr1;
-                document.getElementById("author5_addr2").innerHTML = addr2;
-                $("#author5_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author5_info").slideUp("slow");
-                document.getElementById("author5_name").innerHTML = '';
-                document.getElementById("author5_gender").innerHTML = '';
-                document.getElementById("author5_degree").innerHTML = '';
-                document.getElementById("author5_grade").innerHTML = '';
-                document.getElementById("author5_college").innerHTML = '';
-                document.getElementById("author5_major").innerHTML = '';
-                document.getElementById("author5_year").innerHTML = '';
-                document.getElementById("author5_campus").innerHTML = '';
-                document.getElementById("author5_mobile").innerHTML = '';
-                document.getElementById("author5_phone").innerHTML = '';
-                document.getElementById("author5_addr1").innerHTML = '';
-                document.getElementById("author5_addr2").innerHTML = '';
-                document.getElementById("author5_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
-        });
-    }
-}
-function Timer6_fun() {
-    if (document.getElementById("author6_num").value.length != 11) {
-        document.getElementById("author6_num_check").innerHTML = "输入正确格式学号";
-        $("#author6_info").slideUp("slow");
-        document.getElementById("author6_name").innerHTML = '';
-        document.getElementById("author6_gender").innerHTML = '';
-        document.getElementById("author6_degree").innerHTML = '';
-        document.getElementById("author6_grade").innerHTML = '';
-        document.getElementById("author6_college").innerHTML = '';
-        document.getElementById("author6_major").innerHTML = '';
-        document.getElementById("author6_year").innerHTML = '';
-        document.getElementById("author6_campus").innerHTML = '';
-        document.getElementById("author6_mobile").innerHTML = '';
-        document.getElementById("author6_phone").innerHTML = '';
-        document.getElementById("author6_addr1").innerHTML = '';
-        document.getElementById("author6_addr2").innerHTML = '';
-    }
-    else {
-        document.getElementById("author6_num_check").innerHTML = '';
-        $.ajax({ url: tiaozhanJSON, async: false, success: function (result) {
-            var find = 0;
-            eval(result);
-            for (var i = 0; i < json_string.length; i++)
-                if (json_string[i].no == document.getElementById("author6_num").value) {
-                    find = 1;
-                    var name = json_string[i].name;
-                    var gender = json_string[i].gender;
-                    var degree = json_string[i].degree;
-                    var grade = json_string[i].grade;
-                    var college = json_string[i].college;
-                    var major = json_string[i].major;
-                    var year = json_string[i].year;
-                    var campus = json_string[i].campus;
-                    var mobile = json_string[i].mobile;
-                    var phone = json_string[i].phone;
-                    var addr1 = json_string[i].addr1;
-                    var addr2 = json_string[i].addr2;
-                }
-            if (find == 1) {
-                document.getElementById("author6_name").innerHTML = name;
-                document.getElementById("author6_gender").innerHTML = gender;
-                document.getElementById("author6_degree").innerHTML = degree;
-                document.getElementById("author6_grade").innerHTML = grade;
-                document.getElementById("author6_college").innerHTML = college;
-                document.getElementById("author6_major").innerHTML = major;
-                document.getElementById("author6_year").innerHTML = year;
-                document.getElementById("author6_campus").innerHTML = campus;
-                document.getElementById("author6_mobile").innerHTML = mobile;
-                document.getElementById("author6_phone").innerHTML = phone;
-                document.getElementById("author6_addr1").innerHTML = addr1;
-                document.getElementById("author6_addr2").innerHTML = addr2;
-                $("#author6_info").slideDown("fast");
-                find = 0;
-            }
-            else {
-                $("#author6_info").slideUp("slow");
-                document.getElementById("author6_name").innerHTML = '';
-                document.getElementById("author6_gender").innerHTML = '';
-                document.getElementById("author6_degree").innerHTML = '';
-                document.getElementById("author6_grade").innerHTML = '';
-                document.getElementById("author6_college").innerHTML = '';
-                document.getElementById("author6_major").innerHTML = '';
-                document.getElementById("author6_year").innerHTML = '';
-                document.getElementById("author6_campus").innerHTML = '';
-                document.getElementById("author6_mobile").innerHTML = '';
-                document.getElementById("author6_phone").innerHTML = '';
-                document.getElementById("author6_addr1").innerHTML = '';
-                document.getElementById("author6_addr2").innerHTML = '';
-                document.getElementById("author6_num_check").innerHTML = "未找到匹配此学号的用户，请先注册";
-            }
-        }
-        });
-    }
-}
+
 

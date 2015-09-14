@@ -12,6 +12,16 @@ class CompController extends CommonController {
 		$this->display();
 	}
 	
+	public function checkValidUser($studentid) {
+		$userModel = M('info');
+		$user = $userModel->where("studentid=".$studentid)->field('id,studentid,username,nickname,message,hidden_name,brief,password',true)->find();
+		if (isset($user)) {
+			$this->ajaxReturn(json_encode($user),'EVAL');
+		}
+		
+		$this->ajaxReturn('0','EVAL');
+	}
+	
 	public function getCompInfo() {
 		$compModel = M('ecnu_mind.competition_info', null);
 		$allComp = $compModel->select();
@@ -53,7 +63,8 @@ class CompController extends CommonController {
 			$returnItem['comp_template'] = 
 				'<a href="'.U("Home/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"").'" target="_blank">点此修改</a>';
 			
-			$returnItem['comp_view'] = "abcdefg";
+			$returnItem['comp_view'] = 
+				'<a href="'.U("Home/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"").'" target="_blank">查看/打印</a>';
 			
 			$result[] = $returnItem; 
 		}
@@ -70,12 +81,19 @@ class CompController extends CommonController {
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
 		$compItemInfo['comp_user_id'] = session('userid');
 		
+		// 检查该用户是否已经注册过该竞赛
+		// Ps.通过主表检测，子表中应该检查所有的参与者是否参加该项竞赛，如果有应该不允许重复注册。
+		$checkResult = $compItemModel->where($compItemInfo)->select();
+		
+		if (!isset($checkResult)) $this->ajaxReturn("您已报名过该项竞赛，请勿重复提交","EVAL");
+		
 		// 获取全站唯一的用户个人报名ID
 		$compId = $compItemModel->data($compItemInfo)->add();
 		
 		// 返回给单项竞赛报名页面后台这个唯一的ID
 		return $compId;
 	}
+
 	
 	private function assignTemplate($allComp) {
 		foreach ($allComp as $comp) {
@@ -88,7 +106,7 @@ class CompController extends CommonController {
 			$compTmp = $comp['comp_template'];
 			$comp['comp_template'] = '<a href="'.U("Home/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
 			
-			$result[] =$comp;
+			$result[] = $comp;
 		}
 		return $result;
 	}
@@ -118,5 +136,13 @@ class CompController extends CommonController {
 			$result[] = $comp;
 		}
 		return $result;
+	}
+	
+	/**
+	 * 检测当前登录的用户是否有权限修改制定comp_item_id的表单(即查看当前用户是否处于该表单中)。
+	 */
+	private function checkAccess() {
+		$userId = $session('userid');
+	   
 	}
 }
