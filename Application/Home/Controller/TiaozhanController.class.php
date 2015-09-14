@@ -21,6 +21,27 @@ class TiaozhanController extends CompController {
 	public function Tiaozhan_origin($compItemId) {
 		$tiaozhanData = $this->getTiaozhanData($compItemId);
 		$this->assign($tiaozhanData);
+		if ($tiaozhanData[type_selector] == 'B1')
+		{
+			$B1Type = substr($tiaozhanData[detailed_type],2,1);
+			$B2Type = ' ';
+			$B3Type = ' ';
+			
+		}
+		else if ($tiaozhanData[type_selector] == 'B2')
+		{
+			$B1Type = ' ';
+			$B2Type = substr($tiaozhanData[detailed_type],2,1);
+			$B3Type = ' ';
+		}
+		else if ($tiaozhanData[type_selector] == 'B3'){
+			$B1Type = ' ';
+			$B2Type = ' ';
+			$B3Type = substr($tiaozhanData[detailed_type],2,1);
+		}
+		$this ->assign('B1Type',$B1Type);
+		$this ->assign('B2Type',$B2Type);
+		$this ->assign('B3Type',$B3Type);
 		//显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
 		$this->display('Tiaozhan/tiaozhanView');
 	}

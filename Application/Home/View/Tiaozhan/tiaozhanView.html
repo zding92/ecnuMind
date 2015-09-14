@@ -82,7 +82,7 @@
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
 		bold'>（</span><span style='font-size:12.0pt;line-height:150%;font-family:宋体;
-		mso-bidi-font-weight:bold'>√</span><span style='font-size:12.0pt;line-height:
+		mso-bidi-font-weight:bold'> {$group_type == 'A1' ? '√' : ''}</span><span style='font-size:12.0pt;line-height:
 		150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
 		"Times New Roman";mso-bidi-font-weight:bold'>）</span><span lang=EN-US
 		style='font-size:12.0pt;line-height:150%;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
@@ -92,14 +92,17 @@
 		font-family:黑体;mso-bidi-font-weight:bold'>□ </span><span style='font-size:12.0pt;
 		line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";
 		mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:bold'>集体项目</span><span
-		lang=EN-US style='font-size:12.0pt;line-height:150%;mso-bidi-font-weight:bold'>A2</span><span
-		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
+		lang=EN-US style='font-size:12.0pt;line-height:150%;mso-bidi-font-weight:bold'>A2</span>
+		<span style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
-		bold'>（</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
-		mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>&nbsp; </span></span><span
-		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
+		bold'>（</span>
+		<span lang=EN-US style='font-size:12.0pt;line-height:150%;
+		mso-bidi-font-weight:bold'><span style='mso-spacerun:yes'>{$group_type == 'A2' ? '√' : ''}</span>
+		</span>
+		<span	style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-weight:
-		bold'>）</span><u><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+		bold'>）</span>
+		<u><span lang=EN-US style='font-size:12.0pt;line-height:150%;
 		mso-bidi-font-weight:bold'><o:p></o:p></span></u></p>
 		
 		<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
@@ -112,7 +115,7 @@
 		
 		<p class=MsoNormal style='text-indent:41.45pt;mso-char-indent-count:3.44;
 		line-height:150%'><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
-		font-family:黑体'>□</span></b><span lang=EN-US style='font-size:12.0pt;
+		font-family:黑体'>{$type_selector=='B1' ? '√' : '□'}</span></b><span lang=EN-US style='font-size:12.0pt;
 		line-height:150%;mso-bidi-font-weight:bold'> </span><b><span style='font-size:
 		12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";
 		mso-hansi-font-family:"Times New Roman"'>自然科学类学术论文</span></b><b><span
@@ -120,7 +123,7 @@
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（</span></b><b><span
 		lang=EN-US style='font-size:12.0pt;line-height:150%'><span
-		style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></b><b><span
+		style='mso-spacerun:yes'>{$B1Type}</span></span></b><b><span
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）</span></b><b><span
 		lang=EN-US style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></b></p>
@@ -145,14 +148,14 @@
 		
 		<p class=MsoNormal style='text-indent:41.45pt;mso-char-indent-count:3.44;
 		line-height:150%'><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
-		font-family:黑体'>□ </span></b><b><span style='font-size:12.0pt;line-height:150%;
+		font-family:黑体'>{$type_selector=='B2' ? '√' : '□'}</span></b><b><span style='font-size:12.0pt;line-height:150%;
 		font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
 		"Times New Roman"'>哲学社会科学类社会调查报告和学术论文</span></b><b><span lang=EN-US
 		style='font-size:12.0pt;line-height:150%'>B2</span></b><b><span
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman"'>（</span></b><b><span
 		lang=EN-US style='font-size:12.0pt;line-height:150%'><span
-		style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></b><b><span
+		style='mso-spacerun:yes'>{$B2Type}</span></span></b><b><span
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）</span></b><b><span
 		lang=EN-US style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></b></p>
@@ -180,13 +183,13 @@
 		
 		<p class=MsoNormal style='text-indent:41.45pt;mso-char-indent-count:3.44;
 		line-height:150%'><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
-		font-family:黑体'>□ </span></b><b><span style='font-size:12.0pt;line-height:150%;
+		font-family:黑体'>{$type_selector=='B3' ? '√' : '□'}</span></b><b><span style='font-size:12.0pt;line-height:150%;
 		font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
 		"Times New Roman"'>科技发明制作</span></b><b><span lang=EN-US style='font-size:12.0pt;
 		line-height:150%'>B3</span></b><b><span style='font-size:12.0pt;line-height:
 		150%;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
 		"Times New Roman"'>（</span></b><b><span lang=EN-US style='font-size:12.0pt;
-		line-height:150%'><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span></b><b><span
+		line-height:150%'><span style='mso-spacerun:yes'>{$B3Type}</span></span></b><b><span
 		style='font-size:12.0pt;line-height:150%;font-family:宋体;mso-ascii-font-family:
 		"Times New Roman";mso-hansi-font-family:"Times New Roman"'>）</span></b><b><span
 		lang=EN-US style='font-size:12.0pt;line-height:150%'><o:p></o:p></span></b></p>
