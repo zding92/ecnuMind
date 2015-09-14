@@ -19,9 +19,10 @@ class TiaozhanController extends CompController {
 	}
 	
 	public function Tiaozhan_origin($compItemId) {
-		//$this->assign('compId',$compId);
+		$tiaozhanData = $this->getTiaozhanData($compItemId);
+		$this->assign($tiaozhanData);
 		//显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
-		$this->display('Tiaozhan/tiaozhan_origin_table');
+		$this->display('Tiaozhan/tiaozhanView');
 	}
 	
 	public function tiaozhanView() {
