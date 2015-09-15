@@ -21,27 +21,33 @@ class TiaozhanController extends CompController {
 	public function Tiaozhan_origin($compItemId) {
 		$tiaozhanData = $this->getTiaozhanData($compItemId);
 		$this->assign($tiaozhanData);
+		
+		$CTable='';//C表当前国内外课题研究水平 内容
 		if ($tiaozhanData[type_selector] == 'B1')
 		{
 			$B1Type = substr($tiaozhanData[detailed_type],2,1);
 			$B2Type = ' ';
 			$B3Type = ' ';
-			
+			$CTable = $tiaozhanData[b1_9];
 		}
 		else if ($tiaozhanData[type_selector] == 'B2')
 		{
 			$B1Type = ' ';
 			$B2Type = substr($tiaozhanData[detailed_type],2,1);
 			$B3Type = ' ';
+			$CTable = $tiaozhanData[b2_8];
 		}
 		else if ($tiaozhanData[type_selector] == 'B3'){
 			$B1Type = ' ';
 			$B2Type = ' ';
 			$B3Type = substr($tiaozhanData[detailed_type],2,1);
+			$CTable = $tiaozhanData[b3_10];
 		}
+		
 		$this ->assign('B1Type',$B1Type);
 		$this ->assign('B2Type',$B2Type);
 		$this ->assign('B3Type',$B3Type);
+		$this ->assign('CTable',$CTable);
 		//显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
 		$this->display('Tiaozhan/tiaozhanView');
 	}
