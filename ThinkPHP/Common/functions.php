@@ -1549,9 +1549,17 @@ function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
 
-function checkNull($id) {
+function checkCharNull($id) {
 	if ($id === '') {
 		return 'null';
+	} else {
+		return $id;
+	}
+}
+
+function checkIntNull($id) {
+	if ($id === '') {
+		return null;
 	} else {
 		return $id;
 	}

@@ -20,10 +20,10 @@ class TiaozhanController extends CompController {
 	}
 	
 	public function Tiaozhan_origin($compItemId) {
-		$tiaozhanData = $this->getTiaozhanData($compItemId);
-		$this->assign($tiaozhanData);
+		$tiaozhanData = $this->getTiaozhanData($compItemId);	
 		
-		$CTable='';//C表当前国内外课题研究水平 内容
+		//C表当前国内外课题研究水平 内容
+		$CTable='';
 		if ($tiaozhanData[type_selector] == 'B1')
 		{
 			$B1Type = substr($tiaozhanData[detailed_type],2,1);
@@ -45,10 +45,12 @@ class TiaozhanController extends CompController {
 			$CTable = $tiaozhanData['b3_10'];
 		}
 		
+		$this ->assign($tiaozhanData);
 		$this ->assign('B1Type',$B1Type);
 		$this ->assign('B2Type',$B2Type);
 		$this ->assign('B3Type',$B3Type);
 		$this ->assign('CTable',$CTable);
+		
 		//显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
 		$this->display('Tiaozhan/tiaozhanView');
 	}
@@ -61,19 +63,29 @@ class TiaozhanController extends CompController {
 		$compItemID = $this->registerComp();
 		
 		// 添加教师信息。
-		$TeacherId = $this->addTeacherInfo();
+		if (I('post.teacher_name') !='') { 
+			$teacherId = $this->addTeacherInfo();
+			$result['teacher_id'] = $teacherId;
+		}
 		
 		// 添加推荐人信息。
-		$RefereeId = $this->addRefereeInfo();
-		
+		if (I('post.referee_name') !='') {
+			$refereeId = $this->addRefereeInfo();
+			$result['referee_id'] = $refereeId;
+		}
+				
 		// 添加基本信息
-		$this->addBasicInfo($compItemID, $TeacherId, $RefereeId);
+		$this->addBasicInfo($compItemID, $teacherId, $refereeId);
 		
 		// 添加表格说明（长文本）
 		$this->addTableInfo($compItemID, I('post.type_selector'));	
 		
-		// 返回成功信息
-		$this->ajaxReturn('更新成功', 'EVAL');
+		// 返回comp_item_id用于表单更新。
+		$result['comp_item_id'] = $compItemID;
+		
+		$result['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
+		// 返回添加成功的comp_item_id，teacher_id和referee_id
+		$this->ajaxReturn(json_encode($result), 'EVAL');
 	}
 	
 	/**
@@ -81,13 +93,26 @@ class TiaozhanController extends CompController {
 	 */
 	public function TiaozhanUpdate($compItemId){
 		$this->checkValid($compItemId);
-		
+		$result['needUpdateJs'] = 'false';
 		//更新表单
 		// 更新教师信息。
-		$this->updateTeacherInfo();
+		if (I('post.teacher_id') != '') {
+			$this->updateTeacherInfo();
+		} else if (I('post.teacher_name') != '') {
+			$_POST['teacher_id'] = $this->addTeacherInfo();
+			$result['needUpdateJs'] = 'true';
+			$result['teacher_id'] = I('post.teacher_id'); 
+		}
+			
+		// 更新推荐人信息，如果之前不存在则新填加一个推荐人。
+		if (I('post.referee_id') != '') {
+			$this->updateRefereeInfo();
+		} else if (I('post.referee_name') != '') {
+			$_POST['referee_id'] = $this->addRefereeInfo();
+			$result['needUpdateJs'] = 'true';
+			$result['referee_id'] = I('post.referee_id');
+		}
 		
-		// 更新推荐人信息。
-		$this->updateRefereeInfo();
 		
 		// 更新基本信息
 		$this->updateBasicInfo($compItemId, I('post.teacher_id'), I('post.referee_id'));
@@ -96,7 +121,7 @@ class TiaozhanController extends CompController {
 		$this->updateTableInfo($compItemId, I('post.type_selector'));
 		
 		// 返回成功信息
-		$this->ajaxReturn('更新成功', 'EVAL');
+		$this->ajaxReturn(json_encode($result), 'EVAL');
 		
 	}
 	
@@ -153,11 +178,13 @@ class TiaozhanController extends CompController {
 		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
 		// 另外自动添加报名日期
 		$auto = array (
-				array('author2_id','checkNull',1,'function'),
-				array('author3_id','checkNull',1,'function'),
-				array('author4_id','checkNull',1,'function'),
-				array('author5_id','checkNull',1,'function'),
-				array('author6_id','checkNull',1,'function'),
+				array('author2_id','checkCharNull',1,'function'),
+				array('author3_id','checkCharNull',1,'function'),
+				array('author4_id','checkCharNull',1,'function'),
+				array('author5_id','checkCharNull',1,'function'),
+				array('author6_id','checkCharNull',1,'function'),
+				array('referee_id','checkIntNull',1,'function'),
+				array('teacher_id','checkIntNull',1,'function'),
 				array('apply_date','date',3,'function',array('Y-m-d'))
 		);
 		
@@ -180,11 +207,13 @@ class TiaozhanController extends CompController {
 		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
 		// 另外自动添加报名日期
 		$auto = array (
-				array('author2_id','checkNull',1,'function'),
-				array('author3_id','checkNull',1,'function'),
-				array('author4_id','checkNull',1,'function'),
-				array('author5_id','checkNull',1,'function'),
-				array('author6_id','checkNull',1,'function'),
+				array('author2_id','checkCharNull',1,'function'),
+				array('author3_id','checkCharNull',1,'function'),
+				array('author4_id','checkCharNull',1,'function'),
+				array('author5_id','checkCharNull',1,'function'),
+				array('author6_id','checkCharNull',1,'function'),
+				array('referee_id','checkIntNull',1,'function'),
+				array('teacher_id','checkIntNull',1,'function'),
 				array('apply_date','date',3,'function',array('Y-m-d'))
 		);
 	
@@ -202,9 +231,14 @@ class TiaozhanController extends CompController {
 	private function addTableInfo($compItemID, $bn) {
 		$bn = strtolower($bn);
 		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
+		$auto = array (
+				array('ip1_date','checkCharNull',1,'function'),
+				array('ip2_date','checkCharNull',1,'function'),
+		);
 		$TableModel->create();
 		$TableData = $TableModel->data();
-			$TableData['comp_item_id'] = $compItemID;
+		$TableData['comp_item_id'] = $compItemID;
+		
 		$TableModel->data($TableData)->add();
 	}
 	
@@ -212,7 +246,14 @@ class TiaozhanController extends CompController {
 		$bn = strtolower($bn);
 		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
 		$TableModel->create();
-		$TableModel->where('comp_item_id='.$compItemID)->save();
+		$TableInfo = $TableModel->data();
+		
+		$checkExist = $TableModel->where('comp_item_id='.$compItemID)->find();
+		if (!isset($checkExist)) {
+			$this->addTableInfo($compItemID, $bn);
+		}
+	
+		$TableModel->where('comp_item_id='.$compItemID)->save($TableInfo);
 	}
 	
 	private function getTiaozhanData($compItemId) {

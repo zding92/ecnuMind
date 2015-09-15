@@ -184,6 +184,27 @@ function step1_check()
 var data_string;
 
 $(document).ready(function () {
+	function changeToUpdateMode(update_json) {
+		for (var key in update_json) {
+    		switch (key) {
+			case 'submit_mode':
+				submitUrl = update_json.submit_mode;
+				break;
+			case 'comp_item_id':
+				CompItemId = update_json.comp_item_id;
+				break;
+			case 'teacher_id':
+				$("#teacher_id").val(update_json.teacher_id);
+				break;
+			case 'referee_id':
+				$("#referee_id").val(update_json.referee_id);
+				break;
+			default:
+				break;
+			}
+    	}	
+	};
+	
     $(".save_button").each(function () {
         $(this).click(function () {
             data_string = '';
@@ -218,11 +239,11 @@ $(document).ready(function () {
                             data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
                             success: function (call) 
                             {
-//                                     alert(call);
-//                                     //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
-//                                     if (tiaozhanDataWri==true) alert("已成功保存");
-//                                     else alert("数据写入数据库失败");
-
+                            	if (call != null) {
+                            		alert('数据提交成功');
+                            		var update_json = eval("(" + call + ")");
+                                	changeToUpdateMode(update_json);                 
+                            	}
                             }
                         });	
                     } else {
@@ -233,15 +254,15 @@ $(document).ready(function () {
                             data: $('#tiaozhanForm').serialize()+'&compItemId='+ CompItemId,
                             success: function (call) 
                             {
-//                                     alert(call);
-//                                     //在php中会ajaxReturn一个tiaozhanDataWri变量，以此判断是否数据库写入完毕
-//                                     if (tiaozhanDataWri==true) alert("已成功保存");
-//                                     else alert("数据写入数据库失败");
-
+                            	if (call != null) {
+                            		alert('数据提交成功');
+                            		var update_json = eval("(" + call + ")");
+                            		if (update_json.needUpdateJs)
+                            			changeToUpdateMode(update_json);                 
+                            	}
                             }
                         });
-                    }
-                    
+                    }                
                 }
                 else alert("请检查第一步与第三步中项目名称是否一致");
             }
@@ -250,6 +271,7 @@ $(document).ready(function () {
         });
     });
 });
+
 
 
 //var counter=1;
