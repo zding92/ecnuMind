@@ -186,7 +186,7 @@ function InitAbilityChooser() {
         $('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
         $('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
         $('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中                   
-        $('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");   
+        $('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");   
         $('.popoutLine3RedText').html("×");
         $('.popoutLine3Green').animate({width:'700px'},"middle");
         document.getElementById("abilityDetail").disabled=false;//使能输入框     
