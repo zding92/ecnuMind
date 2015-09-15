@@ -210,7 +210,7 @@ $(document).ready(function () {
 
                     });
                     alert($('#tiaozhanForm').serialize());
-                    if (CompItemId == '') {
+                    if (CompItemId == null) {
                     	$.ajax({
                             url: submitUrl, //请求验证页面 
                             type: "POST", //请求方式

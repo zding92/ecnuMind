@@ -29,20 +29,20 @@ class TiaozhanController extends CompController {
 			$B1Type = substr($tiaozhanData[detailed_type],2,1);
 			$B2Type = ' ';
 			$B3Type = ' ';
-			$CTable = $tiaozhanData[b1_9];
+			$CTable = $tiaozhanData['b1_9'];
 		}
 		else if ($tiaozhanData[type_selector] == 'B2')
 		{
 			$B1Type = ' ';
 			$B2Type = substr($tiaozhanData[detailed_type],2,1);
 			$B3Type = ' ';
-			$CTable = $tiaozhanData[b2_8];
+			$CTable = $tiaozhanData['b2_8'];
 		}
 		else if ($tiaozhanData[type_selector] == 'B3'){
 			$B1Type = ' ';
 			$B2Type = ' ';
 			$B3Type = substr($tiaozhanData[detailed_type],2,1);
-			$CTable = $tiaozhanData[b3_10];
+			$CTable = $tiaozhanData['b3_10'];
 		}
 		
 		$this ->assign('B1Type',$B1Type);
@@ -71,6 +71,9 @@ class TiaozhanController extends CompController {
 		
 		// 添加表格说明（长文本）
 		$this->addTableInfo($compItemID, I('post.type_selector'));	
+		
+		// 返回成功信息
+		$this->ajaxReturn('更新成功', 'EVAL');
 	}
 	
 	/**
@@ -92,6 +95,9 @@ class TiaozhanController extends CompController {
 		// 更新表格说明（长文本）
 		$this->updateTableInfo($compItemId, I('post.type_selector'));
 		
+		// 返回成功信息
+		$this->ajaxReturn('更新成功', 'EVAL');
+		
 	}
 	
 	private function addTeacherInfo() {
@@ -106,7 +112,7 @@ class TiaozhanController extends CompController {
 		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
 		// 根据表单提交的POST数据创建数据对象
 		$TeacherModel->create();
-		// 添加到teacher表并返回主键。
+		// 更新teacher。
 		$TeacherModel->save();
 	}
 	
@@ -137,7 +143,7 @@ class TiaozhanController extends CompController {
 		$refereeData['teacher_zipcode'] = I('post.referee_zipcode');
 		$refereeData['teacher_workphone'] = I('post.referee_workphone');
 		$refereeData['teacher_homephone'] = I('post.referee_homephone');
-		// 添加到teacher表并返回主键。
+		// 更新teacher表。
 		$TeacherModel->data($refereeData)->save();
 	}
 	
