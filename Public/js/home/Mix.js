@@ -13,7 +13,7 @@ $(function () {
     
     $(function () {
         $('#L3 :input').each(function () {
-            $(this).parent().addClass($(this).attr('data-cat'));
+        	$(this).parent().addClass($(this).attr('data-cat'));
             $(this).parent().attr('data-cat', $(this).attr('data-cat'));
             $(this).parent().css('display', 'inline-block');
         })
@@ -88,6 +88,7 @@ $(function () {
         //        setTimeout('$("#index2").click()', 500);
     });
     
+    /*
     var index = 1;
     var last = 1;
     $(function () {
@@ -104,6 +105,7 @@ $(function () {
             }
         })
     });
+    */
 
     var hasAbility = true;
     var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
@@ -125,7 +127,7 @@ $(function () {
         		$('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
         		$('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
         		$('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中			        		
-        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");	
+        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
         		$('.popoutLine3RedText').html("×");
         		$('.popoutLine3Green').animate({width:'700px'},"middle");
         	}
@@ -178,7 +180,7 @@ $(function () {
 		$('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
 		$('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
 		$('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中					
-		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击绿色按钮）");	
+		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
 		$('.popoutLine3RedText').html("×");
 		$('.popoutLine3Green').animate({width:'700px'},"middle");
 		document.getElementById("abilityDetail").disabled=false;//使能输入框		
