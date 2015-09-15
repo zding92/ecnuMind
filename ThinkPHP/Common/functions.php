@@ -1553,6 +1553,6 @@ function checkNull($id) {
 	if ($id === '') {
 		return 'null';
 	} else {
-		return id;
+		return $id;
 	}
 }
