@@ -508,7 +508,8 @@ font-size: 0px;
     max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
-    min-height: 250px;
+    min-height: 300px;
+    margin-bottom: 20px;
 }
 .info_container #L4 {
     max-height: 250px;
@@ -582,10 +583,7 @@ font-size: 0px;
     border: 0px;
     width: 1032px;     
 }
-.abilityDetail{
-	min-width: 680px;
-	height: 200px;
-}
+
 .headAbilityDetail{
 	margin-bottom: 5px;
 }

@@ -13,6 +13,9 @@
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script>
+  	var getDataURL = '/webprj/ecnu_mind/index.php/Home/Comp/getCompItem';
+  </script>
   
 </head>
 

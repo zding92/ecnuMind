@@ -1,0 +1,243 @@
+$(function () {
+    $('#L3 :input').each(function () {
+        var self = $(this),
+        label = self.next(),
+        label_text = label.text();
+        label.remove();
+        self.iCheck({
+            checkboxClass: 'icheckbox_line-blue',
+            radioClass: 'iradio_line-blue',
+            insert: '<div class="icheck_line-icon"></div>' + label_text
+        });
+    });
+    
+    $(function () {
+        $('#L3 :input').each(function () {
+        	$(this).parent().addClass($(this).attr('data-cat'));
+            $(this).parent().attr('data-cat', $(this).attr('data-cat'));
+            $(this).parent().css('display', 'inline-block');
+        })
+    });
+       
+    var filterList = {
+        init: function () {
+            // MixItUp plugin
+        	if ($('#L2').mixItUp('isLoaded'))
+        		$('#L2').mixItUp("destroy");
+            $('#L2').mixItUp({
+            	selectors: {
+            		target: '.tags_1',
+            		//filter: '#L1 .filter'
+            	},
+                animation: {
+            		duration: 300,
+                }
+            });
+        }
+    }.init();
+
+    var filterList2 = {
+        init: function () {
+            // MixItUp plugin
+        	if ($('#L3').mixItUp('isLoaded'))
+        		$('#L3').mixItUp("destroy");
+            $('#L3').mixItUp({
+            	selectors: {
+            		target: '.icheckbox_line-blue',
+            		//filter: '#L2 .filter'
+            	},
+                animation: {
+            		duration: 300
+                }
+            });
+        }
+    }.init();
+
+    var filters = "";
+    $('.tags').click(function () {
+        if ($(this).attr('id') == "L1_all") {
+            $("#L1_all ~ div").removeClass('active');
+            $(this).addClass('active');
+            filters = "all";
+        } else {
+            filters = filters.replace(/all/, "");
+            $("#L1_all").removeClass('active');
+            $(this).toggleClass('active');
+            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/." + $(this).attr('id') + ",*/"), "");
+        }
+        $('#L2').mixItUp('filter', filters);
+        //$("#index").attr('data-filter', filters);
+        //setTimeout('$("#index").click()', 500);
+    })
+
+    var filters_2 = "";
+    $('.tags_1').click(function () {
+        if ($(this).attr('id') == "L2_all") {
+            $("#L2_all ~ div").removeClass('active');
+            $(this).addClass('active');
+            filters_2 = "all";
+        } else {
+            filters_2 = filters_2.replace(/all/, "");
+            $("#L2_all").removeClass('active');
+            $(this).toggleClass('active');
+            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id') + ",") : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
+        }
+        $('#L3').mixItUp('filter', filters_2);
+        //调试用div，可查看filters内容
+        //$("#index2").attr('data-filter', filters_2);
+        //        setTimeout('$("#index2").click()', 500);
+    });
+    
+    /*
+    var index = 1;
+    var last = 1;
+    $(function () {
+        $('.tags_1').each(function () {
+            if ($(this).attr('id') !== "L2_all") {
+                if ($(this).attr('data-cat')[3] == last.toString()) {
+                    $(this).attr('id', $(this).attr('data-cat') + '_' + index);
+                    index++;
+                } else {
+                    last++;
+                    index = 1;
+                    $(this).attr('id', $(this).attr('data-cat') + '_' + index);
+                }
+            }
+        })
+    });
+    */
+
+    var hasAbility = false;
+    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
+    var CheckStateItem;
+    $(function(){//将获取最新的标签文字以及说明添加至页面中
+    	$("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
+        	CheckStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
+        	hasAbility = !(CheckStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
+        	//点击能力标签之后，在未保存之前，不改变当前状态
+        	if (hasAbility == false)
+        		CheckStateItem.iCheck('uncheck');
+        	else
+        		CheckStateItem.iCheck('check');
+        	if (hasAbility == false){
+        		$('.popoutLine3RedText').addClass("line3Selected");
+        		$('.popoutLine3RedText').addClass("line3RedSelected");
+        		$('.popoutLine3GreenText').removeClass("line3Selected");
+        		$('.popoutLine3RedText').removeClass("line3RedUnselected");
+        		$('.popoutLine3GreenText').removeClass("line3GreenSelected");        		
+        		$('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");		
+        		$('.popoutLine3GreenText').html("√");
+        		$('.popoutLine3Green').animate({width:'100px'},"middle");
+        	} 
+        	else{
+        		$('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
+        		$('.popoutLine3GreenText').addClass("line3GreenSelected");//表明绿色选中
+        		$('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
+        		$('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
+        		$('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中			        		
+        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
+        		$('.popoutLine3RedText').html("×");
+        		$('.popoutLine3Green').animate({width:'700px'},"middle");
+        	}
+        	
+        	//点击选择能力的标签，出现弹出框
+    		$('.popoutAblityName').text($(this).parent().text());
+    		$('.theme-popover-mask').fadeIn(100);
+    		$('.theme-popover').slideDown(200);
+    		
+            lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
+        });
+    })
+	
+	$('.theme-popover .close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+	
+	//点击绿色区域，绿色区域滚动放大
+	$('.popoutLine3Green').click(function(){
+		hasAbility = true;
+		$('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
+		$('.popoutLine3GreenText').addClass("line3GreenSelected");//表明绿色选中
+		$('.popoutLine3RedText').removeClass("line3Selected");//删除红色选中
+		$('.popoutLine3RedText').removeClass("line3RedSelected");//删除红色选中
+		$('.popoutLine3RedText').addClass("line3RedUnselected");//表明红色未选中					
+		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
+		$('.popoutLine3RedText').html("×");
+		$('.popoutLine3Green').animate({width:'700px'},"middle");
+		document.getElementById("abilityDetail").disabled=false;//使能输入框	
+	})
+	
+	//点击红色区域，红色区域滚动放大
+	$('.popoutLine3Red').click(function(){
+		hasAbility = false;
+		$('.popoutLine3RedText').addClass("line3Selected");
+		$('.popoutLine3RedText').addClass("line3RedSelected");
+		$('.popoutLine3GreenText').removeClass("line3Selected");
+		$('.popoutLine3RedText').removeClass("line3RedUnselected");
+		$('.popoutLine3GreenText').removeClass("line3GreenSelected");		
+		$('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");		
+		$('.popoutLine3GreenText').html("√");
+		$('.popoutLine3Green').animate({width:'100px'},"middle");
+		document.getElementById("abilityDetail").disabled=true;//禁用输入框
+		$('.abilityDetailCover').css("display","none");//不显示遮罩
+	})
+	
+	//点击弹窗详细能力遮罩，激活textarea开始编辑
+	$('.abilityDetailCover').click(function(){
+		//点击弹窗之后，使弹窗消失
+		$('.abilityDetailCover').css("display","none");
+		
+		//弹窗消失之后，textarea获得焦点
+		document.getElementById("abilityDetail").focus();		
+        if(hasAbility == true){//若选择了该项能力
+            document.getElementById("abilityDetail").disabled=false;//使能输入框
+        }
+        else{//若未选择该项能力      
+           	document.getElementById("abilityDetail").disabled=true;//禁用输入框
+        } 
+	})
+	
+	
+	//鼠标移入textarea，显示遮罩提示
+	$('.abilityDetailContainer').mouseenter(function(){	
+		//若能力激活，且textarea没有在编辑状态下，显示提示遮罩
+		if ((hasAbility == true)&&(!$(":focus").hasClass('abilityDetail')))	$('.abilityDetailCover').css("display","block");
+	})
+	
+	$('.abilityDetailCover').mouseleave(function(){
+		//鼠标立刻能力说明范围，提示遮罩消失
+		$('.abilityDetailCover').css("display","none");
+	})
+
+	//点击保存按钮
+	$('.popoutLine1Save').click(function(){
+        //取出能力说明框中的内容
+        var abilityDetail = $(".abilityDetail").val();
+
+        //判断其是否为默认值，若是默认值，则能力说明框中的值为null
+        if (abilityDetail == "在此添加经历或认证，进一步说明此项能力")
+            abilityDetail = "";
+        
+        var json2selfCommentPHP = 'abilityName='+lastPickedCheckbox +'&selfComment='+abilityDetail;
+        
+//        alert(app_url);
+        
+        $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
+            url: app_url + "/home/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
+            data : json2selfCommentPHP,//交给PHP处理的输入数据
+            type: "POST", //请求方式
+            async: false,
+            success: function (result) {
+            	eval(result);
+            	//$(".abilityDetail").val(selfCommentData.selfComment);
+            	//alert(selfCommentData.selfComment);
+            }
+        });
+        if (hasAbility == false)
+    		CheckStateItem.iCheck('uncheck');
+    	else
+    		CheckStateItem.iCheck('check');
+        
+    });
+})();

@@ -7,50 +7,37 @@ class AbilityController extends CommonController{
 	 * 生成数据库内的三级能力的json格式数据
 	 */
 	public function genDB() {
-		// 连接数据库
-		$conn = new \mysqli("localhost", "ecnu_mind_admin", "hello world", "ecnu_mind", "3306");
-	
-		if ($conn->connect_errno) {
-			exit();
-		}
-	
-		// 定义ability_json数据
-		$ability = "{";
-	
-		// 生成json格式数据
-		$result = $conn->query("select * from field");
-	
-		for ($i = 0; $i < $result->num_rows; ++$i)
-		{
-			$row = mysqli_fetch_assoc($result);
-			$ability = $ability.'"'.$row['name'].'":{';
-			$res2 = $conn->query('select * from direction where Field_id = '.$row['id']);
-			for ($j = 0; $j < $res2->num_rows; ++$j)
-			{
-				$row2 = mysqli_fetch_assoc($res2);
-				$ability = $ability.'"'.$row2['name'].'":{';
-				$res3 = $conn->query('select * from ability where Direction_id = '.$row2['id']);
-				for ($k = 0; $k < $res3->num_rows; ++$k)
-				{
-					$row3 = mysqli_fetch_assoc($res3);
-					$ability = $ability.'"'.$row3['name'].'"';
-					if ($k < $res3->num_rows - 1)
-						$ability = $ability.',';
+	// 获取第一级能力设置
+		$model_f = M('ecnu_mind.field', null);
+		$field = $model_f->field('id,name')->select();
+		
+		$list1 = array();
+		foreach ($field as $f) {
+			// 获取第二级能力设置
+			$model_d = M('ecnu_mind.direction', null);
+			$condition['Field_id'] = $f['id'];
+			$direction = $model_d->field('id,name')->where($condition)->select();
+			
+			$list2 = array();
+			foreach ($direction as $d) {
+				// 获取第三级能力设置
+				$model_a = M('ecnu_mind.ability', null);
+				$condition_2['Direction_id'] = $d['id'];
+				$temp = $model_a->field('name')->where($condition_2)->select();
+				// urlencode 与 urldecode解决中文编码的问题
+				foreach ($temp as $k => $t) {
+					$t['name'] = urlencode($t['name']);
+					$temp[$k] = $t;
 				}
-				$ability = $ability.'}';
-				if ($j < $res2->num_rows - 1)
-					$ability = $ability.',';
+				$list2[urlencode($d['name'])] = $temp;
 			}
-			$ability = $ability.'}';
-			if ($i < $result->num_rows - 1)
-				$ability = $ability.',';
+			
+			$list1[urlencode($f['name'])] = $list2;
 		}
-	
-		$ability = $ability.'};';
-	
-		// 关闭数据库连接并返回json格式数据
-		mysqli_close($conn);
-		$this->ajaxReturn($ability, "EVAL");
+		// 调试
+		//$str1 = urldecode(json_encode($list1).";");
+		// 返回json格式的数据
+		return $this->ajaxReturn(urldecode(json_encode($list1)), "EVAL");
 	}
 	
 	public function checkAbility() {

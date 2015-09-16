@@ -81,6 +81,9 @@ body{
 	display: inline-flex;
 	line-height: 34px;
 }
+#L2 .searchPeopleTag{
+	display: none;
+}
 .searchPeopleTags{
 	display: inline-table;
 	margin-left: 25px;

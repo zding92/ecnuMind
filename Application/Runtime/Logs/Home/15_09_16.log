@@ -1,0 +1,1826 @@
+[ 2015-09-16T00:00:38+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='第三方',`teacher_age`='321',`teacher_job`='但是',`teacher_add`='位',`teacher_zipcode`='414',`teacher_workphone`='4124',`teacher_homephone`='3213' WHERE `teacher_id` = 103 [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='都',`teacher_gender`='男',`teacher_age`='213',`teacher_job`='范德萨',`teacher_add`='但是',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 102 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='粉',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='102',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='103',`practice_type`='0',`apply_date`='2015-09-16' WHERE `comp_item_id` = 21 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='范德萨',`b1_2`='但是',`b1_3`=' 二维',`b1_4`='但是',`b1_5`='都是',`b1_6`=' 第三方',`b1_7`='51 ',`b1_8`='师范大学都',`b1_9`='顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶' WHERE ( comp_item_id=21 ) [ RunTime:0.0050s ]
+
+[ 2015-09-16T00:03:08+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:03:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:03:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:03:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:03:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:03:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T00:05:02+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:05:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-16T00:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T00:05:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:05:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompInfo?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:05:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/Tiaozhan/compId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 24 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 28 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 29 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 32 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 34 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 35 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 36 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 42 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 43 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 44 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 45 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 46 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 49 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 50 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 51 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 52 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 53 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 54 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 57 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 58 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 59 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 60 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 61 行.
+NOTIC: [8] Undefined variable: referee_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 65 行.
+NOTIC: [8] Undefined variable: referee_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 66 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 70 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 71 行.
+NOTIC: [8] Undefined variable: referee_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 73 行.
+NOTIC: [8] Undefined variable: referee_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 75 行.
+NOTIC: [8] Undefined variable: referee_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 77 行.
+NOTIC: [8] Undefined variable: referee_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 79 行.
+NOTIC: [8] Undefined variable: referee_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 81 行.
+NOTIC: [8] Undefined variable: referee_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 82 行.
+NOTIC: [8] Undefined variable: author1_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 95 行.
+NOTIC: [8] Undefined variable: author2_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 120 行.
+NOTIC: [8] Undefined variable: author3_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 144 行.
+NOTIC: [8] Undefined variable: author4_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 169 行.
+NOTIC: [8] Undefined variable: author5_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 193 行.
+NOTIC: [8] Undefined variable: author6_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 217 行.
+NOTIC: [8] Undefined variable: teacher_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 242 行.
+NOTIC: [8] Undefined variable: teacher_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 243 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 246 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 247 行.
+NOTIC: [8] Undefined variable: teacher_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 249 行.
+NOTIC: [8] Undefined variable: teacher_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 251 行.
+NOTIC: [8] Undefined variable: teacher_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 253 行.
+NOTIC: [8] Undefined variable: teacher_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 255 行.
+NOTIC: [8] Undefined variable: teacher_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 257 行.
+NOTIC: [8] Undefined variable: teacher_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 258 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 262 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 263 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 278 行.
+NOTIC: [8] Undefined variable: b1_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 295 行.
+NOTIC: [8] Undefined variable: b1_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 299 行.
+NOTIC: [8] Undefined variable: b1_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 303 行.
+NOTIC: [8] Undefined variable: b1_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 307 行.
+NOTIC: [8] Undefined variable: b1_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 311 行.
+NOTIC: [8] Undefined variable: b1_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 315 行.
+NOTIC: [8] Undefined variable: b1_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 319 行.
+NOTIC: [8] Undefined variable: b1_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 323 行.
+NOTIC: [8] Undefined variable: b1_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 327 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 337 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 402 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 411 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 477 行.
+NOTIC: [8] Undefined variable: comp_item_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:06:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:06:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:06:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+NOTIC: [8] Undefined variable: refereeId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('B1表测试','A1','B1','B1A',NULL,'10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','22') [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_b1 (`b1_1`,`b1_2`,`b1_3`,`b1_4`,`b1_5`,`b1_6`,`b1_7`,`b1_8`,`b1_9`,`comp_item_id`) VALUES ('','','','','','','','','','22') [ RunTime:0.0080s ]
+
+[ 2015-09-16T00:07:25+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('B1推荐人','男','1','A','D','2','3','4') [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`=NULL,`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='',`b1_2`='',`b1_3`='',`b1_4`='',`b1_5`='',`b1_6`='',`b1_7`='',`b1_8`='',`b1_9`='' WHERE ( comp_item_id=22 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:07:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_id`,`teacher_name`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('0','B1导师','2','发的','都','213','213','12') [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='A',`teacher_add`='D',`teacher_zipcode`='2',`teacher_workphone`='3',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0160s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='',`b1_2`='',`b1_3`='',`b1_4`='',`b1_5`='',`b1_6`='',`b1_7`='',`b1_8`='',`b1_9`='' WHERE ( comp_item_id=22 ) [ RunTime:0.0040s ]
+
+[ 2015-09-16T00:08:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1导师',`teacher_age`='2',`teacher_job`='哈哈',`teacher_add`='都',`teacher_zipcode`='213',`teacher_workphone`='1',`teacher_homephone`='12' WHERE `teacher_id` = 105 [ RunTime:0.0090s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='D',`teacher_add`='A',`teacher_zipcode`='2',`teacher_workphone`='3',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='',`b1_2`='',`b1_3`='',`b1_4`='',`b1_5`='',`b1_6`='',`b1_7`='',`b1_8`='',`b1_9`='' WHERE ( comp_item_id=22 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:08:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:08:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:08:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1导师',`teacher_age`='2',`teacher_job`='哈哈',`teacher_add`='都',`teacher_zipcode`='213',`teacher_workphone`='1',`teacher_homephone`='12' WHERE `teacher_id` = 105 [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='D',`teacher_add`='A',`teacher_zipcode`='2',`teacher_workphone`='3',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='10112140253',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='',`b1_2`='',`b1_3`='',`b1_4`='',`b1_5`='',`b1_6`='',`b1_7`='',`b1_8`='',`b1_9`='' WHERE ( comp_item_id=22 ) [ RunTime:0.0020s ]
+
+[ 2015-09-16T00:09:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1导师',`teacher_age`='2',`teacher_job`='哈哈',`teacher_add`='都',`teacher_zipcode`='213',`teacher_workphone`='1',`teacher_homephone`='12' WHERE `teacher_id` = 105 [ RunTime:0.0050s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='D',`teacher_add`='A',`teacher_zipcode`='2',`teacher_workphone`='3',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='10112140253',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='B1测试1_1',`b1_2`='B1测试1_2',`b1_3`='B1测试1_4',`b1_4`='B1测试1_5',`b1_5`='B1测试1_6',`b1_6`='B1测试1_7',`b1_7`='B1测试1_8',`b1_8`='B1测试1_9',`b1_9`='B1测试1_0' WHERE ( comp_item_id=22 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:10:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/myComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-16T00:10:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompItem?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT `comp_type_id`,`comp_item_id` FROM ecnu_mind.competition_main WHERE ( comp_user_id=21 )  [ RunTime:0.0000s ]
+SQL: SELECT `comp_name`,`comp_template` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT `comp_item_name`,`apply_date` FROM ecnu_mind.tiaozhan_info WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:10:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/Tiaozhan_modify/compItemId/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT `b1_1`,`b1_2`,`b1_3`,`b1_4`,`b1_5`,`b1_6`,`b1_7`,`b1_8`,`b1_9` FROM ecnu_mind.tiaozhan_b1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: SELECT `teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone` FROM ecnu_mind.tiaozhan_teacher WHERE `teacher_id` = 104 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone` FROM ecnu_mind.tiaozhan_teacher WHERE `teacher_id` = 105 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant checked - assumed 'checked' C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 28 行.
+NOTIC: [8] Use of undefined constant checked - assumed 'checked' C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 42 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 402 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\5634991bc1288026e8823876868cfef3.php 第 477 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.123007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-16T00:11:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1导师',`teacher_age`='2',`teacher_job`='哈哈',`teacher_add`='都',`teacher_zipcode`='213',`teacher_workphone`='1',`teacher_homephone`='12' WHERE `teacher_id` = 105 [ RunTime:0.0100s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='D',`teacher_add`='A',`teacher_zipcode`='2',`teacher_workphone`='3',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试1',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='10112140253',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='B1测试1_1',`b1_2`='B1测试1_2',`b1_3`='B1测试1_4',`b1_4`='B1测试1_5',`b1_5`='B1测试1_6',`b1_6`='B1测试1_7',`b1_7`='B1测试1_8',`b1_8`='B1测试1_9',`b1_9`='B1测试1_0' WHERE ( comp_item_id=22 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:11:24+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 22 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1导师1',`teacher_age`='2',`teacher_job`='哈哈',`teacher_add`='都',`teacher_zipcode`='213',`teacher_workphone`='1',`teacher_homephone`='12' WHERE `teacher_id` = 105 [ RunTime:0.0110s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='B1推荐人1',`teacher_gender`='男',`teacher_age`='1',`teacher_job`='D',`teacher_add`='A',`teacher_zipcode`='2',`teacher_workphone`='3555',`teacher_homephone`='4' WHERE `teacher_id` = 104 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='B1表测试1',`group_type`='A1',`type_selector`='B1',`detailed_type`='B1A',`referee_id`='104',`author1_id`='10112110128',`author2_id`='10112140253',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='105',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 22 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b1` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b1 WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b1 SET `b1_1`='B1测试1_1',`b1_2`='B1测试1_2',`b1_3`='B1测试1_4',`b1_4`='B1测试1_5',`b1_5`='B1测试1_6',`b1_6`='B1测试1_7',`b1_7`='B1测试1_8',`b1_8`='B1测试1_9',`b1_9`='B1测试1_0' WHERE ( comp_item_id=22 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:23:12+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:23:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:23:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:23:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:23:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:23:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T00:23:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/myComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:23:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompItem?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT `comp_type_id`,`comp_item_id` FROM ecnu_mind.competition_main WHERE ( comp_user_id=21 )  [ RunTime:0.0000s ]
+SQL: SELECT `comp_name`,`comp_template` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT `comp_item_name`,`apply_date` FROM ecnu_mind.tiaozhan_info WHERE ( comp_item_id=22 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:23:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:23:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompInfo?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:23:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/Tiaozhan/compId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 24 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 28 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 29 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 32 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 34 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 35 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 36 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 42 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 43 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 44 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 45 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 46 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 49 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 50 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 51 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 52 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 53 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 54 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 57 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 58 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 59 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 60 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 61 行.
+NOTIC: [8] Undefined variable: referee_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 65 行.
+NOTIC: [8] Undefined variable: referee_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 66 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 70 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 71 行.
+NOTIC: [8] Undefined variable: referee_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 73 行.
+NOTIC: [8] Undefined variable: referee_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 75 行.
+NOTIC: [8] Undefined variable: referee_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 77 行.
+NOTIC: [8] Undefined variable: referee_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 79 行.
+NOTIC: [8] Undefined variable: referee_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 81 行.
+NOTIC: [8] Undefined variable: referee_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 82 行.
+NOTIC: [8] Undefined variable: author1_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 95 行.
+NOTIC: [8] Undefined variable: author2_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 120 行.
+NOTIC: [8] Undefined variable: author3_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 144 行.
+NOTIC: [8] Undefined variable: author4_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 169 行.
+NOTIC: [8] Undefined variable: author5_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 193 行.
+NOTIC: [8] Undefined variable: author6_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 217 行.
+NOTIC: [8] Undefined variable: teacher_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 242 行.
+NOTIC: [8] Undefined variable: teacher_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 243 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 246 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 247 行.
+NOTIC: [8] Undefined variable: teacher_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 249 行.
+NOTIC: [8] Undefined variable: teacher_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 251 行.
+NOTIC: [8] Undefined variable: teacher_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 253 行.
+NOTIC: [8] Undefined variable: teacher_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 255 行.
+NOTIC: [8] Undefined variable: teacher_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 257 行.
+NOTIC: [8] Undefined variable: teacher_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 258 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 262 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 263 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 278 行.
+NOTIC: [8] Undefined variable: b1_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 295 行.
+NOTIC: [8] Undefined variable: b1_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 299 行.
+NOTIC: [8] Undefined variable: b1_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 303 行.
+NOTIC: [8] Undefined variable: b1_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 307 行.
+NOTIC: [8] Undefined variable: b1_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 311 行.
+NOTIC: [8] Undefined variable: b1_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 315 行.
+NOTIC: [8] Undefined variable: b1_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 319 行.
+NOTIC: [8] Undefined variable: b1_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 323 行.
+NOTIC: [8] Undefined variable: b1_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 327 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 337 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 402 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 411 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 477 行.
+NOTIC: [8] Undefined variable: comp_item_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.146009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.147009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-16T00:23:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:23:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:23:40+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0010s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('e','男','0','','','','','') [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('b3','A2','B3','B3A','106','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','23') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+ERR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'ip1_date' at row 1
+
+[ 2015-09-16T00:23:45+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0010s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('e','男','0','','','','','') [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0040s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('b3','A2','B3','B3A','107','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','24') [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+ERR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'ip1_date' at row 1
+
+[ 2015-09-16T00:24:26+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=144233426567817
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-09-16T00:24:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('e','男','0','','','','','') [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('b3','A2','B3','B3A','108','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','25') [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0040s ]
+ERR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'ip1_date' at row 1
+
+[ 2015-09-16T00:25:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0040s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('e','男','0','','','','','') [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('b3','A2','B3','B3A','109','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','26') [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_b3 (`b3_1`,`b3_2`,`b3_3`,`b3_4`,`b3_5`,`b3_6`,`ip1`,`ip1_date`,`ip2`,`ip2_date`,`b3_10`,`comp_item_id`) VALUES ('','','','lab','','','','','','','','26') [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:27:25+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0050s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 26 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:27:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:27:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:27:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:27:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-16T00:27:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T00:27:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:27:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompInfo?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:27:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/Tiaozhan/compId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 24 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 28 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 29 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 32 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 34 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 35 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 36 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 42 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 43 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 44 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 45 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 46 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 49 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 50 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 51 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 52 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 53 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 54 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 57 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 58 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 59 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 60 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 61 行.
+NOTIC: [8] Undefined variable: referee_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 65 行.
+NOTIC: [8] Undefined variable: referee_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 66 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 70 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 71 行.
+NOTIC: [8] Undefined variable: referee_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 73 行.
+NOTIC: [8] Undefined variable: referee_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 75 行.
+NOTIC: [8] Undefined variable: referee_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 77 行.
+NOTIC: [8] Undefined variable: referee_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 79 行.
+NOTIC: [8] Undefined variable: referee_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 81 行.
+NOTIC: [8] Undefined variable: referee_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 82 行.
+NOTIC: [8] Undefined variable: author1_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 95 行.
+NOTIC: [8] Undefined variable: author2_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 120 行.
+NOTIC: [8] Undefined variable: author3_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 144 行.
+NOTIC: [8] Undefined variable: author4_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 169 行.
+NOTIC: [8] Undefined variable: author5_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 193 行.
+NOTIC: [8] Undefined variable: author6_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 217 行.
+NOTIC: [8] Undefined variable: teacher_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 242 行.
+NOTIC: [8] Undefined variable: teacher_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 243 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 246 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 247 行.
+NOTIC: [8] Undefined variable: teacher_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 249 行.
+NOTIC: [8] Undefined variable: teacher_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 251 行.
+NOTIC: [8] Undefined variable: teacher_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 253 行.
+NOTIC: [8] Undefined variable: teacher_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 255 行.
+NOTIC: [8] Undefined variable: teacher_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 257 行.
+NOTIC: [8] Undefined variable: teacher_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 258 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 262 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 263 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 278 行.
+NOTIC: [8] Undefined variable: b1_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 295 行.
+NOTIC: [8] Undefined variable: b1_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 299 行.
+NOTIC: [8] Undefined variable: b1_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 303 行.
+NOTIC: [8] Undefined variable: b1_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 307 行.
+NOTIC: [8] Undefined variable: b1_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 311 行.
+NOTIC: [8] Undefined variable: b1_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 315 行.
+NOTIC: [8] Undefined variable: b1_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 319 行.
+NOTIC: [8] Undefined variable: b1_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 323 行.
+NOTIC: [8] Undefined variable: b1_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 327 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 337 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 402 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 411 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 477 行.
+NOTIC: [8] Undefined variable: comp_item_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.143008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:27:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('df','男','0','','','','','') [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK1` FOREIGN KEY (`author1_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+
+[ 2015-09-16T00:28:08+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:28:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0020s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:28:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('df','男','0','','','','','') [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('a','A2','B3','B3B','111','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','28') [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_b3 (`b3_1`,`b3_2`,`b3_3`,`b3_4`,`b3_5`,`b3_6`,`ip1`,`ip1_date`,`ip2`,`ip2_date`,`b3_10`,`comp_item_id`) VALUES ('','','','lab','','','','','','','','28') [ RunTime:0.0020s ]
+
+[ 2015-09-16T00:28:58+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_id`,`teacher_name`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('0','ds','0','rq412','','','','') [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='df',`teacher_gender`='男',`teacher_age`='0',`teacher_job`='',`teacher_add`='',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 111 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='a',`group_type`='A2',`type_selector`='B3',`detailed_type`='B3B',`referee_id`='111',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='112',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 28 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b3 WHERE ( comp_item_id=28 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b3 SET `b3_1`='dfs',`b3_2`='',`b3_3`='',`b3_4`='lab',`b3_5`='',`b3_6`='',`ip1`='',`ip1_date`='',`ip2`='',`ip2_date`='',`b3_10`='' WHERE ( comp_item_id=28 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:29:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 28 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='ds',`teacher_age`='0',`teacher_job`='rq412',`teacher_add`='',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 112 [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='df',`teacher_gender`='男',`teacher_age`='0',`teacher_job`='',`teacher_add`='',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 111 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='a',`group_type`='A2',`type_selector`='B3',`detailed_type`='B3B',`referee_id`='111',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='112',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 28 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b3 WHERE ( comp_item_id=28 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b3 SET `b3_1`='dfs',`b3_2`='',`b3_3`='',`b3_4`='lab',`b3_5`='',`b3_6`='',`ip1`='',`ip1_date`='',`ip2`='',`ip2_date`='',`b3_10`='' WHERE ( comp_item_id=28 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:30:53+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=144233465312218
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:30:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:30:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:30:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:30:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:30:54+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T00:30:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T00:30:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompInfo?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0010s ]
+
+[ 2015-09-16T00:30:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/Tiaozhan/compId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 24 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 28 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 29 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 32 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 34 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 35 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 36 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 42 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 43 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 44 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 45 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 46 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 49 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 50 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 51 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 52 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 53 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 54 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 57 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 58 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 59 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 60 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 61 行.
+NOTIC: [8] Undefined variable: referee_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 65 行.
+NOTIC: [8] Undefined variable: referee_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 66 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 70 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 71 行.
+NOTIC: [8] Undefined variable: referee_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 73 行.
+NOTIC: [8] Undefined variable: referee_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 75 行.
+NOTIC: [8] Undefined variable: referee_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 77 行.
+NOTIC: [8] Undefined variable: referee_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 79 行.
+NOTIC: [8] Undefined variable: referee_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 81 行.
+NOTIC: [8] Undefined variable: referee_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 82 行.
+NOTIC: [8] Undefined variable: author1_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 95 行.
+NOTIC: [8] Undefined variable: author2_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 120 行.
+NOTIC: [8] Undefined variable: author3_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 144 行.
+NOTIC: [8] Undefined variable: author4_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 169 行.
+NOTIC: [8] Undefined variable: author5_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 193 行.
+NOTIC: [8] Undefined variable: author6_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 217 行.
+NOTIC: [8] Undefined variable: teacher_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 242 行.
+NOTIC: [8] Undefined variable: teacher_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 243 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 246 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 247 行.
+NOTIC: [8] Undefined variable: teacher_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 249 行.
+NOTIC: [8] Undefined variable: teacher_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 251 行.
+NOTIC: [8] Undefined variable: teacher_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 253 行.
+NOTIC: [8] Undefined variable: teacher_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 255 行.
+NOTIC: [8] Undefined variable: teacher_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 257 行.
+NOTIC: [8] Undefined variable: teacher_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 258 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 262 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 263 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 278 行.
+NOTIC: [8] Undefined variable: b1_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 295 行.
+NOTIC: [8] Undefined variable: b1_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 299 行.
+NOTIC: [8] Undefined variable: b1_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 303 行.
+NOTIC: [8] Undefined variable: b1_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 307 行.
+NOTIC: [8] Undefined variable: b1_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 311 行.
+NOTIC: [8] Undefined variable: b1_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 315 行.
+NOTIC: [8] Undefined variable: b1_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 319 行.
+NOTIC: [8] Undefined variable: b1_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 323 行.
+NOTIC: [8] Undefined variable: b1_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 327 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 337 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 402 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 411 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 477 行.
+NOTIC: [8] Undefined variable: comp_item_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Home\e23d5b75eaa6477713f350cc70986149.php 第 495 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.141008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2015-09-16T00:31:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:31:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T00:31:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_main WHERE `comp_type_id` = 1 AND `comp_user_id` = 21  [ RunTime:0.0000s ]
+SQL: INSERT INTO ecnu_mind.competition_main (`comp_type_id`,`comp_user_id`) VALUES ('1','21') [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_name`,`teacher_gender`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('fs','男','0','','','','','') [ RunTime:0.0090s ]
+NOTIC: [8] Undefined variable: teacherId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 78 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_info (`comp_item_name`,`group_type`,`type_selector`,`detailed_type`,`referee_id`,`author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id`,`teacher_id`,`practice_type`,`comp_id`,`apply_date`,`comp_item_id`) VALUES ('a','A1','B3','B3A','113','10112110128','null','null','null','null','null',NULL,'1','1','2015-09-16','29') [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0040s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_b3 (`b3_1`,`b3_2`,`b3_3`,`b3_4`,`b3_5`,`b3_6`,`ip1`,`ip1_date`,`ip2`,`ip2_date`,`b3_10`,`comp_item_id`) VALUES ('','','','lab','','','','','','','','29') [ RunTime:0.0030s ]
+
+[ 2015-09-16T00:32:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0030s ]
+SQL: INSERT INTO ecnu_mind.tiaozhan_teacher (`teacher_id`,`teacher_name`,`teacher_age`,`teacher_job`,`teacher_add`,`teacher_zipcode`,`teacher_workphone`,`teacher_homephone`) VALUES ('0','fdsa','0','fdsarr1qe3','','','','') [ RunTime:0.0150s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='fs',`teacher_gender`='男',`teacher_age`='0',`teacher_job`='',`teacher_add`='',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 113 [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='a',`group_type`='A1',`type_selector`='B3',`detailed_type`='B3A',`referee_id`='113',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='114',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 29 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b3 WHERE ( comp_item_id=29 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b3 SET `b3_1`='',`b3_2`='',`b3_3`='',`b3_4`='lab',`b3_5`='',`b3_c_2`='on',`b3_c_3`='on',`b3_6`='',`b3_7`='on',`ip1`='1314sfa3',`ip1_date`='2016-05-08',`ip2`='',`ip2_date`='',`b3_10`='fdasf' WHERE ( comp_item_id=29 ) [ RunTime:0.0090s ]
+
+[ 2015-09-16T00:32:38+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_info WHERE `comp_item_id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_teacher` [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='fdsa',`teacher_age`='0',`teacher_job`='fdsarr1qe3',`teacher_add`='',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 114 [ RunTime:0.0050s ]
+SQL: UPDATE ecnu_mind.tiaozhan_teacher SET `teacher_name`='fs',`teacher_gender`='男',`teacher_age`='123',`teacher_job`='fdsafsr',`teacher_add`='fsdarwe',`teacher_zipcode`='',`teacher_workphone`='',`teacher_homephone`='' WHERE `teacher_id` = 113 [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.tiaozhan_info SET `comp_item_name`='bb',`group_type`='A1',`type_selector`='B3',`detailed_type`='B3A',`referee_id`='113',`author1_id`='10112110128',`author2_id`='null',`author3_id`='null',`author4_id`='null',`author5_id`='null',`author6_id`='null',`teacher_id`='114',`practice_type`='1',`apply_date`='2015-09-16' WHERE `comp_item_id` = 29 [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`tiaozhan_b3` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.tiaozhan_b3 WHERE ( comp_item_id=29 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE ecnu_mind.tiaozhan_b3 SET `b3_1`='',`b3_2`='',`b3_3`='',`b3_4`='lab',`b3_5`='',`b3_c_2`='on',`b3_c_3`='on',`b3_6`='',`b3_7`='on',`ip1`='1314sfa3',`ip1_date`='2016-05-08',`ip2`='',`ip2_date`='',`b3_10`='fdasf' WHERE ( comp_item_id=29 ) [ RunTime:0.0030s ]
+
+[ 2015-09-16T19:43:13+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-16T19:43:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-16T19:43:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-16T19:43:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-16T19:43:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-16T19:43:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Home\Controller\HomeController.class.php 第 91 行.
+
+[ 2015-09-16T19:43:24+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/ability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T19:43:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-16T19:43:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/getCompInfo?limit=10&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0010s ]
+
