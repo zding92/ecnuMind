@@ -355,4 +355,9 @@ function checkStuid(authorNum) {
     }
 }
 
+$(document).ready(function(){
+	$('.messagePopButton').click(function(){
+		$('.messagePopOut').fadeOut(800);
+	})
+})
 
