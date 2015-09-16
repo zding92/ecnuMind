@@ -18,7 +18,7 @@ class TiaozhanController extends CompController {
 // 		显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
  		$this->display('Tiaozhan/tiaozhan');
 	}
-	
+		
 	public function Tiaozhan_origin($compItemId) {
 		$tiaozhanData = $this->getTiaozhanData($compItemId);	
 		
@@ -93,6 +93,7 @@ class TiaozhanController extends CompController {
 	 */
 	public function TiaozhanUpdate($compItemId){
 		$this->checkValid($compItemId);
+		
 		$result['needUpdateJs'] = 'false';
 		//更新表单
 		// 更新教师信息。
@@ -125,6 +126,12 @@ class TiaozhanController extends CompController {
 		
 	}
 	
+	public function TiaozhanRemove($compItemId) {
+		$this->checkValid($compItemId);
+		
+		
+	}
+	
 	private function addTeacherInfo() {
 		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
 		// 根据表单提交的POST数据创建数据对象
@@ -142,34 +149,24 @@ class TiaozhanController extends CompController {
 	}
 	
 	private function addRefereeInfo() {
-		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
-		// 载入所有referee的属性。
-		$refereeData['teacher_name'] = I('post.referee_name');
-		$refereeData['teacher_gender'] = I('post.referee_gender');
-		$refereeData['teacher_age'] = I('post.referee_age');
-		$refereeData['teacher_job'] = I('post.referee_job');
-		$refereeData['teacher_add'] = I('post.referee_add');
-		$refereeData['teacher_zipcode'] = I('post.referee_zipcode');
-		$refereeData['teacher_workphone'] = I('post.referee_workphone');
-		$refereeData['teacher_homephone'] = I('post.referee_homephone');
+		$refereeModel = M('ecnu_mind.tiaozhan_referee',null);
+		// 根据表单提交的POST数据创建数据对象
+		$refereeModel->create();
 		// 添加到teacher表并返回主键。
-		return $TeacherModel->data($refereeData)->add();
+		return $refereeModel->add();
 	}
 	
 	private function updateRefereeInfo() {
-		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
-		// 载入所有referee的属性。
-		$refereeData['teacher_id'] = I('post.referee_id');
-		$refereeData['teacher_name'] = I('post.referee_name');
-		$refereeData['teacher_gender'] = I('post.referee_gender');
-		$refereeData['teacher_age'] = I('post.referee_age');
-		$refereeData['teacher_job'] = I('post.referee_job');
-		$refereeData['teacher_add'] = I('post.referee_add');
-		$refereeData['teacher_zipcode'] = I('post.referee_zipcode');
-		$refereeData['teacher_workphone'] = I('post.referee_workphone');
-		$refereeData['teacher_homephone'] = I('post.referee_homephone');
+		$refereeModel = M('ecnu_mind.tiaozhan_referee',null);
+		// 根据表单提交的POST数据创建数据对象
+		$refereeModel->create();
 		// 更新teacher表。
-		$TeacherModel->data($refereeData)->save();
+		$refereeModel->save();
+	}
+	
+	private function deleteRefereeInfo($compItemId) {
+		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
+		$TeacherModel->delete($compItemId);
 	}
 	
 	private function addBasicInfo($compItemID, $TeacherId, $RefereeId) {
@@ -228,6 +225,15 @@ class TiaozhanController extends CompController {
 		$BasicModel->data($BasicData)->save();
 	}
 	
+	/**
+	 * 删除基本信息
+	 * 
+	 */
+	private function deleteBasicInfo($compItemID) {
+		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
+		$BasicModel->delete($compItemID);
+	}
+	
 	private function addTableInfo($compItemID, $bn) {
 		$bn = strtolower($bn);
 		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
@@ -256,6 +262,11 @@ class TiaozhanController extends CompController {
 		$TableModel->where('comp_item_id='.$compItemID)->save($TableInfo);
 	}
 	
+	private function deleteTableInfo($compItemID) {
+		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
+		$BasicModel->delete($compItemID);
+	}
+	
 	private function getTiaozhanData($compItemId) {
 		$tiaozhanModel = M('ecnu_mind.tiaozhan_info', null);
 		$tiaozhanData = $tiaozhanModel->find($compItemId);
@@ -272,13 +283,14 @@ class TiaozhanController extends CompController {
 		$bnModel = M('ecnu_mind.tiaozhan_'.strtolower($bn),null);
 		$bnData = $bnModel->field('comp_item_id',true)->find($compItemId);
 		
-		$teacherModel = M('ecnu_mind.tiaozhan_teacher', null);
-		$refereeData = $teacherModel->field('teacher_id',true)->find($refereeId);
+		$teacherModel = M('ecnu_mind.tiaozhan_referee', null);
+		$refereeData = $teacherModel->field('referee_id',true)->find($refereeId);
+		if ($refereeData == null) $refereeData = array();
 		// 将表头的teacher置换为referee.
-		$refereeData = $this->changeTeacherToReferee($refereeData);
+		
 		$teacherData = $teacherModel->field('teacher_id',true)->find($teacherId);
-
-		// 将子表内容合并入tiaozhanData 并返回。
+		if ($teacherData == null) $teacherData = array();
+			
 		$tiaozhanData = array_merge($tiaozhanData, $bnData);
 		$tiaozhanData = array_merge($tiaozhanData, $refereeData);
 		$tiaozhanData = array_merge($tiaozhanData, $teacherData);
@@ -286,16 +298,7 @@ class TiaozhanController extends CompController {
 		unset($tiaozhanData['comp_item_id']);
 		return $tiaozhanData;
 	}
-	
-	private function changeTeacherToReferee($refereeData) {
-		foreach ($refereeData as $key => $val) {
-			$newKey = str_replace('teacher', 'referee', $key);
-			$refereeData[$newKey] = $val;
-			unset($refereeData[$key]);
-		}
-		return $refereeData;
-	}
-	
+		
 	private function replaceNullOfId($tiaozhanData) {
 		foreach ($tiaozhanData as $key => $val) {
 			$newValue= str_replace('null', '', $val);

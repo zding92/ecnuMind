@@ -153,17 +153,15 @@ $(document).ready(function () {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
     		         src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=Comp_frame.document.body.scrollHeight' \
-    		         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
+    		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
     	}                         
     }
     
     function loadMyCompPage(){
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless' scrolling='no'   \
-   		         onload='this.height=Comp_frame.document.body.scrollHeight' \
-   		         onhaschange='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
+   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless'  \
+   		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
     

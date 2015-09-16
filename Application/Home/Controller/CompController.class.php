@@ -61,10 +61,13 @@ class CompController extends CommonController {
 			// 装配template的url
 			$compTmp = $compinfo['comp_template'];			
 			$returnItem['comp_template'] = 
-				'<a href="'.U("Home/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"").'" target="_blank">点此修改</a>';
+				U("Home/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"");
 			
 			$returnItem['comp_view'] = 
-				'<a href="'.U("Home/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"").'" target="_blank">查看/打印</a>';
+				U("Home/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"");
+			
+			$returnItem['comp_remove'] =
+			U("Home/$compTmp/$compTmp"."Remove","compItemId=".$compId['comp_item_id'],"");
 			
 			$result[] = $returnItem; 
 		}

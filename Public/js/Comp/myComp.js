@@ -9,6 +9,31 @@ function starSorter(a, b) {
 	return 0;
 }
 
+function operateFormatter(value, row, index) {
+    return [
+        '<a class="edit ml10" href="' + row.comp_template + '" style="margin-left:20px" title="编辑" target="_blank">',
+            '<i class="glyphicon glyphicon-edit"></i>',
+        '</a>',
+        
+        '<a class="remove ml10" href="' + row.comp_view + '" style="margin-left:20px" title="打印" target="_blank">',
+        '<i class="glyphicon glyphicon-print"></i>',
+        '</a>',
+        
+        '<a class="remove ml10" href="javascript:void(0)" style="margin-left:20px" title="删除">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+        '</a>'
+    ].join('');
+}
+
+window.operateEvents = {
+    'click .remove': function (e, value, row, index) {
+    	
+    	
+    	
+        alert('You click remove icon, row: ' + JSON.stringify(row));
+    }
+};
+
 $(function(){
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,

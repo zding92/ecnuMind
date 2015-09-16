@@ -16,7 +16,7 @@
   
 </head>
 
-<body style="background-color: #fff">
+<body style="background-color: #fff" onmousewheel="event.returnValue=false">
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
@@ -31,10 +31,9 @@
       <thead>
         <tr>
           <th data-field="comp_name" data-width="200" data-align="left" data-sortable="true">竞赛名称</th>
-          <th data-field="comp_item_name" data-width="500" data-align="left">项目名称</th>
+          <th data-field="comp_item_name" data-width="500" data-align="left">题目</th>
           <th data-field="apply_date" data-width="100" data-align="left" data-sortable="true">报名时间</th>
-          <th data-field="comp_template" data-width="100" data-align="left">修改</th>
-          <th data-field="comp_view" data-width="100" data-align="left">查看</th>
+          <th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
         </tr>
       </thead>
     </table>
