@@ -209,64 +209,71 @@ $(document).ready(function () {
         $(this).click(function () {
             data_string = '';
             step1_check();
-            if (step1_finished == 1) {
-                if ((document.getElementById("project_name").value == document.getElementById("project_name_B1").value) ||
-                    (document.getElementById("project_name").value == document.getElementById("project_name_B2").value) ||
-                    (document.getElementById("project_name").value == document.getElementById("project_name_B3").value)
-                   ) {
-                    
-                    $("input,select,textarea").each(function () {
-                        if (($(this).attr("type") != "radio") && ($(this).attr("type") != "button")&&($(this).attr("type") != "checkbox"))
-                            data_string = data_string + $(this).attr("id") + "=" + $(this).val() + "&";
-                        else {
-                            if (($(this).attr("name") == "group_type") && ($(this).attr("checked") == "checked"))
-                                data_string = data_string + "group_type" + "=" + $(this).val() + "&";
-                            if (($(this).attr("name") == "B_ratio") && ($(this).attr("checked") == "checked"))
-                                data_string = data_string + "detailed_type" + "=" + $(this).val() + "&";
-                            if (($(this).attr("class") == "B2_type_check"))
-                                data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";                   
-                            if (($(this).attr("class") == "B3_type_check"))
-                               data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";
-                            }
-
-                    });
-                    alert($('#tiaozhanForm').serialize());
-                    if (CompItemId == null) {
-                    	$.ajax({
-                            url: submitUrl, //请求验证页面 
-                            type: "POST", //请求方式
-                            async: false,
-                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
-                            success: function (call) 
-                            {
-                            	if (call != null) {
-                            		alert('数据提交成功');
-                            		var update_json = eval("(" + call + ")");
-                                	changeToUpdateMode(update_json);                 
-                            	}
-                            }
-                        });	
-                    } else {
-                    	$.ajax({
-                            url: submitUrl, //请求验证页面 
-                            type: "POST", //请求方式
-                            async: false,
-                            data: $('#tiaozhanForm').serialize()+'&compItemId='+ CompItemId,
-                            success: function (call) 
-                            {
-                            	if (call != null) {
-                            		alert('数据提交成功');
-                            		var update_json = eval("(" + call + ")");
-                            		if (update_json.needUpdateJs)
-                            			changeToUpdateMode(update_json);                 
-                            	}
-                            }
-                        });
-                    }                
-                }
-                else alert("请检查第一步与第三步中项目名称是否一致");
+            
+            //判断第一作者信息是否完整
+            if (auther1Ready == true){
+	            if (step1_finished == 1) {
+	                if ((document.getElementById("project_name").value == document.getElementById("project_name_B1").value) ||
+	                    (document.getElementById("project_name").value == document.getElementById("project_name_B2").value) ||
+	                    (document.getElementById("project_name").value == document.getElementById("project_name_B3").value)
+	                   ) {
+	                    
+	                    $("input,select,textarea").each(function () {
+	                        if (($(this).attr("type") != "radio") && ($(this).attr("type") != "button")&&($(this).attr("type") != "checkbox"))
+	                            data_string = data_string + $(this).attr("id") + "=" + $(this).val() + "&";
+	                        else {
+	                            if (($(this).attr("name") == "group_type") && ($(this).attr("checked") == "checked"))
+	                                data_string = data_string + "group_type" + "=" + $(this).val() + "&";
+	                            if (($(this).attr("name") == "B_ratio") && ($(this).attr("checked") == "checked"))
+	                                data_string = data_string + "detailed_type" + "=" + $(this).val() + "&";
+	                            if (($(this).attr("class") == "B2_type_check"))
+	                                data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";                   
+	                            if (($(this).attr("class") == "B3_type_check"))
+	                               data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";
+	                            }
+	
+	                    });
+	                    //alert($('#tiaozhanForm').serialize());
+	                    if (CompItemId == null) {
+	                    	$.ajax({
+	                            url: submitUrl, //请求验证页面 
+	                            type: "POST", //请求方式
+	                            async: false,
+	                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
+	                            success: function (call) 
+	                            {
+	                            	if (call != null) {
+	                            		//alert('数据提交成功');
+	                            		$('.messagePopOut').fadeIn(500);
+	                            		var update_json = eval("(" + call + ")");
+	                                	changeToUpdateMode(update_json);                 
+	                            	}
+	                            }
+	                        });	
+	                    } else {
+	                    	$.ajax({
+	                            url: submitUrl, //请求验证页面 
+	                            type: "POST", //请求方式
+	                            async: false,
+	                            data: $('#tiaozhanForm').serialize()+'&compItemId='+ CompItemId,
+	                            success: function (call) 
+	                            {
+	                            	if (call != null) {
+	                            		$('.messagePopOut').fadeIn(500);
+	                            		//alert('数据提交成功');
+	                            		var update_json = eval("(" + call + ")");
+	                            		if (update_json.needUpdateJs)
+	                            			changeToUpdateMode(update_json);                 
+	                            	}
+	                            }
+	                        });
+	                    }                
+	                }
+	                else alert("请检查第一步与第三步中项目名称是否一致");
+	            }
+	            else alert("请完整填写第一步报名信息");
             }
-            else alert("请完整填写第一步报名信息");
+            else alert("请在第二步中填写第一作者信息");
             //alert(data_string);
         });
     });
@@ -332,9 +339,15 @@ function hidePerson(author, errorInfo) {
 	$('#'+ author +'_info').slideUp("fast");
 }
 
+//此变量代表第一作者信息是否完整
+var auther1Ready = false;
+
 function checkStuid(authorNum) {
     if ($("#"+authorNum).val().length !== 11) {
-        hidePerson(authorNum);
+        hidePerson(authorNum.substring(0,7),'学号格式不正确');
+        
+        //作者信息不完整
+        auther1Ready = false;
     }
     else {
     	$("#" + authorNum + "_check").text('');
@@ -346,7 +359,13 @@ function checkStuid(authorNum) {
         	success: function (result) {
         		if (result == '0') {
         			hidePerson(author, '未找到匹配此学号的用户，请先注册');
+        			
+        			//作者信息不完整
+        			auther1Ready = false;
         		} else {
+        			
+        			//第一作者信息完整
+        			auther1Ready = true;
         			var userData = eval('(' + result + ')')
         			showPerson(author, userData);
         		}
