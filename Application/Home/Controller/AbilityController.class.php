@@ -73,8 +73,10 @@ class AbilityController extends CommonController{
 		$abilityTable = M('ecnu_mind.ability', null);
 		$directionTable = M('ecnu_mind.direction', null);
 		$fieldTable = M('ecnu_mind.field', null);
+		
 		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
 		$directionInfo = $directionTable->where("id='".$abilityInfo->Direction_id."'")->find();
+		
 		if (isset($abilityInfo) && isset($directionInfo)) {
 			// 如果存在完全一样的能力（包括方向），则不允许添加
 			$this->ajaxReturn("var add_success = false;","EVAL");
