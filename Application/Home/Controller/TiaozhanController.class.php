@@ -285,11 +285,12 @@ class TiaozhanController extends CompController {
 		$bnModel = M('ecnu_mind.tiaozhan_'.strtolower($bn),null);
 		$bnData = $bnModel->field('comp_item_id',true)->find($compItemId);
 		
-		$teacherModel = M('ecnu_mind.tiaozhan_referee', null);
-		$refereeData = $teacherModel->field('referee_id',true)->find($refereeId);
+		$refereeModel = M('ecnu_mind.tiaozhan_referee', null);
+		$refereeData = $refereeModel->field('referee_id',true)->find($refereeId);
 		if ($refereeData == null) $refereeData = array();
-		// 将表头的teacher置换为referee.
 		
+		
+		$teacherModel = M('ecnu_mind.tiaozhan_teacher', null);
 		$teacherData = $teacherModel->field('teacher_id',true)->find($teacherId);
 		if ($teacherData == null) $teacherData = array();
 			
