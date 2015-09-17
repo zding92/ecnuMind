@@ -16,11 +16,10 @@
   
 </head>
 
-<body style="background-color: #fff" onmousewheel="event.returnValue=false">
+<body style="background-color: #fff">
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
-           data-url="__URL__/getCompItem"
            data-toolbar="#filter-bar" 
            data-show-toggle="true" 
            data-search="true"           
@@ -38,6 +37,7 @@
       </thead>
     </table>
   </div>
+  <script type="text/javascript">var dataUrl = '__URL__/getCompItem';</script>
   <script src="__PUBLIC__/js/Comp/myComp.js"></script>
 </body>
 

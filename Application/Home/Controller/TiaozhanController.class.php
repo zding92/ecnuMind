@@ -2,6 +2,12 @@
 namespace Home\Controller;
 use Home\Controller\CompController;
 class TiaozhanController extends CompController {
+	private $tiaozhanModel;
+
+	private function createModel() {
+		$this->tiaozhanModel = D('TiaozhanInfo');
+	}
+	
     public function Tiaozhan($compId) {
     	$initData['comp_id'] = $compId;
     	$initData['submit_mode'] = U('home/Tiaozhan/TiaozhanAddData','','');
@@ -11,6 +17,8 @@ class TiaozhanController extends CompController {
 	}
 	
 	public function Tiaozhan_modify($compItemId) {
+		$this->createModel();
+		
  		$tiaozhanData = $this->getTiaozhanData($compItemId);
  		$tiaozhanData['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
  		$tiaozhanData['comp_item_id'] = $compItemId;
@@ -20,8 +28,9 @@ class TiaozhanController extends CompController {
 	}
 		
 	public function Tiaozhan_origin($compItemId) {
-		$tiaozhanData = $this->getTiaozhanData($compItemId);	
+		$this->createModel();
 		
+		$tiaozhanData = $this->getTiaozhanData($compItemId);	
 		//C表当前国内外课题研究水平 内容
 		$CTable='';
 		if ($tiaozhanData[type_selector] == 'B1')
@@ -59,246 +68,68 @@ class TiaozhanController extends CompController {
 	 * 将挑战杯的数据录入数据库
 	 */
 	public function TiaozhanAddData(){
-		$this->checkAccess(I('post.'));	
+		
+		$this->checkAccess(I('post.'),'not_in_author');
+		
+		$this->createModel();			
 	
+		// 通过post构造并验证挑战杯报名信息
+		if(!$this->tiaozhanModel->create()) {
+			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
+		}
+		
 		// 向竞赛主表添加竞赛信息，并返回唯一竞赛item的ID
 		$compItemID = $this->registerComp();
 		
-		// 添加教师信息。
-		if (I('post.teacher_name') !='') { 
-			$teacherId = $this->addTeacherInfo();
-			$result['teacher_id'] = $teacherId;
-		}
+		$tiaozhanData = $this->tiaozhanModel->data();
+		$tiaozhanData['comp_item_id'] = $compItemID;
+		$tiaozhanData = $this->clearBTable($tiaozhanData);
 		
-		// 添加推荐人信息。
-		if (I('post.referee_name') !='') {
-			$refereeId = $this->addRefereeInfo();
-			$result['referee_id'] = $refereeId;
-		}
-				
-		// 添加基本信息
-		$this->addBasicInfo($compItemID, $teacherId, $refereeId);
-		
-		// 添加表格说明（长文本）
-		$this->addTableInfo($compItemID, I('post.type_selector'));	
+		$this->tiaozhanModel->data($tiaozhanData)->add();
 		
 		// 返回comp_item_id用于表单更新。
+		$result['operation_info'] = 'added';
 		$result['comp_item_id'] = $compItemID;
-		
 		$result['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
-		// 返回添加成功的comp_item_id，teacher_id和referee_id
+		
+		// 返回添加成功的comp_item_id
 		$this->ajaxReturn(json_encode($result), 'EVAL');
 	}
 	
 	/**
 	 * 更新已有的表单
 	 */
-	public function TiaozhanUpdate($compItemId){
-		$this->checkValid($compItemId);
+	public function TiaozhanUpdate(){
+		$this->createModel();
+		$this->checkValid();
 		
-		$result['needUpdateJs'] = 'false';
-		//更新表单
-		// 更新教师信息。
-		if (I('post.teacher_id') != '') {
-			$this->updateTeacherInfo();
-		} else if (I('post.teacher_name') != '') {
-			$_POST['teacher_id'] = $this->addTeacherInfo();
-			$result['needUpdateJs'] = 'true';
-			$result['teacher_id'] = I('post.teacher_id'); 
+		if(!$this->tiaozhanModel->create()) {
+			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
 		}
-			
-		// 更新推荐人信息，如果之前不存在则新填加一个推荐人。
-		if (I('post.referee_id') != '') {
-			$this->updateRefereeInfo();
-		} else if (I('post.referee_name') != '') {
-			$_POST['referee_id'] = $this->addRefereeInfo();
-			$result['needUpdateJs'] = 'true';
-			$result['referee_id'] = I('post.referee_id');
-		}
+		$this->tiaozhanModel->save();
 		
-		
-		// 更新基本信息
-		$this->updateBasicInfo($compItemId, I('post.teacher_id'), I('post.referee_id'));
-		
-		// 更新表格说明（长文本）
-		$this->updateTableInfo($compItemId, I('post.type_selector'));
-		
-		// 返回成功信息
-		$this->ajaxReturn(json_encode($result), 'EVAL');
-		
+		$this->ajaxReturn('updated', 'EVAL');
 	}
 	
 	public function TiaozhanRemove($compItemId) {
+		$this->createModel();
 		$this->checkValid($compItemId);
 		
+		$this->tiaozhanModel->delete($compItemId);
+		$this->deleteComp($compItemId);
 		
+		$this->ajaxReturn('deleted', 'EVAL');
 	}
-	
-	private function addTeacherInfo() {
-		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
-		// 根据表单提交的POST数据创建数据对象
-		$TeacherModel->create();
-		// 添加到teacher表并返回主键。
-		return $TeacherModel->add();
-	}
-	
-	private function updateTeacherInfo() {
-		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
-		// 根据表单提交的POST数据创建数据对象
-		$TeacherModel->create();
-		// 更新teacher。
-		$TeacherModel->save();
-	}
-	
-	private function addRefereeInfo() {
-		$refereeModel = M('ecnu_mind.tiaozhan_referee',null);
-		// 根据表单提交的POST数据创建数据对象
-		$refereeModel->create();
-		// 添加到teacher表并返回主键。
-		return $refereeModel->add();
-	}
-	
-	private function updateRefereeInfo() {
-		$refereeModel = M('ecnu_mind.tiaozhan_referee',null);
-		// 根据表单提交的POST数据创建数据对象
-		$refereeModel->create();
-		// 更新teacher表。
-		$refereeModel->save();
-	}
-	
-	private function deleteRefereeInfo($compItemId) {
-		$TeacherModel = M('ecnu_mind.tiaozhan_teacher',null);
-		$TeacherModel->delete($compItemId);
-	}
-	
-	private function addBasicInfo($compItemID, $TeacherId, $RefereeId) {
-		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
-		
-		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
-		// 另外自动添加报名日期
-		$auto = array (
-				array('author2_id','checkCharNull',1,'function'),
-				array('author3_id','checkCharNull',1,'function'),
-				array('author4_id','checkCharNull',1,'function'),
-				array('author5_id','checkCharNull',1,'function'),
-				array('author6_id','checkCharNull',1,'function'),
-				array('referee_id','checkIntNull',1,'function'),
-				array('teacher_id','checkIntNull',1,'function'),
-				array('apply_date','date',3,'function',array('Y-m-d'))
-		);
-		
-		// 根据表单提交的POST数据创建数据对象
- 		$BasicModel->auto($auto)->create();
-// 		$BasicModel->create();
-		$BasicData = $BasicModel->data();
-		
-		// 将竞赛项ID，导师ID和推荐人ID三个外键加入数组
-		$BasicData['comp_item_id'] = $compItemID;
-		$BasicData['teacher_id'] = $TeacherId;
-		$BasicData['referee_id'] = $RefereeId;
-		
-		$BasicModel->data($BasicData)->add();
-	}
-	
-	private function updateBasicInfo($compItemID, $TeacherId, $RefereeId) {
-		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
-	
-		// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
-		// 另外自动添加报名日期
-		$auto = array (
-				array('author2_id','checkCharNull',1,'function'),
-				array('author3_id','checkCharNull',1,'function'),
-				array('author4_id','checkCharNull',1,'function'),
-				array('author5_id','checkCharNull',1,'function'),
-				array('author6_id','checkCharNull',1,'function'),
-				array('referee_id','checkIntNull',1,'function'),
-				array('teacher_id','checkIntNull',1,'function'),
-				array('apply_date','date',3,'function',array('Y-m-d'))
-		);
-	
-		// 根据表单提交的POST数据创建数据对象
-		$BasicModel->auto($auto)->create();
-		// 		$BasicModel->create();
-		$BasicData = $BasicModel->data();
-	
-		// 将竞赛项ID，导师ID和推荐人ID三个外键加入数组
-		$BasicData['comp_item_id'] = $compItemID;
-	
-		$BasicModel->data($BasicData)->save();
-	}
-	
-	/**
-	 * 删除基本信息
-	 * 
-	 */
-	private function deleteBasicInfo($compItemID) {
-		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
-		$BasicModel->delete($compItemID);
-	}
-	
-	private function addTableInfo($compItemID, $bn) {
-		$bn = strtolower($bn);
-		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
-		$auto = array (
-				array('ip1_date','checkCharNull',1,'function'),
-				array('ip2_date','checkCharNull',1,'function'),
-		);
-		$TableModel->create();
-		$TableData = $TableModel->data();
-		$TableData['comp_item_id'] = $compItemID;
-		
-		$TableModel->data($TableData)->add();
-	}
-	
-	private function updateTableInfo($compItemID, $bn) {
-		$bn = strtolower($bn);
-		$TableModel = M('ecnu_mind.tiaozhan_'.$bn,null);
-		$TableModel->create();
-		$TableInfo = $TableModel->data();
-		
-		$checkExist = $TableModel->where('comp_item_id='.$compItemID)->find();
-		if (!isset($checkExist)) {
-			$this->addTableInfo($compItemID, $bn);
-		}
-	
-		$TableModel->where('comp_item_id='.$compItemID)->save($TableInfo);
-	}
-	
-	private function deleteTableInfo($compItemID) {
-		$BasicModel = M('ecnu_mind.tiaozhan_info',null);
-		$BasicModel->delete($compItemID);
-	}
-	
+
 	private function getTiaozhanData($compItemId) {
-		$tiaozhanModel = M('ecnu_mind.tiaozhan_info', null);
-		$tiaozhanData = $tiaozhanModel->find($compItemId);
+		$tiaozhanData = $this->tiaozhanModel->find($compItemId);
 		
-		// 如果学生id为null转为空字符返回
+		// 将所有null转为空字符返回
 		$tiaozhanData = $this->replaceNullOfId($tiaozhanData);
+
+		// 返回指定B表的内容
+		$tiaozhanData = $this->clearBTable($tiaozhanData);
 		
-		// 获取各个子表外键。
-		$refereeId = $tiaozhanData['referee_id'];
-		$teacherId = $tiaozhanData['teacher_id'];
-		$bn = $tiaozhanData['type_selector'];
-		
-		// 获取子表内容
-		$bnModel = M('ecnu_mind.tiaozhan_'.strtolower($bn),null);
-		$bnData = $bnModel->field('comp_item_id',true)->find($compItemId);
-		
-		$refereeModel = M('ecnu_mind.tiaozhan_referee', null);
-		$refereeData = $refereeModel->field('referee_id',true)->find($refereeId);
-		if ($refereeData == null) $refereeData = array();
-		
-		
-		$teacherModel = M('ecnu_mind.tiaozhan_teacher', null);
-		$teacherData = $teacherModel->field('teacher_id',true)->find($teacherId);
-		if ($teacherData == null) $teacherData = array();
-			
-		$tiaozhanData = array_merge($tiaozhanData, $bnData);
-		$tiaozhanData = array_merge($tiaozhanData, $refereeData);
-		$tiaozhanData = array_merge($tiaozhanData, $teacherData);
-		
-		unset($tiaozhanData['comp_item_id']);
 		return $tiaozhanData;
 	}
 		
@@ -310,34 +141,41 @@ class TiaozhanController extends CompController {
 		return $tiaozhanData;
 	}
 	
+	private function clearBTable($tiaozhanData) {
+		$typeSelector = strtolower($tiaozhanData['type_selector']);
+		foreach ($tiaozhanData as $key => $val) {
+			// 如果是选择器选中的b表，留下，如果不是选择器选中的b表过滤掉。
+			if (preg_match('/^'.$typeSelector.'/', $key)) continue;
+			if (preg_match('/^b[1-3]_/', $key)) unset($tiaozhanData[$key]);
+		}	
+		return $tiaozhanData;
+	}
+	
 	private function checkValid($compItemId) {
-		$tiaozhanInfo = $this->checkExist();
-		$this->checkAccess($tiaozhanInfo);
-		
+		$tiaozhanInfo = $this->checkExist($compItemId);
+		$this->checkAccess($tiaozhanInfo, 'access_denied');
 		//如果有权限则没有ajax返回。
 	}
 	
 	/**
 	 * 检查是否存在表单，如果存在返回找到的数据
 	 */ 
-	private function checkExist() {
-		$tiaozhanModel = M('ecnu_mind.tiaozhan_info', null);
-		$tiaozhanInfo = $tiaozhanModel->find($compItemId);
+	private function checkExist($compItemId) {
+		$tiaozhanInfo = $this->tiaozhanModel->field('author1_id,author2_id,author3_id,author4_id,author5_id,author6_id')->find($compItemId);
 		if (!isset($tiaozhanInfo)) {
-			$this->ajaxReturn('表单未找到，无法提交，请联系管理员','EVAL');
+			$this->ajaxReturn('not_found','EVAL');
 		}
-		
 		return $tiaozhanInfo;
 	}
 	
 	/**
 	 * 检查用户权限。
 	 */
-	private function checkAccess($checkData) {
+	private function checkAccess($checkData, $errorInfo) {
 		$studentid = session('studentid');
 		$key = array_search($studentid, $checkData);
 		if (!preg_match('/author[1-6]_id$/',$key)) {
-			$this->ajaxReturn('您无权修改该表单，如有问题请联系管理员','EVAL');
+			$this->ajaxReturn($errorInfo, 'EVAL');
 		}
 	}
 }

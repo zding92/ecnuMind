@@ -13,7 +13,7 @@ class CompController extends CommonController {
 	}
 	
 	public function checkValidUser($studentid) {
-		$userModel = M('info');
+		$userModel = M('user_info');
 		$user = $userModel->where("studentid=".$studentid)->field('id,studentid,username,nickname,message,hidden_name,brief,password',true)->find();
 		if (isset($user)) {
 			$this->ajaxReturn(json_encode($user),'EVAL');
@@ -68,6 +68,8 @@ class CompController extends CommonController {
 			
 			$returnItem['comp_remove'] =
 			U("Home/$compTmp/$compTmp"."Remove","compItemId=".$compId['comp_item_id'],"");
+			
+			$returnItem['comp_item_id'] = $compId['comp_item_id'];
 			
 			$result[] = $returnItem; 
 		}
@@ -139,5 +141,10 @@ class CompController extends CommonController {
 			$result[] = $comp;
 		}
 		return $result;
+	}
+	
+	protected function deleteComp($compItemId) {
+		$compModel = M('ecnu_mind.competition_main');
+		$compModel->delete($compItemId);
 	}
 }

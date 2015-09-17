@@ -7,7 +7,6 @@ return array(
 	'DB_USER'=>'ecnu_mind_admin',// 用户名
 	'DB_PWD'=>'hello world',// 密码
 	'DB_PORT'=>3306,// 端口
-	'DB_PREFIX'=>'user_',// 数据库表前缀
 	'DB_CHARSET'=>'utf8',// 数据库字符集	
 	'VAR_FILTERS'=>'stripslashes,strip_tags,trim',
 );

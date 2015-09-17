@@ -699,14 +699,17 @@
         html.push('<span class="page-list">');
 
         var pageNumber = [
-            '<span class="btn-group dropup">',
-            '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">',
-            '<span class="page-size">',
-            this.options.pageSize,
-            '</span>',
-            ' <span class="caret"></span>',
-            '</button>',
-            '<ul class="dropdown-menu" role="menu">'],
+//            '<span class="btn-group dropup" style="display:none">',
+//            '<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">',
+//            '<span class="page-size">',
+//            this.options.pageSize,
+//            '</span>',
+//            ' <span class="caret"></span>',
+//            '</button>',
+			  '<span>20</span>',
+              '<ul class="dropdown-menu" role="menu" style="display:none">'
+			  
+			],
             pageList = this.options.pageList;
 
         if (typeof this.options.pageList === 'string') {

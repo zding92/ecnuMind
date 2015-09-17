@@ -53,16 +53,19 @@
 		<div class="searchPeoplePart2Row" id="searchPeoplePart2Row1">
 			<div class="searchPeopleTags" id="L1">
 				<div class="searchPeopleTag" id="L1_all">全部</div>
+				<!-- 
 	            <div class="searchPeopleTag" id="L1_1">信息技术</div>
 	            <div class="searchPeopleTag" id="L1_2">生物医药</div>
 	            <div class="searchPeopleTag" id="L1_3">设计</div>
 	            <div class="searchPeopleTag" id="L1_4">艺术</div>
+	             -->
 			</div>
 		</div>
 		<div class="searchPeoplePart2RowHead"><b>选择方向:</b></div>
 		<div class="searchPeoplePart2Row" id="searchPeoplePart2Row2">
 			<div class="searchPeopleTags" id="L2">
 				<div class="searchPeopleTag" id="L2_all">全部</div>
+				<!-- 
 	            <div class="searchPeopleTag L1_1" data-cat="L1_1">Web前台</div>
 	            <div class="searchPeopleTag L1_1" data-cat="L1_1">Web后台</div>
 	            <div class="searchPeopleTag L1_1" data-cat="L1_1">数据库</div>
@@ -87,11 +90,13 @@
 	            <div class="searchPeopleTag L1_4" data-cat="L1_4">舞蹈</div>
 	            <div class="searchPeopleTag L1_4" data-cat="L1_4">绘画</div>
 	            <div class="searchPeopleTag L1_4" data-cat="L1_4">书法</div>
+	             -->
 			</div>
 		</div>
 		<div class="searchPeoplePart2RowHead"><b>选择能力:</b></div>
 		<div class="searchPeoplePart2Row" id="searchPeoplePart2Row3">
 			<div class="searchPeopleTags" id="L3">
+				 <!-- 
 			     <input type="checkbox" class="searchPeopleTag" data-cat="L1_1_1"><label class="searchPeopleTag">前台脚本语言</label>
 	             <input type="checkbox" class="searchPeopleTag" data-cat="L1_1_1"><label class="searchPeopleTag">前台界面编辑</label>
 	             <input type="checkbox" class="searchPeopleTag" data-cat="L1_1_1"><label class="searchPeopleTag">UI设计</label>
@@ -142,6 +147,7 @@
 	             <input type="checkbox" class="searchPeopleTag" data-cat="L1_4_6"><label class="searchPeopleTag">书法</label>
 	             <input type="checkbox" class="searchPeopleTag" data-cat="L1_4_5"><label class="searchPeopleTag">素描</label>
 	             <input type="checkbox" class="searchPeopleTag" data-cat="L1_4_5"><label class="searchPeopleTag">油彩</label>     
+	              -->
 			</div>
 		</div>
 		<div class="searchPeoplePart2RowHead"><b>其他条件:</b></div>

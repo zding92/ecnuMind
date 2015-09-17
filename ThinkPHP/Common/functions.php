@@ -1550,17 +1550,24 @@ function in_array_case($value,$array){
 }
 
 function checkCharNull($id) {
-	if ($id === '') {
-		return 'null';
+	if ($id == '') {
+		return null;
 	} else {
 		return $id;
 	}
 }
 
 function checkIntNull($id) {
-	if ($id === '') {
+	if ($id == '') {
 		return null;
 	} else {
 		return $id;
 	}
+}
+
+// 验证年龄
+function checkRange($age) {
+	if ($age < 20 || $age > 99) {
+		return false;
+	} else return true;
 }

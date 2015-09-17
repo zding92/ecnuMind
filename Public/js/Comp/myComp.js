@@ -1,3 +1,4 @@
+var $table;
 function starSorter(a, b) {
 	if (a.length > b.length) return 1;
 	if (a.length < b.length) return -1;
@@ -15,7 +16,7 @@ function operateFormatter(value, row, index) {
             '<i class="glyphicon glyphicon-edit"></i>',
         '</a>',
         
-        '<a class="remove ml10" href="' + row.comp_view + '" style="margin-left:20px" title="打印" target="_blank">',
+        '<a class="print ml10" href="' + row.comp_view + '" style="margin-left:20px" title="打印" target="_blank">',
         '<i class="glyphicon glyphicon-print"></i>',
         '</a>',
         
@@ -28,17 +29,32 @@ function operateFormatter(value, row, index) {
 window.operateEvents = {
     'click .remove': function (e, value, row, index) {
     	
-    	
-    	
-        alert('You click remove icon, row: ' + JSON.stringify(row));
+    	$.ajax({
+            url: row.comp_remove, //请求验证页面 
+            type: "POST", //请求方式
+            async: false,
+            success: function (call) 
+            {
+            	if (call === 'deleted') {
+            		alert('删除成功');   
+            		var deleteTarget = [];
+            		deleteTarget[0] = row.comp_item_id;
+            		$table.bootstrapTable('remove', {
+                        field: 'comp_item_id',
+                        values: deleteTarget
+                    });
+            	}
+            }
+        });	
     }
 };
-
 $(function(){
 	$table = $("#comp-table").bootstrapTable({
+		url: dataUrl,
 		striped: true,
 		pagination: true,
-		height: 500
+		height: 600,
+		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
 //		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
 //		table_filter.bootstrapTableFilter('enableFilter', 'apply_state');

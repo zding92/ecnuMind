@@ -13,7 +13,8 @@ $(function(){
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,
 		pagination: true,
-		height: 500
+		height: 600,
+		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
 		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
 		table_filter.bootstrapTableFilter('enableFilter', 'apply_state');

@@ -183,6 +183,7 @@ function step1_check()
 
 var data_string;
 
+
 $(document).ready(function () {
 	function changeToUpdateMode(update_json) {
 		for (var key in update_json) {
@@ -193,23 +194,52 @@ $(document).ready(function () {
 			case 'comp_item_id':
 				CompItemId = update_json.comp_item_id;
 				break;
-			case 'teacher_id':
-				$("#teacher_id").val(update_json.teacher_id);
-				break;
-			case 'referee_id':
-				$("#referee_id").val(update_json.referee_id);
-				break;
 			default:
 				break;
 			}
     	}	
 	};
 	
+	function handleReturn(call) {
+		switch (call) {
+		case 'access_denied':
+			alert('您无权操作该表单');
+			break;
+		case 'not_in_author':
+			alert('请您将自己的学号填入作者表当中');
+			break;
+		case 'not_found':
+			alert('该报名信息未找到，请联系管理员');
+			break;
+		case 'updated':
+			alert('更新成功');
+			break;
+		case 't_not_num':
+			alert('导师年龄必须是数字');
+			break;
+		case 't_not_range':
+			alert('导师年龄必须在20~99之间');
+			break;
+		case 'r_not_num':
+			alert('推荐人年龄必须是数字');
+			break;
+		case 'r_not_range':
+			alert('推荐人年龄必须在20~99之间');
+			break;
+		default:
+			var returnJson = eval("(" + call + ")");
+			if (returnJson.operation_info == 'added') {
+				changeToUpdateMode(returnJson);
+				alert('竞赛报名成功')
+			}
+			break;
+		}
+	}
+	
     $(".save_button").each(function () {
         $(this).click(function () {
             data_string = '';
             step1_check();
-            
             //判断第一作者信息是否完整
             if (auther1Ready == true){
 	            if (step1_finished == 1) {
@@ -217,22 +247,7 @@ $(document).ready(function () {
 	                    (document.getElementById("project_name").value == document.getElementById("project_name_B2").value) ||
 	                    (document.getElementById("project_name").value == document.getElementById("project_name_B3").value)
 	                   ) {
-	                    
-	                    $("input,select,textarea").each(function () {
-	                        if (($(this).attr("type") != "radio") && ($(this).attr("type") != "button")&&($(this).attr("type") != "checkbox"))
-	                            data_string = data_string + $(this).attr("id") + "=" + $(this).val() + "&";
-	                        else {
-	                            if (($(this).attr("name") == "group_type") && ($(this).attr("checked") == "checked"))
-	                                data_string = data_string + "group_type" + "=" + $(this).val() + "&";
-	                            if (($(this).attr("name") == "B_ratio") && ($(this).attr("checked") == "checked"))
-	                                data_string = data_string + "detailed_type" + "=" + $(this).val() + "&";
-	                            if (($(this).attr("class") == "B2_type_check"))
-	                                data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";                   
-	                            if (($(this).attr("class") == "B3_type_check"))
-	                               data_string = data_string + $(this).attr("id") + "=" + Boolean($(this).attr("checked")) + "&";
-	                            }
-	
-	                    });
+	                  
 	                    //alert($('#tiaozhanForm').serialize());
 	                    if (CompItemId == null) {
 	                    	$.ajax({
@@ -242,12 +257,7 @@ $(document).ready(function () {
 	                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
 	                            success: function (call) 
 	                            {
-	                            	if (call != null) {
-	                            		//alert('数据提交成功');
-	                            		$('.messagePopOut').fadeIn(500);
-	                            		var update_json = eval("(" + call + ")");
-	                                	changeToUpdateMode(update_json);                 
-	                            	}
+	                            	handleReturn(call); 	                          
 	                            }
 	                        });	
 	                    } else {
@@ -255,16 +265,11 @@ $(document).ready(function () {
 	                            url: submitUrl, //请求验证页面 
 	                            type: "POST", //请求方式
 	                            async: false,
-	                            data: $('#tiaozhanForm').serialize()+'&compItemId='+ CompItemId,
+	                            data: $('#tiaozhanForm').serialize()+'&comp_item_id='+ CompItemId,
 	                            success: function (call) 
 	                            {
-	                            	if (call != null) {
-	                            		$('.messagePopOut').fadeIn(500);
-	                            		//alert('数据提交成功');
-	                            		var update_json = eval("(" + call + ")");
-	                            		if (update_json.needUpdateJs)
-	                            			changeToUpdateMode(update_json);                 
-	                            	}
+                            		//$('.messagePopOut').fadeIn(500);
+                            		handleReturn(call);            
 	                            }
 	                        });
 	                    }                
@@ -274,7 +279,6 @@ $(document).ready(function () {
 	            else alert("请完整填写第一步报名信息");
             }
             else alert("请在第二步中填写第一作者信息");
-            //alert(data_string);
         });
     });
 });
@@ -284,6 +288,7 @@ $(document).ready(function () {
 //var counter=1;
 var checkTask;
 $(document).ready(function () {
+	
 	$(".author_num").keyup(function() {
 		if (checkTask != undefined) {
 			clearTimeout(checkTask);

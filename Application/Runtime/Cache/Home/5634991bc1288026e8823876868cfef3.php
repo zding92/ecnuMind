@@ -61,8 +61,7 @@
                             <input type="radio" class="B_ratio" name="detailed_type" value="B3E" <?php echo ($detailed_type == 'B3E' ? checked : ''); ?>><h2>能源化工</h2>
                         </div>
                         <br>
-                        <h1>推荐人情况：</h1>
-                        <input type="text" name="referee_id" id="referee_id" style="display:none" value="<?php echo ($referee_id); ?>">
+                        <h1>推荐人情况：</h1>                    
                         <h2>姓名</h2><input type="text" class="teacher_name" name="referee_name" id="referee_name" value="<?php echo ($referee_name); ?>">
                         <br><br>
                         <h2>性别</h2>
@@ -238,11 +237,10 @@
                         </div>
                         <hr/>                    
                         <h2>指导教师：</h2>
-                        <br>
-                        <input type="text" name="teacher_id" id="teacher_id" style="display:none" value="<?php echo ($teacher_id); ?>">
+                        <br>                
                         <h1>姓名</h1><input type="text" class="teacher_name" id="teacher_name" name="teacher_name" value="<?php echo ($teacher_name); ?>"> 
                         <h1>性别</h1>
-                            <select class="teacher_gender" id="teacher_gender">
+                            <select class="teacher_gender" id="teacher_gender" name="teacher_gender">
                                 <option value="男" <?php echo ($teacher_gender == '男' ? 'selected = "selected"' : ''); ?>>男</option>
                                 <option value="女" <?php echo ($teacher_gender == '女' ? 'selected = "selected"' : ''); ?>>女</option>
                             </select>
@@ -465,9 +463,9 @@
                    <hr/>
                    <h1>专利申报情况:</h1>
                    <br>
-                   <input type="checkbox" class="B3_type_check" id="B3_type_check9" name="b3_7" <?php echo ($b3_7 == 'on' ? 'checked' : ''); ?>><h1>提出专利申报；</h1><h1>申报号：</h1><input type="text" class="p_num1" id="ip1" name="ip1" value="<?php echo ($ip1); ?>" ><h1>申报日期：</h1><input type="text" class="p_day1" id="ip1_date"  name="ip1_date" value="<?php echo ($ip1_date); ?>" placeholder="格式如：2014-06-05">
+                   <input type="checkbox" class="B3_type_check" id="B3_type_check9" name="b3_7" <?php echo ($b3_7 == 'on' ? 'checked' : ''); ?>><h1>提出专利申报；</h1><h1>申报号：</h1><input type="text" class="p_num1" id="ip1" name="b3_ip1" value="<?php echo ($b3_ip1); ?>" ><h1>申报日期：</h1><input type="text" class="p_day1" id="ip1_date"  name="b3_ip1_date" value="<?php echo ($b3_ip1_date); ?>" placeholder="格式如：2014-06-05">
                    <br> 
-                   <input type="checkbox" class="B3_type_check" id="B3_type_check10" name="b3_8" <?php echo ($b3_8 == 'on' ? 'checked' : ''); ?>><h1>已获专利权批准；</h1><h1>批准号：</h1><input type="text" class="p_num2" id="ip2" name="ip2" value="<?php echo ($ip2); ?>"><h1>批准日期：</h1><input type="text" class="p_day2" id="ip2_date" name="ip2_date" value="<?php echo ($ip2_date); ?>" placeholder="格式如：2014-06-05">
+                   <input type="checkbox" class="B3_type_check" id="B3_type_check10" name="b3_8" <?php echo ($b3_8 == 'on' ? 'checked' : ''); ?>><h1>已获专利权批准；</h1><h1>批准号：</h1><input type="text" class="p_num2" id="ip2" name="b3_ip2" value="<?php echo ($b3_ip2); ?>"><h1>批准日期：</h1><input type="text" class="p_day2" id="ip2_date" name="b3_ip2_date" value="<?php echo ($b3_ip2_date); ?>" placeholder="格式如：2014-06-05">
                    <br> 
                    <input type="checkbox" class="B3_type_check" id="B3_type_check11" name="b3_9" <?php echo ($b3_9 == 'on' ? 'checked' : ''); ?>><h1>未提出专利申请；</h1>
                    <br> 
@@ -487,6 +485,15 @@
             </div>
             <br><br>
          </form>
+         </div>
+         <div class='messagePopOut' style='display:none'>
+         	<div class='messagePopText'>
+         		保存成功
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>
+         	
          </div>
          <script>
 	  		var checkUrl = '/webprj/ecnu_mind/index.php/Home/Comp/checkValidUser';

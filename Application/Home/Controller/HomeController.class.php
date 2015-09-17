@@ -96,7 +96,7 @@ class HomeController extends CommonController {
 	 */ 
 	private function returnBaseinfo() {
 		// 初始化M对象（相较于D对象效率高，此处仅用于基本查询）。
-		$model = M('info');
+		$model = M('user_info');
 	    // 获取登录时存放的session。
 		$username = session("username");
 		// sql语句：SELECT nickname,email,phone,address,name,department,academy,
@@ -171,7 +171,7 @@ class HomeController extends CommonController {
 		// academy = 'academy', department = 'department', major = 'major', brief = 'brief',
 		// hidden_name = 'hidden_name' where username = 'username';
 		$username = array_pop($allData);
-		$model = M('info');
+		$model = M('user_info');
 		return $model->where("username = '".$username."'")->save($allData);
 	}
 }
