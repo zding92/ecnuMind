@@ -203,34 +203,34 @@ $(document).ready(function () {
 	function handleReturn(call) {
 		switch (call) {
 		case 'access_denied':
-			alert('您无权操作该表单');
+			myAlert('您无权操作该表单');
 			break;
 		case 'not_in_author':
-			alert('请您将自己的学号填入作者表当中');
+			myAlert('请您将自己的学号填入作者表当中');
 			break;
 		case 'not_found':
-			alert('该报名信息未找到，请联系管理员');
+			myAlert('该报名信息未找到，请联系管理员');
 			break;
 		case 'updated':
-			alert('更新成功');
+			myAlert('更新成功');
 			break;
 		case 't_not_num':
-			alert('导师年龄必须是数字');
+			myAlert('导师年龄必须是数字');
 			break;
 		case 't_not_range':
-			alert('导师年龄必须在20~99之间');
+			myAlert('导师年龄必须在20~99之间');
 			break;
 		case 'r_not_num':
-			alert('推荐人年龄必须是数字');
+			myAlert('推荐人年龄必须是数字');
 			break;
 		case 'r_not_range':
-			alert('推荐人年龄必须在20~99之间');
+			myAlert('推荐人年龄必须在20~99之间');
 			break;
 		default:
 			var returnJson = eval("(" + call + ")");
 			if (returnJson.operation_info == 'added') {
 				changeToUpdateMode(returnJson);
-				alert('竞赛报名成功')
+				myAlert('竞赛报名成功')
 			}
 			break;
 		}
@@ -274,11 +274,11 @@ $(document).ready(function () {
 	                        });
 	                    }                
 	                }
-	                else alert("请检查第一步与第三步中项目名称是否一致");
+	                else myAlert("请检查第一步与第三步中项目名称是否一致");
 	            }
-	            else alert("请完整填写第一步报名信息");
+	            else myAlert("请完整填写第一步报名信息");
             }
-            else alert("请在第二步中填写第一作者信息");
+            else myAlert("请在第二步中填写第一作者信息");
         });
     });
 });
@@ -379,12 +379,7 @@ function checkStuid(authorNum) {
     }
 }
 
-$(document).ready(function(){
-	//点击弹窗的ok按钮，弹窗消失
-	$('.messagePopButton').click(function(){
-		$('.messagePopOut').fadeOut(800);
-	})
-})
+
 
 $(document).ready(function (){
 	//页面加载完毕后，先激活所有作者的更新

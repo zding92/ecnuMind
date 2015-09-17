@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+.messagePopOut{
+    width: 360px;
+    height: 130px;
+    background-color: #2e3846;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -180px;
+    margin-top: -65px;
+    text-align: center;	
+}
+
+.messagePopButton{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    background-color: #795aac;
+    text-align: center; 
+    color: white;
+    vertical-align: center;
+    line-height: 40px;
+    top: 80px;
+    left: 105px;
+    cursor: pointer;
+}
+.messagePopText{
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+    font-family: '微软雅黑';
+}
