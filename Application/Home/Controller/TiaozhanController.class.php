@@ -59,6 +59,8 @@ class TiaozhanController extends CompController {
 	 * 将挑战杯的数据录入数据库
 	 */
 	public function TiaozhanAddData(){
+		$this->checkAccess(I('post.'));	
+	
 		// 向竞赛主表添加竞赛信息，并返回唯一竞赛item的ID
 		$compItemID = $this->registerComp();
 		
@@ -308,20 +310,33 @@ class TiaozhanController extends CompController {
 	}
 	
 	private function checkValid($compItemId) {
-		$this->checkExist($tiaozhanInfo);
+		$tiaozhanInfo = $this->checkExist();
+		$this->checkAccess($tiaozhanInfo);
+		
+		//如果有权限则没有ajax返回。
+	}
+	
+	/**
+	 * 检查是否存在表单，如果存在返回找到的数据
+	 */ 
+	private function checkExist() {
 		$tiaozhanModel = M('ecnu_mind.tiaozhan_info', null);
 		$tiaozhanInfo = $tiaozhanModel->find($compItemId);
 		if (!isset($tiaozhanInfo)) {
 			$this->ajaxReturn('表单未找到，无法提交，请联系管理员','EVAL');
 		}
 		
-		$this->checkAccess($tiaozhanInfo);
+		return $tiaozhanInfo;
+	}
+	
+	/**
+	 * 检查用户权限。
+	 */
+	private function checkAccess($checkData) {
 		$studentid = session('studentid');
-		$key = array_search($studentid, $tiaozhanInfo);
+		$key = array_search($studentid, $checkData);
 		if (!preg_match('/author[1-6]_id$/',$key)) {
 			$this->ajaxReturn('您无权修改该表单，如有问题请联系管理员','EVAL');
 		}
-		
-		//如果有权限则没有ajax返回。
 	}
 }
