@@ -140,12 +140,4 @@ class CompController extends CommonController {
 		}
 		return $result;
 	}
-	
-	/**
-	 * 检测当前登录的用户是否有权限修改制定comp_item_id的表单(即查看当前用户是否处于该表单中)。
-	 */
-	private function checkAccess() {
-		$userId = $session('userid');
-	   
-	}
 }

@@ -308,13 +308,15 @@ class TiaozhanController extends CompController {
 	}
 	
 	private function checkValid($compItemId) {
+		$this->checkExist($tiaozhanInfo);
 		$tiaozhanModel = M('ecnu_mind.tiaozhan_info', null);
 		$tiaozhanInfo = $tiaozhanModel->find($compItemId);
 		if (!isset($tiaozhanInfo)) {
 			$this->ajaxReturn('表单未找到，无法提交，请联系管理员','EVAL');
 		}
+		
+		$this->checkAccess($tiaozhanInfo);
 		$studentid = session('studentid');
-		// 检查用户是否有权限修改该表
 		$key = array_search($studentid, $tiaozhanInfo);
 		if (!preg_match('/author[1-6]_id$/',$key)) {
 			$this->ajaxReturn('您无权修改该表单，如有问题请联系管理员','EVAL');
