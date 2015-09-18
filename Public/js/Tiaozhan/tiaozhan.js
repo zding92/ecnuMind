@@ -302,10 +302,10 @@ $(document).ready(function () {
 	$(".author_num").blur(function() {
 		if (checkTask != undefined) {
 			clearTimeout(checkTask);
+			if ($(this).val() != "") {
+				checkStuid($(this).attr('id'));
+			}	  
 		}
-		if ($(this).val() != "") {
-			checkStuid($(this).attr('id'));
-		}	  
 	});
 });
 
@@ -355,6 +355,7 @@ function checkStuid(authorNum) {
         auther1Ready = false;
     }
     else {
+    	checkTask = undefined;
     	$("#" + authorNum + "_check").text('');
     	var author = authorNum.substring(0,7);
         $.ajax({ 
