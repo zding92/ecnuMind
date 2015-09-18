@@ -53,8 +53,7 @@ function RefreshChart(doughnutData, tabs) {
 function InitPersonalData(doughnutData, tabs) {
     RefreshChart(doughnutData, tabs);
 	
-	$(".box1 .welcome").append("<p>" + user_json.nickname + "</p>")
-    .append("<p>" + user_json.name + "</p>")
+	$(".box1 .welcome").append("<p>" + user_json.name + "</p>")
     .append("<p>" + user_json.major + "</p>");
 
 	$(".box1 .photo").append("<img src='" + public_url + "/img/photo/face.png' alt='照片载入失败'>");

@@ -10,8 +10,8 @@ class CheckForm {
 	 */
 	public function checkOne($action, $value) {
 				
-		$model = M('info');
-		if($action=='nickname' || $action=='studentid'||
+		$model = M('ecnu_mind.user_info');
+		if($action=='studentid'||
 				$action=='Email' || $action=='phone') {
 			// sql查询： SELECT actionName from user_info where actionName = actionValue;		
 			$this->queryResult = $model->field($action)->where($action."='".$value."'")->find();	
@@ -19,9 +19,6 @@ class CheckForm {
 		
 		switch($action)
 		{
-			case 'nickname':
-				$this->CheckNickFromDB($value);
-				break;
 			case 'name':
 				$this->CheckNameFromDB($value);
 				break;
@@ -53,9 +50,6 @@ class CheckForm {
 	public function checkAll($allData) {
 		// 验证各个变量是否合法，如果存在任何的不合法，
 		// 返回false，若全部合法返回true.
-		$this->CheckNickFromDB($allData['nickname']);
-		if ($this->isIllegal() || $this->isRepeat()) return false;
-		
 		$this->CheckNameFromDB($allData['name']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
@@ -82,25 +76,7 @@ class CheckForm {
 		// 全部验证通过，返回true.
 		return true;
 	}
-	
-	private function CheckNickFromDB($value){
-		if($this->queryResult != "")
-		{
-			$this->repeat = true;
-			$this->repeat = true;
-		} else{
-			if(preg_match('/[ .,]+?/',$value))
-			{
-				
-				$this->illegal = true;
-			}else{
-	
-				$this->illegal = false;
-			}
-			$this->repeat = false;
-		}
-	}
-	
+
 	private function CheckNameFromDB($value){
 		if(!preg_match("/^[\x{4e00}-\x{9fa5}]{2,4}$/u",$value))
 		{

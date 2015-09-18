@@ -1571,3 +1571,40 @@ function checkRange($age) {
 		return false;
 	} else return true;
 }
+
+// 验证名字长度
+function checkName($name) {
+	$length = strlen($name);
+	if ($length > 20) return false;
+	if (!isChineseOrEnglish($name)) return false; 
+	return true;
+}
+
+// 验证电话格式
+function checkPhone($phone) {
+	$length = strlen($phone);
+	if ($length > 20) return false;
+	if (!isNumOrConnectchar($phone)) return false;
+	return true;
+}
+
+function checkGender($gender) {
+	if (preg_match('/^(男|女){1}$/', $gender)) return true;
+	return false;
+}
+
+function checkStudentId($studentid) {
+	if (preg_match('/^[0-9]{11}$/', $studentid)) return true;
+	return false;
+}
+
+
+function isChineseOrEnglish($value) {
+	if (preg_match('/^(?:[\u4e00-\u9fa5]|[a-zA-Z])+$/',$value)) return true;
+	else return false;
+}
+
+function isNumOrConnectchar($value) {
+	if (preg_match('/^(?:[0-9\-])+$/',$value)) return true;
+	else return false;
+}

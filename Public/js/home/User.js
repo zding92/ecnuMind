@@ -8,7 +8,7 @@ $(document).ready(function () {
     
     function showname() {
 		document.getElementById("welcome-user").innerHTML =
-		"<div>欢迎您！" + ((user_json.name == null) ? user_json.nickname : user_json.name) + "</div>";
+		"<div>欢迎您！" + user_json.name + "</div>";
 	}
 
     $(document).ready(function () {

@@ -9,7 +9,8 @@
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/nav.css" /> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Person.css" />
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />
-        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.css"/>   
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.css"/> 
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>  
         <link href="/webprj/ecnu_mind/Public/css/icheck/flat/blue.css" rel="stylesheet">
         <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/Chart.js"></script>
@@ -19,6 +20,7 @@
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.icheck.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.mixitup.min.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
+        <script src="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script>
 
 		<script type="text/javascript">
         	var public_url = "/webprj/ecnu_mind/Public";
@@ -83,6 +85,14 @@
 	    <div class="homeBottom">
 		       		联系我们|智库团队版权所有 ©2015-2016
 		</div>
+		<div class='messagePopOut' style='display:none'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+         </div>
 	    <script src="/webprj/ecnu_mind/Public/js/home/User.js"></script>
     </body>
 

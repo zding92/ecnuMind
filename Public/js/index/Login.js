@@ -18,24 +18,35 @@ window.onload = function () {
         } else {
             isValidate = true;
         }
+        
+        function handleReturn(call) {
+        	switch (call) {
+			case 'success':
+				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
+                location = home_url; // 登录成功后指定跳转页面  
+				break;
+			case 'user_noexist':
+				tips.innerHTML = '<font color="red">帐号不存在！</font>';
+				break;
+			case 'password_error':
+				tips.innerHTML = '<font color="red">密码错误！</font>';
+				break;
+			case 'user_info_incomplete':
+				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
+                location = incomplete_url; // 登录成功后指定跳转页面  
+				break;
+			default:
+				break;
+			}
+		}
+        
         if (isValidate) {
             $.ajax({
                 url: login_url, //请求验证页面 
                 type: "POST", //请求方式
                 data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val(),
                 success: function (call) {
-                    eval(call);
-                    if (login) {
-                        tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
-                        location = home_url; // 登录成功后指定跳转页面  
-                    } else {
-                        if (user_noexist) {
-                            tips.innerHTML = '<font color="red">帐号不存在！</font>';
-                        }
-                        else if (pwd_error) {
-                            tips.innerHTML = '<font color="red">密码错误！</font>';
-                        }
-                    }
+                    handleReturn(call);          	         
                 }
             });
         }

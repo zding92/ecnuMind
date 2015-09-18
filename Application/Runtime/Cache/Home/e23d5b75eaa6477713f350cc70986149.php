@@ -5,8 +5,10 @@
         <meta charset="utf-8" />
         <title>挑战杯报名信息录入系统</title>
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/Tiaozhan.css" />
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script> 
         <script src="/webprj/ecnu_mind/Public/js/Tiaozhan/tiaozhan.js"></script>
+        <script src="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script>
     </head>
     <body>
         <div class="info_container">
@@ -488,13 +490,12 @@
          </div>
          <div class='messagePopOut' style='display:none'>
          	<div class='messagePopText'>
-         		保存成功
+         		
          	</div>
          	<div class='messagePopButton'>
          		OK
-         	</div>
-         	
-         </div>
+         	</div>        	
+         </div>	
          <script>
 	  		var checkUrl = '/webprj/ecnu_mind/index.php/Home/Comp/checkValidUser';
 	        var submitUrl = '<?php echo ($submit_mode); ?>';
