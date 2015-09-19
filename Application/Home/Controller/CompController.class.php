@@ -13,8 +13,8 @@ class CompController extends CommonController {
 	}
 	
 	public function checkValidUser($studentid) {
-		$userModel = M('user_info');
-		$user = $userModel->where("studentid=".$studentid)->field('id,studentid,username,nickname,message,hidden_name,brief,password',true)->find();
+		$userModel = M('ecnu_mind.user_info');
+		$user = $userModel->where("studentid=$studentid")->field('id,studentid,username,brief,password',true)->find();
 		if (isset($user)) {
 			$this->ajaxReturn(json_encode($user),'EVAL');
 		}

@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+body{
+	margin: 0;
+	background-color: black;
+}
+.stepGuideHeader{
+	width: 100%;
+	height: 95px;
+	margin: 0 auto;
+	padding: 48px 16px 48px 16px;
+	background-color: black;
+	text-align: center;
+	color: rgba(255,255,255,0.85);
+}
+.stepGuideHeader h1{
+	margin: 0;
+	font-weight: 400;
+	font-size: 45px;
+	font-family: '微软雅黑';
+	margin-bottom: 10px;
+	min-width: 400px;
+}
+.stepGuideHeader span{
+	display: block;
+	font-size: 0.6em;
+	opacity: 0.7;
+}
+.stepGuideContainer{
+	width: 100%;
+	height: 300px;
+	padding: 80px 32px 160px 32px;
+	text-align: center;
+	background-color: #fff;
+	color: #0099FF;
+}
+.stepGuideInnerContainer{
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 0;
+	max-width: 860px;
+	width: 100%;
+	text-align: left;
+	/*font-size: 2.5em;*/
+	/*background-color: red;*/
+}
+.stepGuideInnerContainer h1{
+	font-family: '微软雅黑';
+	font-size: 45px;
+	font-weight: 400;
+	text-align: left;
+	min-width: 600px;
+}
+.stepGuideForm{
+	background-color: #E5E5E5;
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: -20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.stepGuideText{
+	border: none;
+	border-color: #E5E5E5;
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	font-size: 45px;
+	font-family: '微软雅黑';
+	width: 700px;
+	outline: none;
+	margin-left: 10px;
+}
+.stepGuideText:focus{
+	border: none;
+	border-color: #E5E5E5;
+}
+.stepGuideSubmit{
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	border: none;
+	font-family: 'Consolas';
+	content: "/e006";
+	width: auto;
+	height: auto;
+	font-size: 90px;
+	float: right;
+	cursor: pointer;
+	margin-right: 5px;
+	outline: none;
+	margin-top: -25px;
+}
+.stepGuideProgress{
+	width: 100%;
+	height: 10px;
+	position: initial;
+	top: 90px;
+	left: 0;
+	background-color: #F2F2F2;
+}
+.stepGuideInProgress{
+	height: 100%;
+	background-color: #A8A8A8;
+	/*width: 50%;*/
+
+	transition:all 0.3s ease-in-out ;
+	-moz-transition:width 0.3s; /* Firefox 4 */
+	-webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+	-o-transition:width 0.3s; /* Opera */
+}
+
+.stepGuideInfo{
+	width: 100%;
+	height: 10px;
+	position: initial;
+	top: 90px;
+	left: 0;
+	margin-top: 10px;
+	font-family: '微软雅黑';
+	font-size: 20px;
+	color: #8c8c8c;
+}
+.stepGuideInfo span{
+	display: inline;
+}
+.showStepNum{
+	float: right;
+	color: #0099FF;
+}
+.stepGuideForm .kitjs-form-suggestselect-input{
+	border: none;
+	border-color: #E5E5E5;
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	outline: none;
+	margin-left: 10px;
+	font-size: 45px;
+	font-family: '微软雅黑';
+	height: 60px;
+}
+.prev{
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	border: none;
+	font-family: 'Consolas';
+	content: "/e006";
+	width: auto;
+	height: auto;
+	font-size: 90px;
+	float: left;
+	cursor: pointer;
+	margin-right: 5px;
+	outline: none;
+	margin-top: -25px;
+	
+}

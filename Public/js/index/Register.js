@@ -61,8 +61,7 @@ $("#register_user").blur(function () {
         type: "POST", //请求方式,
         data: "username=" + $("#register_user").val() + "&password=" + "", 
         success: function (data) { //请求成功时执行操作
-            eval(data);
-            if (user_noexist) {
+            if (data == 'user_noexist') {
                 if (flag_log) {
                     $("#chk_user_no").html("");
                     $("#user_tips").html("");
@@ -261,14 +260,17 @@ $("#btn_reg").click(function () {
             type: "POST", 
             data: "username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val(),
             //请求成功时执行操作
-            success: function (data) { 
-                eval(data);
-                if (reg_success) {
-                    location = home_url;
-                }
-                else {
-                    var str="username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val();                   
-                }
+            success: function (call) { 
+            	switch (call) {
+				case 'success':
+					location = home_url;
+					break;
+				case 'username_exist':
+					var str="username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val();
+					break;
+				default:
+					break;
+				}
             }
         })
     }

@@ -486,21 +486,21 @@
             <br><br>
          </form>
          </div>
-         <div class='messagePopOut' style='display:none'>
-         	<div class='messagePopText'>
-         		保存成功
-         	</div>
-         	<div class='messagePopButton'>
-         		OK
-         	</div>
-         	
-         </div>
-         <script>
-	  		var checkUrl = '/webprj/ecnu_mind/index.php/Home/Comp/checkValidUser';
-	        var submitUrl = '<?php echo ($submit_mode); ?>';
-	        var CompId = <?php echo ($comp_id!=''?$comp_id:'null'); ?>;
-	        var CompItemId = <?php echo ($comp_item_id!=''?$comp_item_id:'null'); ?>;
-	        Gettext();
-         </script>
+        <div class='messagePopOut' style='display:none'>
+	       	<div class='messagePopText'>
+	               	 保存成功
+	        </div>
+	        <div class='messagePopButton'>
+	         		OK
+	        </div>
+	         	
+	    </div>
+        <script>
+		  	var checkUrl = '/webprj/ecnu_mind/index.php/Home/Comp/checkValidUser';
+		    var submitUrl = '<?php echo ($submit_mode); ?>';
+		    var CompId = <?php echo ($comp_id!=''?$comp_id:'null'); ?>;
+		    var CompItemId = <?php echo ($comp_item_id!=''?$comp_item_id:'null'); ?>;
+		    Gettext();
+        </script>
     </body>
 </html>

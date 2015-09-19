@@ -3400,7 +3400,7 @@ transform: function () {
     this.inputEl.className = me.config.inputCls;
     this.inputEl.type = 'text';
     this.inputEl.name = inputname[inputname_i];
-    inputname_i = inputname_i == 2 ? 0 : inputname_i++;
+     inputname_i == 2 ? 0 : inputname_i++;
     //formEl
     this.formEl = document.createElement('input');
     this.formEl.type = 'hidden';

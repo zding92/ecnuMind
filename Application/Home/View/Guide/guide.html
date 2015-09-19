@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>【华师智库】完善个人信息</title>	
+	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
+  	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
+  	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
+	<script src='__PUBLIC__/JSON/ComboxData.js'></script>
+    <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
+    <script type="text/javascript">
+   		var app_url = "__APP__";
+    </script>
+</head>
+<body>
+	<div class='stepGuideHeader'>
+		<h1>
+			欢迎使用华师智库
+			<span>在这里，让你的想法闪耀</span>
+		</h1>
+	</div>
+	<div class='stepGuideContainer'>
+		<div class='stepGuideInnerContainer'>
+			<h1>您叫什么名字？</h1>
+			<form stepGuide='1' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<input type='text' class='stepGuideText' name='name' value='{$name}'>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='2' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<input type='text' class='stepGuideText'  name='studentid' value='{$studentid}'>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='3' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='stepGuideText'  name='gender'>
+					<option label=""></option>
+					<option label="男" {$gender == '男' ? 'selected = "selected"' : ''}>男</option>
+					<option label="女" {$gender == '女' ? 'selected = "selected"' : ''}>女</option>
+				</select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='4' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<input type='text' class='stepGuideText'  name=email value='{$email}'>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='5' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<input type='text' class='stepGuideText'  name='address' value='{$address}'>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='6' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<input type='text' class='stepGuideText'  name='phone' value='{$phone}'>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='7' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='kitjs-form-suggestselect stepGuideSelect1' style='margin-bottom: 10px;' id='academy'  name='academy'></select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='8' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'  name='department'></select>				
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='9' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'  name='major'></select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='10' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='stepGuideText'  name='grade'>
+					<option label=""></option>
+					<option label="大一" {$grade == '大一' ? 'selected = "selected"' : ''}>大一</option>
+					<option label="大二" {$grade == '大二' ? 'selected = "selected"' : ''}>大二</option>
+					<option label="大三" {$grade == '大三' ? 'selected = "selected"' : ''}>大三</option>
+					<option label="大四" {$grade == '大四' ? 'selected = "selected"' : ''}>大四</option>
+					<option label="研一" {$grade == '研一' ? 'selected = "selected"' : ''}>研一</option>
+					<option label="研二" {$grade == '研二' ? 'selected = "selected"' : ''}>研二</option>
+					<option label="研三" {$grade == '研三' ? 'selected = "selected"' : ''}>研三</option>
+					<option label="博士" {$grade == '博士' ? 'selected = "selected"' : ''}>博士</option>
+				</select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			
+			<div class='stepGuideProgress'>
+					<div class='stepGuideInProgress'> </div>
+			</div>
+			<div class='stepGuideInfo'>
+				<span class='stepGuideError'></span>
+				<span class='showStepNum'>
+				<span class='stepNow'></span>/
+				<span class='stepAll'></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 唯一值，不可重复
+		var myStudentid = '{$studentid}';
+		var myEmail = '{$email}';
+		var myPhone = '{$phone}';
+		//此变量为，总共需要几步完成整个stepGuide
+		var stepGuideNum = {$stepGuideNum};
+		//当前正进行到哪个stepGuide
+		var stepGuideInProgress = {$info_complete};
+		
+		var academy = '{$academy == '' ? null : $academy}';
+		var department = '{$department == '' ? null : $department}';
+		var major = '{$major == '' ? null : $major}';
+	</script>
+	<script src="__PUBLIC__/js/guide/guide.js"></script> 
+</body>
+</html>

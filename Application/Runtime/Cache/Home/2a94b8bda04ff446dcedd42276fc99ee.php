@@ -11,12 +11,6 @@
 	<link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/IndexSection2.css" /> 
-    <script> 
-    	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
-    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
-    	var public_url = '/webprj/ecnu_mind/Public';
-  		var home_url = '/webprj/ecnu_mind/index.php/Home/home/home'
-    </script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
 	<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
@@ -118,12 +112,18 @@
 	  <li></li>
 	</ul>
 	<div class="arrow">&laquo;</div>
-
-<script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>
-<script src="/webprj/ecnu_mind/Public/js/index/Register.js"></script>
-<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
-<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
-<script src="/webprj/ecnu_mind/Public/js/index/IndexRoll.js"></script> <!-- 整体网页的上下滑动翻转，包括立即体验点击返回顶部 -->
+    <script> 
+    	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
+    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
+    	var public_url = '/webprj/ecnu_mind/Public';
+  		var home_url = '/webprj/ecnu_mind/index.php/Home/home/home';
+  		var incomplete_url = '/webprj/ecnu_mind/index.php/Home/Guide/guide';
+    </script>
+	<script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>
+	<script src="/webprj/ecnu_mind/Public/js/index/Register.js"></script>
+	<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+	<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
+	<script src="/webprj/ecnu_mind/Public/js/index/IndexRoll.js"></script> <!-- 整体网页的上下滑动翻转，包括立即体验点击返回顶部 -->
 
 </body>
 </html>
