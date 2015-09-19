@@ -44,7 +44,7 @@ class HomeController extends CommonController {
 		else if($checkForm->isIllegal() && $checkForm->illegalInfo == "") 
 			$this->ajaxReturn("illegal", "EVAL");
 		else if($checkForm->illegalInfo != "") 
-			$this->ajaxReturn('$checkForm->illegalInfo', "EVAL");
+			$this->ajaxReturn($checkForm->illegalInfo, "EVAL");
 		else $this->ajaxReturn('legal', "EVAL");
 	}
 	

@@ -1,32 +1,4 @@
 function InitPersonalInfo() {
-///\根据user_json初始化数据
-///----------------------
-//Combobox初始化值
-b3.transform();
-b1.formEl.name = 'academy';
-b1.formEl.id = 'academy';
-b1.inputEl.value = user_json.academy;
-b1.formEl.value = user_json.academy;
-b2.formEl.name = 'department';
-b2.formEl.id = 'department';
-b2.inputEl.value = user_json.department;
-b2.formEl.value = user_json.department;
-b3.formEl.name = 'major';
-b3.formEl.id = 'major';
-b3.formEl.value = user_json.major;
-b3.inputEl.value = user_json.major;
-
-//普通Input输入框及按钮初始化值
-$("#name").val(user_json.name);
-$("#studentid").val(user_json.studentid);
-$("#Email").val(user_json.email);
-$("#address").val(user_json.address);
-$("#phone").val(user_json.phone);
-$("#brief").val(user_json.brief);
-$("#" + user_json.gender).iCheck('check');
-///----------------------
-///\结束数据初始化
-	
 	
 ///\ 初始化相关事件响应函数
 ///---------------------
@@ -114,6 +86,34 @@ $("#form_base").submit(function (ev) {
 })
 ///-----------------------
 ///\初始化结束
+
+///\根据user_json初始化数据
+///----------------------
+//Combobox初始化值
+b3.transform();
+b1.formEl.name = 'academy';
+b1.formEl.id = 'academy';
+b1.inputEl.value = user_json.academy;
+b1.formEl.value = user_json.academy;
+b2.formEl.name = 'department';
+b2.formEl.id = 'department';
+b2.inputEl.value = user_json.department;
+b2.formEl.value = user_json.department;
+b3.formEl.name = 'major';
+b3.formEl.id = 'major';
+b3.formEl.value = user_json.major;
+b3.inputEl.value = user_json.major;
+
+//普通Input输入框及按钮初始化值
+$("#name").val(user_json.name);
+$("#studentid").val(user_json.studentid);
+$("#Email").val(user_json.email);
+$("#address").val(user_json.address);
+$("#phone").val(user_json.phone);
+$("#brief").val(user_json.brief);
+$("#" + (user_json.gender == '男' ? 'male' : 'female')).iCheck('check');
+///----------------------
+///\结束数据初始化
 
 ///\表单验证方法
 ///\-----------------------------------

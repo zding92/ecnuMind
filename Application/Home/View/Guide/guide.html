@@ -4,7 +4,14 @@
 <meta charset="UTF-8">
 <title>【华师智库】完善个人信息</title>
 	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
+  	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
 	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
+	<script src='__PUBLIC__/JSON/ComboxData.js'></script>
+    <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
+    <script type="text/javascript">
+   		var app_url = "__APP__";
+    </script>
 </head>
 <body>
 	<div class='stepGuideHeader'>
@@ -41,10 +48,15 @@
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='7' class='stepGuideForm'>
-				<input type='text' class='stepGuideText'>
+				<select name='academy' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='academy'></select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='8' class='stepGuideForm'>
+				<select name='department' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'></select>
+				<select name='major' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'></select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='9' class='stepGuideForm'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
