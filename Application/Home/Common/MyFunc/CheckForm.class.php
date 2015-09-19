@@ -130,7 +130,7 @@ class CheckForm {
 		{
 			$this->repeat = true;
 		} else{
-			if(!preg_match('/^1[0-9]{10}$/',$value))
+			if(!preg_match('/^[0-9]{1,20}$/',$value))
 			{
 				$this->illegal = true;
 			}else{

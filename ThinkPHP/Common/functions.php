@@ -1600,7 +1600,7 @@ function checkStudentId($studentid) {
 
 
 function isChineseOrEnglish($value) {
-	if (preg_match('/^(?:[\u4e00-\u9fa5]|[a-zA-Z])+$/',$value)) return true;
+	if (preg_match('/^(?:[\x{4e00}-\x{9fa5}]|[a-zA-Z])+$/u',$value)) return true;
 	else return false;
 }
 

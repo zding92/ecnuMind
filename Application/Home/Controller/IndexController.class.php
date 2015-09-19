@@ -39,7 +39,7 @@ class IndexController extends Controller {
 			session('userid', $Data->id);
 			
 			// 判断用户信息是否完善， 如果不完善要求用户补全
-			if ($result['info_complete'] < 12) {
+			if ($result['info_complete'] < 11) {
 				$this->ajaxReturn("user_info_incomplete", "EVAL");
 			} 
 			

@@ -35,36 +35,28 @@ function Checkform_Combobox(){
     switch(call)
     {
         case 'academy':
-            $("#academy").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
-            $("#department").prev().removeAttr('style');
-            $("#major").prev().removeAttr('style');
-            $("#combobox-tip").html('请填写正确学院/系别（应与选择框中的待选项完全一致）');
-            $("#combobox-tip").slideDown("fast");
+            $(".stepGuideError").text('请填写正确学院/系别（应与选择框中的待选项完全一致）');
             break;
         case 'department':
-            $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-            $("#department").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
-            $("#major").prev().removeAttr('style');
-            $("#combobox-tip").html('请填写正确系别（应与选择框中的待选项完全一致）');
-            $("#combobox-tip").slideDown("fast");
+            $(".stepGuideError").text('请填写正确系别（应与选择框中的待选项完全一致）');
             break;
         case 'major':
-            $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-            $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });    
-            $("#major").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
-            $("#combobox-tip").html('请填写正确专业（应与选择框中的待选项完全一致）');
-            $("#combobox-tip").slideDown("fast");
+        	$(".stepGuideError").text('请填写正确专业（应与选择框中的待选项完全一致）');
             break;
         case 'legal':
-            $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-            $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-            $("#major").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-            $("#combobox-tip").slideUp("fast");
-            $("#combobox-tip").html('');
+        	$(".stepGuideError").text('');
             break;
         default: break;
    
     }
+}
+
+
+document.onkeydown = function(e){ 
+    var ev = document.all ? window.event : e;
+    if(ev.keyCode==13) {
+    	$("[stepGuide='"+stepGuideInProgress+"'] .next" ).trigger('click');
+     }
 }
 
 $(document).ready(function(){
@@ -72,18 +64,17 @@ $(document).ready(function(){
 	b3.transform();
 	b1.formEl.name = 'academy';
 	b1.formEl.id = 'academy';
-//	b1.inputEl.value = user_json.academy;
-//	b1.formEl.value = user_json.academy;
+	b1.inputEl.value = academy == 'null' ? null : academy;
+	b1.formEl.value = academy == 'null' ? null : academy;
 	b2.formEl.name = 'department';
 	b2.formEl.id = 'department';
-//	b2.inputEl.value = user_json.department;
-//	b2.formEl.value = user_json.department;
+	b2.inputEl.value = department == 'null' ? null : department;
+	b2.formEl.value = department == 'null' ? null : department;
 	b3.formEl.name = 'major';
 	b3.formEl.id = 'major';
-//	b3.formEl.value = user_json.major;
-//	b3.inputEl.value = user_json.major;
-	//使文本框初始化时选中
-	$('.stepGuideText').focus();
+	b3.formEl.value = major == 'null' ? null : major;
+	b3.inputEl.value = major == 'null' ? null : major;
+
 	//初始化进度条
 	$('.stepGuideInProgress').css('width',stepGuideInProgress*100/stepGuideNum+'%');
 	
@@ -92,7 +83,12 @@ $(document).ready(function(){
 	
 	//初始化显示的form
 	$('.stepGuideInnerContainer').children("form").each(function(){
+		$(this).submit(function(e){
+			e.preventDefault();
+		});
+		
 		if ($(this).attr('stepGuide') == stepGuideInProgress) {//如果form的stepGuide属性为当前的stepGuide
+			$(this).children('.stepGuideText').focus();
 			$(this).css('display','block');
 		}
 		else {//如果form的stepGuide属性不为当前的stepGuide
@@ -105,7 +101,7 @@ $(document).ready(function(){
 	$('.stepAll').text(stepGuideNum);
 	
 	$('.prev').click(function(){				
-		if (stepGuideInProgress<stepGuideNum){
+		if (stepGuideInProgress >1){
 						
 			//清空提示信息
 			$('.stepGuideError').text('');
@@ -135,44 +131,88 @@ $(document).ready(function(){
 	});
 	
 	$('.next').click(function(){
-		alert(123);
-		if (stepGuideInProgress<stepGuideNum){
-			if ($(this).siblings(":text").val() !== ''){//如果表单项如果完整填写				
-				//清空提示信息
-				$('.stepGuideError').text('');
+		if (stepGuideInProgress <= stepGuideNum){
+			if ($(this).parent().find(":text,select").val() !== ''){//如果表单项如果完整填写
+				// 当院系专全部填完时，统一验证。
+				if ($(this).parent().attr('stepGuide') != '7' &&
+						$(this).parent().attr('stepGuide') != '8') {
+					if ($(this).parent().attr('stepGuide') != '9') {
 				
-				//点击下一步，进入下一个步骤
-				stepGuideInProgress++;
-				
-				//显示第几步
-				$('.stepNow').text(stepGuideInProgress);
-				
-				//显示对应的问题
-				$('.stepGuideInnerContainer h1').text(question[stepGuideInProgress-1]);
-				
-				//进度条增加
-				$('.stepGuideInProgress').css('width',stepGuideInProgress*100/stepGuideNum+'%');
-				
-				//显示对应的form
-				$('.stepGuideInnerContainer').children("form").each(function(){
-					if ($(this).attr('stepGuide') == stepGuideInProgress) {//如果form的stepGuide属性为当前的stepGuide
-						$(this).css('display','block');
-					}
-					else {//如果form的stepGuide属性不为当前的stepGuide
-						$(this).css('display','none');
-					}
-				});
+						var name = $(this).parent().find(":text").attr('name');
+						if (name == 'studentid' && 
+									$(this).parent().find(":text").val() == myStudentid) {
+								allowSlide();
+						} 
+						else if (name == 'email' &&
+									$(this).parent().find(":text").val() == myEmail) {
+								allowSlide();
+						} 
+						else if (name == 'phone' &&
+									$(this).parent().find(":text").val() == myPhone) {
+								allowSlide();
+						} 			
+						else submitItem($(this).parent());
+					
+					} else {
+						submitItem($("[stepGuide='7'],[stepGuide='8'],[stepGuide='9']"));
+					}			
+				} else allowSlide();			
 			}
 			else{//如果表单项如果没有完整填写
 				$('.stepGuideError').text('请完整填写后再提交哦~');
 			}
 		}
 	});	
-	$('body').keyup(function(e){
-		if(e.keyCode==13){
-			$("[stepGuide='"+stepGuideInProgress+"'] .next" ).trigger('click');
+	
+	function submitItem($form) {
+		$.ajax({
+			url: app_url + "/home/guide/submitItem", //请求验证页面 
+	        type: "POST", //请求方式
+	        async: false,
+	        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+	        data: $form.serialize() + '&step='+stepGuideInProgress,
+	        success: function (call) {
+	        	if (call == 'success')
+	        		allowSlide();
+	        	else 
+	        		$('.stepGuideError').text(call);;   
+	        }
+		})
+	}
+	
+	function allowSlide() {
+		if (stepGuideInProgress < stepGuideNum) {
+			//清空提示信息
+			$('.stepGuideError').text('');
+			
+			//点击下一步，进入下一个步骤
+			stepGuideInProgress++;
+			
+			//显示第几步
+			$('.stepNow').text(stepGuideInProgress);
+			
+			//显示对应的问题
+			$('.stepGuideInnerContainer h1').text(question[stepGuideInProgress-1]);
+			
+			//进度条增加
+			$('.stepGuideInProgress').css('width',stepGuideInProgress*100/stepGuideNum+'%');
+			
+			//显示对应的form
+			$('.stepGuideInnerContainer').children("form").each(function(){
+				if ($(this).attr('stepGuide') == stepGuideInProgress) {//如果form的stepGuide属性为当前的stepGuide
+					$(this).css('display','block');
+					$(this).children('.stepGuideText,.kitjs-form-suggestselect-input').focus();
+				}
+				else {//如果form的stepGuide属性不为当前的stepGuide
+					$(this).css('display','none');
+				}
+			});
+		} else {
+			// 最后一步，跳转进入主页。
+			location = app_url + '/home/home/home';
 		}
-	});
+	}
+	
 })
 
 

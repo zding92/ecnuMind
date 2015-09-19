@@ -8,9 +8,9 @@ class GuideController extends CommonController {
 		// 检查哪些列为空
 		$uid = session('userid');
 		$infoData = $infoModel->field('id,username,password,brief', true)->find($uid);
-		$startStep['stepGuideInProgress'] = $infoData['info_complete'];
-		$startStep['stepGuideNum'] = count($infoData) - 1;
-		$this->assign($startStep);
+		// 规定信息补全总步数
+		$infoData['stepGuideNum'] = 10;		
+		$this->assign($infoData);
 		$this->display();
 	}
 	
@@ -20,7 +20,21 @@ class GuideController extends CommonController {
 		if (!$infoModel->create()) {
 			$this->ajaxReturn($infoModel->getError(), 'EVAL');
 		} else {
+			// 单独对院/系/专业进行校验。维护数据完整性。
+			if (isset($infoModel->major)) {
+				$checkForm = new \Home\Common\MyFunc\CheckForm();
+				$checkData = $infoModel->academy."|".$infoModel->department."|".$infoModel->major;
+				$checkForm->checkOne('combobox', $checkData);
+				// 返回校验失败的院/系/专业。
+				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+			}
+			unset($infoModel->password);
+			
+			// 通过验证，设置完成步骤
+			$infoModel->info_complete = I('step') + 1;
+			
 			$infoModel->where('id='.session('userid'))->save();
+			
 			$this->ajaxReturn('success', 'EVAL');
 		}
 	}

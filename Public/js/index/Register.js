@@ -265,7 +265,7 @@ $("#btn_reg").click(function () {
 				case 'success':
 					location = home_url;
 					break;
-				case 'exist':
+				case 'username_exist':
 					var str="username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val();
 					break;
 				default:
