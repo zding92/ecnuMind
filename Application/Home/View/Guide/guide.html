@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>【华师智库】完善个人信息</title>
-	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+<title>【华师智库】完善个人信息</title>	
 	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
   	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
+  	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
 	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
 	<script src='__PUBLIC__/JSON/ComboxData.js'></script>
     <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
@@ -24,40 +24,67 @@
 		<div class='stepGuideInnerContainer'>
 			<h1>您叫什么名字？</h1>
 			<form stepGuide='1' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='2' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='3' class='stepGuideForm'>
-				<input type='text' class='stepGuideText'>
+				<input type='button' class='prev' value='←'>
+				<select class='stepGuideText'>
+				<option label=""></option>
+				<option label="男">男</option>
+				<option label="女">女</option>
+				</select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='4' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='5' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='6' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
 				<input type='text' class='stepGuideText'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='7' class='stepGuideForm'>
-				<select name='academy' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='academy'></select>
+				<input type='button' class='prev' value='←'>
+				<select name='academy' class='kitjs-form-suggestselect stepGuideSelect1' style='margin-bottom: 10px;' id='academy'></select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='8' class='stepGuideForm'>
-				<select name='department' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'></select>
-				<select name='major' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'></select>
+				<input type='button' class='prev' value='←'>
+				<select name='department' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'></select>				
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='9' class='stepGuideForm'>
-				<input type='text' class='stepGuideText'>
+				<input type='button' class='prev' value='←'>
+				<select name='major' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'></select>
+				<input type='button' class='stepGuideSubmit next' value='→'>				
+			</form>
+			<form stepGuide='10' class='stepGuideForm'>
+				<input type='button' class='prev' value='←'>
+				<select class='stepGuideText'>
+				<option label=""></option>
+				<option label="大一">大一</option>
+				<option label="大二">大二</option>
+				<option label="大三">大三</option>
+				<option label="大四">大四</option>
+				<option label="研一">研一</option>
+				<option label="研二">研二</option>
+				<option label="研三">研三</option>
+				<option label="博士">博士</option>
+				</select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<div class='stepGuideProgress'>
@@ -74,7 +101,7 @@
 	</div>
 	<script>
 		//此变量为，总共需要几步完成整个stepGuide
-		var stepGuideNum = 8;
+		var stepGuideNum = 10;
 		//当前正进行到哪个stepGuide
 		var stepGuideInProgress = {$stepGuideInProgress};
 	</script>

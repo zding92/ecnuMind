@@ -28,6 +28,7 @@ body{
 	font-size: 45px;
 	font-family: '微软雅黑';
 	margin-bottom: 10px;
+	min-width: 400px;
 }
 .stepGuideHeader span{
 	display: block;
@@ -56,6 +57,8 @@ body{
 	font-family: '微软雅黑';
 	font-size: 45px;
 	font-weight: 400;
+	text-align: left;
+	min-width: 600px;
 }
 .stepGuideForm{
 	background-color: #E5E5E5;
@@ -73,7 +76,7 @@ body{
 	color: rgba(0,0,0,0.8);
 	font-size: 45px;
 	font-family: '微软雅黑';
-	width: 780px;
+	width: 700px;
 	outline: none;
 	margin-left: 10px;
 }
@@ -132,4 +135,31 @@ body{
 .showStepNum{
 	float: right;
 	color: #0099FF;
+}
+.stepGuideForm .kitjs-form-suggestselect-input{
+	border: none;
+	border-color: #E5E5E5;
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	outline: none;
+	margin-left: 10px;
+	font-size: 45px;
+	font-family: '微软雅黑';
+	height: 60px;
+}
+.prev{
+	background: transparent;
+	color: rgba(0,0,0,0.8);
+	border: none;
+	font-family: 'Consolas';
+	content: "/e006";
+	width: auto;
+	height: auto;
+	font-size: 90px;
+	float: left;
+	cursor: pointer;
+	margin-right: 5px;
+	outline: none;
+	margin-top: -25px;
+	
 }

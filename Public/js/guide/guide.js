@@ -6,13 +6,14 @@
 
 var question = ['您的真实姓名是？',
                 '您的学号是？',
+                '您的性别是？',
                 '您常用的电子邮箱是？',
                 '您的通信地址是？',
                 '您的联系电话是？',
-                '您的性别是？',
                 '您来自哪个学院？',
-                '您来自哪个系别、专业？',
-                '请简单介绍一下您'];
+                '您来自哪个系别？',
+                '您来自哪个专业？',
+                '您当前的年级？'];
 
 function Check_Ajax(action,items,value)
 {
@@ -103,7 +104,38 @@ $(document).ready(function(){
 	$('.stepNow').text(stepGuideInProgress);
 	$('.stepAll').text(stepGuideNum);
 	
-	$('.next').click(function(){				
+	$('.prev').click(function(){				
+		if (stepGuideInProgress<stepGuideNum){
+						
+			//清空提示信息
+			$('.stepGuideError').text('');
+			
+			//点击下一步，进入下一个步骤
+			stepGuideInProgress--;
+			
+			//显示第几步
+			$('.stepNow').text(stepGuideInProgress);
+			
+			//显示对应的问题
+			$('.stepGuideInnerContainer h1').text(question[stepGuideInProgress-1]);
+			
+			//进度条增加
+			$('.stepGuideInProgress').css('width',stepGuideInProgress*100/stepGuideNum+'%');
+			
+			//显示对应的form
+			$('.stepGuideInnerContainer').children("form").each(function(){
+				if ($(this).attr('stepGuide') == stepGuideInProgress) {//如果form的stepGuide属性为当前的stepGuide
+					$(this).css('display','block');
+				}
+				else {//如果form的stepGuide属性不为当前的stepGuide
+					$(this).css('display','none');
+				}
+			});
+		}
+	});
+	
+	$('.next').click(function(){
+		alert(123);
 		if (stepGuideInProgress<stepGuideNum){
 			if ($(this).siblings(":text").val() !== ''){//如果表单项如果完整填写				
 				//清空提示信息
@@ -136,4 +168,14 @@ $(document).ready(function(){
 			}
 		}
 	});	
+	$('body').keyup(function(e){
+		if(e.keyCode==13){
+			$("[stepGuide='"+stepGuideInProgress+"'] .next" ).trigger('click');
+		}
+	});
 })
+
+
+
+
+
