@@ -8,7 +8,7 @@ $(document).ready(function () {
     
     function showname() {
 		document.getElementById("welcome-user").innerHTML =
-		"<div>欢迎您！" + user_json.name + "</div>";
+		"<div class='welcomeText'>欢迎您！<span>" + user_json.name + "</span></div>";
 	}
 
     $(document).ready(function () {
