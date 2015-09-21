@@ -175,7 +175,21 @@ $(document).ready(function(){
 	        	if (call == 'success')
 	        		allowSlide();
 	        	else 
-	        		$('.stepGuideError').text(call);;   
+	        		//$('.stepGuideError').text(call);;   
+	        		switch (call){
+	        		case 'username_exist' : myAlert('用户名重复');break;	        		
+	        		case  'name_error' : myAlert('请输入正确的姓名');break;	
+	        		case 'email_exist' : myAlert('此Email地址已经被注册');break;	
+	        		case  'email_error' : myAlert('请输入正确的Email地址');break;	
+	        		case 'phone_exist' : myAlert('此号码已经被注册');break;	
+	        		case  'phone_error' : myAlert('请正确输入联系电话');break;	
+	        		case 'gender_error' : myAlert('请正确输入性别');break;	
+	        		case  'studentid_exist' : myAlert('此学号已经被注册');break;	
+	        		case  'studentid_error' : myAlert('请正确输入学号');break;	
+	        		
+	        		
+	        		}
+	        		
 	        }
 		})
 	}

@@ -288,7 +288,6 @@ $(document).ready(function () {
 //var counter=1;
 var checkTask;
 $(document).ready(function () {
-	
 	$(".author_num").keyup(function() {
 		if (checkTask != undefined) {
 			clearTimeout(checkTask);

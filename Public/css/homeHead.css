@@ -31,6 +31,7 @@
 	font-size: 25px;
 	display: inline;
 	text-align: left;
+	font-family: 微软雅黑;
 }
 #left-li h1 span{
 	color: #363d40;
@@ -71,5 +72,5 @@
 	float: right;
 	margin: 0 auto;
 	padding-top: 25px;
->>>>>>> refs/heads/ChrisLiu
+	margin-left: 10px;
 }
