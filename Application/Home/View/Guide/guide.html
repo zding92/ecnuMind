@@ -6,9 +6,11 @@
 	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
   	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
   	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+  	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/> 
 	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
 	<script src='__PUBLIC__/JSON/ComboxData.js'></script>
     <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
+    <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
     <script type="text/javascript">
    		var app_url = "__APP__";
     </script>
@@ -100,6 +102,14 @@
 			</div>
 		</div>
 	</div>
+	<div class='messagePopOut' style='display:none'>
+       	<div class='messagePopText'>
+       		
+       	</div>
+       	<div class='messagePopButton'>
+       		OK
+       	</div>        	
+    </div>
 	<script>
 		// 唯一值，不可重复
 		var myStudentid = '{$studentid}';

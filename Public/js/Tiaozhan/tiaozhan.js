@@ -289,7 +289,6 @@ $(document).ready(function () {
 var checkTask;
 var initial;
 $(document).ready(function () {
-	
 	$(".author_num").keyup(function() {
 		if (checkTask != undefined) {
 			clearTimeout(checkTask);

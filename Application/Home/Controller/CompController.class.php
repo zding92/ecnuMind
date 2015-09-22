@@ -18,8 +18,8 @@ class CompController extends CommonController {
 		if (isset($user)) {
 			$this->ajaxReturn(json_encode($user),'EVAL');
 		}
-		
-		$this->ajaxReturn('0','EVAL');
+		else{
+		$this->ajaxReturn('0','EVAL');}
 	}
 	
 	public function getCompInfo() {
