@@ -1,7 +1,7 @@
 <?php
-namespace Home\Controller;
-use Home\Common\Controller\CommonController;
-use Home\Common\MyFunc\CheckForm;
+namespace Custom\Controller;
+use Custom\Common\Controller\CommonController;
+use Custom\Common\MyFunc\CheckForm;
 
 class HomeController extends CommonController {
 	/**
@@ -56,9 +56,9 @@ class HomeController extends CommonController {
 		$value = I('value');
 		$checkForm = new \Home\Common\MyFunc\CheckForm();
 		$allData = I('get.');
-		if (isset($_SESSION['username'])) {
+		if (isset($_SESSION['user_id'])) {
 			// 如果存在会话，才开始校验，否则直接退出。
-			$allData['username'] = session('username');
+			$allData['user_id'] = session('user_id');
 			if ($checkForm->checkAll($allData)) {
 				if ($this->updateInfo($allData)) {
 					// 写入数据库成功
@@ -90,14 +90,10 @@ class HomeController extends CommonController {
 	 */ 
 	private function returnBaseinfo() {
 		// 初始化M对象（相较于D对象效率高，此处仅用于基本查询）。
-		$model = M('user_info');
-	    // 获取登录时存放的session。
-		$username = session("username");
-		// sql语句：SELECT email,phone,address,name,department,academy,
-		//					major,grade,gender,brief FROM user_info where username='username';
-		$condition['username'] = $username;
-		$model->field("email,studentid,phone,address,name,department,academy,major,grade,gender,brief")->
-		where($condition)->find();
+		$model = M('user_custom');
+		
+		$model->field("user_id, complete_steps",true)->find(session('user_id'));
+		
 		// 构造json，并返回数据
 		$this->ajaxReturn(json_encode($model->data()), "EVAL");
 
@@ -164,8 +160,8 @@ class HomeController extends CommonController {
 		// ID = 'id',email = 'email', address = 'address', phone = 'phone', gender = 'gender',
 		// academy = 'academy', department = 'department', major = 'major', brief = 'brief',
 		// where username = 'username';
-		$username = array_pop($allData);
-		$model = M('user_info');
-		return $model->where("username = '".$username."'")->save($allData);
+		$user_id = array_pop($allData);
+		$model = M('user_custom');
+		return $model->where("user_id = $user_id")->save($allData);
 	}
 }

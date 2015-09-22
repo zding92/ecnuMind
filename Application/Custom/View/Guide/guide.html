@@ -32,7 +32,7 @@
 			</form>
 			<form stepGuide='2' class='stepGuideForm'>
 				<input type='button' class='prev' value='←'>
-				<input type='text' class='stepGuideText'  name='studentid' value='{$studentid}'>
+				<input type='text' class='stepGuideText'  name='student_id' value='{$student_id}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='3' class='stepGuideForm'>
@@ -112,13 +112,13 @@
     </div>
 	<script>
 		// 唯一值，不可重复
-		var myStudentid = '{$studentid}';
+		var myStudentId = '{$student_id}';
 		var myEmail = '{$email}';
 		var myPhone = '{$phone}';
 		//此变量为，总共需要几步完成整个stepGuide
 		var stepGuideNum = {$stepGuideNum};
 		//当前正进行到哪个stepGuide
-		var stepGuideInProgress = {$info_complete};
+		var stepGuideInProgress = {$complete_steps};
 		
 		var academy = '{$academy == '' ? null : $academy}';
 		var department = '{$department == '' ? null : $department}';

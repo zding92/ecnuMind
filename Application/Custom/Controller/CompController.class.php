@@ -1,6 +1,6 @@
 <?php
-namespace Home\Controller;
-use Home\Common\Controller\CommonController;
+namespace Custom\Controller;
+use Custom\Common\Controller\CommonController;
 class CompController extends CommonController {
 	public function Comp(){
 		//显示__app__/home/comp/comp页面
@@ -12,9 +12,9 @@ class CompController extends CommonController {
 		$this->display();
 	}
 	
-	public function checkValidUser($studentid) {
-		$userModel = M('ecnu_mind.user_info');
-		$user = $userModel->where("studentid=$studentid")->field('id,studentid,username,brief,password',true)->find();
+	public function checkValidUser($student_id) {
+		$userModel = M('ecnu_mind.user_custom');
+		$user = $userModel->where("$student_id=$student_id")->field('id,$student_id,username,brief,password',true)->find();
 		if (isset($user)) {
 			$this->ajaxReturn(json_encode($user),'EVAL');
 		}
@@ -61,13 +61,13 @@ class CompController extends CommonController {
 			// 装配template的url
 			$compTmp = $compinfo['comp_template'];			
 			$returnItem['comp_template'] = 
-				U("Home/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"");
+				U("Custom/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"");
 			
 			$returnItem['comp_view'] = 
-				U("Home/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"");
+				U("Custom/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"");
 			
 			$returnItem['comp_remove'] =
-			U("Home/$compTmp/$compTmp"."Remove","compItemId=".$compId['comp_item_id'],"");
+			U("Custom/$compTmp/$compTmp"."Remove","compItemId=".$compId['comp_item_id'],"");
 			
 			$returnItem['comp_item_id'] = $compId['comp_item_id'];
 			
@@ -84,7 +84,7 @@ class CompController extends CommonController {
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
-		$compItemInfo['apply_user_id'] = session('userid');
+		$compItemInfo['applyer_student_id'] = session('$student_id');
 		
 		// 检查该用户是否已经注册过该竞赛
 		// Ps.通过主表检测，子表中应该检查所有的参与者是否参加该项竞赛，如果有应该不允许重复注册。
@@ -109,7 +109,7 @@ class CompController extends CommonController {
 			unset($comp['comp_id']);
 			
 			$compTmp = $comp['comp_template'];
-			$comp['comp_template'] = '<a href="'.U("Home/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
+			$comp['comp_template'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
 			
 			$result[] = $comp;
 		}

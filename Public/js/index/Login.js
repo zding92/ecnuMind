@@ -21,7 +21,7 @@ window.onload = function () {
         
         function handleReturn(call) {
         	switch (call) {
-			case 'success':
+			case 'custom_login':
 				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
                 location = home_url; // 登录成功后指定跳转页面  
 				break;
@@ -31,7 +31,7 @@ window.onload = function () {
 			case 'password_error':
 				tips.innerHTML = '<font color="red">密码错误！</font>';
 				break;
-			case 'user_info_incomplete':
+			case 'user_custom_incomplete':
 				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
                 location = incomplete_url; // 登录成功后指定跳转页面  
 				break;

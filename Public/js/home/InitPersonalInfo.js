@@ -106,7 +106,7 @@ b3.inputEl.value = user_json.major;
 
 //普通Input输入框及按钮初始化值
 $("#name").val(user_json.name);
-$("#studentid").val(user_json.studentid);
+$("#studentid").val(user_json.student_id);
 $("#Email").val(user_json.email);
 $("#address").val(user_json.address);
 $("#phone").val(user_json.phone);
@@ -158,7 +158,7 @@ function Checkform_studentid(obj){
         $("#studentid-tip").html('请输入11位学号');
         $("#studentid-tip").slideDown("fast");
     }else {
-        var call = Check_Ajax("studentid", "studentid", $("#studentid").val());
+        var call = Check_Ajax("student_id", "student_id", $("#studentid").val());
         if (call == 'repeat') {
             $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
             $("#studentid-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');

@@ -10,10 +10,10 @@ class CheckForm {
 	 */
 	public function checkOne($action, $value) {
 				
-		$model = M('ecnu_mind.user_info');
-		if($action=='studentid'||
+		$model = M('ecnu_mind.user_custom');
+		if($action=='student_id'||
 				$action=='Email' || $action=='phone') {
-			// sql查询： SELECT actionName from user_info where actionName = actionValue;		
+			// sql查询： SELECT actionName from user_custom where actionName = actionValue;		
 			$this->queryResult = $model->field($action)->where($action."='".$value."'")->find();	
 		}
 		
@@ -22,7 +22,7 @@ class CheckForm {
 			case 'name':
 				$this->CheckNameFromDB($value);
 				break;
-			case 'studentid':
+			case 'student_id':
 				$this->CheckStuIDFromDB($value);
 				break;
 			case 'Email':
@@ -53,7 +53,7 @@ class CheckForm {
 		$this->CheckNameFromDB($allData['name']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
-		$this->CheckStuIDFromDB($allData['studentid']);
+		$this->CheckStuIDFromDB($allData['student_id']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
 		$this->CheckEmailFromDB($allData['email']);

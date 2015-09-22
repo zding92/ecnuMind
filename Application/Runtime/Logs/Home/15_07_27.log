@@ -5,7 +5,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.088005s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.041002s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.042002s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0130s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -26,7 +26,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0110s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]

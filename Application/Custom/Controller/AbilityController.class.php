@@ -1,6 +1,6 @@
 <?php
-namespace Home\Controller;
-use Home\Common\Controller\CommonController;
+namespace Custom\Controller;
+use Custom\Common\Controller\CommonController;
 class AbilityController extends CommonController{
 	
 	/**

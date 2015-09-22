@@ -139,8 +139,8 @@ $(document).ready(function(){
 					if ($(this).parent().attr('stepGuide') != '9') {
 				
 						var name = $(this).parent().find(":text").attr('name');
-						if (name == 'studentid' && 
-									$(this).parent().find(":text").val() == myStudentid) {
+						if (name == 'student_id' && 
+									$(this).parent().find(":text").val() == myStudentId) {
 								allowSlide();
 						} 
 						else if (name == 'email' &&
@@ -184,8 +184,8 @@ $(document).ready(function(){
 	        		case 'phone_exist' : myAlert('此号码已经被注册');break;	
 	        		case  'phone_error' : myAlert('请正确输入联系电话');break;	
 	        		case 'gender_error' : myAlert('请正确输入性别');break;	
-	        		case  'studentid_exist' : myAlert('此学号已经被注册');break;	
-	        		case  'studentid_error' : myAlert('请正确输入学号');break;	
+	        		case  'student_id_exist' : myAlert('此学号已经被注册');break;	
+	        		case  'student_id_error' : myAlert('请正确输入学号');break;	
 	        		
 	        		
 	        		}

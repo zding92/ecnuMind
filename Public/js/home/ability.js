@@ -3,7 +3,7 @@ var ability_json;
 $(document).ready(function() {
 	
 	// 请求后台生成json格式的数据
-	$.ajax({url: app_url + "/Home/ability/genDB",
+	$.ajax({url: app_url + "/Custom/Ability/genDB",
             type: "GET",
             async:false,
             dataType: "json",

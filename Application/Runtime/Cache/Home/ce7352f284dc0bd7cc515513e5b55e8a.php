@@ -11,6 +11,7 @@
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.css"/> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>  
+         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/homeHead.css"/>  
         <link href="/webprj/ecnu_mind/Public/css/icheck/flat/blue.css" rel="stylesheet">
         <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/Chart.js"></script>
@@ -33,17 +34,17 @@
         <!--<script src="/HtmlJS/Page.js"></script>-->
     </head>
 
-    <body">
+    <body>
 	    <div class="Part">
 		   	<div class="homeHead">
-			    <!-- <div id="logo">
-				     <div id="logo_1">ECNU</div>
-				     <div id="logo_2">华师</div>
-				     <div id="logo_3">人才项目智库</div>
-			    </div> -->
 			    <ul>
 				    <li id="left-li">
-					    <a href="/webprj/ecnu_mind/index.php/Home/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/logo.png"></a>
+					    <div class='homeHeadLogo'>
+					    	<a href="/webprj/ecnu_mind/index.php/Home/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/LogoBulbSmall.png"></a>
+					    </div>
+					    <div class='homeHeadLogoText'>
+					    	<h1>华师智库<span>Creation & Connection</span></h1>
+					    </div>						    						    
 				    </li>
 				    <li id="right-li">
 					    <ul id="sub-right-ul">
@@ -60,14 +61,14 @@
 		       <div class="nav">
 		           <p>功能列表</p>
 		           <a href="#main" id="btn_main" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/home.png" alt="error"></div>个人首页</a>		           
-		           <a href="#ability" id="btn_ability" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/ability.png" alt="error"></div>个人能力</a>
+		           
 		           
 		           <a href="#information" id="btn_info" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/down.png" alt="error"></div>信息管理</a>
 		           <div class="info_child nav_child">
 		             <a href="#base_info" id="btn_base_info" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/base.png" alt="error"></div>基本信息</a>
 		             <a href="#safe" id="btn_safe" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/safe.png" alt="error"></div>安全设置</a>
 		           </div>
-		           
+		           <a href="#ability" id="btn_ability" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/ability.png" alt="error"></div>个人能力</a>
 		           <a href="#competitions" id="btn_comp" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/down.png" alt="error"></div>竞赛管理</a>
 		           <div class="comp_child nav_child">
 		             <a href="#comp_apply" id="comp_apply" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/base.png" alt="error"></div>竞赛报名</a> 

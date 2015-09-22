@@ -1,6 +1,6 @@
 <?php
-namespace Home\Controller;
-use Home\Controller\CompController;
+namespace Custom\Controller;
+use Custom\Controller\CompController;
 class TiaozhanController extends CompController {
 	private $tiaozhanModel;
 
@@ -176,8 +176,8 @@ class TiaozhanController extends CompController {
 	 * 检查用户权限。
 	 */
 	private function checkAccess($checkData, $errorInfo) {
-		$studentid = session('studentid');
-		$key = array_search($studentid, $checkData);
+		$studentId = session('student_id');
+		$key = array_search($studentId, $checkData);
 		if (!preg_match('/author[1-6]_id$/',$key)) {
 			$this->ajaxReturn($errorInfo, 'EVAL');
 		}

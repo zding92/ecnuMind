@@ -362,7 +362,7 @@ function checkStuid(authorNum) {
         $.ajax({ 
         	url: checkUrl, 
         	async: false, 
-        	data: 'studentid=' + $("#" + authorNum).val(), 
+        	data: 'student_id=' + $("#" + authorNum).val(), 
         	success: function (result) {
         		if (result == '0') {
         			hidePerson(author, '未找到匹配此学号的用户，请先注册');
