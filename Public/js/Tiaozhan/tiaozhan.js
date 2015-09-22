@@ -287,6 +287,7 @@ $(document).ready(function () {
 
 //var counter=1;
 var checkTask;
+var initial;
 $(document).ready(function () {
 	
 	$(".author_num").keyup(function() {
@@ -300,8 +301,9 @@ $(document).ready(function () {
 	});
 	
 	$(".author_num").blur(function() {
-		if (checkTask != undefined) {
-			clearTimeout(checkTask);
+		if (checkTask != undefined || initial) {
+			if (checkTask != undefined)
+				clearTimeout(checkTask);
 			if ($(this).val() != "") {
 				checkStuid($(this).attr('id'));
 			}	  
@@ -385,6 +387,8 @@ function checkStuid(authorNum) {
 $(document).ready(function (){
 	//页面加载完毕后，先激活所有作者的更新
 	//$('.author_num').focus();
+	initial = true;
 	$('.author_num').blur();
+	initial = false;
 })
 

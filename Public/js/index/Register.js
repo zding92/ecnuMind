@@ -247,8 +247,6 @@ $("#register_pwdre").keyup(function () {
     }
 })
 
-
-
 $("#btn_reg").click(function () {
     $("#register_user").blur();
     $("#register_pwdre").blur()
@@ -263,7 +261,7 @@ $("#btn_reg").click(function () {
             success: function (call) { 
             	switch (call) {
 				case 'success':
-					location = home_url;
+					location = incomplete_url;
 					break;
 				case 'username_exist':
 					var str="username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val();

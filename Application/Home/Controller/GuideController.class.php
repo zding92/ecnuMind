@@ -20,6 +20,7 @@ class GuideController extends CommonController {
 		if (!$infoModel->create()) {
 			$this->ajaxReturn($infoModel->getError(), 'EVAL');
 		} else {
+			
 			// 单独对院/系/专业进行校验。维护数据完整性。
 			if (isset($infoModel->major)) {
 				$checkForm = new \Home\Common\MyFunc\CheckForm();
@@ -27,6 +28,11 @@ class GuideController extends CommonController {
 				$checkForm->checkOne('combobox', $checkData);
 				// 返回校验失败的院/系/专业。
 				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+			}
+			
+			// 将学号传入session
+			if (isset($infoModel->studentid)) {
+				session('studentid',$infoModel->studentid);
 			}
 			unset($infoModel->password);
 			

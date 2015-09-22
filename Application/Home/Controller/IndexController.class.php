@@ -65,7 +65,8 @@ class IndexController extends Controller {
     		// 设置session
     		session('username', $Data->username);
     		// 操作数据库->添加数据
-     		$Data->add();
+     		$id = $Data->add();
+     		session('userid', $id);
      		// 返回操作结果。利用js的eval脚本解析功能读取数据。
      		$this->ajaxReturn("success", "EVAL");
     	} else {

@@ -84,7 +84,7 @@ class CompController extends CommonController {
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
-		$compItemInfo['comp_user_id'] = session('userid');
+		$compItemInfo['apply_user_id'] = session('userid');
 		
 		// 检查该用户是否已经注册过该竞赛
 		// Ps.通过主表检测，子表中应该检查所有的参与者是否参加该项竞赛，如果有应该不允许重复注册。

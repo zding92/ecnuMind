@@ -17,8 +17,9 @@ class TiaozhanController extends CompController {
 	}
 	
 	public function Tiaozhan_modify($compItemId) {
-		$this->createModel();
+		$this->checkValid(I('get.comp_item_id'));
 		
+		$this->createModel();
  		$tiaozhanData = $this->getTiaozhanData($compItemId);
  		$tiaozhanData['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
  		$tiaozhanData['comp_item_id'] = $compItemId;
@@ -28,6 +29,7 @@ class TiaozhanController extends CompController {
 	}
 		
 	public function Tiaozhan_origin($compItemId) {
+		$this->checkValid(I('get.comp_item_id'));
 		$this->createModel();
 		
 		$tiaozhanData = $this->getTiaozhanData($compItemId);	
@@ -101,7 +103,7 @@ class TiaozhanController extends CompController {
 	 */
 	public function TiaozhanUpdate(){
 		$this->createModel();
-		$this->checkValid();
+		$this->checkValid(I('post.comp_item_id'));
 		
 		if(!$this->tiaozhanModel->create()) {
 			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
@@ -161,7 +163,9 @@ class TiaozhanController extends CompController {
 	 * 检查是否存在表单，如果存在返回找到的数据
 	 */ 
 	private function checkExist($compItemId) {
-		$tiaozhanInfo = $this->tiaozhanModel->field('author1_id,author2_id,author3_id,author4_id,author5_id,author6_id')->find($compItemId);
+		$tiaozhanInfo = $this->tiaozhanModel->
+						field('author1_id,author2_id,author3_id,author4_id,author5_id,author6_id')->
+						find($compItemId);
 		if (!isset($tiaozhanInfo)) {
 			$this->ajaxReturn('not_found','EVAL');
 		}
