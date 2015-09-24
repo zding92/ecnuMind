@@ -17,9 +17,8 @@ class TiaozhanController extends CompController {
 	}
 	
 	public function Tiaozhan_modify($compItemId) {
-		$this->checkValid(I('get.comp_item_id'));
-		
 		$this->createModel();
+		$this->checkValid($compItemId);		
  		$tiaozhanData = $this->getTiaozhanData($compItemId);
  		$tiaozhanData['submit_mode'] = U('Custom/Tiaozhan/TiaozhanUpdate','','');
  		$tiaozhanData['comp_item_id'] = $compItemId;
@@ -29,8 +28,8 @@ class TiaozhanController extends CompController {
 	}
 		
 	public function Tiaozhan_origin($compItemId) {
-		$this->checkValid(I('get.comp_item_id'));
 		$this->createModel();
+		$this->checkValid($compItemId);
 		
 		$tiaozhanData = $this->getTiaozhanData($compItemId);	
 		//C表当前国内外课题研究水平 内容
@@ -106,12 +105,12 @@ class TiaozhanController extends CompController {
 		$this->createModel();
 		$this->checkValid(I('post.comp_item_id'));
 		
-		$participentId = $this->getParticipantId();
-		$this->updateCompParticipant($participentId);
-		
 		if(!$this->tiaozhanModel->create()) {
 			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
 		}
+		
+		$participentId = $this->getParticipantId();
+		$this->updateCompParticipant($participentId);
 		
 		$this->tiaozhanModel->save();
 		
