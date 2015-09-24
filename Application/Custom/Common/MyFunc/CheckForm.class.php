@@ -1,5 +1,5 @@
 <?php
-namespace Home\Common\MyFunc;
+namespace Custom\Common\MyFunc;
 class CheckForm {
 	
 	private $queryResult;
@@ -16,7 +16,6 @@ class CheckForm {
 			// sql查询： SELECT actionName from user_custom where actionName = actionValue;		
 			$this->queryResult = $model->field($action)->where($action."='".$value."'")->find();	
 		}
-		
 		switch($action)
 		{
 			case 'name':
@@ -179,7 +178,7 @@ class CheckForm {
 	
 	// 临时获取，以后应当从配置文件或者数据库中获取
 	private function getJson() {
-		require_once 'ComboxData.php';
+		require_once DATA_PATH.'ComboxData.php';
 		$json_obj = json_decode($json_string,TRUE);
 		if(!is_array($json_obj)) return false;
 		return $json_obj;

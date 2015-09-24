@@ -38,8 +38,11 @@ class CompController extends CommonController {
 		$compItemModel = M('ecnu_mind.competition_main', null);
 		$compInfoModel = M('ecnu_mind.competition_info', null);
 		
+		// 设置查询条件
+		$map['comp_participant_id'] = array('like', '%'.session('user_studentid').'%') ;
+		
 		$userCompIds = $compItemModel
-		               ->where("comp_user_id=".session('userid'))
+		               ->where($map)
 					   ->field('comp_type_id, comp_item_id')
 		               ->select();
 		
@@ -78,19 +81,27 @@ class CompController extends CommonController {
 		
 	}
 	
-	protected function registerComp() {
+	protected function registerComp($participant) {
 		$compItemModel = M('ecnu_mind.competition_main', null);
 		$regValue = I('post.');
+		$participantStr = implode(',', $participant);
+		foreach ($participant as $key => $val) {
+			$participant[$key] = '%'.$val.'%';
+		}
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
-		$compItemInfo['applyer_student_id'] = session('$student_id');
+		// 构造模糊插叙条件
+		$compItemInfo['comp_participant_id'] = array('like', $participant, 'OR');
 		
 		// 检查该用户是否已经注册过该竞赛
 		// Ps.通过主表检测，子表中应该检查所有的参与者是否参加该项竞赛，如果有应该不允许重复注册。
 		$checkResult = $compItemModel->where($compItemInfo)->select();
 		
 		if (!isset($checkResult)) $this->ajaxReturn("您已报名过该项竞赛，请勿重复提交","EVAL");
+		
+		// 将用户学号数组转化为字符串存入
+		$compItemInfo['comp_participant_id'] = $participantStr;
 		
 		// 获取全站唯一的用户个人报名ID
 		$compId = $compItemModel->data($compItemInfo)->add();
@@ -146,5 +157,12 @@ class CompController extends CommonController {
 	protected function deleteComp($compItemId) {
 		$compModel = M('ecnu_mind.competition_main');
 		$compModel->delete($compItemId);
+	}
+	
+	protected function updateCompParticipant($participant) {
+		$compItemModel = M('ecnu_mind.competition_main', null);
+		$compItemModel->create();
+		$compItemModel->comp_participant_id = implode(',', $participant);
+		$compItemModel->save();
 	}
 }

@@ -14,6 +14,8 @@
 
 var b1, b2, b3;
 
+
+
 var Combobox = function () {
    var inputname_i = 0;
    var inputname = new Array('academy', 'department', 'major');

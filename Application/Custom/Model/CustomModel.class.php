@@ -1,5 +1,5 @@
 <?php
-namespace Home\Model;
+namespace Custom\Model;
 use Think\Model;
 class CustomModel extends Model {
 	protected $trueTableName = 'user_custom';

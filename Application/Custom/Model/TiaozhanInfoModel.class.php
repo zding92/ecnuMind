@@ -1,17 +1,8 @@
 <?php
-namespace Home\Model;
+namespace Custom\Model;
 use Think\Model\RelationModel;
 class TiaozhanInfoModel extends RelationModel{
 	protected $trueTableName = 'tiaozhan_info';
-	
-	// 定义关联模型
-	protected $_link = array(
-			'competition_main'  =>  array(
-					'mapping_type' => self::BELONGS_TO,
-					'class_name'   => 'competition_main',
-					'foreign_key'  => 'comp_item_id',
-			)
-	);
 	
 	// 自动校验author2~6的id是否为空，如果为空，赋值为'null'
 	// 另外自动添加报名日期

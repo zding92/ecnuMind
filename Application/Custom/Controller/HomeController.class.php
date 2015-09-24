@@ -1,9 +1,8 @@
 <?php
 namespace Custom\Controller;
-use Custom\Common\Controller\CommonController;
 use Custom\Common\MyFunc\CheckForm;
 
-class HomeController extends CommonController {
+class HomeController extends UserinfoController {
 	/**
 	 * 显示home界面
 	 */
@@ -36,7 +35,7 @@ class HomeController extends CommonController {
 	public function  checkForm() {
 		$action = I('action');
 		$value = I('value');
-		$checkForm = new \Home\Common\MyFunc\CheckForm();
+		$checkForm = new \Custom\Common\MyFunc\CheckForm();
 		$checkForm->checkOne($action, $value);
 		
 		// 根据验证结果返回Js变量。
@@ -54,7 +53,7 @@ class HomeController extends CommonController {
 	public function  submitModify() {
 		$action = I('action');
 		$value = I('value');
-		$checkForm = new \Home\Common\MyFunc\CheckForm();
+		$checkForm = new \Custom\Common\MyFunc\CheckForm();
 		$allData = I('get.');
 		if (isset($_SESSION['user_id'])) {
 			// 如果存在会话，才开始校验，否则直接退出。

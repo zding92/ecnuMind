@@ -166,7 +166,7 @@ $(document).ready(function(){
 	
 	function submitItem($form) {
 		$.ajax({
-			url: app_url + "/home/guide/submitItem", //请求验证页面 
+			url: app_url + "/Custom/guide/submitItem", //请求验证页面 
 	        type: "POST", //请求方式
 	        async: false,
 	        contentType: "application/x-www-form-urlencoded; charset=utf-8",
@@ -223,7 +223,7 @@ $(document).ready(function(){
 			});
 		} else {
 			// 最后一步，跳转进入主页。
-			location = app_url + '/home/home/home';
+			location = app_url + '/Custom/home/home';
 		}
 	}
 	

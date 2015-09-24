@@ -10,7 +10,7 @@ class TiaozhanController extends CompController {
 	
     public function Tiaozhan($compId) {
     	$initData['comp_id'] = $compId;
-    	$initData['submit_mode'] = U('home/Tiaozhan/TiaozhanAddData','','');
+    	$initData['submit_mode'] = U('Custom/Tiaozhan/TiaozhanAddData','','');
     	$this->assign($initData);
 		//显示__app__/home/Tiaozhan/Tiaozhan页面
 		$this->display();
@@ -21,7 +21,7 @@ class TiaozhanController extends CompController {
 		
 		$this->createModel();
  		$tiaozhanData = $this->getTiaozhanData($compItemId);
- 		$tiaozhanData['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
+ 		$tiaozhanData['submit_mode'] = U('Custom/Tiaozhan/TiaozhanUpdate','','');
  		$tiaozhanData['comp_item_id'] = $compItemId;
  		$this->assign($tiaozhanData);
 // 		显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
@@ -80,8 +80,9 @@ class TiaozhanController extends CompController {
 			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
 		}
 		
+		$participentId = $this->getParticipantId();
 		// 向竞赛主表添加竞赛信息，并返回唯一竞赛item的ID
-		$compItemID = $this->registerComp();
+		$compItemID = $this->registerComp($participentId);
 		
 		$tiaozhanData = $this->tiaozhanModel->data();
 		$tiaozhanData['comp_item_id'] = $compItemID;
@@ -92,7 +93,7 @@ class TiaozhanController extends CompController {
 		// 返回comp_item_id用于表单更新。
 		$result['operation_info'] = 'added';
 		$result['comp_item_id'] = $compItemID;
-		$result['submit_mode'] = U('home/Tiaozhan/TiaozhanUpdate','','');
+		$result['submit_mode'] = U('Custom/Tiaozhan/TiaozhanUpdate','','');
 		
 		// 返回添加成功的comp_item_id
 		$this->ajaxReturn(json_encode($result), 'EVAL');
@@ -105,9 +106,13 @@ class TiaozhanController extends CompController {
 		$this->createModel();
 		$this->checkValid(I('post.comp_item_id'));
 		
+		$participentId = $this->getParticipantId();
+		$this->updateCompParticipant($participentId);
+		
 		if(!$this->tiaozhanModel->create()) {
 			$this->ajaxReturn($this->tiaozhanModel->getError(), 'EVAL');
 		}
+		
 		$this->tiaozhanModel->save();
 		
 		$this->ajaxReturn('updated', 'EVAL');
@@ -181,5 +186,21 @@ class TiaozhanController extends CompController {
 		if (!preg_match('/author[1-6]_id$/',$key)) {
 			$this->ajaxReturn($errorInfo, 'EVAL');
 		}
+	}
+	
+	/**
+	 * 将存在的author_id变为整体数组返回
+	 */
+	private function getParticipantId() {
+		$data = $this->tiaozhanModel->data();
+		$return = array();
+		foreach ($data as $key=>$val) {
+			if (preg_match('/^author[1-6]_id$/',$key)) {
+				if(isset($val)) {
+					$return[] = $val;
+				}
+			}	
+		}
+		return $return;
 	}
 }

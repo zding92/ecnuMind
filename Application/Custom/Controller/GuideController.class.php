@@ -1,7 +1,6 @@
 <?php
 namespace Custom\Controller;
-use Custom\Common\Controller\CommonController;
-class GuideController extends CommonController {
+class GuideController extends UserinfoController {
 	public function guide() {
 		// 建立user_custom表模型
 		$custom = M('ecnu_mind.user_custom');
@@ -10,7 +9,9 @@ class GuideController extends CommonController {
 		$customData = $custom->field('user_id,brief', true)->find($uid);
 		// 规定信息补全总步数
 		$customData['stepGuideNum'] = 10;	
-		$this->assign($customData);
+		$schoolJson = $this->getJson();
+		$customData['schoolJSON'] = json_encode($schoolJson);
+		$this->assign($customData);		
 		$this->display();
 	}
 	
@@ -23,7 +24,7 @@ class GuideController extends CommonController {
 			
 			// 单独对院/系/专业进行校验。维护数据完整性。
 			if (isset($custom->major)) {
-				$checkForm = new \Home\Common\MyFunc\CheckForm();
+				$checkForm = new \Custom\Common\MyFunc\CheckForm();
 				$checkData = $custom->academy."|".$custom->department."|".$custom->major;
 				$checkForm->checkOne('combobox', $checkData);
 				// 返回校验失败的院/系/专业。

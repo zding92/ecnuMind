@@ -1,0 +1,905 @@
+[ 2015-09-24T13:33:37+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14430728160371
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000072s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001249s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001548s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001628s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001820s ]
+
+[ 2015-09-24T13:33:43+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0028s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhpf' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T13:34:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/registerCustom
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `user_base` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `user_base` WHERE `username` = 'phphhpf' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `user_base` (`username`,`password`,`register_date`) VALUES ('phphhpf','64528858aa8a3ba872964006190f7696','2015-09-24') [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0068s ]
+SQL: INSERT INTO ecnu_mind.user_custom (`user_id`) VALUES ('4') [ RunTime:0.0029s ]
+
+[ 2015-09-24T13:38:33+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006903s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2015-09-24T13:38:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0044s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T13:38:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0025s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T13:38:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/registerCustom
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `user_base` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `user_base` WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0008s ]
+SQL: INSERT INTO `user_base` (`username`,`password`,`register_date`) VALUES ('phphhp4','64528858aa8a3ba872964006190f7696','2015-09-24') [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0059s ]
+SQL: INSERT INTO ecnu_mind.user_custom (`user_id`) VALUES ('5') [ RunTime:0.0044s ]
+
+[ 2015-09-24T13:49:52+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000206s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000553s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2015-09-24T13:50:55+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14430738554702
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2015-09-24T13:54:35+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14430740751323
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000068s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001380s ]
+
+[ 2015-09-24T13:58:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0033s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0029s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000648s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000093s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000299s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006512s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000797s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000732s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000727s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000300s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2015-09-24T14:05:05+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2015-09-24T14:05:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0038s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0028s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-24T14:06:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0049s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0031s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T14:06:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E6%95%B0%E5%AD%A6%E7%B3%BB|%E6%95%B0%E5%AD%A6%E7%B3%BB|%E6%95%B0%E5%AD%A6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:06:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E6%95%B0%E5%AD%A6%E7%B3%BB|%E6%95%B0%E5%AD%A6%E7%B3%BB|%E6%95%B0%E5%AD%A6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001320s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:07:10+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14430748306034
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000542s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008133s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2015-09-24T14:07:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0045s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-09-24T14:07:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:07:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:17:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA4%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001468s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:18:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA4%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:18:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:19:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA6%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000146s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002844s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:19:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/home/checkForm?action=combobox&value=%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2|%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB|%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E7%A8%8B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001443s ]
+ERR: 无法加载控制器:Home
+
+[ 2015-09-24T14:22:13+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000458s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007410s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001279s ]
+
+[ 2015-09-24T14:22:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0028s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0028s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T14:31:27+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000642s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2015-09-24T14:31:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0026s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0032s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-09-24T14:33:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?student_id=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+ERR: 无法加载控制器:Comp
+
+[ 2015-09-24T14:35:29+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2015-09-24T14:35:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0037s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T14:36:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001912s ]
+
+[ 2015-09-24T21:07:52+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14431000716081
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003578s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001051s ]
+
+[ 2015-09-24T21:07:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0031s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2015-09-24T21:08:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?student_id=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001545s ]
+ERR: 无法加载控制器:Comp
+
+[ 2015-09-24T21:08:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?student_id=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001358s ]
+ERR: 无法加载控制器:Comp
+
+[ 2015-09-24T21:11:27+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008467s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000639s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2015-09-24T21:11:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0031s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0026s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-24T21:11:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+ERR: 无法加载控制器:Tiaozhan
+
+[ 2015-09-24T21:13:12+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2015-09-24T21:13:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?student_id=10112110128
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+ERR: 无法加载控制器:Comp
+
+[ 2015-09-24T21:14:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_base` [ RunTime:0.0035s ]
+NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\Develop\webprj\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 68 行.
+SQL: SELECT `password`,`user_id`,`user_access` FROM ecnu_mind.user_base WHERE `username` = 'phphhp4' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE ecnu_mind.user_base SET `last_login_date`='2015-09-24' WHERE ( user_id=5 ) [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0027s ]
+SQL: SELECT `student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-24T21:23:07+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14431009872302
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006779s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2015-09-24T21:23:34+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14431010139063
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000720s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
