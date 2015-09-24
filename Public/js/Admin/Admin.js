@@ -39,8 +39,8 @@ $(document).ready(function () {
 	                case 'btn_history':                   
 	                  loadHistoryItem();
 	                break;
-	                case 'btn_base_info':
-	                  loadPersonalPage();
+	                case 'btn_CurrentComp':
+	                  loadCurrentComp();
 	                break;
 	                case 'comp_apply':
 	                  loadCompetetionPage();
@@ -54,6 +54,8 @@ $(document).ready(function () {
 	                case 'btn_find':
 	                  loadSearchPage();
 	                break;
+	                case 'btn_UserControl':
+	                	loadUserControl();
 	                default: break;
               }
             }
@@ -121,14 +123,22 @@ $(document).ready(function () {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='HistoryItem_frame' id='HistoryItem_frame'   \
     		         src= '" + app_url + "/Admin/HistoryItem/HistoryItem" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
+    		         onload='this.height=HistoryItem_frame.document.body.scrollHeight'></iframe>")	
     	} 
     }
 
-    function loadPersonalPage() {
+    function loadCurrentComp() {
     	if (checkCookies()) {
-    		$(".info_container").load("personal_info.html")
-    
+    		$(".info_container").append("<iframe class='iframe' name='CurrentComp_frame' id='CurrentComp_frame'   \
+    		         src= '" + app_url + "/Admin/CurrentComp/CurrentComp" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=CurrentComp_frame.document.body.scrollHeight'></iframe>")	
+    	} 
+    }
+    function loadMyCompPage(){
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
+   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless' scrolling='no' \
+   		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
 
@@ -141,13 +151,14 @@ $(document).ready(function () {
     	}                         
     }
     
-    function loadMyCompPage(){
+    function loadUserControl(){
     	if (checkCookies()) {
-    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless' scrolling='no' \
-   		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
+    		$(".info_container").append("<iframe class='iframe' name='UserControl_frame' id='UserControl_frame'   \
+   		         src= '" + app_url + "/Admin/UserControl/UserControl" + "' seamless='seamless' scrolling='no' \
+   		         onload='this.height=UserControl_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
+    
     
     function loadAbilityPage() {
     	if (checkCookies()) {
@@ -174,14 +185,15 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-//进入管理员界面，默认进入HistoryItem
-$('#btn_history').trigger('click');
-location = '#HistoryItem';
+	//进入管理员界面，默认进入HistoryItem
+	$('#btn_history').trigger('click');
+	location = '#HistoryItem';
 });
- /*$('#chart-area').mouseover = function (evt) {
-     //var activePoints = myDoughnutChart.getSegmentsAtEvent(evt);
-     alert('evrt');
-     // => activePoints is an array of segments on the canvas that are at the same position as the click event.
- };*/
+
+$(document).ready(function(){
+	$('.fixed-table-toolbar pull-right').append('<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">'+
+			'<i class="glyphicon glyphicon-export icon-share"></i>'+ 
+	  	  	'</button>');
+})
 
 
