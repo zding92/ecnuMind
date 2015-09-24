@@ -100,23 +100,6 @@ function InitAbilityChooser() {
         //        setTimeout('$("#index2").click()', 500);
     });
     
-    var index = 1;
-    var last = 1;
-    $(function () {
-        $('.tags_1').each(function () {
-            if ($(this).attr('id') !== "L2_all") {
-                if ($(this).attr('data-cat')[3] == last.toString()) {
-                    $(this).attr('id', $(this).attr('data-cat') + '_' + index);
-                    index++;
-                } else {
-                    last++;
-                    index = 1;
-                    $(this).attr('id', $(this).attr('data-cat') + '_' + index);
-                }
-            }
-        })
-    });
-
 	    var hasAbility = false;
 	    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
 	    var CheckStateItem;

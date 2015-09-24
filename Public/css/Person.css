@@ -549,7 +549,7 @@ font-size: 0px;
     padding: 5px 10px 5px 10px;
     color: #2098d1;
     background: #fff;
-    margin: 5px auto;
+    margin: 5px 2px;
     display: inline-block;
 }
 
@@ -561,7 +561,7 @@ font-size: 0px;
     padding: 5px 5px 5px 5px;
     color: #2098d1;
     background: #fff;
-    margin: 5px auto;
+    margin: 5px 2px;
     display: none;
 }
 
