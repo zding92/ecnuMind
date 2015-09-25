@@ -1,14 +1,14 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="/webprj/ecnu_mind/Public/css/abilityPopout.css" rel="stylesheet">
-	<script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
-    <script src="/webprj/ecnu_mind/Public/js/home/InitAbilityChooser.js"></script>
+	<link href="/Eclipse_For_PHP/ecnu_mind/Public/css/abilityPopout.css" rel="stylesheet">
+	<script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
+    <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/InitAbilityChooser.js"></script>
 	<script>
-		var starOnIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
-		var starOffIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
-		var starHalfIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"
-		var selfCommentJSON = '/webprj/ecnu_mind/Public/JSON/selfComment.dat';
+		var starOnIcon = "/Eclipse_For_PHP/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
+		var starOffIcon = "/Eclipse_For_PHP/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
+		var starHalfIcon = "/Eclipse_For_PHP/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"
+		var selfCommentJSON = '/Eclipse_For_PHP/ecnu_mind/Public/JSON/selfComment.dat';
 	</script>
 </head>
 <body>
@@ -30,7 +30,7 @@
           <div class="theme-popover"> <!-- 此DIV为弹出窗口 -->
 		  	<div class="popoutLine1">
 		  		<p class="popoutAblityName">高速PCB设计</p>
-		  		<img src="/webprj/ecnu_mind/Public/img/popout/popoutLine1Right.png" alt="error">
+		  		<img src="/Eclipse_For_PHP/ecnu_mind/Public/img/popout/popoutLine1Right.png" alt="error">
 		  		<div class="popoutLine1Right"> 
 		  			<div class="popoutLine1Text">
 			  			<div class="close popoutLine1Save">保存</div> |
@@ -57,12 +57,12 @@
 		  	</div>
 		  	<div class="popoutLine4">
 		  		<div class="abilityDetailHead">
-		  			<img src="/webprj/ecnu_mind/Public/img/popout/abilityDetailHead.png" alt="error">
+		  			<img src="/Eclipse_For_PHP/ecnu_mind/Public/img/popout/abilityDetailHead.png" alt="error">
 		  			<h1>能力详细说明</h1>
 		  		</div>
 		  		<div class="abilityDetailContainer" style="z-index:99">
 			  		<div class="abilityDetailCover">
-			  			<img src="/webprj/ecnu_mind/Public/img/popout/abilityDetailCover.png" alt="error">	
+			  			<img src="/Eclipse_For_PHP/ecnu_mind/Public/img/popout/abilityDetailCover.png" alt="error">	
 			  			<h1>点击以编辑此能力的详细说明</h1>	  			
 			  		</div>
 			  		<form>
@@ -74,9 +74,9 @@
 		  </div>
           <div class="theme-popover-mask"></div>  <!-- 此DIV为弹出窗口之下的遮罩 -->
           
-		  <!-- <script src="/webprj/ecnu_mind/Public/js/home/abilitySave.js"></script>
-          <script src="/webprj/ecnu_mind/Public/js/home/abilityStar.js"></script> -->
-          <script src="/webprj/ecnu_mind/Public/js/home/ability.js"></script>
+		  <!-- <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/abilitySave.js"></script>
+          <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/abilityStar.js"></script> -->
+          <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/ability.js"></script>
           <script type="text/javascript">
           	InitAbilityChooser();
           </script>

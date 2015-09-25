@@ -68,6 +68,9 @@ $(document).ready(function () {
 	                case 'my_comp':
 		              loadMyCompPage();
 		            break;
+	                case 'btn_safe':
+		              loadSafePage();
+		                break;
 	                case 'btn_ability':
 	                  loadAbilityPage();
 	                break;
@@ -165,6 +168,16 @@ $(document).ready(function () {
     	}
     }
     
+    
+    function loadSafePage()
+    {
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Safe_frame' id='Safe_frame'   \
+    		         src= '" + app_url + "/Home/Comp/Safe" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=Comp_frame.document.body.scrollHeight' style='height:600px;' ></iframe>")	
+    	}                         
+    }
+    
     function loadAbilityPage() {
     	if (checkCookies()) {
     		$(".info_container").load("ability.html");		
@@ -177,6 +190,7 @@ $(document).ready(function () {
     		$(".info_container").load("searchPeople.html");
     	}
     }
+    
     
     function checkCookies() {
     	if (document.cookie.indexOf("PHPSESSID", 0) < 0) {
