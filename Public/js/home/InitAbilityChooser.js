@@ -102,16 +102,16 @@ function InitAbilityChooser() {
     
 	    var hasAbility = false;
 	    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
-	    var CheckStateItem;
+	    var checkStateItem;
 	    $(function(){//将获取最新的标签文字以及说明添加至页面中
 	    	$("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
-	        	CheckStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
-	        	hasAbility = !(CheckStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
+	        	checkStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
+	        	hasAbility = !(checkStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
 	        	//点击能力标签之后，在未保存之前，不改变当前状态
 	        	if (hasAbility == false)
-	        		CheckStateItem.iCheck('uncheck');
+	        		checkStateItem.iCheck('uncheck');
 	        	else
-	        		CheckStateItem.iCheck('check');
+	        		checkStateItem.iCheck('check');
 	        	if (hasAbility == false){
 	        		$('.popoutLine3RedText').addClass("line3Selected");
 	        		$('.popoutLine3RedText').addClass("line3RedSelected");
@@ -228,9 +228,9 @@ function InitAbilityChooser() {
 	            }
 	        });
 	        if (hasAbility == false)
-	    		CheckStateItem.iCheck('uncheck');
+	    		checkStateItem.iCheck('uncheck');
 	    	else
-	    		CheckStateItem.iCheck('check');
+	    		checkStateItem.iCheck('check');
 	        
 	    });
 };
