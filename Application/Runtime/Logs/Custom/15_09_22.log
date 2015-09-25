@@ -1,0 +1,809 @@
+[ 2015-09-22T23:31:30+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-09-22T23:32:10+08:00 ] ::1 /webprj/ecnu_mind/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:42:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:44:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:44:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-22T23:44:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:44:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:44:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_info.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-09-22T23:44:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/ability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:44:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_info.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:44:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/ability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:46:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:46:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:46:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:46:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:46:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_info.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:46:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/ability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-09-22T23:47:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:47:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-22T23:47:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:47:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:47:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/ability.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:47:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Ability/genDB
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`field` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name` FROM ecnu_mind.field  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`direction` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`name` FROM ecnu_mind.direction WHERE `Field_id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`ability` [ RunTime:0.0040s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`name` FROM ecnu_mind.direction WHERE `Field_id` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM ecnu_mind.direction WHERE `Field_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 5  [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.ability WHERE `Direction_id` = 6  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`name` FROM ecnu_mind.direction WHERE `Field_id` = 4  [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:48:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:48:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:48:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:48:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:49:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:49:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:49:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:49:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:49:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2015-09-22T23:49:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Comp/getCompInfo?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:50:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:50:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-09-22T23:50:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:50:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+
+[ 2015-09-22T23:50:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Comp/Comp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:50:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Comp/getCompInfo?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT * FROM ecnu_mind.competition_info  [ RunTime:0.0010s ]
+
+[ 2015-09-22T23:50:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Tiaozhan/Tiaozhan/compId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 26 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 30 行.
+NOTIC: [8] Undefined variable: group_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 31 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 34 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 36 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 37 行.
+NOTIC: [8] Undefined variable: type_selector C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 38 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 44 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 45 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 46 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 47 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 48 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 51 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 52 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 53 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 54 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 55 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 56 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 59 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 60 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 61 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 62 行.
+NOTIC: [8] Undefined variable: detailed_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 63 行.
+NOTIC: [8] Undefined variable: referee_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 67 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 71 行.
+NOTIC: [8] Undefined variable: referee_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 72 行.
+NOTIC: [8] Undefined variable: referee_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 74 行.
+NOTIC: [8] Undefined variable: referee_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 76 行.
+NOTIC: [8] Undefined variable: referee_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 78 行.
+NOTIC: [8] Undefined variable: referee_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 80 行.
+NOTIC: [8] Undefined variable: referee_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 82 行.
+NOTIC: [8] Undefined variable: referee_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 83 行.
+NOTIC: [8] Undefined variable: author1_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 96 行.
+NOTIC: [8] Undefined variable: author2_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 121 行.
+NOTIC: [8] Undefined variable: author3_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 145 行.
+NOTIC: [8] Undefined variable: author4_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 170 行.
+NOTIC: [8] Undefined variable: author5_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 194 行.
+NOTIC: [8] Undefined variable: author6_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 218 行.
+NOTIC: [8] Undefined variable: teacher_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 243 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 246 行.
+NOTIC: [8] Undefined variable: teacher_gender C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 247 行.
+NOTIC: [8] Undefined variable: teacher_age C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 249 行.
+NOTIC: [8] Undefined variable: teacher_job C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 251 行.
+NOTIC: [8] Undefined variable: teacher_add C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 253 行.
+NOTIC: [8] Undefined variable: teacher_zipcode C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 255 行.
+NOTIC: [8] Undefined variable: teacher_workphone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 257 行.
+NOTIC: [8] Undefined variable: teacher_homephone C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 258 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 262 行.
+NOTIC: [8] Undefined variable: practice_type C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 263 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 278 行.
+NOTIC: [8] Undefined variable: b1_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 295 行.
+NOTIC: [8] Undefined variable: b1_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 299 行.
+NOTIC: [8] Undefined variable: b1_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 303 行.
+NOTIC: [8] Undefined variable: b1_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 307 行.
+NOTIC: [8] Undefined variable: b1_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 311 行.
+NOTIC: [8] Undefined variable: b1_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 315 行.
+NOTIC: [8] Undefined variable: b1_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 319 行.
+NOTIC: [8] Undefined variable: b1_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 323 行.
+NOTIC: [8] Undefined variable: b1_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 327 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 337 行.
+NOTIC: [8] Undefined variable: b2_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 355 行.
+NOTIC: [8] Undefined variable: b2_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 359 行.
+NOTIC: [8] Undefined variable: b2_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 363 行.
+NOTIC: [8] Undefined variable: b2_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 367 行.
+NOTIC: [8] Undefined variable: b2_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 371 行.
+NOTIC: [8] Undefined variable: b2_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 375 行.
+NOTIC: [8] Undefined variable: b2_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 380 行.
+NOTIC: [8] Undefined variable: b2_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 381 行.
+NOTIC: [8] Undefined variable: b2_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 382 行.
+NOTIC: [8] Undefined variable: b2_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 383 行.
+NOTIC: [8] Undefined variable: b2_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 384 行.
+NOTIC: [8] Undefined variable: b2_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 385 行.
+NOTIC: [8] Undefined variable: b2_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 386 行.
+NOTIC: [8] Undefined variable: b2_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 387 行.
+NOTIC: [8] Undefined variable: b2_c_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 388 行.
+NOTIC: [8] Undefined variable: b2_c_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 389 行.
+NOTIC: [8] Undefined variable: b2_c_11 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 390 行.
+NOTIC: [8] Undefined variable: b2_c_12 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 391 行.
+NOTIC: [8] Undefined variable: b2_c_13 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 392 行.
+NOTIC: [8] Undefined variable: b2_c_14 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 393 行.
+NOTIC: [8] Undefined variable: b2_c_15 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 394 行.
+NOTIC: [8] Undefined variable: b2_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 398 行.
+NOTIC: [8] Undefined variable: b2_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 402 行.
+NOTIC: [8] Undefined variable: comp_item_name C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 411 行.
+NOTIC: [8] Undefined variable: b3_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 427 行.
+NOTIC: [8] Undefined variable: b3_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 431 行.
+NOTIC: [8] Undefined variable: b3_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 435 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 441 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 442 行.
+NOTIC: [8] Undefined variable: b3_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 443 行.
+NOTIC: [8] Undefined variable: b3_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 447 行.
+NOTIC: [8] Undefined variable: b3_c_1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 452 行.
+NOTIC: [8] Undefined variable: b3_c_2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 453 行.
+NOTIC: [8] Undefined variable: b3_c_3 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 454 行.
+NOTIC: [8] Undefined variable: b3_c_4 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 455 行.
+NOTIC: [8] Undefined variable: b3_c_5 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 456 行.
+NOTIC: [8] Undefined variable: b3_c_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 457 行.
+NOTIC: [8] Undefined variable: b3_c_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 458 行.
+NOTIC: [8] Undefined variable: b3_c_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 459 行.
+NOTIC: [8] Undefined variable: b3_6 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 463 行.
+NOTIC: [8] Undefined variable: b3_7 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_ip1 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_ip1_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 468 行.
+NOTIC: [8] Undefined variable: b3_8 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_ip2 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_ip2_date C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 470 行.
+NOTIC: [8] Undefined variable: b3_9 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 472 行.
+NOTIC: [8] Undefined variable: b3_10 C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 477 行.
+NOTIC: [8] Undefined variable: comp_item_id C:\Users\yt\git\ecnu_mind\Application\Runtime\Cache\Custom\fac01d58b5639dc9eceb5287e9ad0a99.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.143008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:53:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-09-22T23:53:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-09-22T23:53:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-09-22T23:53:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs C:\Users\yt\git\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 85 行.
+

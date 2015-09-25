@@ -26,7 +26,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:36:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -55,8 +55,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:36:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -161,7 +161,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:37:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -190,8 +190,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:37:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -432,8 +432,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:38:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -442,8 +442,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:38:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -577,7 +577,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:48:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -606,8 +606,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:48:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -806,8 +806,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:48:58+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -867,7 +867,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:49:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -896,8 +896,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:49:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -1005,7 +1005,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:51:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -1034,8 +1034,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:51:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -1234,8 +1234,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:51:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -1244,8 +1244,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:51:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -1294,7 +1294,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:53:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -1323,8 +1323,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:53:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -1561,8 +1561,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:54:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -1728,8 +1728,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T00:57:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/Comp
 INFO: [ app_init ] --START--
@@ -1919,8 +1919,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:57:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
 INFO: [ app_init ] --START--
@@ -1929,8 +1929,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T00:58:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -1988,8 +1988,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T01:03:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -1998,8 +1998,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T01:04:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -2026,8 +2026,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T01:04:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -2036,8 +2036,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T01:04:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -2077,7 +2077,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0060s ]
 
 [ 2015-09-17T16:32:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -2106,8 +2106,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:32:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -2306,8 +2306,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:33:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -2316,8 +2316,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:33:41+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -2438,7 +2438,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:38:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -2467,8 +2467,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:38:07+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -2743,8 +2743,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:38:24+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
 INFO: [ app_init ] --START--
@@ -2753,8 +2753,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:38:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -2820,7 +2820,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:45:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -2849,8 +2849,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:45:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -3049,8 +3049,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:45:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -3059,8 +3059,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:45:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -3130,7 +3130,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:51:01+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -3159,8 +3159,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:51:01+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -3249,7 +3249,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:51:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -3278,8 +3278,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0020s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0020s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T16:51:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -3478,8 +3478,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:51:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -3488,8 +3488,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T16:51:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -3738,7 +3738,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:08:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -3767,8 +3767,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:08:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -4073,8 +4073,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:08:45+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -4083,8 +4083,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:09:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -4140,7 +4140,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:21:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -4169,8 +4169,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:21:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -4350,7 +4350,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:22:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -4379,8 +4379,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:22:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -4509,8 +4509,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:23:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -4683,7 +4683,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:32:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -4712,8 +4712,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:32:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -4873,7 +4873,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:36:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -4902,8 +4902,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:36:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -5076,7 +5076,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:53:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -5105,8 +5105,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:53:40+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -5263,8 +5263,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:53:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -5463,7 +5463,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T18:55:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -5492,8 +5492,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:55:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -5612,7 +5612,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:56:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -5641,8 +5641,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:56:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -5754,7 +5754,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T18:58:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -6094,7 +6094,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T19:00:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -6123,8 +6123,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T19:00:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -6537,7 +6537,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T19:56:08+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -6566,8 +6566,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T19:56:08+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -6656,7 +6656,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T19:58:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -6685,8 +6685,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T19:58:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -6981,8 +6981,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:00:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -7219,7 +7219,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:08:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -7248,8 +7248,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:08:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -7446,8 +7446,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:08:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -7456,8 +7456,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:11:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -7769,7 +7769,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:16:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -7798,8 +7798,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:16:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -8070,8 +8070,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:16:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -8080,8 +8080,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:16:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -8163,7 +8163,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:17:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -8192,8 +8192,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:17:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -8390,8 +8390,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:17:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -8400,8 +8400,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:18:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -8489,8 +8489,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:18:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
 INFO: [ app_init ] --START--
@@ -8499,8 +8499,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:19:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -8710,7 +8710,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:23:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -8739,8 +8739,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:23:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -8997,7 +8997,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:30:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -9026,8 +9026,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:30:42+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -9156,8 +9156,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:30:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -9170,7 +9170,7 @@ SQL: SHOW COLUMNS FROM `tiaozhan_info` [ RunTime:0.0040s ]
 NOTIC: [2] Missing argument 1 for Home\Controller\TiaozhanController::checkValid(), called in C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php on line 100 and defined C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 146 行.
 NOTIC: [8] Undefined variable: compItemId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 147 行.
 SQL: SELECT `author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id` FROM `tiaozhan_info` LIMIT 1   [ RunTime:0.0000s ]
-ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 
 [ 2015-09-17T20:31:08+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=144249306835730
 INFO: [ app_init ] --START--
@@ -9203,7 +9203,7 @@ SQL: SHOW COLUMNS FROM `tiaozhan_info` [ RunTime:0.0040s ]
 NOTIC: [2] Missing argument 1 for Home\Controller\TiaozhanController::checkValid(), called in C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php on line 100 and defined C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 146 行.
 NOTIC: [8] Undefined variable: compItemId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 147 行.
 SQL: SELECT `author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id` FROM `tiaozhan_info` LIMIT 1   [ RunTime:0.0010s ]
-ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 
 [ 2015-09-17T20:33:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -9216,7 +9216,7 @@ SQL: SHOW COLUMNS FROM `tiaozhan_info` [ RunTime:0.0040s ]
 NOTIC: [2] Missing argument 1 for Home\Controller\TiaozhanController::checkValid(), called in C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php on line 100 and defined C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 146 行.
 NOTIC: [8] Undefined variable: compItemId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 147 行.
 SQL: SELECT `author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id` FROM `tiaozhan_info` LIMIT 1   [ RunTime:0.0010s ]
-ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 
 [ 2015-09-17T20:42:25+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -9229,7 +9229,7 @@ SQL: SHOW COLUMNS FROM `tiaozhan_info` [ RunTime:0.0040s ]
 NOTIC: [2] Missing argument 1 for Home\Controller\TiaozhanController::checkValid(), called in C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php on line 100 and defined C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 146 行.
 NOTIC: [8] Undefined variable: compItemId C:\Users\yt\git\ecnu_mind\Application\Home\Controller\TiaozhanController.class.php 第 147 行.
 SQL: SELECT `author1_id`,`author2_id`,`author3_id`,`author4_id`,`author5_id`,`author6_id` FROM `tiaozhan_info` LIMIT 1   [ RunTime:0.0010s ]
-ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`ecnu_mind`.`tiaozhan_info`, CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 
 [ 2015-09-17T20:42:28+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=144249374777931
 INFO: [ app_init ] --START--
@@ -9274,8 +9274,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:43:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
 INFO: [ app_init ] --START--
@@ -9284,8 +9284,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:43:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -9701,8 +9701,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:45:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -9711,8 +9711,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T20:45:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -9721,8 +9721,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T20:46:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -10011,7 +10011,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:10:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -10040,8 +10040,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:10:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -10321,7 +10321,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:11:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -10350,8 +10350,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:11:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -10631,7 +10631,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:27:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -10660,8 +10660,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:27:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -10858,8 +10858,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:28:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -11001,7 +11001,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:34:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -11030,8 +11030,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:34:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -11228,8 +11228,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:35:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -11238,8 +11238,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:35:49+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -11341,7 +11341,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:38:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -11370,8 +11370,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:38:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -11656,8 +11656,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:42:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112140253
 INFO: [ app_init ] --START--
@@ -11666,8 +11666,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112140253 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:42:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -11684,8 +11684,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:42:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -11694,8 +11694,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:42:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -11918,8 +11918,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:44:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -11928,8 +11928,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:44:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -12056,8 +12056,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:45:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanUpdate
 INFO: [ app_init ] --START--
@@ -12199,7 +12199,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:48:01+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -12228,8 +12228,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:48:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -12529,7 +12529,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:48:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -12558,8 +12558,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:48:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -12756,8 +12756,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:49:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -12766,8 +12766,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:49:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -12894,8 +12894,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:54:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Tiaozhan/TiaozhanRemove/compItemId/67
 INFO: [ app_init ] --START--
@@ -12949,8 +12949,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:54:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -13071,7 +13071,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:56:45+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -13100,8 +13100,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:56:45+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -13298,8 +13298,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T21:57:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -13308,8 +13308,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T21:57:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -13399,7 +13399,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:10:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -13428,8 +13428,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:10:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -13688,8 +13688,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:10:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -13698,8 +13698,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:10:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -13789,7 +13789,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:10:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -13818,8 +13818,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:10:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -14016,8 +14016,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:11:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -14026,8 +14026,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:11:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -14104,7 +14104,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:19:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -14133,8 +14133,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:19:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -14252,7 +14252,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:22:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -14281,8 +14281,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:22:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -14640,8 +14640,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:23:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -14650,8 +14650,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:23:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -14750,7 +14750,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:23:40+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -14779,8 +14779,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:23:40+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -15009,8 +15009,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:23:58+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -15019,8 +15019,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:23:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -15132,7 +15132,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:28:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -15161,8 +15161,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:28:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -15421,8 +15421,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:28:57+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -15431,8 +15431,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:29:01+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -15722,8 +15722,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:30:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -15732,8 +15732,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:30:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -15823,7 +15823,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:46:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -15852,8 +15852,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:46:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -16112,8 +16112,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:47:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Comp/checkValidUser?studentid=10112110128
 INFO: [ app_init ] --START--
@@ -16122,8 +16122,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_info` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender` FROM `user_custom` WHERE ( studentid=10112110128 ) LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:47:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/home/Tiaozhan/TiaozhanAddData
 INFO: [ app_init ] --START--
@@ -16528,7 +16528,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:48:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -16557,8 +16557,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:48:29+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -16895,7 +16895,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:49:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -16924,8 +16924,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:49:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17076,7 +17076,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:52:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -17105,8 +17105,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:52:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17194,8 +17194,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = null LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:52:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17253,8 +17253,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = null LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = null LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:52:38+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17313,7 +17313,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:52:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -17342,8 +17342,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:52:55+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17680,7 +17680,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:57:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -17709,8 +17709,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:57:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17839,7 +17839,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:58:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -17868,8 +17868,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:58:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -17978,7 +17978,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:58:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18007,8 +18007,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:58:46+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18139,7 +18139,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T22:59:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18168,8 +18168,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T22:59:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18449,7 +18449,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:03:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18478,8 +18478,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:03:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18568,7 +18568,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:04:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18597,8 +18597,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:04:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18687,7 +18687,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:04:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18716,8 +18716,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:04:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18838,7 +18838,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:05:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -18867,8 +18867,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:05:01+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -18956,8 +18956,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:05:08+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -19046,7 +19046,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:10:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -19075,8 +19075,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:10:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -19247,7 +19247,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:10:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -19276,8 +19276,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:10:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -19428,7 +19428,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:13:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -19457,8 +19457,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:13:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -19547,7 +19547,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:14:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -19576,8 +19576,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:14:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -19870,7 +19870,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:18:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -19899,8 +19899,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:18:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -20413,7 +20413,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:20:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -20442,8 +20442,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:20:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--
@@ -21789,7 +21789,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 19 行.
-SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME`,`ID`,`studentid` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-09-17T23:23:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/home
 INFO: [ app_init ] --START--
@@ -21818,8 +21818,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
-SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_info` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
+SQL: SELECT `nickname`,`email`,`studentid`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`hidden_name`,`message` FROM `user_custom` WHERE `username` = 'testECNU' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-09-17T23:23:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/home/personal_main.html
 INFO: [ app_init ] --START--

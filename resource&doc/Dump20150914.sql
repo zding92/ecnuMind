@@ -59,7 +59,7 @@ CREATE TABLE `comment` (
   PRIMARY KEY (`id`),
   KEY `fk_Comment_User_has_Ability1_idx` (`User_has_Ability_id`),
   KEY `fk_Comment_User1_idx` (`Commentator_id`),
-  CONSTRAINT `fk_Comment_User1` FOREIGN KEY (`Commentator_id`) REFERENCES `user_info` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Comment_User1` FOREIGN KEY (`Commentator_id`) REFERENCES `user_custom` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Comment_User_has_Ability1` FOREIGN KEY (`User_has_Ability_id`) REFERENCES `user_has_ability` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -122,7 +122,7 @@ CREATE TABLE `competition_main` (
   KEY `FK_competition_user_idx` (`comp_user_id`),
   KEY `FK_competition_prj_idx1` (`comp_type_id`),
   CONSTRAINT `FK_competition_info` FOREIGN KEY (`comp_type_id`) REFERENCES `competition_info` (`comp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `FK_competition_user` FOREIGN KEY (`comp_user_id`) REFERENCES `user_info` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `FK_competition_user` FOREIGN KEY (`comp_user_id`) REFERENCES `user_custom` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -347,13 +347,13 @@ CREATE TABLE `tiaozhan_info` (
   KEY `tiaozhan_basic_F5_idx` (`author5_id`),
   KEY `tiaozhan_basic_FK6_idx` (`author6_id`),
   KEY `tiaozhan_basic_FK9_idx` (`comp_id`),
-  CONSTRAINT `tiaozhan_basic_FK1` FOREIGN KEY (`author1_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK1` FOREIGN KEY (`author1_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `tiaozhan_basic_FK10` FOREIGN KEY (`comp_id`) REFERENCES `competition_info` (`comp_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tiaozhan_basic_FK3` FOREIGN KEY (`author3_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tiaozhan_basic_FK4` FOREIGN KEY (`author4_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tiaozhan_basic_FK5` FOREIGN KEY (`author5_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `tiaozhan_basic_FK6` FOREIGN KEY (`author6_id`) REFERENCES `user_info` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK2` FOREIGN KEY (`author2_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK3` FOREIGN KEY (`author3_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK4` FOREIGN KEY (`author4_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK5` FOREIGN KEY (`author5_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `tiaozhan_basic_FK6` FOREIGN KEY (`author6_id`) REFERENCES `user_custom` (`studentid`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `tiaozhan_basic_FK7` FOREIGN KEY (`referee_id`) REFERENCES `tiaozhan_teacher` (`teacher_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `tiaozhan_basic_FK8` FOREIGN KEY (`teacher_id`) REFERENCES `tiaozhan_teacher` (`teacher_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `tiaozhan_basic_FK9` FOREIGN KEY (`comp_item_id`) REFERENCES `competition_main` (`comp_item_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -443,7 +443,7 @@ CREATE TABLE `user_has_ability` (
   KEY `fk_User_has_Ability_Ability1_idx` (`Ability_id`,`Ability_name`),
   KEY `fk_User_has_Ability_User1_idx` (`User_id`),
   CONSTRAINT `fk_User_has_Ability_Ability1` FOREIGN KEY (`Ability_id`, `Ability_name`) REFERENCES `ability` (`id`, `name`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_User_has_Ability_User1` FOREIGN KEY (`User_id`) REFERENCES `user_info` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_User_has_Ability_User1` FOREIGN KEY (`User_id`) REFERENCES `user_custom` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -458,13 +458,13 @@ INSERT INTO `user_has_ability` VALUES (11,21,1,'前台脚本语言','这个人�
 UNLOCK TABLES;
 
 --
--- Table structure for table `user_info`
+-- Table structure for table `user_custom`
 --
 
-DROP TABLE IF EXISTS `user_info`;
+DROP TABLE IF EXISTS `user_custom`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_info` (
+CREATE TABLE `user_custom` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `password` varchar(45) DEFAULT NULL,
   `username` varchar(20) DEFAULT NULL,
@@ -489,13 +489,13 @@ CREATE TABLE `user_info` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `user_info`
+-- Dumping data for table `user_custom`
 --
 
-LOCK TABLES `user_info` WRITE;
-/*!40000 ALTER TABLE `user_info` DISABLE KEYS */;
-INSERT INTO `user_info` VALUES (1,'null','null','null','null','null','null','null','null','null','null','null','null','null','null','null','null'),(2,'zding92','zding','ecnu_testECNU','1234@qq.com','18000000000','东川路500','张鼎','通信工程系','信息学院','通信工程','研一','男','无','on','呵呵','10112140253'),(21,'cc03e747a6afbbcbf8be7668acfebee5','testECNU','edags','1239835@qq.com','18011111111','地址测试','姓哈哈','通信工程系','信息学院','电子信息科学与技术','研一','女','简546','on','即时消息测试','10112110128');
-/*!40000 ALTER TABLE `user_info` ENABLE KEYS */;
+LOCK TABLES `user_custom` WRITE;
+/*!40000 ALTER TABLE `user_custom` DISABLE KEYS */;
+INSERT INTO `user_custom` VALUES (1,'null','null','null','null','null','null','null','null','null','null','null','null','null','null','null','null'),(2,'zding92','zding','ecnu_testECNU','1234@qq.com','18000000000','东川路500','张鼎','通信工程系','信息学院','通信工程','研一','男','无','on','呵呵','10112140253'),(21,'cc03e747a6afbbcbf8be7668acfebee5','testECNU','edags','1239835@qq.com','18011111111','地址测试','姓哈哈','通信工程系','信息学院','电子信息科学与技术','研一','女','简546','on','即时消息测试','10112110128');
+/*!40000 ALTER TABLE `user_custom` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

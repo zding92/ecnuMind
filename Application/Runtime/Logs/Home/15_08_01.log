@@ -146,7 +146,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0080s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -200,7 +200,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -274,7 +274,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -328,7 +328,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -382,7 +382,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -436,7 +436,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0030s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -490,7 +490,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -549,7 +549,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
@@ -583,7 +583,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -637,7 +637,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -691,7 +691,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -745,7 +745,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -799,7 +799,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -853,7 +853,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
@@ -907,7 +907,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -961,7 +961,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1015,7 +1015,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1069,7 +1069,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1123,7 +1123,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -1177,7 +1177,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
@@ -1231,7 +1231,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1285,7 +1285,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -1339,7 +1339,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -1433,7 +1433,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1487,7 +1487,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1541,7 +1541,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1595,7 +1595,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1709,7 +1709,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1803,7 +1803,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1857,7 +1857,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1911,7 +1911,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
@@ -1985,7 +1985,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
@@ -2039,7 +2039,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2093,7 +2093,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2147,7 +2147,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2181,7 +2181,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -2235,7 +2235,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
@@ -2389,7 +2389,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
@@ -2463,7 +2463,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2517,7 +2517,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2571,7 +2571,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -2625,7 +2625,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 11 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'zding92' LIMIT 1   [ RunTime:0.0020s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 25 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]

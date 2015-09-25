@@ -1071,7 +1071,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1092,7 +1092,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:50:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1102,7 +1102,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:50:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1112,7 +1112,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:53:05+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1122,7 +1122,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 
 [ 2015-07-26T14:53:11+08:00 ] ::1 /webprj/ecnu_mind/index.php?XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14378935894406
 INFO: [ app_init ] --START--
@@ -1131,7 +1131,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1152,7 +1152,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:53:44+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1162,7 +1162,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 
 [ 2015-07-26T14:54:43+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14378936806237
 INFO: [ app_init ] --START--
@@ -1171,7 +1171,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1192,7 +1192,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:55:25+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1202,7 +1202,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 
 [ 2015-07-26T14:55:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14378937263268
 INFO: [ app_init ] --START--
@@ -1211,7 +1211,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1232,7 +1232,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:57:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1242,7 +1242,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 
 [ 2015-07-26T14:57:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=14378938338789
 INFO: [ app_init ] --START--
@@ -1251,7 +1251,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1272,7 +1272,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:57:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1282,7 +1282,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:57:23+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1292,7 +1292,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'zding' in 'where clause'
 
 [ 2015-07-26T14:57:39+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1302,7 +1302,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-07-26T14:58:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789390067310
 INFO: [ app_init ] --START--
@@ -1311,7 +1311,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1332,7 +1332,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T14:59:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/Register
@@ -1342,7 +1342,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:02:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/login
@@ -1352,7 +1352,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PWD' in 'field list'
 
@@ -1363,7 +1363,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1384,7 +1384,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PWD' in 'field list'
 
@@ -1395,7 +1395,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1416,7 +1416,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
 
 [ 2015-07-26T15:05:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd
@@ -1426,7 +1426,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1447,9 +1447,9 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: pwd C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 18 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1462,7 +1462,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1483,9 +1483,9 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` LIMIT 1   [ RunTime:0.0010s ]
 NOTIC: [8] Undefined index: name C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 23 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1498,7 +1498,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1519,9 +1519,9 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 23 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
@@ -1534,7 +1534,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1555,7 +1555,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:13:51+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
@@ -1565,7 +1565,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:13:58+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789483626612
@@ -1575,7 +1575,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1596,7 +1596,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:15:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
@@ -1606,7 +1606,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-07-26T15:15:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
 INFO: [ app_init ] --START--
@@ -1615,7 +1615,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:15:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
@@ -1625,7 +1625,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:16:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789496997813
@@ -1635,7 +1635,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1656,7 +1656,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '1' for key 'PRIMARY'
 
 [ 2015-07-26T15:17:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
@@ -1666,7 +1666,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-07-26T15:17:25+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
 INFO: [ app_init ] --START--
@@ -1675,8 +1675,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
-SQL: INSERT INTO `user_info` (`username`,`password`) VALUES ('zding2','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0040s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `user_custom` (`username`,`password`) VALUES ('zding2','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0040s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1688,7 +1688,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'
 
 [ 2015-07-26T15:17:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/Home/Index/register
@@ -1698,7 +1698,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding2' LIMIT 1   [ RunTime:0.0000s ]
 ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2' for key 'PRIMARY'
 
 [ 2015-07-26T15:17:38+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789505546714
@@ -1708,7 +1708,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1729,8 +1729,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
-SQL: INSERT INTO `user_info` (`username`,`password`) VALUES ('3dkltsyt','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0030s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `user_custom` (`username`,`password`) VALUES ('3dkltsyt','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0030s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -1742,7 +1742,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1754,7 +1754,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0010s ]
 
 [ 2015-07-26T15:18:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789512158515
 INFO: [ app_init ] --START--
@@ -1763,7 +1763,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -1784,7 +1784,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -1796,7 +1796,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -1808,7 +1808,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1820,7 +1820,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
@@ -1832,7 +1832,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = '3dkltsyt' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-07-26T15:26:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789557052016
 INFO: [ app_init ] --START--
@@ -1841,7 +1841,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1862,7 +1862,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -1874,7 +1874,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1886,7 +1886,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1907,7 +1907,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1919,7 +1919,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-07-26T15:28:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789567608618
 INFO: [ app_init ] --START--
@@ -1928,7 +1928,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1949,7 +1949,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -1969,7 +1969,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -1990,7 +1990,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2002,7 +2002,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2014,8 +2014,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
-SQL: INSERT INTO `user_info` (`username`,`password`) VALUES ('hello','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0040s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `user_custom` (`username`,`password`) VALUES ('hello','d41d8cd98f00b204e9800998ecf8427e') [ RunTime:0.0040s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2027,7 +2027,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2039,7 +2039,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2051,7 +2051,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2072,7 +2072,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2084,7 +2084,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2104,7 +2104,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -2125,7 +2125,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2137,7 +2137,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2157,7 +2157,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2178,7 +2178,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2190,7 +2190,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2211,7 +2211,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'hello' LIMIT 1   [ RunTime:0.0000s ]
 
 [ 2015-07-26T15:45:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/?name=zd&XDEBUG_SESSION_START=ECLIPSE_DBGP&KEY=143789671587423
 INFO: [ app_init ] --START--
@@ -2220,7 +2220,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2241,7 +2241,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2253,7 +2253,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
@@ -2265,7 +2265,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
@@ -2286,7 +2286,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2298,7 +2298,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -2319,7 +2319,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'dsada' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'dsada' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2331,7 +2331,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'asdfs' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'asdfs' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
@@ -2343,7 +2343,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2364,7 +2364,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2376,7 +2376,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2388,7 +2388,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0030s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2409,9 +2409,9 @@ INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 NOTIC: [8] A session had already been started - ignoring session_start() C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name C:\Users\yt\git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 23 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
@@ -2424,7 +2424,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2436,7 +2436,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2448,7 +2448,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'zding' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2460,7 +2460,7 @@ INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
-SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -2482,7 +2482,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2495,7 +2495,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'hello world' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'hello world' LIMIT 1   [ RunTime:0.0020s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2508,7 +2508,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2521,7 +2521,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0000s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2533,8 +2533,8 @@ INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
-SQL: SELECT * FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
-SQL: INSERT INTO `user_info` (`username`,`password`) VALUES ('change1','ed52efced6f7f5438c91fe8293eed992') [ RunTime:0.0070s ]
+SQL: SELECT * FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `user_custom` (`username`,`password`) VALUES ('change1','ed52efced6f7f5438c91fe8293eed992') [ RunTime:0.0070s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2547,7 +2547,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
@@ -2560,7 +2560,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0010s ]
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
@@ -2573,7 +2573,7 @@ INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 NOTIC: [8] A session had already been started - ignoring session_start() E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 12 行.
-SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_info` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `PASSWORD`,`USERNAME` FROM `user_custom` WHERE `username` = 'change1' LIMIT 1   [ RunTime:0.0000s ]
 NOTIC: [8] Undefined index: name E:\web\Git\ecnu_mind\Application\Home\Controller\IndexController.class.php 第 26 行.
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]

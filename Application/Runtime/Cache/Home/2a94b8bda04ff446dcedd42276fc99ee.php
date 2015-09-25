@@ -114,10 +114,10 @@
 	<div class="arrow">&laquo;</div>
     <script> 
     	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
-    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/register'
+    	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/registerCustom'
     	var public_url = '/webprj/ecnu_mind/Public';
-  		var home_url = '/webprj/ecnu_mind/index.php/Home/home/home';
-  		var incomplete_url = '/webprj/ecnu_mind/index.php/Home/Guide/guide';
+  		var home_url = '/webprj/ecnu_mind/index.php/custom/home/home';
+  		var incomplete_url = '/webprj/ecnu_mind/index.php/custom/guide/guide';
     </script>
 	<script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>
 	<script src="/webprj/ecnu_mind/Public/js/index/Register.js"></script>
