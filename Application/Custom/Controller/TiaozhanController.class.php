@@ -31,7 +31,7 @@ class TiaozhanController extends CompController {
 		$this->createModel();
 		$this->checkValid($compItemId);
 		
-		$tiaozhanData = $this->getTiaozhanData($compItemId);	
+		$tiaozhanData = $this->getTiaozhanData($compItemId, true);	
 		//C表当前国内外课题研究水平 内容
 		$CTable='';
 		if ($tiaozhanData[type_selector] == 'B1')
@@ -127,8 +127,20 @@ class TiaozhanController extends CompController {
 		$this->ajaxReturn('deleted', 'EVAL');
 	}
 
-	private function getTiaozhanData($compItemId) {
+	private function getTiaozhanData($compItemId, $returnAuthorDetail=FALSE) {
 		$tiaozhanData = $this->tiaozhanModel->find($compItemId);
+		
+		// 检测是否需要返回用户详细信息。
+		if ($returnAuthorDetail) {
+			foreach ($tiaozhanData as $key => $val) {
+				if (preg_match('/author[1-6]_id$/',$key) && isset($val)) {
+					$custom = M('user_custom');
+					$key = str_replace('id', 'info', $key);
+					$tiaozhanData[$key] = 
+						$custom->where("student_id=$val")->field("brief,user_id,complete_steps", true)->find(); 
+				}
+			}
+		}
 		
 		// 将所有null转为空字符返回
 		$tiaozhanData = $this->replaceNullOfId($tiaozhanData);

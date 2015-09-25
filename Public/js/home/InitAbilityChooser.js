@@ -222,7 +222,7 @@ function ability() {
 //		        alert(app_url);
 	        
 	        $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
-	            url: app_url + "/home/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
+	            url: app_url + "/Custom/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
 	            data : json2selfCommentPHP,//交给PHP处理的输入数据
 	            type: "POST", //请求方式
 	            async: false,
