@@ -1,4 +1,21 @@
-function InitAbilityChooser() {
+function ability() {
+	var ability_json;
+	var user_ability_json;
+	
+	function FillSelfComment(ability_name) {
+		var handinPHP = "abilityName=" + ability_name;
+		$.ajax({
+            url: app_url + "/Custom/ability/getSelfComment",
+            data: handinPHP,
+            async: false,
+            success: function (result) {
+        		$(".abilityDetail").html(result);
+            }
+        });
+		
+	}
+	
+	function InitAbilityChooser() {
 	   $('#L3 :input').each(function () {
 	        var self = $(this),
 	        label = self.next(),
@@ -9,8 +26,12 @@ function InitAbilityChooser() {
 	            radioClass: 'iradio_line-blue',
 	            insert: '<div class="icheck_line-icon"></div>' + label_text
 	        });
+	        // 已经有的能力要勾选
+	        for (idx in user_ability_json)
+	        	if (user_ability_json[idx]['ability_name'] == label_text)
+	        		self.iCheck("check");
 	    });
-	    
+	   
 	    $(function () {
 	        $('#L3 :input').each(function () {
 	        	$(this).parent().addClass($(this).attr('data-cat'));
@@ -18,7 +39,7 @@ function InitAbilityChooser() {
 	            $(this).parent().css('display', 'inline-block');
 	        })
 	    });
-	       
+	    
 	    var filterList = {
 	        init: function () {
 	            // MixItUp plugin
@@ -53,53 +74,53 @@ function InitAbilityChooser() {
 	        }
 	    }.init();
 
-    var filters = "";
-    $('.tags').click(function () {
-        if ($(this).attr('id') == "L1_all") {
-            $("#L1_all ~ div").removeClass('active');
-            $(this).addClass('active');
-            filters = "all";
-        } else {
-            filters = filters.replace(/all/, "");
-            $("#L1_all").removeClass('active');
-            $(this).toggleClass('active');
-            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/,*." + $(this).attr('id') + ",*/"), "");
-            if (filters.charAt(filters.length - 1) === ',') {
-            	filters = filters.substring(0, filters.length-1);
-            }; 
-        }
-        $('#L2').mixItUp('filter', filters);
-        if (filters !== 'all' && filters !== '') {
-        	filters = filters + ',';
-        }
-        //$("#index").attr('data-filter', filters);
-        //setTimeout('$("#index").click()', 500);
-    })
+	    var filters = "";
+	    $('.tags').click(function () {
+	        if ($(this).attr('id') == "L1_all") {
+	            $("#L1_all ~ div").removeClass('active');
+	            $(this).addClass('active');
+	            filters = "all";
+	        } else {
+	            filters = filters.replace(/all/, "");
+	            $("#L1_all").removeClass('active');
+	            $(this).toggleClass('active');
+	            filters = $(this).hasClass('active') ? (filters + "." +  $(this).attr('id') + ",") : filters.replace(eval("/(,." + $(this).attr('id') + ")|(."+ $(this).attr('id') + ",)/"), "");
+	            if (filters.charAt(filters.length - 1) === ',') {
+	            	filters = filters.substring(0, filters.length-1);
+	            }; 
+	        }
+	        $('#L2').mixItUp('filter', filters);
+	        if (filters !== 'all' && filters !== '') {
+	        	filters = filters + ',';
+	        }
+	        //$("#index").attr('data-filter', filters);
+	        //setTimeout('$("#index").click()', 500);
+	    })
 
-    var filters_2 = "";
-    $('.tags_1').click(function () {
-        if ($(this).attr('id') == "L2_all") {
-            $("#L2_all ~ div").removeClass('active');
-            $(this).addClass('active');
-            filters_2 = "all";
-        } else {
-            filters_2 = filters_2.replace(/all/, "");
-            $("#L2_all").removeClass('active');
-            $(this).toggleClass('active');
-            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id')) : filters_2.replace(eval("/." + $(this).attr('id') + ",*/"), "");
-            if (filters_2.charAt(filters_2.length - 1) === ',') {
-            	filters_2 = filters_2.substring(0, filters_2.length-1);
-            };  
-        }
-        $('#L3').mixItUp('filter', filters_2);
-        if (filters_2 !== 'all' && filters_2 !== '') {
-        	filters_2 = filters_2 + ',';
-        }
-        //调试用div，可查看filters内容
-        //$("#index2").attr('data-filter', filters_2);
-        //        setTimeout('$("#index2").click()', 500);
-    });
-    
+	    var filters_2 = "";
+	    $('.tags_1').click(function () {
+	        if ($(this).attr('id') == "L2_all") {
+	            $("#L2_all ~ div").removeClass('active');
+	            $(this).addClass('active');
+	            filters_2 = "all";
+	        } else {
+	            filters_2 = filters_2.replace(/all/, "");
+	            $("#L2_all").removeClass('active');
+	            $(this).toggleClass('active');
+	            filters_2 = $(this).hasClass('active') ? (filters_2 + "." +  $(this).attr('id')) : filters_2.replace(eval("/(,." + $(this).attr('id') + ")|(."+ $(this).attr('id') + ",)/"), "");
+	            if (filters_2.charAt(filters_2.length - 1) === ',') {
+	            	filters_2 = filters_2.substring(0, filters_2.length-1);
+	            };  
+	        }
+	        $('#L3').mixItUp('filter', filters_2);
+	        if (filters_2 !== 'all' && filters_2 !== '') {
+	        	filters_2 = filters_2 + ',';
+	        }
+	        //调试用div，可查看filters内容
+	        //$("#index2").attr('data-filter', filters_2);
+	        //        setTimeout('$("#index2").click()', 500);
+	    });
+
 	    var hasAbility = false;
 	    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
 	    var checkStateItem;
@@ -131,6 +152,8 @@ function InitAbilityChooser() {
 	        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
 	        		$('.popoutLine3RedText').html("×");
 	        		$('.popoutLine3Green').animate({width:'700px'},"middle");
+	        		// 获取以前已经有的自我评价
+	        		FillSelfComment($(this).parent().text());
 	        	}
 	        	
 	        	//点击选择能力的标签，出现弹出框
@@ -141,7 +164,7 @@ function InitAbilityChooser() {
 	            lastPickedCheckbox = $(this).parent().text();//获取最新点击的标签中的文字
 	        });
 	    })
-		
+			
 		$('.theme-popover .close').click(function(){
 			$('.theme-popover-mask').fadeOut(100);
 			$('.theme-popover').slideUp(200);
@@ -212,17 +235,29 @@ function InitAbilityChooser() {
 	        if (abilityDetail == "在此添加经历或认证，进一步说明此项能力")
 	            abilityDetail = "";
 	        
-	        var json2selfCommentPHP = 'abilityName='+lastPickedCheckbox +'&selfComment='+abilityDetail;
+	        var json2selfCommentPHP = 
+	        			'abilityName='+ lastPickedCheckbox +
+	        			'&selfComment='+ abilityDetail + 
+	        			'&hasAbility=' + hasAbility;
 	        
-//	        alert(app_url);
+//		        alert(app_url);
 	        
 	        $.ajax({//将用户名以及最新点击的能力标签返回给后台，后台处理后，返回给前台此标签对应的selfComment，并显示
-	            url: app_url + "/home/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
+	            url: app_url + "/Custom/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
 	            data : json2selfCommentPHP,//交给PHP处理的输入数据
 	            type: "POST", //请求方式
 	            async: false,
 	            success: function (result) {
-	            	eval(result);
+	            	switch (result) {
+					case 'insert_success':
+						break;
+					case 'update_success':
+						break;
+					case 'delete_success':
+						break;
+					default:
+						break;
+					}
 	            	//$(".abilityDetail").val(selfCommentData.selfComment);
 	            	//alert(selfCommentData.selfComment);
 	            }
@@ -233,4 +268,67 @@ function InitAbilityChooser() {
 	    		checkStateItem.iCheck('check');
 	        
 	    });
-};
+	};
+
+	$(document).ready(function() {
+
+		// 请求当前用户的已有能力
+		function getUserAbility() {
+			$.ajax({
+	            url: app_url + "/Custom/ability/getAbility" ,
+	            async: false,
+	            dataType: 'JSON',
+	            success: function (result) {
+	            	user_ability_json = result;
+	            	InitAbilityChooser();
+	            }
+	        });
+		}
+		
+		// 请求后台生成json格式的数据
+		$.ajax({url: app_url + "/Custom/Ability/genDB",
+			type: "GET",
+	        async:false,
+	        dataType: 'JSON',
+	        success: function(result) {
+	        	ability_json = result;
+	            var cnt1 = new Number(1);
+	            for (l1 in ability_json) {
+	            			
+		            var obj1 = $("<div></div>");
+					obj1.attr("id", "L1_" + cnt1.toString());
+					obj1.addClass("tags hvr-radial-out");
+					obj1.html(l1);
+					obj1.appendTo("#L1");
+					
+					var cnt2 = new Number(1);
+					for (l2 in ability_json[l1]) {
+						
+						var obj2 = $("<div></div>");
+						obj2.attr("id", "L1_" + cnt1.toString() + "_" + cnt2.toString());
+						obj2.attr("data-cat", "L1_" + cnt1.toString());
+						obj2.addClass("tags_1 " + "L1_" + cnt1.toString() + " hvr-radial-out");
+						obj2.html(l2);
+						obj2.appendTo("#L2");
+						
+						for (l3 in ability_json[l1][l2]) {
+							var obj3 = $("<input type='checkbox' class='hvr-radial-out'>");
+							obj3.addClass("L1_" + cnt1.toString() + "_" + cnt2.toString());
+							obj3.attr("data-cat", "L1_" + cnt1.toString() + "_" + cnt2.toString());
+		    				obj3.appendTo("#L3");
+							var label = $("<label></label>");
+							label.html(ability_json[l1][l2][l3]["name"]);
+							label.appendTo("#L3");
+						}
+						cnt2 = cnt2 + 1;
+					}
+					cnt1 = cnt1 + 1;
+	            }
+	        }
+		});
+		$('<div id="index" class="filter" style="display:none"></div>').appendTo('#L1');
+		$('<div id="index2" class="filter" style="display:none"></div>').appendTo('#L2');
+		getUserAbility();
+	});
+
+}
