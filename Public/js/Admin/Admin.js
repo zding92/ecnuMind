@@ -36,24 +36,19 @@ $(document).ready(function () {
                 
                 // 根据action载入相应的page
                 switch (action) {
+                
 	                case 'btn_history':                   
-	                  loadHistoryItem();
+	                	loadHistoryItem();
 	                break;
+	                
 	                case 'btn_CurrentComp':
-	                  loadCurrentComp();
+	                	loadCurrentComp();
 	                break;
-	                case 'comp_apply':
-	                  loadCompetetionPage();
+	                
+	                case 'btn_CompControl':
+	                	loadCompControl();
 	                break;
-	                case 'my_comp':
-		              loadMyCompPage();
-		            break;
-	                case 'btn_ability':
-	                  loadAbilityPage();
-	                break;
-	                case 'btn_find':
-	                  loadSearchPage();
-	                break;
+	                
 	                case 'btn_UserControl':
 	                	loadUserControl();
 	                default: break;
@@ -119,6 +114,7 @@ $(document).ready(function () {
         }
     }
 
+    //载入历史项目页面
     function loadHistoryItem() {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='HistoryItem_frame' id='HistoryItem_frame'   \
@@ -127,6 +123,7 @@ $(document).ready(function () {
     	} 
     }
 
+    //载入当前比赛页面
     function loadCurrentComp() {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='CurrentComp_frame' id='CurrentComp_frame'   \
@@ -134,23 +131,17 @@ $(document).ready(function () {
     		         onload='this.height=CurrentComp_frame.document.body.scrollHeight'></iframe>")	
     	} 
     }
-    function loadMyCompPage(){
+    
+    //载入比赛管理页面
+    function loadCompControl(){
     	if (checkCookies()) {
-    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-   		         src= '" + app_url + "/Home/Comp/myComp" + "' seamless='seamless' scrolling='no' \
-   		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")			
+    		$(".info_container").append("<iframe class='iframe' name='CompControl_frame' id='CompControl_frame'   \
+   		         src= '" + app_url + "/Admin/CompControl/CompControl" + "' seamless='seamless' scrolling='no' \
+   		         onload='this.height=CompControl_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
-
-    function loadCompetetionPage()
-    {
-    	if (checkCookies()) {
-    		$(".info_container").append("<iframe class='iframe' name='Comp_frame' id='Comp_frame'   \
-    		         src= '" + app_url + "/Home/Comp/Comp" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=Comp_frame.document.body.scrollHeight'></iframe>")	
-    	}                         
-    }
-    
+  
+    //载入用户管理页面
     function loadUserControl(){
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='UserControl_frame' id='UserControl_frame'   \
@@ -159,19 +150,7 @@ $(document).ready(function () {
     	}
     }
     
-    
-    function loadAbilityPage() {
-    	if (checkCookies()) {
-    		$(".info_container").load("ability.html");		
-    	}
-    
-    } 
-    
-    function loadSearchPage() {//在info_container中显示searchPeople.html
-    	if (checkCookies()) {
-    		$(".info_container").load("searchPeople.html");
-    	}
-    }
+
     
     function checkCookies() {
     	if (document.cookie.indexOf("PHPSESSID", 0) < 0) {
