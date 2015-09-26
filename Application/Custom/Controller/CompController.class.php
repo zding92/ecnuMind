@@ -104,27 +104,27 @@ class CompController extends CommonController {
 	protected function registerComp($participant) {
 		$compItemModel = M('ecnu_mind.competition_main');
 		$regValue = I('post.');
+		
+		// 将学号数组转化为学号字串
 		$participantStr = implode(',', $participant);
-		foreach ($participant as $key => $val) {
-			$participant[$key] = '%'.$val.'%';
-		}
+
+		// 根据第一作者学号，获取第一作者名
+		$author1Name = $this->getAuthor1Name($participant[0]);
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
-		// 构造模糊插叙条件
-		$compItemInfo['comp_participant_id'] = array('like', $participant, 'OR');
-		
-		// 检查该用户是否已经注册过该竞赛
-		// Ps.通过主表检测，子表中应该检查所有的参与者是否参加该项竞赛，如果有应该不允许重复注册。
-		$checkResult = $compItemModel->where($compItemInfo)->select();
-		
-		if (!isset($checkResult)) $this->ajaxReturn("您已报名过该项竞赛，请勿重复提交","EVAL");
 		
 		// 将用户学号数组转化为字符串存入
 		$compItemInfo['comp_participant_id'] = $participantStr;
 		
 		// 将当前日期设置为竞赛报名日期
 		$compItemInfo['apply_date'] = date('Y-m-d', time());
+		
+		// 添加第一作者姓名
+		$compItemInfo['author1_name'] = $author1Name;
+		
+		// 添加竞赛项目名称
+		$compItemInfo['comp_item_name'] = $regValue['post.comp_item_name'];		
 		
 		// 获取全站唯一的用户个人报名ID
 		$compId = $compItemModel->data($compItemInfo)->filter('strip_tags')->add();
@@ -183,9 +183,25 @@ class CompController extends CommonController {
 	}
 	
 	protected function updateCompParticipant($participant) {
+		
 		$compItemModel = M('ecnu_mind.competition_main', null);
+		
 		$compItemModel->create();
+		
 		$compItemModel->comp_participant_id = implode(',', $participant);
+		
+		// 获取第一作者姓名
+		$author1Name = $this->getAuthor1Name($participant[0]);
+		
+		// 添加第一作者姓名
+		$compItemModel->author1_name = $author1Name;
+		
 		$compItemModel->filter('strip_tags')->save();
+	}
+	
+	private function getAuthor1Name($author1Id) {
+		$custom = M('user_custom');
+		$name = $custom->where("student_id=$author1Id")->field('name')->find()['name'];
+		return $name;
 	}
 }

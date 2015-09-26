@@ -8,18 +8,51 @@ class HistoryItemController extends CommonController {
     	$this->display();
   	}
   	
+  	/**
+  	 * 分页获取历史记录信息
+  	 */
   	public function showAllHistoryItem(){
-  		$compItemModel = M('ecnu_mind.competition_main', null);
+	  	$compItemModel = M('ecnu_mind.competition_main', null);
 		$compInfoModel = M('ecnu_mind.competition_info', null);
 		
 		//建立作者user_custom表的model
 		$userDetailModel = M('ecnu_mind.user_custom', null);
 		
-		//allHistoryItem为competition_main 表格中的所有行，取"comp_item_id,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
-		$allCompItem = $compItemModel -> field('comp_participant_id',true) -> select();
+		// 检索条件
+		$condition['comp_state'] = '已结束';
+		
+		// 如果符合条件的竞赛报名总数量，则查询并存入session.
+		if (null === session('comp_count')){
+			$compCount = $compItemModel
+									->where($condition)
+									->Count();
+			session('comp_count', $compCount);
+			$returnToFront['total'] = session('comp_count');
+		}	
+		else
+			$returnToFront['total'] = session('comp_count');
+		
+		// 如果前台检索条件不存在，即不进行模糊搜索(模糊搜索为针对题目名或人名的相似查询)。
+		$search = I('get.search');
+		if ($search != '') {
+			$searchCondition['author1_name'] = array('like', '%'.$search.'%');
+			$searchCondition['comp_item_name'] = array('like', '%'.$search.'%');
+			$searchCondition['_logic'] = 'or';
+			$condition['_complex'] = $searchCondition;
+		}		
+			
+			
+		
+		// $allCompItem为competition_main 表格中的所有行，取"comp_item_id,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
+		// 并且由前台分页工具决定载入的数量。
+		$allCompItem = $compItemModel
+								 ->where($condition)
+								 ->limit("'".I('get.offset').",".I('get.limit')."'")
+								 ->field('comp_participant_id',true)
+								 ->select();
 		
 		//返回二维数组的行数
-		$i = 0;
+		$i = 0;		
 		
 		//遍历$allHistoryItem的每一行，每一行成为一个一维数组$eachHistoryItem
 		foreach ($allCompItem as $eachCompItem) {
@@ -29,10 +62,7 @@ class HistoryItemController extends CommonController {
 								->where('comp_id='.$eachCompItem['comp_type_id'])
 								->field("comp_name,comp_template")
 								->find();
-			
-			// 只有当竞赛状态为“已经结束”的时候。才返回竞赛信息
-			if ($eachCompItem['comp_state'] !== '已结束') continue; 
-			
+					
 			// 竞赛模板名+_info为数据库表名。
 			$compModelName = $compinfo['comp_template'].'_info';
 			
@@ -65,7 +95,7 @@ class HistoryItemController extends CommonController {
 			$returnItemInfo['comp_author1'] = $author1DetailInfo['name'];
 			$returnItemInfo['apply_department'] = $author1DetailInfo['academy'];
 			
-			$returnToFront[$i] = $returnItemInfo;
+			$returnToFront['rows'][$i] = $returnItemInfo;
 			
 			$i++;
 		}

@@ -13,25 +13,34 @@ function starSorter(a, b) {
 }
 
 $(function(){
+	var initialFlag = true;
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,
+		sidePagination: 'server',
 		pagination: true,
 		height: 600,
 		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
-		table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
-		table_filter.bootstrapTableFilter('enableFilter', 'comp_date');
-		// 将第四列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
-		$table.bootstrapTable('toggleColumn', 4, false, true);
+		if (initialFlag) {
+			table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
+			table_filter.bootstrapTableFilter('enableFilter', 'comp_date');
+	
+			// 将第四列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
+			$table.bootstrapTable('toggleColumn', 4, false, true);
+			
+			//点击下拉选择的整体，能够选中勾选框
+			$('.dropdown-menu li a :input').click(function(e){
+				if($(this).prop('checked')){
+					$(this).prop('checked',false);
+				} else {
+					$(this).prop('checked',true);
+				}
+			});
+			
+			initialFlag = false;
+		}
 		
-		//点击下拉选择的整体，能够选中勾选框
-		$('.dropdown-menu li a :input').click(function(e){
-			if($(this).prop('checked')){
-				$(this).prop('checked',false);
-			} else {
-				$(this).prop('checked',true);
-			}
-		});
+		
     });
 	
 });
