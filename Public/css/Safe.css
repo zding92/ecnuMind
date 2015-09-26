@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+.title_box{
+	margin:0px 0px auto;
+	background-color:rgba(240,240,240,8);
+	color:#45484d;
+	text-align:left;
+	padding:3px 10px 2px 20px;
+	height:22px;width:1300px;
+	font-size:10px;
+	font-weight:300;
+	border:1px solid #ddd;
+	display:block;
+	letter-spacing:3px;
+	vertical-align:top;
+}
+.control-label{
+	margin-bottom: 0px;
+    text-align: right;
+    margin-top: 0px;
+    margin-left: 218px;
+    top: 20px;
+    bottom: 100px;
+    position: relative;
+    font-weight: 500;
+}
+.span2 {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-left: 350px;
+    margin-bottom: 35px;
+    margin-top: -15px;
+    width: 210px;
+}
+.button{
+	padding: 0px 0px 0px 20px;
+    vertical-align: central;
+    text-align: center;
+    letter-spacing: 20px;
+    border: 0px;
+    outline: none;
+    margin: 20px -80px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 100;
+    font-family: "微软雅黑";
+    background: #0080FF;
+    border-radius: 0px;
+    cursor: pointer;
+}
