@@ -37,7 +37,7 @@ class CompController extends CommonController {
 	public function getCompItem() {
 		$compItemModel = M('ecnu_mind.competition_main', null);
 		$compInfoModel = M('ecnu_mind.competition_info', null);
-		
+	
 		// 设置查询条件
 		$map['comp_participant_id'] = array('like', '%'.session('user_studentid').'%') ;
 		
@@ -46,6 +46,8 @@ class CompController extends CommonController {
 					   ->field('comp_type_id, comp_item_id')
 		               ->select();
 		
+		$compModels = array();
+		
 		foreach ($userCompIds as $compId) {
 			// 获得该项竞赛的基本信息
 			$compinfo =	$compInfoModel
@@ -53,8 +55,18 @@ class CompController extends CommonController {
 						->field("comp_name, comp_template")
 						->find();
 			
+			// 竞赛模板名+_info为数据库表名。
+			$compModelName = $compinfo['comp_template'].'_info';
+			
+			// 将所有竞赛报名信息表实例化成数组,如果数组中包含该表对象，则跳过实例化。
+			if (!isset($compModels[$compModelName])) {
+				$compModels[$compModelName] = M($compModelName);
+			}
+			
+			// 根据表名获取其模型对象。
+			$compDetailModel = $compModels[$compModelName];
+			
 			// 根据模板名称和竞赛报名ID获得详细信息
-			$compDetailModel = M('ecnu_mind.'.$compinfo['comp_template'].'_info',null);
 			$returnItem = $compDetailModel
 			              ->where("comp_item_id=".$compId['comp_item_id'])
 			              ->field("comp_item_name, apply_date")
