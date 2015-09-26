@@ -3,7 +3,7 @@ var tips = document.getElementById('tips');
 var user = document.getElementById('login_user');  
 var password = document.getElementById('login_pwd');
 var sendstr = "username=" + user.value + "&password=" + password.value;
-window.onload = function () {
+window.onload = function () {	
     btn.onclick = function () {
         var isValidate = false;
         if (!user.value.match(/^[a-zA-Z0-9\u4E00-\u9FA5][0-9a-zA-Z\u4E00-\u9FA5]{3,15}/)) {
@@ -61,7 +61,7 @@ window.onload = function () {
 document.onkeydown = function(e){ 
     var ev = document.all ? window.event : e;
     if(ev.keyCode==13) {
-    	$("#btn_lgn" ).click();
+    	setTimeout(function () { $("#btn_lgn" ).click(); }, 20);
      }
 }
 
