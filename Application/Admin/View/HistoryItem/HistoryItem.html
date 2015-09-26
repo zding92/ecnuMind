@@ -20,8 +20,8 @@
 </head>
 
 <body style="background-color: #fff">
-  <div id="custom-toolbar">
-  	<button class="btn btn-default dropdown-toggle"  type="button" onClick ="$('#comp-table').tableExport({type:'excel', escape:'false'});">
+  <div id="custom-toolbar"  style="width:250px">
+  	<button class="btn btn-default dropdown-toggle" style='float:right'  type="button" onClick ="$('#comp-table').tableExport({type:'excel', escape:'false'});">
   		<i class="glyphicon glyphicon-export icon-share"></i> 
   	</button>
   </div>
@@ -31,7 +31,7 @@
     <table id="comp-table"   
     	   data-url="__APP__/Admin/HistoryItem/showAllHistoryItem"
     	   data-cache="false"
-           data-toolbar="#filter-bar" 
+           data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
            data-search="true"           
            data-show-filter="true"
