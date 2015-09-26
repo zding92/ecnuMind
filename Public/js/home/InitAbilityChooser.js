@@ -1,5 +1,6 @@
+// 全局变量，在abilityNew.js中还可以调用
+var ability_json;
 function ability() {
-	var ability_json;
 	var user_ability_json;
 	
 	// 获取能力的自我评价数据，用于显示弹出框里的自我评价，在InitAbilityChooser()里被调用
@@ -285,10 +286,10 @@ function ability() {
 	    });
 	};
 
-	// js代码从这里开始执行
 	$(document).ready(function() {
+		
+		// 获取当前用户的已有能力
 		function getUserAbility() {
-			// 获取当前用户的已有能力
 			$.ajax({
 	            url: app_url + "/Custom/ability/getAbility" ,
 	            async: false,
@@ -301,7 +302,7 @@ function ability() {
 	        });
 		}
 		
-		// 请求后台生成json格式的数据
+		// js代码从这里开始执行，请求后台生成json格式的数据
 		$.ajax({url: app_url + "/Custom/Ability/genDB",
 			type: "GET",
 	        async:false,
