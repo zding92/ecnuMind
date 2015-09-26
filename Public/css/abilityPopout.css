@@ -221,7 +221,12 @@
 	margin-top: 70px;
 	margin-left: 45px;
 }
-.addAbilityPopSelectLine{
+.addAbilityPopLine1{
+	height: 75px;
+	width: 100%;
+	background-color: #2b99ce;
+}
+.addAbilityPopLine2{
 	height: 75px;
 	width: 100%;
 	background-color: #d2d2d2;
@@ -249,7 +254,31 @@
 .addAbilityPopSelectDiv2{
 	display: inline;
 }
-
-
-
-
+.addAbilityPopLine3{
+	height: 75px;
+	width: 100%;
+	font-size: 25px;
+	font-family: 微软雅黑;
+	font-weight: 200;
+	background-color: #ffffff;
+}
+.addAbilityName{
+	margin-top: 30px;
+	margin-left: 35px;
+}
+.addAbilityName label{
+	font-size: 25px;
+	font-family: 微软雅黑;
+    font-weight: 400;
+}
+.addAbilityName input{
+	min-width: 255px;
+	font-size: 25px;
+	font-family: 微软雅黑;
+    font-weight: 200;
+}
+.addAbilityPopLine4{
+	height: 240px;
+	width: 100%;
+	background-color: #fff;
+} 

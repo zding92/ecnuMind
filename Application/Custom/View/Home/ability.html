@@ -89,7 +89,7 @@
 
           <!-- 此div为新增个人能力窗口 -->
           <div class="new-popover">
-		  	<div class="popoutLine1">
+		  	<div class="addAbilityPopLine1">
 		  		<p class="popoutAblityName">添加能力</p>
 		  		<img src="__PUBLIC__/img/popout/popoutLine1Right.png" alt="error">
 		  		<div class="popoutLine1Right"> 
@@ -99,7 +99,7 @@
 		  			</div>
 		  		</div>
 		  	</div>
-		  	<div class="addAbilityPopSelectLine" id="popoutLine3">
+		  	<div class="addAbilityPopLine2">
 				<div class='addAbilityPopSelectDiv'>
 					<div class='addAbilityPopSelectDiv1'>
 						领域：<select id="cmbProvince"></select>
@@ -108,20 +108,34 @@
 						方向：<select id="cmbCity"></select>
 					</div>
 					  <select id="cmbArea" style="display:none"></select>
-
-
-				<script type="text/javascript">
-					addressInit('cmbProvince', 'cmbCity', 'cmbArea', '陕西', '宝鸡市', '金台区');
-				</script>
 				</div>
 		  	</div>
-		  			  	 
+		  	<div class="addAbilityPopLine3">
+		  		<div class="addAbilityName">
+			  		<label>
+			  		能力：<input type="text" placeholder="请输入你要添加的能力"/>
+			  		</label>
+		  		</div>
+		  	</div>
+		  	<div class="addAbilityPopLine4">
+		  		<div class="abilityDetailHead">
+		  			<img src="__PUBLIC__/img/popout/abilityDetailHead.png" alt="error">
+		  			<h1>能力详细说明</h1>
+		  		</div>
+		  		<div class="abilityDetailContainer" style="z-index:99">
+			  		<div class="abilityDetailCover">
+			  			<img src="__PUBLIC__/img/popout/abilityDetailCover.png" alt="error">	
+			  			<h1>点击以编辑此能力的详细说明</h1>	  			
+			  		</div>
+			  		<form>
+			  			 <textarea class="abilityDetail" id="abilityDetail" placeholder="在此添加经历或认证，进一步说明此项能力"></textarea>
+			  		</form>
+		  		</div>
+		  	</div>
 		  </div>
   		<script type="text/javascript"> ability(); </script>
   		<script type="text/javascript">
-			$(function(){
-				$("#popoutLine3").sjld("#shenfen","#chengshi","#quyu");
-			});
+			addressInit('cmbProvince', 'cmbCity', 'cmbArea', '陕西', '宝鸡市', '金台区');
 		</script>
 	</body>
 </html>         

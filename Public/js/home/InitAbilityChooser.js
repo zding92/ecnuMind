@@ -308,7 +308,7 @@ function ability() {
 	        dataType: 'JSON',
 	        success: function(result) {
 	        	ability_json = result;
-	            var cnt1 = new Number(1);
+	        	var cnt1 = new Number(1);
 	            for (l1 in ability_json) {
 	            			
 		            var obj1 = $("<div></div>");
