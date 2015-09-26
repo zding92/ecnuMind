@@ -10,6 +10,11 @@ class HomeController extends UserinfoController {
 		$this->display();
 	}	
 	
+	//加载修改密码界面
+	public function Safe(){
+		$this->display();
+	}
+	
 	/**
 	 * 载入个人主页时提交Ajax数据的Target
 	 */

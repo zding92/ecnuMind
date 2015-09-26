@@ -173,8 +173,8 @@ $(document).ready(function () {
     {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='Safe_frame' id='Safe_frame'   \
-    		         src= '" + app_url + "/Home/Comp/Safe" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=Comp_frame.document.body.scrollHeight' style='height:600px;' ></iframe>")	
+    		         src= '" + app_url + "/Custom/Home/Safe" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=Safe_frame.document.body.scrollHeight' style='height:600px;' ></iframe>")	
     	}                         
     }
     
