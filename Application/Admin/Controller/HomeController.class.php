@@ -1,8 +1,9 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class HomeController extends Controller {
-    public function index(){
+use Admin\Common\Controller\CommonController;
+class HomeController extends CommonController {
+    public function home(){
     	$this->display();
   }
 }

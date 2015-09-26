@@ -1,7 +1,8 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class CurrentCompController extends Controller {
+use Admin\Common\Controller\CommonController;
+class CurrentCompController extends CommonController {
     public function index(){
     	$this->display();
   }

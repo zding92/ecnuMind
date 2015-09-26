@@ -1,8 +1,9 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class HistoryItemController extends Controller {
-    public function index(){
+use Admin\Common\Controller\CommonController;
+class HistoryItemController extends CommonController {
+    public function Historyitem(){
     	$this->display();
   }
 }

@@ -23,7 +23,11 @@ window.onload = function () {
         	switch (call) {
 			case 'custom_login':
 				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
-                location = home_url; // 登录成功后指定跳转页面  
+                location = custom_url; // 登录成功后指定跳转页面  
+				break;
+			case 'admin_login':
+				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
+                location = admin_url; // 登录成功后指定跳转页面  
 				break;
 			case 'user_noexist':
 				tips.innerHTML = '<font color="red">帐号不存在！</font>';

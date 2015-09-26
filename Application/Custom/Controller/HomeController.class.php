@@ -161,6 +161,8 @@ class HomeController extends UserinfoController {
 		// where username = 'username';
 		$user_id = array_pop($allData);
 		$model = M('user_custom');
-		return $model->where("user_id = $user_id")->save($allData);
+		$return = $model->where("user_id=$user_id")->filter('strip_tags')->save($allData);
+		if ($return === false) return false;
+		return true;
 	}
 }

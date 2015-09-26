@@ -104,7 +104,7 @@ class CompController extends CommonController {
 		$compItemInfo['comp_participant_id'] = $participantStr;
 		
 		// 获取全站唯一的用户个人报名ID
-		$compId = $compItemModel->data($compItemInfo)->add();
+		$compId = $compItemModel->data($compItemInfo)->filter('strip_tags')->add();
 		
 		// 返回给单项竞赛报名页面后台这个唯一的ID
 		return $compId;
@@ -163,6 +163,6 @@ class CompController extends CommonController {
 		$compItemModel = M('ecnu_mind.competition_main', null);
 		$compItemModel->create();
 		$compItemModel->comp_participant_id = implode(',', $participant);
-		$compItemModel->save();
+		$compItemModel->filter('strip_tags')->save();
 	}
 }

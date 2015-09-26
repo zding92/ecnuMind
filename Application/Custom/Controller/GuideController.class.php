@@ -40,7 +40,7 @@ class GuideController extends UserinfoController {
 			// 通过验证，设置完成步骤
 			$custom->complete_steps = I('step') + 1;
 			
-			$custom->where('user_id='.session('user_id'))->save();
+			$custom->where('user_id='.session('user_id'))->filter('strip_tags')->save();
 			
 			$this->ajaxReturn('success', 'EVAL');
 		}

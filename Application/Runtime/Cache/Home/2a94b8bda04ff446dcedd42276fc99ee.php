@@ -116,7 +116,8 @@
     	var login_url = '/webprj/ecnu_mind/index.php/Home/Index/login'; 
     	var register_url = '/webprj/ecnu_mind/index.php/Home/Index/registerCustom'
     	var public_url = '/webprj/ecnu_mind/Public';
-  		var home_url = '/webprj/ecnu_mind/index.php/custom/home/home';
+  		var custom_url = '/webprj/ecnu_mind/index.php/custom/home/home';
+  		var admin_url = '/webprj/ecnu_mind/index.php/Admin/home/home';
   		var incomplete_url = '/webprj/ecnu_mind/index.php/custom/guide/guide';
     </script>
 	<script src="/webprj/ecnu_mind/Public/js/index/Login.js"></script>

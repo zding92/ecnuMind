@@ -56,7 +56,7 @@ class AbilityController extends CommonController{
 			$insertData['_logic'] = 'AND';
 			if ($userAbility->where($insertData)->find() === null) {
 				$userAbility->create($insertData);
-				$userAbility->add();
+				$userAbility->filter('strip_tags')->add();
 				$this->ajaxReturn("var update_success = true;","EVAL");
 			} else {
 				$this->ajaxReturn("var update_success = false;","EVAL");
@@ -88,7 +88,7 @@ class AbilityController extends CommonController{
 				// 所有ability的tag都包含其name。
 				$abilityInfo['tag'] = $abilityName;
 				$abilityTable->create();
-				$abilityTable->add();
+				$abilityTable->filter('strip_tags')->add();
 				$this->ajaxReturn("var add_success = true;","EVAL");
 			} else {
 				$this->ajaxReturn("var add_success = false;","EVAL");

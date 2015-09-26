@@ -87,7 +87,7 @@ class TiaozhanController extends CompController {
 		$tiaozhanData['comp_item_id'] = $compItemID;
 		$tiaozhanData = $this->clearBTable($tiaozhanData);
 		
-		$this->tiaozhanModel->data($tiaozhanData)->add();
+		$this->tiaozhanModel->data($tiaozhanData)->filter('strip_tags')->add();
 		
 		// 返回comp_item_id用于表单更新。
 		$result['operation_info'] = 'added';
@@ -112,7 +112,7 @@ class TiaozhanController extends CompController {
 		$participentId = $this->getParticipantId();
 		$this->updateCompParticipant($participentId);
 		
-		$this->tiaozhanModel->save();
+		$this->tiaozhanModel->filter('strip_tags')->save();
 		
 		$this->ajaxReturn('updated', 'EVAL');
 	}

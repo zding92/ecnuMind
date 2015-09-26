@@ -6,6 +6,8 @@ class IndexController extends Controller {
 	 * 首页入口
 	 */
     public function index(){
+    	// 先注销，后显示
+    	session(null);
         $this->display();
     }
     
@@ -49,7 +51,7 @@ class IndexController extends Controller {
     	// 自动利用表单构建D对象
     	if ($user->create()) {
     		// 操作数据库->添加数据，并获取主键
-    		$id = $user->add();
+    		$id = $user->filter('strip_tags')->add();
     		session('user_id', $id);
     	} else {
     		// 根据模型自动验证，如果存在相同用户名返回'exist'。
@@ -92,7 +94,7 @@ class IndexController extends Controller {
     		
     		// 设置登录日期
     		$data['last_login_date'] = date('Y-m-d');
-    		$user->where("user_id=$userId")->save($data);
+    		$user->where("user_id=$userId")->filter('strip_tags')->save($data);
     		
     	} else {
     		// 否则代表存在用户，但是密码错误，返回下列js变量，利用eval脚本解析器获取变量
