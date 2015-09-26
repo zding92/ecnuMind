@@ -19,8 +19,8 @@ $(function(){
 		height: 600,
 		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
-		table_filter.bootstrapTableFilter('enableFilter', 'comp_field');
-		table_filter.bootstrapTableFilter('enableFilter', 'apply_state');
+		table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
+		table_filter.bootstrapTableFilter('enableFilter', 'comp_date');
 		// 将第四列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
 		$table.bootstrapTable('toggleColumn', 4, false, true);
 		
