@@ -127,6 +127,11 @@ class TiaozhanController extends CompController {
 		$this->ajaxReturn('deleted', 'EVAL');
 	}
 
+	/**
+	 * 返回用户该项竞赛的详细信息。
+	 * @param string $compItemId 竞赛报名表单id。 
+	 * @param boolean $returnAuthorDetail 是否返回参与者详细信息。
+	 */
 	private function getTiaozhanData($compItemId, $returnAuthorDetail=FALSE) {
 		$tiaozhanData = $this->tiaozhanModel->find($compItemId);
 		

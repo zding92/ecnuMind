@@ -23,7 +23,7 @@ class CompController extends CommonController {
 	}
 	
 	public function getCompInfo() {
-		$compModel = M('ecnu_mind.competition_info', null);
+		$compModel = M('ecnu_mind.competition_info');
 		$allComp = $compModel->select();
 			
 		$allComp = $this->assignTemplate($allComp);
@@ -35,23 +35,24 @@ class CompController extends CommonController {
 	 * 获取个人竞赛信息（不包含具体内容，仅返回竞赛名称等最基本信息）
 	 */
 	public function getCompItem() {
-		$compItemModel = M('ecnu_mind.competition_main', null);
-		$compInfoModel = M('ecnu_mind.competition_info', null);
+		$compItemModel = M('ecnu_mind.competition_main');
+		$compInfoModel = M('ecnu_mind.competition_info');
 	
 		// 设置查询条件
 		$map['comp_participant_id'] = array('like', '%'.session('user_studentid').'%') ;
 		
-		$userCompIds = $compItemModel
-		               ->where($map)
-					   ->field('comp_type_id, comp_item_id')
-		               ->select();
+		// 获取报名的基本信息
+		$compBaseInfo = $compItemModel
+		               				->where($map)
+							   		->field('comp_type_id,comp_item_id,apply_date,comp_state')
+				               		->select();
 		
 		$compModels = array();
 		
-		foreach ($userCompIds as $compId) {
+		foreach ($compBaseInfo as $compBase) {
 			// 获得该项竞赛的基本信息
 			$compinfo =	$compInfoModel
-						->where('comp_id='.$compId['comp_type_id'])
+						->where('comp_id='.$compBase['comp_type_id'])
 						->field("comp_name,comp_template")
 						->find();
 			
@@ -68,23 +69,30 @@ class CompController extends CommonController {
 			
 			// 根据模板名称和竞赛报名ID获得详细信息
 			$returnItem = $compDetailModel
-			              ->where("comp_item_id=".$compId['comp_item_id'])
-			              ->field("comp_item_name,apply_date")
+			              ->where($compBase)
+			              ->field("comp_item_name")
 			              ->find();
-			$returnItem['comp_name'] = $compinfo['comp_name'];
+			
+			/// 添加其他竞赛信息
 			
 			// 装配template的url
 			$compTmp = $compinfo['comp_template'];			
+			
+			// 返回竞赛名和竞赛报名日期和报名当前状态。
+			$returnItem['comp_name'] = $compinfo['comp_name'];
+			$returnItem['apply_date'] = $compBase['apply_date'];
+			$returnItem['comp_state'] = $compBase['comp_state'];
+			
 			$returnItem['comp_template'] = 
-				U("Custom/$compTmp/$compTmp"."_modify","compItemId=".$compId['comp_item_id'],"");
+				U("Custom/$compTmp/$compTmp"."_modify","compItemId=".$compBase['comp_item_id'],"");
 			
 			$returnItem['comp_view'] = 
-				U("Custom/$compTmp/$compTmp"."_origin","compItemId=".$compId['comp_item_id'],"");
+				U("Custom/$compTmp/$compTmp"."_origin","compItemId=".$compBase['comp_item_id'],"");
 			
 			$returnItem['comp_remove'] =
-			U("Custom/$compTmp/$compTmp"."Remove","compItemId=".$compId['comp_item_id'],"");
+			U("Custom/$compTmp/$compTmp"."Remove","compItemId=".$compBase['comp_item_id'],"");
 			
-			$returnItem['comp_item_id'] = $compId['comp_item_id'];
+			$returnItem['comp_item_id'] = $compBase['comp_item_id'];
 			
 			$result[] = $returnItem; 
 		}
@@ -94,7 +102,7 @@ class CompController extends CommonController {
 	}
 	
 	protected function registerComp($participant) {
-		$compItemModel = M('ecnu_mind.competition_main', null);
+		$compItemModel = M('ecnu_mind.competition_main');
 		$regValue = I('post.');
 		$participantStr = implode(',', $participant);
 		foreach ($participant as $key => $val) {
@@ -114,6 +122,9 @@ class CompController extends CommonController {
 		
 		// 将用户学号数组转化为字符串存入
 		$compItemInfo['comp_participant_id'] = $participantStr;
+		
+		// 将当前日期设置为竞赛报名日期
+		$compItemInfo['apply_date'] = date('Y-m-d', time());
 		
 		// 获取全站唯一的用户个人报名ID
 		$compId = $compItemModel->data($compItemInfo)->filter('strip_tags')->add();
