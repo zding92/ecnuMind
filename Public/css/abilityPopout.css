@@ -11,7 +11,7 @@
 	filter:alpha(opacity=40);
 	display:none
 }
-.theme-popover {
+.theme-popover, .new-popover  {
 	z-index:9999;
 	position:fixed;
 	top:50%;
@@ -70,7 +70,7 @@
 	vertical-align: top;
 	color: white;
 }
-.theme-popover .close{
+.theme-popover .close, .new-popover .close {
 	display: inline;
 	font-size: 18px;
 	line-height: 18px;
@@ -79,7 +79,7 @@
 	margin-right: 4px;
 	margin-left: 4px;
 }
-.theme-popover .close:hover{
+.theme-popover .close, .new-popover .close {
 	color: #6fbce1;
 }
 .popoutLine1Text{

@@ -141,11 +141,11 @@ class AbilityController extends CommonController{
 					$insertData['selfComment'] = $selfComment;
 				$insertData['_logic'] = 'AND';
 				$userAbility->create($insertData);
-				$userAbility->add();
+				$userAbility->add();//插入已有数据
 				$this->ajaxReturn("insert_success","EVAL");
 			} else {
 				$updateData['selfComment'] = $selfComment;
-				$userAbility->where($insertData)->save($updateData);
+				$userAbility->where($insertData)->save($updateData);//更新已有数据
 				$this->ajaxReturn("update_success","EVAL");
 			}
 		}

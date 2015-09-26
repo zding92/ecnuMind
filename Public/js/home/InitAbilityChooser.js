@@ -2,6 +2,7 @@ function ability() {
 	var ability_json;
 	var user_ability_json;
 	
+	// 获取能力的自我评价数据，用于显示弹出框里的自我评价，在InitAbilityChooser()里被调用
 	function FillSelfComment(ability_name) {
 		var handinPHP = "abilityName=" + ability_name;
 		$.ajax({
@@ -15,6 +16,18 @@ function ability() {
 		
 	}
 	
+	// 添加个人新的能力
+	$(".new_ability").click(function() {
+		// 弹出新增能力框
+		$('.new-popover').slideDown(200);
+		// 关闭新增能力框
+		$('.new-popover .close').click(function(){
+			$('.theme-popover-mask').fadeOut(100);
+			$('.new-popover').slideUp(200);
+		})
+	});
+	
+	// mixitup初始化 + 弹出框初始化，在getUserAbility()里被调用
 	function InitAbilityChooser() {
 	   $('#L3 :input').each(function () {
 	        var self = $(this),
@@ -74,6 +87,7 @@ function ability() {
 	        }
 	    }.init();
 
+	    // 关联第一级和第二级的能力
 	    var filters = "";
 	    $('.tags').click(function () {
 	        if ($(this).attr('id') == "L1_all") {
@@ -97,6 +111,7 @@ function ability() {
 	        //setTimeout('$("#index").click()', 500);
 	    })
 
+	    // 关联第二级和第三级的能力
 	    var filters_2 = "";
 	    $('.tags_1').click(function () {
 	        if ($(this).attr('id') == "L2_all") {
@@ -157,7 +172,7 @@ function ability() {
 	        	}
 	        	
 	        	//点击选择能力的标签，出现弹出框
-	    		$('.popoutAblityName').text($(this).parent().text());
+	    		$('.theme-popover .popoutAblityName').text($(this).parent().text());
 	    		$('.theme-popover-mask').fadeIn(100);
 	    		$('.theme-popover').slideDown(200);
 	    		
@@ -226,8 +241,8 @@ function ability() {
 			$('.abilityDetailCover').css("display","none");
 		})
 
-		//点击保存按钮
-		$('.popoutLine1Save').click(function(){
+		//点击更新能力的保存按钮
+		$('.theme-popover .popoutLine1Save').click(function(){
 	        //取出能力说明框中的内容
 	        var abilityDetail = $(".abilityDetail").val();
 
@@ -270,16 +285,17 @@ function ability() {
 	    });
 	};
 
+	// js代码从这里开始执行
 	$(document).ready(function() {
-
-		// 请求当前用户的已有能力
 		function getUserAbility() {
+			// 获取当前用户的已有能力
 			$.ajax({
 	            url: app_url + "/Custom/ability/getAbility" ,
 	            async: false,
 	            dataType: 'JSON',
 	            success: function (result) {
 	            	user_ability_json = result;
+	            	// mixitup初始化 + 弹出框初始化
 	            	InitAbilityChooser();
 	            }
 	        });
