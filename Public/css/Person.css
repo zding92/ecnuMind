@@ -530,7 +530,7 @@ font-size: 0px;
     position: relative;
 }
 
-.info_container .ability_head > p{
+.info_container .ability_head p {
     font-size: 30px;
     margin: 0px auto;
     font-family: 微软雅黑;
@@ -541,30 +541,6 @@ font-size: 0px;
     letter-spacing: 5px;
 }
 
-/*
-.info_container .ability_head #left-li{
-	position: relative;
-	float: left;
-    margin: 0px auto;
-    padding: 10px 0px 0px 0px;
-    display: inline-flex;
-	list-style-type:none;
-	font-size: 30px;
-    font-family: 微软雅黑;
-    color: #aaa;
-    position: relative;
-    display: inline-block;
-    letter-spacing: 5px;
-}
-#right-li{
-	position: relative;
-	float: right;
-	margin: 0px auto;
-	padding: 10px 0px 0px 0px;
-	display: inline-flex;
-}
-*/
-
 .info_container .tags {
     height: 26px;
     width: auto;
@@ -573,7 +549,7 @@ font-size: 0px;
     padding: 5px 10px 5px 10px;
     color: #2098d1;
     background: #fff;
-    margin: 5px 2px;
+    margin: 5px auto;
     display: inline-block;
 }
 
@@ -585,7 +561,7 @@ font-size: 0px;
     padding: 5px 5px 5px 5px;
     color: #2098d1;
     background: #fff;
-    margin: 5px 2px;
+    margin: 5px auto;
     display: none;
 }
 

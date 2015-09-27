@@ -1,34 +1,8 @@
-// 全局变量，在abilityNew.js中还可以调用
-var ability_json;
 function ability() {
-	var user_ability_json;
-	
-	// 获取能力的自我评价数据，用于显示弹出框里的自我评价，在InitAbilityChooser()里被调用
-	function FillSelfComment(ability_name) {
-		var handinPHP = "abilityName=" + ability_name;
-		$.ajax({
-            url: app_url + "/Custom/ability/getSelfComment",
-            data: handinPHP,
-            async: false,
-            success: function (result) {
-        		$(".abilityDetail").html(result);
-            }
-        });
-		
-	}
-	
-	// 添加个人新的能力
-	$(".newAbilityIcon").click(function() {
-		// 弹出新增能力框
-		$('.new-popover').slideDown(200);
-		// 关闭新增能力框
-		$('.new-popover .close').click(function(){
-			$('.theme-popover-mask').fadeOut(100);
-			$('.new-popover').slideUp(200);
-		});
-	});
-	
-	// mixitup初始化 + 弹出框初始化，在getUserAbility()里被调用
+	var ability_json;
+
+
+
 	function InitAbilityChooser() {
 	   $('#L3 :input').each(function () {
 	        var self = $(this),
@@ -40,12 +14,8 @@ function ability() {
 	            radioClass: 'iradio_line-blue',
 	            insert: '<div class="icheck_line-icon"></div>' + label_text
 	        });
-	        // 已经有的能力要勾选
-	        for (idx in user_ability_json)
-	        	if (user_ability_json[idx]['ability_name'] == label_text)
-	        		self.iCheck("check");
 	    });
-	   
+	    
 	    $(function () {
 	        $('#L3 :input').each(function () {
 	        	$(this).parent().addClass($(this).attr('data-cat'));
@@ -53,7 +23,7 @@ function ability() {
 	            $(this).parent().css('display', 'inline-block');
 	        })
 	    });
-	    
+	       
 	    var filterList = {
 	        init: function () {
 	            // MixItUp plugin
@@ -88,7 +58,6 @@ function ability() {
 	        }
 	    }.init();
 
-	    // 关联第一级和第二级的能力
 	    var filters = "";
 	    $('.tags').click(function () {
 	        if ($(this).attr('id') == "L1_all") {
@@ -112,7 +81,6 @@ function ability() {
 	        //setTimeout('$("#index").click()', 500);
 	    })
 
-	    // 关联第二级和第三级的能力
 	    var filters_2 = "";
 	    $('.tags_1').click(function () {
 	        if ($(this).attr('id') == "L2_all") {
@@ -139,16 +107,16 @@ function ability() {
 
 	    var hasAbility = false;
 	    var lastPickedCheckbox = '';//最后一次点击、操作的能力标签
-	    var checkStateItem;
+	    var CheckStateItem;
 	    $(function(){//将获取最新的标签文字以及说明添加至页面中
 	    	$("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
-	        	checkStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
-	        	hasAbility = !(checkStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
+	        	CheckStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
+	        	hasAbility = !(CheckStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
 	        	//点击能力标签之后，在未保存之前，不改变当前状态
 	        	if (hasAbility == false)
-	        		checkStateItem.iCheck('uncheck');
+	        		CheckStateItem.iCheck('uncheck');
 	        	else
-	        		checkStateItem.iCheck('check');
+	        		CheckStateItem.iCheck('check');
 	        	if (hasAbility == false){
 	        		$('.popoutLine3RedText').addClass("line3Selected");
 	        		$('.popoutLine3RedText').addClass("line3RedSelected");
@@ -168,12 +136,10 @@ function ability() {
 	        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
 	        		$('.popoutLine3RedText').html("×");
 	        		$('.popoutLine3Green').animate({width:'700px'},"middle");
-	        		// 获取以前已经有的自我评价
-	        		FillSelfComment($(this).parent().text());
 	        	}
 	        	
 	        	//点击选择能力的标签，出现弹出框
-	    		$('.theme-popover .popoutAblityName').text($(this).parent().text());
+	    		$('.popoutAblityName').text($(this).parent().text());
 	    		$('.theme-popover-mask').fadeIn(100);
 	    		$('.theme-popover').slideDown(200);
 	    		
@@ -242,8 +208,8 @@ function ability() {
 			$('.abilityDetailCover').css("display","none");
 		})
 
-		//点击更新能力的保存按钮
-		$('.theme-popover .popoutLine1Save').click(function(){
+		//点击保存按钮
+		$('.popoutLine1Save').click(function(){
 	        //取出能力说明框中的内容
 	        var abilityDetail = $(".abilityDetail").val();
 
@@ -251,10 +217,7 @@ function ability() {
 	        if (abilityDetail == "在此添加经历或认证，进一步说明此项能力")
 	            abilityDetail = "";
 	        
-	        var json2selfCommentPHP = 
-	        			'abilityName=' + lastPickedCheckbox +
-	        			'&selfComment='+ abilityDetail + 
-	        			'&hasAbility=' + hasAbility;
+	        var json2selfCommentPHP = 'abilityName='+lastPickedCheckbox +'&selfComment='+abilityDetail;
 	        
 //		        alert(app_url);
 	        
@@ -264,52 +227,29 @@ function ability() {
 	            type: "POST", //请求方式
 	            async: false,
 	            success: function (result) {
-	            	switch (result) {
-					case 'insert_success':
-						break;
-					case 'update_success':
-						break;
-					case 'delete_success':
-						break;
-					default:
-						break;
-					}
+	            	eval(result);
 	            	//$(".abilityDetail").val(selfCommentData.selfComment);
 	            	//alert(selfCommentData.selfComment);
 	            }
 	        });
 	        if (hasAbility == false)
-	    		checkStateItem.iCheck('uncheck');
+	    		CheckStateItem.iCheck('uncheck');
 	    	else
-	    		checkStateItem.iCheck('check');
+	    		CheckStateItem.iCheck('check');
 	        
 	    });
 	};
 
 	$(document).ready(function() {
 		
-		// 获取当前用户的已有能力
-		function getUserAbility() {
-			$.ajax({
-	            url: app_url + "/Custom/ability/getAbility" ,
-	            async: false,
-	            dataType: 'JSON',
-	            success: function (result) {
-	            	user_ability_json = result;
-	            	// mixitup初始化 + 弹出框初始化
-	            	InitAbilityChooser();
-	            }
-	        });
-		}
-		
-		// js代码从这里开始执行，请求后台生成json格式的数据
+		// 请求后台生成json格式的数据
 		$.ajax({url: app_url + "/Custom/Ability/genDB",
 			type: "GET",
 	        async:false,
 	        dataType: 'JSON',
 	        success: function(result) {
 	        	ability_json = result;
-	        	var cnt1 = new Number(1);
+	            var cnt1 = new Number(1);
 	            for (l1 in ability_json) {
 	            			
 		            var obj1 = $("<div></div>");
@@ -345,7 +285,7 @@ function ability() {
 		});
 		$('<div id="index" class="filter" style="display:none"></div>').appendTo('#L1');
 		$('<div id="index2" class="filter" style="display:none"></div>').appendTo('#L2');
-		getUserAbility();
+		InitAbilityChooser();
 	});
 
 }
