@@ -23,7 +23,8 @@ class IndexController extends Controller {
     public function login() {
     	$this->checkUser();
     	
-    	// 验证通过，开始登录操作。    	
+    	// 验证通过，开始登录操作,并设置时间戳。    	
+    	session('login_time', time());
     	
     	// 分别对不同权限的用户（普通用户custom和管理员amdmin做不同操作）
     	if (session('user_access') == 'custom') {
@@ -38,7 +39,8 @@ class IndexController extends Controller {
      */
     public function logout() {
     	session(null);
-    	$this->display('index');
+    	// 重定向到网站入口
+    	$this->redirect('/');
     }
     
     /**
@@ -83,9 +85,6 @@ class IndexController extends Controller {
     	// 构造用户数据基础模型
     	$user = M('ecnu_mind.user_base');
     	
-    	// 启动session。
-    	session_start();
-    	 
     	// 获取post方式传来的username和password
     	$username = I('post.username');
     	$password = I('post.password');
@@ -104,6 +103,7 @@ class IndexController extends Controller {
     	if ($result['password'] === md5($password)) {
     		// 将userid放入session，作为后台识别用户操作身份句柄。
     		$userId = $user->user_id;
+    		
     		session('user_id', $userId);
     			
     		// 设置登录权限，作为后台校验用户权限的依据。
