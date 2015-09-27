@@ -906,7 +906,7 @@
                     id_ = '',
                     class_ = that.header.classes[j];
 
-                style = sprintf('style="%s"', csses.concat(that.header.styles[j]).join('; '));
+                style = sprintf('style="%s"', csses.concat(that.header.styles[j].replace(/width:[ 0-9]*px;/, "")).join('; '));
 
                 value = calculateObjectValue(that.header,
                     that.header.formatters[j], [value, item, i], value);
