@@ -21,10 +21,11 @@
 
 <body style="background-color: #fff">
   <div id="custom-toolbar"  style="width:700px">
-    <span class='toolBarCompName' style='float:right'>|完成时间：</span>
-  	<span class='toolBarFinishTime' style='float:right;margin-left: 10px;'>竞赛名称：</span>
-  	
-  	
+    
+    <span style='float:right' id='comp_date'></span>
+    <span style='float:right'> &nbsp;| &nbsp;</span>
+	<span style='float:right' id='comp_name'></span>
+	<span style='float:right'>筛选条件：</span>
   </div>
   <div style="margin:10px 15px 15px;">
   	<!-- <a href="#" onClick ="$('#comp-table').tableExport({type:'excel', escape:'false'});" id="buttonExportData" class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all">Export XLS</a> -->
@@ -40,7 +41,6 @@
            data-sort-name="apply_state" 
            data-sort-order="desc"
            data-pagination="true"
-           data-page-list="[5, 10, 20, 50, 100, 200]"
            data-show-export="true"
            >
       <thead>

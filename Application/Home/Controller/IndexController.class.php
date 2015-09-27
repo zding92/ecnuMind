@@ -6,8 +6,14 @@ class IndexController extends Controller {
 	 * 首页入口
 	 */
     public function index(){
-    	// 先注销，后显示
-    	session(null);
+    	// 判断是否存在session，如果存在直接登录
+    	if (null !== session('user_id')) {
+    		if (session('user_access') === 'custom') 
+    			$this->redirect('Custom/Home/home');
+    		else if (session('user_access') === 'admin')
+    			$this->redirect('Admin/Home/home');
+    	}
+    	// 不存在的话显示登陆界面
         $this->display();
     }
     
@@ -28,6 +34,14 @@ class IndexController extends Controller {
     }
     
     /**
+     * 登出
+     */
+    public function logout() {
+    	session(null);
+    	$this->display('index');
+    }
+    
+    /**
      * 注册按钮Ajax提交Target
      */
     public function registerCustom() {
@@ -45,6 +59,9 @@ class IndexController extends Controller {
     	$this->ajaxReturn("success", "EVAL");
     }   
     
+    /**
+     *  在user_base中注册用户。包含帐号密码权限等基本信息。
+     */
     public function registerUser() {
     	// 利用Model类，快速设置约束条件，并创建D对象
     	$user = D('Userbase');

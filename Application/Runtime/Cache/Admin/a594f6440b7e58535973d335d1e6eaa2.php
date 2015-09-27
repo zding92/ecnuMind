@@ -51,7 +51,7 @@
 						    <li id="welcome-user">
 						    </li>
 						    <li id="exit-icon">
-						    	<a href="/webprj/ecnu_mind/index.php/Home/Index/index.html"><img alt="Exit" src="/webprj/ecnu_mind/Public/img/icon/exit.png" title="退出登录"></a>
+						    	<a href="/webprj/ecnu_mind/index.php/Home/Index/logout"><img alt="Exit" src="/webprj/ecnu_mind/Public/img/icon/exit.png" title="退出登录"></a>
 						    </li>
 					    </ul>
 				    </li>
