@@ -72,6 +72,7 @@ class AbilityController extends CommonController{
 			$this->updateAbility();
 	}
 	
+	/*
 	public function addAbility() {
 		$abilityName = I('abilityName');
 		$directionName = I('directionName');
@@ -100,6 +101,57 @@ class AbilityController extends CommonController{
 				$this->ajaxReturn("var add_success = false;","EVAL");
 			}
 		}
+	}*/
+	
+	public function addAbility() {
+
+		$fieldName 	   = I('fieldName');
+		$directionName = I('directionName');
+		$abilityName   = I('abilityName');
+		$selfComment   = I('selfComment');
+		
+		$fieldTable = M('ecnu_mind.field', null);
+		$directionTable = M('ecnu_mind.direction', null);
+		$abilityTable = D('ecnu_mind.ability', null);
+		
+		$fieldTable->where("name='".$fieldName."'")->find();		
+
+		$directionTable->where("name='".$directionName."' AND Field_id='".$fieldTable->id."'")->find();
+		
+		$abilityInfo = 
+		$abilityTable->where("name='".$abilityName."' AND Direction_id='".$directionTable->id."'")->find();
+
+		// 能力已经存在
+		if (isset($abilityInfo)) {
+			$this->ajaxReturn("ability_exist", "EVAL");
+		}
+		// 新增一个能力
+		else {
+			// 在ability表中新增
+			$abilityInfo['name'] = $abilityName;
+			$abilityInfo['Direction_id'] = $directionTable->id;
+			$abilityInfo['tags'] = $abilityName;
+			$abilityInfo['people_count'] = 1;
+			$abilityInfo['state'] = "u";
+			$abilityInfo['_logic'] = "AND";
+			$abilityTable->create($abilityInfo);
+			$abilityTable->add();
+			
+			// 在user_has_ability表中新增
+			$insertData['User_id'] = session('user_id');
+			$insertData['Ability_name'] = $abilityName;
+			// 重新查一遍ability表以获取最新插入的数据的id
+			$abilityTable->where("name='".$abilityName."' AND Direction_id='".$directionTable->id."'")->find();
+			$insertData['Ability_id'] = $abilityTable->id;
+			if ($selfComment !== '')
+				$insertData['selfComment'] = $selfComment;
+			$userAbility = M('ecnu_mind.user_has_ability', null);
+			$userAbility->create($insertData);
+			$userAbility->add();
+			
+			$this->ajaxReturn("add_success", "EVAL");
+		}
+		
 	}
 	
 	public function addComment($Comment) {

@@ -21,10 +21,37 @@ function ability() {
 	$(".newAbilityIcon").click(function() {
 		// 弹出新增能力框
 		$('.new-popover').slideDown(200);
+		//$('.addAbilityPopLine4 input').val("");
 		// 关闭新增能力框
 		$('.new-popover .close').click(function(){
 			$('.theme-popover-mask').fadeOut(100);
 			$('.new-popover').slideUp(200);
+		});
+		// 讲用户编辑的数据传送到后台
+		$('.new-popover .popoutLine1Save').click(function(){
+			var chosenField = $('#cmbProvince option:selected').html();
+			var chosenDirection = $('#cmbCity option:selected').html();
+			var addedAbility = $('.addAbilityName input').val();
+			var abilitySelfComment = $('.addAbilityPopLine4 .abilityDetail').val();
+			var handinPHP = "fieldName=" + chosenField +
+							"&directionName=" + chosenDirection +
+							"&abilityName=" + addedAbility + 
+							"&selfComment=" + abilitySelfComment;
+			$.ajax({
+				url: app_url + "/Custom/ability/addAbility",
+				data: handinPHP,
+				async: false,
+				success: function(result) {
+					switch (result) {
+					case 'add_success':
+						break;
+					case 'ability_exist':
+						break;
+					default:
+						break;
+					}
+				}
+			});
 		});
 	});
 	
