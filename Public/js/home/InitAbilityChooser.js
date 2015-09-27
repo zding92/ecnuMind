@@ -20,6 +20,7 @@ function ability() {
 	// 添加个人新的能力
 	$(".newAbilityIcon").click(function() {
 		// 弹出新增能力框
+		$('.theme-popover-mask').fadeIn(100);
 		$('.new-popover').slideDown(200);
 		//$('.addAbilityPopLine4 input').val("");
 		// 关闭新增能力框
@@ -169,7 +170,7 @@ function ability() {
 	    var checkStateItem;
 	    $(function(){//将获取最新的标签文字以及说明添加至页面中
 	    	$("ins").click(function() {//点击能力标签后执行函数，能力标签被icheck转化为了ins标签
-	        	checkStateItem = $(this).prev().prev();////获取要改变勾选状态的标签
+	        	checkStateItem = $(this).prev().prev();//获取要改变勾选状态的标签
 	        	hasAbility = !(checkStateItem.is(':checked'));//在点击之前，当前的能力标签勾选的勾选情况（true表示被勾选）
 	        	//点击能力标签之后，在未保存之前，不改变当前状态
 	        	if (hasAbility == false)
@@ -185,6 +186,8 @@ function ability() {
 	        		$('.popoutLine3RedText').html("<b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）");		
 	        		$('.popoutLine3GreenText').html("√");
 	        		$('.popoutLine3Green').animate({width:'100px'},"middle");
+	        		$(".abilityDetail").html("");// 不具备的能力肯定没有自我评价
+	        		document.getElementById("abilityDetail").disabled=true;//禁用输入框
 	        	} 
 	        	else{
 	        		$('.popoutLine3GreenText').addClass("line3Selected");//表明绿色选中
@@ -195,8 +198,7 @@ function ability() {
 	        		$('.popoutLine3GreenText').html("<b>目前已掌握</b>（若未掌握该能力，请点击红色按钮）");	
 	        		$('.popoutLine3RedText').html("×");
 	        		$('.popoutLine3Green').animate({width:'700px'},"middle");
-	        		// 获取以前已经有的自我评价
-	        		FillSelfComment($(this).parent().text());
+	        		FillSelfComment($(this).parent().text());// 获取以前已经有的自我评价
 	        	}
 	        	
 	        	//点击选择能力的标签，出现弹出框
