@@ -72,44 +72,15 @@ class AbilityController extends CommonController{
 			$this->updateAbility();
 	}
 	
-	/*
-	public function addAbility() {
-		$abilityName = I('abilityName');
-		$directionName = I('directionName');
-
-		$abilityTable = M('ecnu_mind.ability', null);
-		$directionTable = M('ecnu_mind.direction', null);
-		$fieldTable = M('ecnu_mind.field', null);
-		
-		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
-		$directionInfo = $directionTable->where("id='".$abilityInfo->Direction_id."'")->find();
-		
-		if (isset($abilityInfo) && isset($directionInfo)) {
-			// 如果存在完全一样的能力（包括方向），则不允许添加
-			$this->ajaxReturn("var add_success = false;","EVAL");
-		} else {
-			$directionInfo = $directionTable->where('name='.$directionName)->find();
-			if (isset($directionInfo)) {
-				$abilityInfo['name'] = $abilityName;
-				$abilityInfo['direction_id'] = $directionInfo['id'];
-				// 所有ability的tag都包含其name。
-				$abilityInfo['tag'] = $abilityName;
-				$abilityTable->create();
-				$abilityTable->add();
-				$this->ajaxReturn("var add_success = true;","EVAL");
-			} else {
-				$this->ajaxReturn("var add_success = false;","EVAL");
-			}
-		}
-	}*/
-	
 	public function addAbility() {
 
+		// 获取前台传来的数据
 		$fieldName 	   = I('fieldName');
 		$directionName = I('directionName');
 		$abilityName   = I('abilityName');
 		$selfComment   = I('selfComment');
 		
+		// 创建表的模型
 		$fieldTable = M('ecnu_mind.field', null);
 		$directionTable = M('ecnu_mind.direction', null);
 		$abilityTable = D('ecnu_mind.ability', null);
