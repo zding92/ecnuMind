@@ -13,6 +13,9 @@
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/exportPlugin.js"></script>
   <script>
   	var getDataURL = '__APP__/Home/Comp/getCompItem';
   </script>
@@ -29,16 +32,23 @@
            data-search="true"           
            data-show-filter="true"
            data-striped="true"
-           data-sort-name="apply_state" 
-           data-sort-order="desc">
+           data-sort-name="apply_state"
+           data-click-to-select="true" 
+           data-sort-order="desc"
+           data-show-export="true"
+           >
+           
+           
       <thead>
         <tr>
-          <th data-field="comp_importance" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter">竞赛评级</th>
-          <th data-field="comp_name" data-width="400" data-align="left">竞赛名称</th>
-          <th data-field="comp_field" data-width="100" data-align="left">竞赛类型</th>
-          <th data-field="comp_template" data-width="100" data-align="left">报名链接</th>
-          <th data-field="apply_state" data-width="100" data-align="left">已报项目</th>
-          <th data-field="apply_date" data-width="200" data-align="center">报名起止日期</th>
+          <th data-field="state" data-checkbox="true"></th>
+          <th data-field="comp_name" data-width="250" data-align="left" data-sortable="true" data-sorter="starSorter" >竞赛名称</th>
+          <th data-field="comp_item_name" data-width="400" data-align="left">项目名称</th>
+          <th data-field="comp_date" data-width="80" data-align="center" data-sortable="true">申报时间</th>
+          <th data-field="comp_author1" data-width="80" data-align="left">第一作者</th>
+          <th data-field="apply_department" data-width="200" data-align="center">申报院系</th>
+          <th data-field="comp_prize" data-width="100" data-align="center">审批情况</th>
+          <th data-field="apply_detail" data-width="50" data-align="center">详细查看</th>
         </tr>
       </thead>
     </table>
