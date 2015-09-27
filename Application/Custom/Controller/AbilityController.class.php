@@ -44,44 +44,47 @@ class AbilityController extends CommonController{
 		// 返回json格式的数据
 		return $this->ajaxReturn(S('ability_table'), "EVAL");
 	}
+	public function getAbility() {
+		$userAbility = M('ecnu_mind.user_has_ability', null);
+		$result = $userAbility->field('Ability_name')->select(session('user_id'));
+		return $this->ajaxReturn(json_encode($result),"EVAL");
+	}
 	
-	public function checkAbility() {
+	public function getSelfComment() {
 		$abilityName = I('abilityName');
-		$selfComment = I('selfComment');
 		$userAbility = M('ecnu_mind.user_has_ability', null);
 		$abilityTable = M('ecnu_mind.ability', null);
-		
+	
 		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
 		if (isset($abilityInfo)) {
-			$insertData['User_id'] = session('userid');
-			$insertData['Ability_name'] = $abilityName;
-			$insertData['Ability_id'] = $abilityInfo['id'];
-			if ($selfComment !== '')
-				$insertData['selfComment'] = $selfComment;
-			$insertData['_logic'] = 'AND';
-			if ($userAbility->where($insertData)->find() === null) {
-				$userAbility->create($insertData);
-				$userAbility->filter('strip_tags')->add();
-				$this->ajaxReturn("var update_success = true;","EVAL");
-			} else {
-				$this->ajaxReturn("var update_success = false;","EVAL");
-			}
-		} 
+			$queryData['User_id'] = session('user_id');
+			$queryData['Ability_id'] = $abilityInfo['id'];
+			$userAbility->where($queryData)->find();
+			$this->ajaxReturn($userAbility->selfcomment, "EVAL");
+		}
 		// 防止用户通过非法手段注入数据，以及防止数据传输过程中失真。
-		else $this->ajaxReturn("var update_success = false;","EVAL");
+		else
+			$this->ajaxReturn("fail","EVAL");
+	}
+	
+	public function checkAbility() {
+		if (I('hasAbility') == "false")
+			$this->deleteAbility();
+		else
+			$this->updateAbility();
 	}
 	
 	public function addAbility() {
 		$abilityName = I('abilityName');
 		$directionName = I('directionName');
-
+	
 		$abilityTable = M('ecnu_mind.ability', null);
 		$directionTable = M('ecnu_mind.direction', null);
 		$fieldTable = M('ecnu_mind.field', null);
-		
+	
 		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
 		$directionInfo = $directionTable->where("id='".$abilityInfo->Direction_id."'")->find();
-		
+	
 		if (isset($abilityInfo) && isset($directionInfo)) {
 			// 如果存在完全一样的能力（包括方向），则不允许添加
 			$this->ajaxReturn("var add_success = false;","EVAL");
@@ -93,7 +96,7 @@ class AbilityController extends CommonController{
 				// 所有ability的tag都包含其name。
 				$abilityInfo['tag'] = $abilityName;
 				$abilityTable->create();
-				$abilityTable->filter('strip_tags')->add();
+				$abilityTable->add();
 				$this->ajaxReturn("var add_success = true;","EVAL");
 			} else {
 				$this->ajaxReturn("var add_success = false;","EVAL");
@@ -107,6 +110,51 @@ class AbilityController extends CommonController{
 	
 	public function findSimilarAbility($AbilityName) {
 		// 利用sphinx检索相似的能力
+	}
+	
+	private function deleteAbility() {
+		$abilityName = I('abilityName');
+		$userAbility = M('ecnu_mind.user_has_ability', null);
+		$abilityTable = M('ecnu_mind.ability', null);
+	
+		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
+		if (isset($abilityInfo)) {
+			$deleteData['User_id'] = session('user_id');
+			$deleteData['Ability_id'] = $abilityInfo['id'];
+			$userAbility->where($deleteData)->delete();
+			$this->ajaxReturn("delete_success", "EVAL");
+		}
+		// 防止用户通过非法手段注入数据，以及防止数据传输过程中失真。
+		else
+			$this->ajaxReturn("fail","EVAL");
+	}
+	
+	private function updateAbility() {
+		$abilityName = I('abilityName');
+		$selfComment = I('selfComment');
+		$userAbility = M('ecnu_mind.user_has_ability', null);
+		$abilityTable = M('ecnu_mind.ability', null);
+	
+		$abilityInfo = $abilityTable->where("name='".$abilityName."'")->find();
+		if (isset($abilityInfo)) {
+			$insertData['User_id'] = session('user_id');
+			$insertData['Ability_name'] = $abilityName;
+			$insertData['Ability_id'] = $abilityInfo['id'];
+			if ($userAbility->where($insertData)->find() === null) {
+				if ($selfComment !== '')
+					$insertData['selfComment'] = $selfComment;
+				$insertData['_logic'] = 'AND';
+				$userAbility->create($insertData);
+				$userAbility->add();//插入已有数据
+				$this->ajaxReturn("insert_success","EVAL");
+			} else {
+				$updateData['selfComment'] = $selfComment;
+				$userAbility->where($insertData)->save($updateData);//更新已有数据
+				$this->ajaxReturn("update_success","EVAL");
+			}
+		}
+		// 防止用户通过非法手段注入数据，以及防止数据传输过程中失真。
+		else $this->ajaxReturn("fail","EVAL");
 	}
 }
 ?>
