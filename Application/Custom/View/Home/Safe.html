@@ -11,6 +11,7 @@
   <link rel='Stylesheet' type='text/css' href='__PUBLIC__/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Person.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Safe.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
  
   <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
@@ -19,6 +20,8 @@
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
+  
 </head> 
 <body >
 	<div class="title_box">
@@ -39,7 +42,7 @@
           
           <div class="controls">
             <div class="input-append" style="positon:static">
-              <input class="span2" placeholder="" type="password">
+              <input id="Safe_original_pwd" class="span2"  type="password">
               <span class="add-on">^_^</span>
             </div>
             <p class="help-block"></p>
@@ -52,7 +55,7 @@
           
           <div class="controls">
             <div class="input-append" style="positon:static">
-              <input class="span2" placeholder="" type="password">
+              <input id="Safe_new_pwd1" class="span2" type="password">
               <span class="add-on">^_^</span>
             </div>
             <p class="help-block"></p>
@@ -65,7 +68,7 @@
           
           <div class="controls">
             <div class="input-append" style="positon:static">
-              <input class="span2" placeholder="" type="password">
+              <input id="Safe_new_pwd2" class="span2" type="password">
               <span class="add-on">^_^</span>
             </div>
             <p class="help-block"></p>
@@ -77,11 +80,24 @@
 
           <!-- Button -->
           <div class="controls" style="width:10%;height:100%;margin:0 auto">
-            <button class="button" style="font-size:19px; border-radius:0px" type="submit">提交</button>
+            <button id="Safe_btn" class="button" type="button">提交</button>
           </div>
         </div>
     </fieldset>
   </form>
+  
+  <div class='messagePopOut' style='display:none'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+   </div>	
 
+<script>
+	var PasswordChange_url = '__URL__/PasswordChange'; 
+</script>
+<script src="__PUBLIC__/js/home/ChangePassword.js"></script>
 </body>
 </html>
