@@ -23,6 +23,8 @@ class AbilityController extends CommonController{
 				// 获取第三级能力设置
 				$model_a = M('ecnu_mind.ability', null);
 				$condition_2['Direction_id'] = $d['id'];
+				$condition_2['state'] = 'y';
+				$condition_2['_logic'] = 'AND';
 				$temp = $model_a->field('name')->where($condition_2)->select();
 				// urlencode 与 urldecode解决中文编码的问题
 				foreach ($temp as $k => $t) {

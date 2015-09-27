@@ -82,6 +82,34 @@
 .theme-popover .close, .new-popover .close {
 	color: #6fbce1;
 }
+.ability_head p{
+	display: inline-block;
+	float: left;
+}
+.newAbilityDiv{
+	display: inline-block;
+    float: right;
+    padding: 15px 146px 0px 0px;
+}
+.newAbilityHintDiv{
+	display: inline-block;
+}
+.newAbilityHint{
+	font-family: 微软雅黑;
+	font-size: 20px;
+	font-weight: normal;
+	color: #aaa;
+	margin: 0px auto;
+}
+.newAbilityIconDiv{
+	width: 25px;
+	height: 25px;
+	display: inline-block; /*inline元素不能设计width和height*/
+}
+.newAbilityIcon{
+	width: 100%;  /*宽度和父级元素一样*/
+	height: 100%; /*高度和父级元素一样*/
+}
 .popoutLine1Text{
 	margin-top: 25px;
 	margin-left: 45px;
@@ -260,16 +288,17 @@
 	font-size: 25px;
 	font-family: 微软雅黑;
 	font-weight: 200;
-	background-color: #ffffff;
+	background-color: #2ecc71;
 }
 .addAbilityName{
-	margin-top: 30px;
-	margin-left: 35px;
+	padding-top: 20px;
+	padding-left: 35px;
 }
 .addAbilityName label{
 	font-size: 25px;
 	font-family: 微软雅黑;
-    font-weight: 400;
+    font-weight: 200;
+    color: #ffffff;
 }
 .addAbilityName input{
 	min-width: 255px;
@@ -282,3 +311,17 @@
 	width: 100%;
 	background-color: #fff;
 } 
+.abilityDetailHeadImg{
+	display: inline;
+}
+.abilityDetailHeadText{
+	display: inline;
+}
+.abilityDetailHeadText h1{
+	font-size: 24px;
+	color: #757575;
+	position: absolute;
+	left: 75px;
+	top: 250px;
+	line-height: 0px; /*两个div的下边框对齐*/
+}

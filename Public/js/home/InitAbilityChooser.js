@@ -18,14 +18,14 @@ function ability() {
 	}
 	
 	// 添加个人新的能力
-	$(".new_ability").click(function() {
+	$(".newAbilityIcon").click(function() {
 		// 弹出新增能力框
 		$('.new-popover').slideDown(200);
 		// 关闭新增能力框
 		$('.new-popover .close').click(function(){
 			$('.theme-popover-mask').fadeOut(100);
 			$('.new-popover').slideUp(200);
-		})
+		});
 	});
 	
 	// mixitup初始化 + 弹出框初始化，在getUserAbility()里被调用
@@ -252,7 +252,7 @@ function ability() {
 	            abilityDetail = "";
 	        
 	        var json2selfCommentPHP = 
-	        			'abilityName='+ lastPickedCheckbox +
+	        			'abilityName=' + lastPickedCheckbox +
 	        			'&selfComment='+ abilityDetail + 
 	        			'&hasAbility=' + hasAbility;
 	        

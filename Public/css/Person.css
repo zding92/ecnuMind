@@ -530,7 +530,7 @@ font-size: 0px;
     position: relative;
 }
 
-.info_container .ability_head p{
+.info_container .ability_head > p{
     font-size: 30px;
     margin: 0px auto;
     font-family: 微软雅黑;
