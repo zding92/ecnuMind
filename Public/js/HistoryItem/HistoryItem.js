@@ -34,6 +34,21 @@ $(function(){
 				}
 			});
 			
+			$('.dropdown-menu li a').click(function(){
+				var filterType = $(this).parent().parent().parent().attr('data-filter-field');
+				var filterText = $(this).parent().text();
+				//alert(filterType+'='+filterText);
+				
+				if(!$(this).children('input').prop('checked')){
+					$('#'+filterType).append(filterText+';');
+				}
+				else{
+					var currentFilterText = $('#'+filterType).text();
+					var afterFilterText = currentFilterText.replace(filterText+';','');
+					$('#'+filterType).text(afterFilterText);
+				}
+			});
+			
 			initialFlag = false;
 		}
 		

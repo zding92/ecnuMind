@@ -107,9 +107,6 @@ class CompController extends CommonController {
 		
 		// 将学号数组转化为学号字串
 		$participantStr = implode(',', $participant);
-
-		// 根据第一作者学号，获取第一作者名
-		$author1Name = $this->getAuthor1Name($participant[0]);
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
@@ -119,12 +116,16 @@ class CompController extends CommonController {
 		
 		// 将当前日期设置为竞赛报名日期
 		$compItemInfo['apply_date'] = date('Y-m-d', time());
+	
+		// 获取第一作者姓名和所属学院
+		$author1Info = $this->getAuthor1Info($participant[0]);
 		
-		// 添加第一作者姓名
-		$compItemInfo['author1_name'] = $author1Name;
+		// 添加第一作者姓名和所属学院
+		$compItemInfo['author1_name'] = $author1Info['name'];
+		$compItemInfo['owner_academy'] = $author1Info['academy'];
 		
 		// 添加竞赛项目名称
-		$compItemInfo['comp_item_name'] = $regValue['post.comp_item_name'];		
+		$compItemInfo['comp_item_name'] = $regValue['comp_item_name'];		
 		
 		// 获取全站唯一的用户个人报名ID
 		$compId = $compItemModel->data($compItemInfo)->filter('strip_tags')->add();
@@ -190,18 +191,19 @@ class CompController extends CommonController {
 		
 		$compItemModel->comp_participant_id = implode(',', $participant);
 		
-		// 获取第一作者姓名
-		$author1Name = $this->getAuthor1Name($participant[0]);
+		// 获取第一作者姓名和所属学院
+		$author1Info = $this->getAuthor1Info($participant[0]);
 		
-		// 添加第一作者姓名
-		$compItemModel->author1_name = $author1Name;
+		// 添加第一作者姓名和所属学院
+		$compItemModel->author1_name = $author1Info['name'];
+		$compItemModel->owner_academy = $author1Info['academy'];
 		
 		$compItemModel->filter('strip_tags')->save();
 	}
 	
-	private function getAuthor1Name($author1Id) {
+	private function getAuthor1Info($author1Id) {
 		$custom = M('user_custom');
-		$name = $custom->where("student_id=$author1Id")->field('name')->find()['name'];
-		return $name;
+		$author1Info = $custom->where("student_id=$author1Id")->field('name,academy')->find();
+		return $author1Info;
 	}
 }

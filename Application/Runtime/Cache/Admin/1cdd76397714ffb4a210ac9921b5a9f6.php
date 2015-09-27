@@ -1,37 +1,36 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
-  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
-  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table-filter.css" />
   
-  <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table-filter.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/ext/bs-table.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
-  <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
-  <script src="__PUBLIC__/jsLib/bootstrap/ext/tableExport.js"></script>
-  <script src="__PUBLIC__/jsLib/bootstrap/ext/html2canvas.js"></script>
-  <script src="__PUBLIC__/jsLib/bootstrap/ext/exportPlugin.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table-filter.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
   
 </head>
 
 <body style="background-color: #fff">
   <div id="custom-toolbar"  style="width:700px">
-    
-    <span style='float:right' id='comp_date'></span>
-    <span style='float:right'> &nbsp;| &nbsp;</span>
-	<span style='float:right' id='comp_name'></span>
-	<span style='float:right'>筛选条件：</span>
+    <span class='toolBarCompName' style='float:right'>|完成时间：</span>
+  	<span class='toolBarFinishTime' style='float:right;margin-left: 10px;'>竞赛名称：</span>
+  	
+  	
   </div>
   <div style="margin:10px 15px 15px;">
   	<!-- <a href="#" onClick ="$('#comp-table').tableExport({type:'excel', escape:'false'});" id="buttonExportData" class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all">Export XLS</a> -->
     <div id="filter-bar"> </div>
     <table id="comp-table"   
-    	   data-url="__APP__/Admin/HistoryItem/showAllHistoryItem"
+    	   data-url="/webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem"
     	   data-cache="false"
            data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
@@ -59,7 +58,7 @@
     </table>
   </div>
   
- <script src="__PUBLIC__/js/HistoryItem/HistoryItem.js"></script> 
+ <script src="/webprj/ecnu_mind/Public/js/HistoryItem/HistoryItem.js"></script> 
 
 </body>
 
