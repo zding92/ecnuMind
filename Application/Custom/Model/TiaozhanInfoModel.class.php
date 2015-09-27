@@ -14,7 +14,6 @@ class TiaozhanInfoModel extends RelationModel{
 			array('author6_id','checkCharNull',3,'function'),
 			array('teacher_age','checkIntNull',3,'function'),
 			array('referee_age','checkIntNull',3,'function'),
-			array('apply_date','date',1,'function',array('Y-m-d'))
 	);
 	
 	protected $_validate = array(
