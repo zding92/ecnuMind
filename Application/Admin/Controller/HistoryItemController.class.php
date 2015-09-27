@@ -18,11 +18,15 @@ class HistoryItemController extends CommonController {
 		//建立作者user_custom表的model
 		$userDetailModel = M('ecnu_mind.user_custom');
 		
-		// 如果不存在（或超时--10分钟）已结束竞赛信息缓存，则重新从数据库载入。
-		if (!S("finish_comps")) {
+		// 如果不存在（或超时--10分钟）该管理员权限能查看范围内的、且已结束竞赛的信息缓存，则重新从数据库载入。
+		if (!S("finish_comps_".session('access_id'))) {
+			// 根据access_id获取该管理员所属院系，或学校层面管理员。
+			$accessName = M('academy')->find(session('access_id'))['name'];
 			
 			// 检索条件
-			$condition['comp_state'] = '已结束';			
+			$condition['comp_state'] = '已结束';
+			if ($accessName !== "华东师范大学")
+				$condition['owner_academy'] = $accessName;
 			
 			// $allCompItem为competition_main 表格中的所有行，
 			// 取"comp_item_id,comp_item_name,author1_name,owner_academy,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
@@ -57,9 +61,9 @@ class HistoryItemController extends CommonController {
 				
 				$i++;
 			}
-			S('finish_comps', json_encode($returnToFront), array('type'=>'file','expire'=>600));
+			S("finish_comps_".session('access_id'), json_encode($returnToFront), array('type'=>'file','expire'=>600));
 		} 
 		
-		$this->ajaxReturn(S('finish_comps'),'EVAL');
+		$this->ajaxReturn(S("finish_comps_".session('access_id')),'EVAL');
   	}
 }
