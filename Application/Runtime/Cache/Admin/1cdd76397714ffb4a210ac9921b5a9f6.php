@@ -46,11 +46,11 @@
       <thead>
         <tr>
           <th data-field="comp_name" data-width="250" data-align="left" data-sortable="true" data-sorter="starSorter" >竞赛名称</th>
-          <th data-field="comp_item_name" data-width="400" data-align="left">项目名称</th>
+          <th data-field="comp_item_name" data-width="350" data-align="left">项目名称</th>
           <th data-field="comp_date" data-width="80" data-align="center" data-sortable="true">完成时间</th>
           <th data-field="comp_author1" data-width="80" data-align="left">第一作者</th>
-          <th data-field="apply_department" data-width="200" data-align="center">申报院系</th>
-          <th data-field="comp_prize" data-width="100" data-align="center">获奖情况</th>
+          <th data-field="apply_department" data-width="150" data-align="center">申报院系</th>
+          <th data-field="comp_prize" data-width="150" data-align="center">获奖情况</th>
           <th data-field="apply_detail" data-width="50" data-align="center">详细查看</th>
           
         </tr>

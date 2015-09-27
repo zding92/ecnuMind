@@ -16,7 +16,6 @@ $(function(){
 	var initialFlag = true;
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,
-		sidePagination: 'server',
 		pagination: true,
 		height: 600,
 		pageSize: 20
