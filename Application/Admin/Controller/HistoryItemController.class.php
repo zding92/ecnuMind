@@ -18,7 +18,7 @@ class HistoryItemController extends CommonController {
 		//建立作者user_custom表的model
 		$userDetailModel = M('ecnu_mind.user_custom');
 		
-		// 如果不存在已结束竞赛信息缓存
+		// 如果不存在（或超时--10分钟）已结束竞赛信息缓存，则重新从数据库载入。
 		if (!S("finish_comps")) {
 			
 			// 检索条件
