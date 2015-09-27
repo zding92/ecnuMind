@@ -75,7 +75,9 @@
             });
             serverUrl = $bootstrapTable.bootstrapTable('getServerUrl');
             if (serverUrl) {
+            	alert(1);
                 this.$el.on('submit.bs.table.filter', function() {
+                	alert(2);
                     filterData = bootstrapTableFilter.getData();
                     var delimiter = serverUrl.indexOf('?') < 0 ? '?' : '&';
                     var url = serverUrl + delimiter + 'filter=' + encodeURIComponent(JSON.stringify(filterData));
@@ -85,7 +87,9 @@
             }
             else {
                 $bootstrapTable.bootstrapTable('registerSearchCallback', rowFilter);
+                alert(3);
                 this.$el.on('submit.bs.table.filter', function() {
+                	alert(4);
                     filterData = bootstrapTableFilter.getData();
                     $bootstrapTable.bootstrapTable('updateSearch');
                 });

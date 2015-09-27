@@ -12,36 +12,18 @@ class HistoryItemController extends CommonController {
   	 * 分页获取历史记录信息
   	 */
   	public function showAllHistoryItem(){
-	  	$compItemModel = M('ecnu_mind.competition_main', null);
-		$compInfoModel = M('ecnu_mind.competition_info', null);
+	  	$compItemModel = M('ecnu_mind.competition_main');
+		$compInfoModel = M('ecnu_mind.competition_info');
 		
 		//建立作者user_custom表的model
-		$userDetailModel = M('ecnu_mind.user_custom', null);
+		$userDetailModel = M('ecnu_mind.user_custom');
+		
+		if (null === S()) {
+			
+		}
 		
 		// 检索条件
-		$condition['comp_state'] = '已结束';
-		
-		// 如果符合条件的竞赛报名总数量，则查询并存入session.
-		if (null === session('comp_count')){
-			$compCount = $compItemModel
-									->where($condition)
-									->Count();
-			session('comp_count', $compCount);
-			$returnToFront['total'] = session('comp_count');
-		}	
-		else
-			$returnToFront['total'] = session('comp_count');
-		
-		// 如果前台检索条件不存在，即不进行模糊搜索(模糊搜索为针对题目名或人名的相似查询)。
-		$search = I('get.search');
-		if ($search != '') {
-			$searchCondition['author1_name'] = array('like', '%'.$search.'%');
-			$searchCondition['comp_item_name'] = array('like', '%'.$search.'%');
-			$searchCondition['_logic'] = 'or';
-			$condition['_complex'] = $searchCondition;
-		}		
-			
-			
+		$condition['comp_state'] = '已结束';			
 		
 		// $allCompItem为competition_main 表格中的所有行，
 		// 取"comp_item_id,comp_item_name,author1_name,owner_academy,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
