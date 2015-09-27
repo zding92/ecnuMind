@@ -7,12 +7,12 @@ class AbilityController extends CommonController{
 	 * 生成数据库内的三级能力的json格式数据
 	 */
 	public function genDB() {
-	// 获取第一级能力设置
-		$model_f = M('ecnu_mind.field', null);
-		$field = $model_f->field('id,name')->select();
-		
 		// 如果能力表缓存不存在。重新从数据库读取并建立新缓存。
 		if (!S('ability_table')) {
+			// 获取第一级能力设置
+			$model_f = M('ecnu_mind.field', null);
+			$field = $model_f->field('id,name')->select();
+
 			$list1 = array();
 			foreach ($field as $f) {
 				// 获取第二级能力设置
