@@ -24,7 +24,7 @@ $(function(){
 		if (initialFlag) {
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_date');
-	
+			
 			//点击下拉选择的整体，能够选中勾选框
 			$('.dropdown-menu li a :input').click(function(e){
 				if($(this).prop('checked')){
