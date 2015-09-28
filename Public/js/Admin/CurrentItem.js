@@ -24,9 +24,9 @@ $(function(){
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_state');
 			
-			// 将第四列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
+			// 将第九列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
 			$table.bootstrapTable('toggleColumn', 8, false, true);
-			// 将第四列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
+			// 将第十列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
 			$table.bootstrapTable('toggleColumn', 9, false, true);
 			
 			// 如果管理员是校级管理员，显示院系过滤框
@@ -61,6 +61,8 @@ $(function(){
 		}
 		
 		
+    }).on('check.bs.table', function (e, row) {
+    	alert(row['comp_item_id']);
     });
 	
 });
