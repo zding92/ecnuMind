@@ -23,11 +23,40 @@
 </head>
 
 <body style="background-color: #fff">
+  <div id="custom-toolbar"  style="width:auto;">
+  	<div class="btn-group" style="float:left;margin-right:15px;">
+	   <button type="button" class="btn btn-default dropdown-toggle" 
+	      data-toggle="dropdown">
+	      对勾选项目进行审批<span class="caret"></span>
+	   </button>
+	   <ul class="dropdown-menu" role="menu">
+	      <li><a href="#">通过</a></li>
+	      <li><a href="#">未通过</a></li>
+	   </ul>
+	</div>	<!-- btn-group 的/div -->
+	
+	<div style="float:left">
+	   <form class="bs-example bs-example-form" role="form">
+	      <div class="row" style='width:500px'>
+	         <div class="col-lg-6">
+	            <div class="input-group">
+	               <input type="text" class="form-control">
+	               <span class="input-group-btn">
+	                  <button class="btn btn-default" type="button">
+	                                 对勾选项目更新获奖信息
+	                  </button>
+	               </span>
+	            </div><!-- /input-group -->
+	         </div><!-- /.col-lg-6 -->
+	      </div><!-- /.row -->
+	   </form>
+	</div>
+  </div>
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
            data-url="__URL__/showAllCurrentItem"
-           data-toolbar="#filter-bar" 
+           data-toolbar="#custom-toolbar"
            data-show-toggle="true" 
            data-search="true"           
            data-show-filter="true"
