@@ -52,8 +52,12 @@ class CompsinfoController extends CommonController {
 				$returnItemInfo['comp_date'] = $eachCompItem['apply_date'];
 				$returnItemInfo['comp_state'] = $eachCompItem['comp_state'];
 			}
-			$returnToFront[$i] = $returnItemInfo;
 			
+			
+			$returnItemInfo['comp_item_id'] = $eachCompItem['comp_item_id'];
+			$returnItemInfo['comp_type_id'] = $eachCompItem['comp_type_id'];
+			
+			$returnToFront[$i] = $returnItemInfo;
 			$i++;
 		}	
 		return $returnToFront;
