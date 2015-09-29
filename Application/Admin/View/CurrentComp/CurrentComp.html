@@ -30,8 +30,8 @@
 	      对勾选项目进行审批<span class="caret"></span>
 	   </button>
 	   <ul class="dropdown-menu" role="menu">
-	      <li><a href="#" data-toggle="modal" data-target="#judgeModal">通过</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#judgeModal">未通过</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#judgeModal" id="approved" onclick="btnOnClick(this.id)">通过</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#judgeModal" id="disapproved" onclick="btnOnClick(this.id)">未通过</a></li>
 	   </ul>
 	</div>	<!-- btn-group 的/div -->
 	
@@ -40,16 +40,16 @@
 	      data-toggle="dropdown">
 	      对勾选项目填写获奖情况<span class="caret"></span>
 	   </button>
-	   <ul class="dropdown-menu" role="menu">
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国一等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国二等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国三等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市一等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市二等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市三等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级一等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级二等奖</a></li>
-	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级三等奖</a></li>
+	   <ul class="dropdown-menu" role="menu" >
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="country1" onclick="btnOnClick(this.id)">全国一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="country2" onclick="btnOnClick(this.id)">全国二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="country3" onclick="btnOnClick(this.id)">全国三等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="city1" onclick="btnOnClick(this.id)">省市一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="city2" onclick="btnOnClick(this.id)">省市二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="city3" onclick="btnOnClick(this.id)">省市三等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="school1" onclick="btnOnClick(this.id)">校级一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="school2" onclick="btnOnClick(this.id)">校级二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="school3" onclick="btnOnClick(this.id)">校级三等奖</a></li>
 	      
 	   </ul>
 	</div>	<!-- btn-group 的/div -->
@@ -104,7 +104,7 @@
 	            <button type="button" class="btn btn-default" 
 	               data-dismiss="modal">关闭
 	            </button>
-	            <button type="button" class="btn btn-primary" id='judgeConfirm'>
+	            <button type="button" class="btn btn-primary" id='judgeConfirm' data-dismiss="modal" onclick="btnOnClick(this.id)">
 	               提交更改
 	            </button>
 	         </div>
@@ -131,7 +131,7 @@
 	            <button type="button" class="btn btn-default" 
 	               data-dismiss="modal">关闭
 	            </button>
-	            <button type="button" class="btn btn-primary" id='prizeConfirm'>
+	            <button type="button" class="btn btn-primary" id='prizeConfirm' data-dismiss="modal" onclick="btnOnClick(this.id)">
 	               提交更改
 	            </button>
 	         </div>
