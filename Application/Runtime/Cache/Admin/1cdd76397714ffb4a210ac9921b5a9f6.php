@@ -16,12 +16,15 @@
   <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
   <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
   <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
-  
+  <script type="text/javascript">
+	var admin = "<?php echo ($admin_access); ?>";
+  </script>
 </head>
 
 <body style="background-color: #fff">
   <div id="custom-toolbar"  style="width:700px">
-    
+    <span style='float:right' id='apply_department'></span>
+    <span style='float:right'> &nbsp;| &nbsp;</span>
     <span style='float:right' id='comp_date'></span>
     <span style='float:right'> &nbsp;| &nbsp;</span>
 	<span style='float:right' id='comp_name'></span>
@@ -58,7 +61,7 @@
     </table>
   </div>
   
- <script src="/webprj/ecnu_mind/Public/js/HistoryItem/HistoryItem.js"></script> 
+ <script src="/webprj/ecnu_mind/Public/js/Admin/HistoryItem.js"></script> 
 
 </body>
 

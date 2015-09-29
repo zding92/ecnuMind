@@ -16,6 +16,7 @@
   <script src="__PUBLIC__/jsLib/bootstrap/ext/tableExport.js"></script>
   <script src="__PUBLIC__/jsLib/bootstrap/ext/jquery.base64.js"></script>
   <script src="__PUBLIC__/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/exportPlugin.js"></script>
   
 </head>
 
@@ -23,7 +24,7 @@
   <div style="margin:10px 15px 15px;">
 	<div id="filter-bar"> </div>
     <table id="comp-table" 
-           
+           data-url="__APP__/Admin/UserControl/showAllUser"
            data-toolbar="#filter-bar" 
            data-show-toggle="true" 
            data-search="true"           
@@ -32,23 +33,25 @@
            data-sort-name="apply_state" 
            data-sort-order="desc"
            data-pagination="true"
-           data-toolbar="#custom-toolbar">
+           data-toolbar="#custom-toolbar"
+           data-show-export="true">
       <thead>
         <tr>
-          <th data-field="comp_importance" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter" >姓名</th>
-          <th data-field="comp_name" data-width="200" data-align="left">学号</th>
-          <th data-field="comp_field" data-width="200" data-align="left" data-sortable="true">学院</th>
-          <th data-field="comp_template" data-width="200" data-align="left">专业</th>
-          <th data-field="apply_date" data-width="200" data-align="left">手机</th>
-          <th data-field="apply_date" data-width="200" data-align="left">邮箱</th>
-          <th data-field="apply_date" data-width="50" data-align="left">详细查看</th>
+          <th data-field="name" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter" >姓名</th>
+          <th data-field="student_id" data-width="200" data-align="left">学号</th>
+          <th data-field="academy" data-width="200" data-align="left">学院</th>
+          <th data-field="major" data-width="200" data-align="left">专业</th>
+          <th data-field="phone" data-width="200" data-align="left">手机</th>
+          <th data-field="email" data-width="200" data-align="left">邮箱</th>
+          <th data-field="detail" data-width="50" data-align="left">详细查看</th>
+          <th data-field="user_id" data-width="50" data-align="left">user_id</th>
           
         </tr>
       </thead>
     </table>
   </div>
   
-  <script src="__PUBLIC__/js/Comp/Comp.js"></script>
+  <script src="__PUBLIC__/js/Admin/UserControl.js"></script>
 </body>
 
 </html>
