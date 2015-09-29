@@ -133,7 +133,7 @@ function btnOnClick(id){
 			result[1] = judgeAction;
 			result[2] = judgeActionVal;
 			//将要传的数据置为一个字符串
-			var compStr = "checkedItemId=" + result[0] + "&judgeAction=" + result[1] +"&judgeActionVal=" + result[2];
+			var compStr = "checkedItemID=" + result[0] + "&judgeAction=" + result[1] +"&judgeActionVal=" + result[2];
 			$.ajax({
 		        url: competitionChange_url, //验证页面 
 		        type: "POST", //请求方式

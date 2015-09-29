@@ -41,10 +41,10 @@ class CurrentCompController extends CompsinfoController {
 		//根据不同的前台操作给予后台不同的数据库赋值
 		switch ($judgeActionVal){
 			case 'approved': 
-				$dataToSql[$judgeAction] ='通过';
+				$dataToSql[$judgeAction] ='审批通过';
 				break;
 			case 'disapproved': 
-				$dataToSql[$judgeAction] ='不通过';
+				$dataToSql[$judgeAction] ='审批未通过';
 				break;
 			case 'country1':
 				$dataToSql[$judgeAction] ='全国一等奖';

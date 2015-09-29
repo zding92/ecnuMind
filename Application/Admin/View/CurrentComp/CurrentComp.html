@@ -5,6 +5,8 @@
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
+  
   
   <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
@@ -16,6 +18,7 @@
   <script src="__PUBLIC__/jsLib/bootstrap/ext/tableExport.js"></script>
   <script src="__PUBLIC__/jsLib/bootstrap/ext/html2canvas.js"></script>
   <script src="__PUBLIC__/jsLib/bootstrap/ext/exportPlugin.js"></script>
+  <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
   <script>
 	var admin = "{$admin_access}";
   </script>
@@ -138,7 +141,16 @@
 	      </div><!-- /.modal-content -->
 	   </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+  <div class='messagePopOut' style='display:none'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+   </div>	
   <script src="__PUBLIC__/js/Admin/CurrentItem.js"></script>
+  <script>var competitionChange_url = "__URL__/judgeItem";</script>
 </body>
 
 </html>
