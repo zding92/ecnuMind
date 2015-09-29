@@ -20,11 +20,14 @@
 </head>
 
 <body style="background-color: #fff">
+  <div id="custom-toolbar"  style="width:750px;">
+  	<button type="button" class="btn btn-primary" id='btn_addComp' style="float:right">发起新的比赛</button>
+  </div>
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
            data-url="__URL__/getCompInfo"
-           data-toolbar="#filter-bar" 
+           data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
            data-search="true"           
            data-show-filter="true"
