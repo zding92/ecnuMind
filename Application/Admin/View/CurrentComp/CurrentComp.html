@@ -30,8 +30,8 @@
 	      对勾选项目进行审批<span class="caret"></span>
 	   </button>
 	   <ul class="dropdown-menu" role="menu">
-	      <li><a href="#">通过</a></li>
-	      <li><a href="#">未通过</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#judgeModal">通过</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#judgeModal">未通过</a></li>
 	   </ul>
 	</div>	<!-- btn-group 的/div -->
 	
@@ -41,15 +41,15 @@
 	      对勾选项目填写获奖情况<span class="caret"></span>
 	   </button>
 	   <ul class="dropdown-menu" role="menu">
-	      <li><a href="#">全国一等奖</a></li>
-	      <li><a href="#">全国二等奖</a></li>
-	      <li><a href="#">全国三等奖</a></li>
-	      <li><a href="#">省市一等奖</a></li>
-	      <li><a href="#">省市二等奖</a></li>
-	      <li><a href="#">省市三等奖</a></li>
-	      <li><a href="#">校级一等奖</a></li>
-	      <li><a href="#">校级二等奖</a></li>
-	      <li><a href="#">校级三等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">全国三等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">省市三等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级一等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级二等奖</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#prizeModal">校级三等奖</a></li>
 	      
 	   </ul>
 	</div>	<!-- btn-group 的/div -->
@@ -84,6 +84,60 @@
       </thead>
     </table>
   </div>
+  <!-- 模态框（judgeModal） -->
+	<div class="modal fade" id="judgeModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" 
+	               aria-hidden="true">×
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	提示
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            您确定进行此审批操作么？
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-default" 
+	               data-dismiss="modal">关闭
+	            </button>
+	            <button type="button" class="btn btn-primary" id='judgeConfirm'>
+	               提交更改
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+	   </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+  <!-- 模态框（prizeModal） -->
+	<div class="modal fade" id="prizeModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" 
+	               aria-hidden="true">×
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	提示
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            您确定进行此获奖提交的操作么？
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-default" 
+	               data-dismiss="modal">关闭
+	            </button>
+	            <button type="button" class="btn btn-primary" id='prizeConfirm'>
+	               提交更改
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+	   </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
   <script src="__PUBLIC__/js/Admin/CurrentItem.js"></script>
 </body>
 

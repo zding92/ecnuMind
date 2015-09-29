@@ -25,4 +25,34 @@ class CurrentCompController extends CompsinfoController {
   		
   		$this->ajaxReturn(S("current_comps_".session('access_id')),'EVAL');
 	}
+	
+	public function judgeItem(){
+		//$checkedItemID为前台返回的checked的行的comp_item_id
+		$checkedItemID = I('post.checkedItemID');
+		//将$checkedItemID字符串（以逗号分隔）变为$checkedItemIDArray数组
+		$checkedItemIDArray = explode(',', $checkedItemID);
+		
+		//$judgeAction为前台进行的审批动作
+		$judgeAction = I('post.judgeAction');
+		//根据不同的前台操作给予后台不同的数据库赋值
+		switch ($judgeAction){
+			case 'approved': 
+				$dataToSql['comp_state'] ='通过';
+				break;
+			case 'disapproved': 
+				$dataToSql['comp_state'] ='不通过';
+				break;
+			default:
+				break;
+		}
+
+		
+		$compItemModel = M('ecnu_mind.competition_main');
+		
+		//取出所有选中的compItemID,每一行进行写入数据库操作
+		foreach ($checkedItemIDArray as $key=>$val){
+			$compItemModel->where("comp_item_id=$val")->save($dataToSql);
+		}
+		$this->ajaxReturn('success','EVAL');
+	}
 }
