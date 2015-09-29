@@ -1,6 +1,11 @@
 /**
  * HistoryItem管理员界面中历史项目页面使用的js
  */
+var checkedItemID = new Array();//被选中行ID
+var result = new Array();
+var judgeAction = new Array() ;//被点击按钮类别（填写获奖情况或审批）
+var judgeActionVal =  new Array();//被点击按钮值（奖项级别或通过与否）
+
 function starSorter(a, b) {
 	if (a.length > b.length) return 1;
 	if (a.length < b.length) return -1;
@@ -60,10 +65,96 @@ $(function(){
 			initialFlag = false;
 		}
 		
-		
-    }).on('check.bs.table', function (e, row) {
-    	alert(row['comp_item_id']);
+	}).on('check.bs.table', function (e, row) {
+		checkedItemID.push(row['comp_item_id']);
+    	//将所选行的comp_item_id值添加至入checkedItemID数组
+    	//复选框uncheck事件响应
+    }).on('uncheck.bs.table', function (e, row) {
+    	for(var i = 0; i < checkedItemID.length; i++)
+    		if(checkedItemID[i] == row['comp_item_id']){
+    			checkedItemID.splice(i,1);//遍历checkedItemID数组，找到当前所选行的comp_item_id的值并删除，而不是将其置为null
+    			break;
+    		}
     });
 	
+	
 });
+//CurrentComp.html页面btnOnClick()事件响应
+function btnOnClick(id){
+	switch(id){
+		case 'approved':
+			judgeAction = "comp_state";
+			judgeActionVal = "approved";
+			break;
+		case 'disapproved':
+			judgeAction = "comp_state";
+			judgeActionVal = "disapproved";
+			break;
+		case 'country1':
+			judgeAction = "comp_prize";
+			judgeActionVal = "country1";
+			break;
+		case 'country2':
+			judgeAction = "comp_prize";
+			judgeActionVal = "country2";
+			break;
+		case 'country3':
+			judgeAction = "comp_prize";
+			judgeActionVal = "country3";
+			break;
+		case 'city1':
+			judgeAction = "comp_prize";
+			judgeActionVal = "city1";
+			break;
+		case 'city2':
+			judgeAction = "comp_prize";
+			judgeActionVal = "city2";
+			break;
+		case 'city3':
+			judgeAction = "comp_prize";
+			judgeActionVal = "city3";
+			break;
+		case 'school1':
+			judgeAction = "comp_prize";
+			judgeActionVal = "school1";
+			break;
+		case 'school2':
+			judgeAction = "comp_prize";
+			judgeActionVal = "school2";
+			break;
+		case 'school3':
+			judgeAction = "comp_prize";
+			judgeActionVal = "school3";
+			break;
+		case 'prizeConfirm' :
+		case 'judgeConfirm' :
+			//result寄存器，存放要传给后台的数据。
+			result[0] = checkedItemID;
+			result[1] = judgeAction;
+			result[2] = judgeActionVal;
+			//将要传的数据置为一个字符串
+			var compStr = "checkedItemId=" + result[0] + "&judgeAction=" + result[1] +"&judgeActionVal=" + result[2];
+			$.ajax({
+		        url: competitionChange_url, //验证页面 
+		        type: "POST", //请求方式
+		        data: compStr,
+		        success: function (call) {
+		            handleReturn(call);          	         
+		        }
+			});
+			break;
+		default:
+			break;	
+	}
+	
+}
 
+function handleReturn(call) {
+	switch (call) {
+	case 'success':
+		myAlert("修改成功");
+		break;
+	default:
+		break;
+	}
+}
