@@ -51,6 +51,10 @@ $(document).ready(function () {
 	                
 	                case 'btn_UserControl':
 	                	loadUserControl();
+	                break;
+	                case 'btn_ChangePassword':
+	                	loadChangePassword();
+	                break;
 	                default: break;
               }
             }
@@ -147,6 +151,14 @@ $(document).ready(function () {
     		$(".info_container").append("<iframe class='iframe' name='UserControl_frame' id='UserControl_frame'   \
    		         src= '" + app_url + "/Admin/UserControl/UserControl" + "' seamless='seamless' scrolling='no' \
    		         onload='this.height=UserControl_frame.document.body.scrollHeight'></iframe>")			
+    	}
+    }
+    
+    function loadChangePassword(){
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Safe_frame' id='Safe_frame'   \
+   		         src= '" + app_url + "/Admin/Home/Safe" + "' seamless='seamless' scrolling='no' \
+   		         onload='this.height=Safe_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
     
