@@ -79,11 +79,31 @@ class IndexController extends Controller {
     }
     
     /**
+     *  生成验证码
+     */
+    public function verifyCreate(){
+    	$Verify = new \Think\Verify();
+    	$Verify->fontSize = 22;
+    	$Verify->length   = 4;
+    	$Verify->useNoise = true;
+    	$Verify->codeSet = '0123456789';
+    	$Verify->imageW = 150;
+    	$Verify->imageH = 50;
+		$Verify->entry();
+    }
+    
+    /**
      * 验证用户密码和权限，并将用户id和权限写入session方便后续验证。
      */
     private function checkUser() {
     	// 构造用户数据基础模型
     	$user = M('ecnu_mind.user_base');
+    	
+    	// 检查验证码是否正确
+    	$code = I('post.verify');
+    	$verify = new \Think\Verify();
+    	if (!$verify->check($code,''))
+    		$this->ajaxReturn("verify_error", "EVAL");
     	
     	// 获取post方式传来的username和password
     	$username = I('post.username');
