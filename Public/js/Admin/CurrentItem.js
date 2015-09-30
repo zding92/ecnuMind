@@ -142,7 +142,6 @@ function btnOnClick(id){
 		            handleReturn(call);          	         
 		        }
 			});
-			$('#comp-table').bootstrapTable('refresh',null);//刷新表格
 			break;
 		default:
 			break;	
@@ -154,6 +153,7 @@ function handleReturn(call) {
 	switch (call) {
 	case 'success':
 		myAlert("修改成功");
+		$('#comp-table').bootstrapTable('refresh');//刷新表格
 		break;
 	default:
 		break;
