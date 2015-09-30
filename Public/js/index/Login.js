@@ -34,10 +34,18 @@ window.onload = function () {
 				break;
 			case 'password_error':
 				tips.innerHTML = '<font color="red">密码错误！</font>';
+				$("#login_pwd").val('');
+				$("#verify").val('');
+				setNewVerify();
 				break;
 			case 'user_custom_incomplete':
 				tips.innerHTML = '<font color="green">登录成功，跳转中...</font>';
                 location = incomplete_url; // 登录成功后指定跳转页面  
+				break;
+			case 'verify_error':
+				tips.innerHTML = '<font color="red">验证码错误!</font>';
+				$("#verify").val('');
+				captcha_img.click();
 				break;
 			default:
 				break;
@@ -48,7 +56,7 @@ window.onload = function () {
             $.ajax({
                 url: login_url, //请求验证页面 
                 type: "POST", //请求方式
-                data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val(),
+                data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val() + "&verify=" + $("#verify").val(),
                 success: function (call) {
                     handleReturn(call);          	         
                 }
