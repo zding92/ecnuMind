@@ -28,6 +28,7 @@ class CurrentCompController extends CompsinfoController {
 		//$checkedItemID为前台返回的checked的行的comp_item_id
 		$checkedItemID = I('post.checkedItemID');
 		//将$checkedItemID字符串（以逗号分隔）变为$checkedItemIDArray数组
+		if(null == $checkedItemID) $this->ajaxReturn('unseleceted');
 		$checkedItemIDArray = explode(',', $checkedItemID);
 		
 		//$judgeAction为前台进行的审批动作
@@ -72,7 +73,6 @@ class CurrentCompController extends CompsinfoController {
 			default:
 				break;
 		}
-
 		
 		$compItemModel = M('ecnu_mind.competition_main');
 		

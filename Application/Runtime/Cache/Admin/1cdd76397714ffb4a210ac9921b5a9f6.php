@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table-filter.css" />
   
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap-table-filter.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/bs-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table-filter.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
   <script type="text/javascript">
 	var admin = "<?php echo ($admin_access); ?>";
   </script>
@@ -34,7 +34,7 @@
   	<!-- <a href="#" onClick ="$('#comp-table').tableExport({type:'excel', escape:'false'});" id="buttonExportData" class="ui-btn ui-btn-inline ui-mini ui-shadow ui-corner-all">Export XLS</a> -->
     <div id="filter-bar"> </div>
     <table id="comp-table"   
-    	   data-url="/Eclipse_For_PHP/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem"
+    	   data-url="/webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem"
     	   data-cache="false"
            data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
@@ -61,7 +61,7 @@
     </table>
   </div>
   
- <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/Admin/HistoryItem.js"></script> 
+ <script src="/webprj/ecnu_mind/Public/js/Admin/HistoryItem.js"></script> 
 
 </body>
 

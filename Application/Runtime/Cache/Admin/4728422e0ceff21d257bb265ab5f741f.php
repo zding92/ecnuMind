@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/css/bootstrap/bootstrap-table-filter.css" />
-  <link rel="Stylesheet" type="text/css" href="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>
   
   
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap-table-filter.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/bs-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/jquery/jquery.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table-filter.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script>
   <script>
 	var admin = "<?php echo ($admin_access); ?>";
   </script>
@@ -60,7 +60,7 @@
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
-           data-url="/Eclipse_For_PHP/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem"
+           data-url="/webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem"
            data-toolbar="#custom-toolbar"
            data-show-toggle="true" 
            data-search="true"           
@@ -82,7 +82,7 @@
           <th data-field="apply_department" data-width="200" data-align="center">申报院系</th>
           <th data-field="comp_state" data-width="100" data-align="center">审批情况</th>
           <th data-field="apply_detail" data-width="30" data-align="center">详细查看</th>
-          <th data-field="comp_item_id" data-width="30" data-align="center">comp_item_id</th>
+          <th data-field="comp_item_id" data-width="30" data-align="center" >comp_item_id</th>
           <th data-field="comp_type_id" data-width="30" data-align="center">comp_type_id</th>
         </tr>
       </thead>
@@ -150,8 +150,8 @@
          		OK
          	</div>        	
    </div>	
-  <script src="/Eclipse_For_PHP/ecnu_mind/Public/js/Admin/CurrentItem.js"></script>
-  <script>var competitionChange_url = "/Eclipse_For_PHP/ecnu_mind/index.php/Admin/CurrentComp/judgeItem";</script>
+  <script src="/webprj/ecnu_mind/Public/js/Admin/CurrentItem.js"></script>
+  <script>var competitionChange_url = "/webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem";</script>
 </body>
 
 </html>

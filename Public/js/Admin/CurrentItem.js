@@ -19,6 +19,19 @@ function starSorter(a, b) {
 
 $(function(){
 	var initialFlag = true;
+	 getRows = function () {
+         var rows = [];
+
+         for (var i = 0; i < 10; i++) {
+             rows.push({
+                 id: id,
+                 name: 'test' + id,
+                 price: '$' + id
+             });
+             id++;
+         }
+         return rows;
+     };
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,
 		pagination: true,
@@ -75,8 +88,16 @@ $(function(){
     			checkedItemID.splice(i,1);//遍历checkedItemID数组，找到当前所选行的comp_item_id的值并删除，而不是将其置为null
     			break;
     		}
+    }).on('check-all.bs.table', function (e) {
+    	var temp = $("#comp-table").bootstrapTable('getData');
+    	checkedItemID.splice(0,checkedItemID.length);
+    	for (var key in temp)
+        {
+    		checkedItemID[key] = temp[key]["comp_item_id"];
+        }
+    }).on('uncheck-all.bs.table', function (e) {
+    	checkedItemID.splice(0,checkedItemID.length);
     });
-	
 	
 });
 //CurrentComp.html页面btnOnClick()事件响应
@@ -139,9 +160,11 @@ function btnOnClick(id){
 		        type: "POST", //请求方式
 		        data: compStr,
 		        success: function (call) {
-		            handleReturn(call);          	         
+		            handleReturn(call); 
+		            checkedItemID.splice(0,checkedItemID.length);
 		        }
 			});
+			
 			break;
 		default:
 			break;	
@@ -153,7 +176,10 @@ function handleReturn(call) {
 	switch (call) {
 	case 'success':
 		myAlert("修改成功");
-		$('#comp-table').bootstrapTable('refresh');//刷新表格
+		$('#comp-table').bootstrapTable('refresh',null);//刷新表格
+		break;
+	case 'unseleceted':
+		myAlert("没有选中任何竞赛");
 		break;
 	default:
 		break;

@@ -4125,3 +4125,1513 @@ SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMI
 SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
 
+[ 2015-09-30T22:08:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2015-09-30T22:08:10+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000709s ]
+
+[ 2015-09-30T22:08:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443622090933
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0034s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` = '已结束'  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T22:08:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006104s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2015-09-30T22:08:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001747s ]
+
+[ 2015-09-30T22:08:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443622098480
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002879s ]
+
+[ 2015-09-30T22:08:19+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2015-09-30T22:08:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0036s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0006s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:08:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CompControl/CompControl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006016s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2015-09-30T22:08:20+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CompControl/getCompInfo?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+ERR: 非法操作:getCompInfo
+
+[ 2015-09-30T22:08:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000715s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2015-09-30T22:08:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0032s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0006s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:08:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0036s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0061s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0028s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0102s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0041s ]
+
+[ 2015-09-30T22:08:26+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000959s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0032s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0007s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:31:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007116s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2015-09-30T22:31:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2015-09-30T22:31:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623462913
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0057s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` = '已结束'  [ RunTime:0.0006s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T22:31:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CompControl/CompControl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005923s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2015-09-30T22:31:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CompControl/getCompInfo?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+ERR: 非法操作:getCompInfo
+
+[ 2015-09-30T22:31:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012795s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2015-09-30T22:31:06+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0039s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:31:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0040s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0038s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0025s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0100s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0025s ]
+
+[ 2015-09-30T22:31:11+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0030s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:31:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0033s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0029s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0023s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0025s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0027s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0021s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0020s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0020s ]
+
+[ 2015-09-30T22:31:18+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0036s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-09-30T22:32:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006141s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2015-09-30T22:32:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2015-09-30T22:32:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623570298
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+
+[ 2015-09-30T22:32:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000865s ]
+
+[ 2015-09-30T22:32:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0035s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T22:33:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0033s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0097s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0027s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0024s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0024s ]
+
+[ 2015-09-30T22:33:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0046s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T22:33:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0041s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0005s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T22:33:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0044s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=6 ) [ RunTime:0.0048s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=5 ) [ RunTime:0.0021s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=3 ) [ RunTime:0.0021s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=7 ) [ RunTime:0.0020s ]
+
+[ 2015-09-30T22:33:21+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2015-09-30T22:33:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623602016
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+
+[ 2015-09-30T22:33:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009311s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001013s ]
+
+[ 2015-09-30T22:33:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000584s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0061s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:33:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2015-09-30T22:33:27+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0029s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:33:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009075s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2015-09-30T22:33:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623610382
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+
+[ 2015-09-30T22:33:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000797s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001700s ]
+
+[ 2015-09-30T22:33:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0054s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-09-30T22:33:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006252s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2015-09-30T22:33:32+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623612216
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+
+[ 2015-09-30T22:33:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001698s ]
+
+[ 2015-09-30T22:33:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0033s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:33:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0036s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2015-09-30T22:33:35+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0029s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2015-09-30T22:33:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008509s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2015-09-30T22:33:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623616594
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+
+[ 2015-09-30T22:33:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2015-09-30T22:33:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0046s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0005s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:34:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000447s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001802s ]
+
+[ 2015-09-30T22:34:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2015-09-30T22:34:02+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623642611
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+
+[ 2015-09-30T22:34:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000365s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001884s ]
+
+[ 2015-09-30T22:34:04+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0043s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:34:09+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0040s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:34:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000085s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0059s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国一等奖' WHERE ( comp_item_id=3 ) [ RunTime:0.0044s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国一等奖' WHERE ( comp_item_id=5 ) [ RunTime:0.0033s ]
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国一等奖' WHERE ( comp_item_id=6 ) [ RunTime:0.0035s ]
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国一等奖' WHERE ( comp_item_id=7 ) [ RunTime:0.0077s ]
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: condition xdebug://debug-eval 第 1 行.
+SQL: SELECT * FROM ecnu_mind.competition_main  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+
+[ 2015-09-30T22:35:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001596s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000536s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001265s ]
+
+[ 2015-09-30T22:35:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623700112
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000106s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+
+[ 2015-09-30T22:35:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000534s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010279s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000932s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2015-09-30T22:35:00+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0043s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0005s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:36:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000834s ]
+
+[ 2015-09-30T22:36:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001009s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2015-09-30T22:36:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443623775342
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001557s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0034s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` = '已结束'  [ RunTime:0.0008s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:36:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000935s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000710s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2015-09-30T22:36:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0039s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:36:24+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+NOTIC: [8] Undefined variable: Data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Trying to get property of non-object xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: compItemModel xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: data xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: json_option xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: username xdebug://debug-eval 第 1 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0044s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=5 ) [ RunTime:0.0033s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市二等奖' WHERE ( comp_item_id=3 ) [ RunTime:0.0021s ]
+
+[ 2015-09-30T22:36:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0046s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国三等奖' WHERE ( comp_item_id=5 ) [ RunTime:0.0136s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='全国三等奖' WHERE ( comp_item_id=3 ) [ RunTime:0.0027s ]
+
+[ 2015-09-30T22:36:34+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0032s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0006s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T22:36:40+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0032s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0053s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0027s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0030s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=3 ) [ RunTime:0.0024s ]
+
+[ 2015-09-30T22:36:41+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0036s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0005s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T23:00:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/home/home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006042s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001824s ]
+
+[ 2015-09-30T23:00:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/HistoryItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000891s ]
+
+[ 2015-09-30T23:00:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/HistoryItem/showAllHistoryItem?limit=20&offset=0&sort=apply_state&order=desc&_=1443625214843
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0056s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` = '已结束'  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T23:00:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/CurrentComp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001355s ]
+
+[ 2015-09-30T23:00:16+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000756s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0058s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T23:00:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0042s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=5 ) [ RunTime:0.0032s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0021s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0020s ]
+
+[ 2015-09-30T23:00:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0046s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0004s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-09-30T23:00:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0044s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=7 ) [ RunTime:0.0031s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_state`='审批未通过' WHERE ( comp_item_id=6 ) [ RunTime:0.0024s ]
+
+[ 2015-09-30T23:00:28+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0031s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-09-30T23:00:43+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/judgeItem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0043s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市三等奖' WHERE ( comp_item_id=3 ) [ RunTime:0.0119s ]
+SQL: UPDATE ecnu_mind.competition_main SET `comp_prize`='省市三等奖' WHERE ( comp_item_id=5 ) [ RunTime:0.0027s ]
+
+[ 2015-09-30T23:00:43+08:00 ] ::1 /webprj/ecnu_mind/index.php/Admin/CurrentComp/showAllCurrentItem?limit=20&offset=0&sort=apply_state&order=desc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `academy` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `academy` WHERE `academy_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_main` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`competition_info` [ RunTime:0.0034s ]
+SQL: SELECT `comp_item_id`,`comp_type_id`,`comp_state`,`comp_prize`,`apply_date`,`author1_name`,`comp_item_name`,`owner_academy` FROM ecnu_mind.competition_main WHERE `comp_state` IN ('待审批','审批通过','审批未通过','正在进行')  [ RunTime:0.0003s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=10 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `comp_name` FROM ecnu_mind.competition_info WHERE ( comp_id=9 ) LIMIT 1   [ RunTime:0.0002s ]
+
