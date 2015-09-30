@@ -29,10 +29,10 @@ $(function(){
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_name');
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_state');
 			
-			// 将第九列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
-			$table.bootstrapTable('toggleColumn', 8, false, true);
-			// 将第十列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第4列)，隐藏，更新表）
+			// 将第九列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第9列)，隐藏，更新表）
 			$table.bootstrapTable('toggleColumn', 9, false, true);
+			// 将第十列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第10列)，隐藏，更新表）
+			$table.bootstrapTable('toggleColumn', 10, false, true);
 			
 			// 如果管理员是校级管理员，显示院系过滤框
 			if (admin == 'all') 
@@ -142,6 +142,7 @@ function btnOnClick(id){
 		            handleReturn(call);          	         
 		        }
 			});
+			$('#comp-table').bootstrapTable('refresh',null);//刷新表格
 			break;
 		default:
 			break;	

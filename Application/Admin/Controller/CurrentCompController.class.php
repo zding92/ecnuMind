@@ -9,7 +9,6 @@ class CurrentCompController extends CompsinfoController {
     
 	public function showAllCurrentItem(){
 		// 如果不存在（或超时--10分钟）该管理员权限能查看范围内的、且已结束竞赛的信息缓存，则重新从数据库载入。
-  		if (!S("current_comps_".session('access_id'))) {
 	  		// 根据access_id获取该管理员所属院系，或学校层面管理员。
 	  		$accessName = M('academy')->find(session('access_id'))['name'];
 	  		$condition['comp_state'] = array('in','待审批,审批通过,审批未通过,正在进行');
@@ -19,11 +18,8 @@ class CurrentCompController extends CompsinfoController {
 	  		// 根据条件获取返回前台的信息。
 	  		$returnToFront = $this->getCompsByCondition($condition);
 	  		
-	  		// 2分钟更新一次缓存
-	  		S("current_comps_".session('access_id'), json_encode($returnToFront), array('type'=>'file','expire'=>120));
-  		}
-  		
-  		$this->ajaxReturn(S("current_comps_".session('access_id')),'EVAL');
+	  		// 2分钟更新一次缓存  		
+  		$this->ajaxReturn(json_encode($returnToFront),'EVAL');
 	}
 	
 	
@@ -39,7 +35,7 @@ class CurrentCompController extends CompsinfoController {
 		//$judgeAction为前台进行的审批动作
 		$judgeActionVal = I('post.judgeActionVal');
 		//根据不同的前台操作给予后台不同的数据库赋值
-		switch ($judgeActionVal){
+ 		switch ($judgeActionVal){
 			case 'approved': 
 				$dataToSql[$judgeAction] ='审批通过';
 				break;
@@ -65,13 +61,13 @@ class CurrentCompController extends CompsinfoController {
 				$dataToSql[$judgeAction] ='省市三等奖';
 				break;
 			case 'school1':
-				$dataToSql[$judgeAction] ='省市一等奖';
+				$dataToSql[$judgeAction] ='校级一等奖';
 				break;
 			case 'school2':
-				$dataToSql[$judgeAction] ='省市二等奖';
+				$dataToSql[$judgeAction] ='校级二等奖';
 				break;
 			case 'school3':
-				$dataToSql[$judgeAction] ='省市三等奖';
+				$dataToSql[$judgeAction] ='校级三等奖';
 				break;
 			default:
 				break;
