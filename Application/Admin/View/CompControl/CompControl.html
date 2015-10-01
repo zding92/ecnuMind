@@ -7,6 +7,7 @@
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/dateRangerPicker/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/jsLib/dateRangerPicker/daterangepicker-bs3.css"/>
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
   
   <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
@@ -17,9 +18,13 @@
   <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
   <script src="__PUBLIC__/jsLib/dateRangerPicker/moment.js"></script>
   <script src="__PUBLIC__/jsLib/dateRangerPicker/daterangepicker.js"></script>
+  <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
 
   <script>
   	var getDataURL = '__APP__/Home/Comp/getCompItem';
+  </script>
+  <script>
+  	var addCompURL = '__APP__/Admin/CompControl/addComp'
   </script>
 
   <!-- 
@@ -117,6 +122,7 @@
 				   <br>
 				   <label for="comp_template">选择比赛模板</label>
 				      <select class="form-control" name="comp_template" id="comp_template">
+				         <option>无</option>
 				         <option>挑战杯</option>
 				         <option>大夏科赛</option>
 				         <option>大夏创赛</option>
@@ -132,13 +138,22 @@
 	            <button type="button" class="btn btn-default" 
 	               data-dismiss="modal">关闭
 	            </button>
-	            <button type="button" class="btn btn-primary" id='addCompConfirm' data-dismiss="modal" onclick="btnOnClick(this.id)">
+	            <button type="button" class="btn btn-primary" id='addCompConfirm'>
 	               	添加比赛
 	            </button>
 	         </div>
 	      </div><!-- /.modal-content -->
 	   </div><!-- /.modal-dialog -->
+	   	<div class='messagePopOut' style='display:none;z-index:99;'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+    	</div>	
 	</div><!-- /.modal -->
+
 	<script type="text/javascript">
        $(document).ready(function() {
           $('#compDate').daterangepicker(null, function(start, end, label) {

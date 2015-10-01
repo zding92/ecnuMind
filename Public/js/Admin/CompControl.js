@@ -34,16 +34,31 @@ $(function(){
 
 $(document).ready(function (){
 	$('#addCompConfirm').click(function(){
-		var dataToBack = $("#addCompForm").serialize();
-		alert(dataToBack);
-		$.ajax({
-	        url: competitionChange_url, //验证页面 
-	        type: "POST", //请求方式
-	        data: dataToBack,
-	        success: function (call) {
-	            handleReturn(call);          	         
-	        }
+		//此变量allInputDone表示所有的添加比赛的表单都已被填写
+		var allInputDone = true;
+		
+		$("#addCompForm input").each(function(){
+			//若存在input并未填写
+			if ($(this).val() == '') allInputDone = false;
 		});
+		
+		if (allInputDone){
+			var dataToBack = $("#addCompForm").serialize();
+			alert(dataToBack);
+			$.ajax({
+		        url: addCompURL, //验证页面 
+		        type: "POST", //请求方式
+		        data: dataToBack,
+		        success: function (call) {
+		            handleReturn(call);          	         
+		        }
+			});
+			$('#addCompModal').modal('toggle')
+		}
+		else{
+			myAlert("请完整填写表单");
+		}
+		
 	});
 	
 	$('#btn_addComp').click(function(){
