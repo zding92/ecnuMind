@@ -53,7 +53,8 @@ $(document).ready(function (){
 		            handleReturn(call);          	         
 		        }
 			});
-			$('#addCompModal').modal('toggle')
+			$('#addCompModal').modal('toggle');
+			$('#comp-table').bootstrapTable('refresh',null);//刷新表格
 		}
 		else{
 			myAlert("请完整填写表单");
@@ -65,6 +66,16 @@ $(document).ready(function (){
 		document.getElementById("addCompForm").reset(); 
 	});
 })
+
+function handleReturn(call) {
+	switch (call) {
+	case 'success':
+		myAlert("修改成功");
+		break;
+	default:
+		break;
+	}
+}
 
 
 

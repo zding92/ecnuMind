@@ -1,0 +1,3 @@
+<?php
+//000000000300s:617:"[{"user_id":"2","name":"\u4f59\u7c89","student_id":"10112110128","academy":"\u8d44\u73af\u5b66\u9662","major":"\u8d44\u73afxxx-2\u4e13\u4e1a","phone":"18021051036","email":"305605080@qq.com"},{"user_id":"3","name":"\u4e8e\u5929","student_id":"10112110129","academy":"\u4fe1\u606f\u5b66\u9662","major":"\u7535\u5b50\u4fe1\u606f\u79d1\u5b66\u4e0e\u6280\u672f","phone":"18021051037","email":"tian_yu92@yahoo.com"},{"user_id":"5","name":"\u4f60\u597d\u5730\u65b9","student_id":"10112140125","academy":"\u4fe1\u606f\u5b66\u9662","major":"\u8ba1\u7b97\u673a\u5de5\u7a0b","phone":"18888888888","email":"tian_yu92@yahoo.co"}]";
+?>

@@ -40,7 +40,7 @@
 			    <ul>
 				    <li id="left-li">
 					    <div class='homeHeadLogo'>
-					    	<a href="/webprj/ecnu_mind/index.php/Home/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/LogoBulbSmall.png"></a>
+					    	<a href="/webprj/ecnu_mind/index.php/Admin/Home/home"><img alt="Logo" src="/webprj/ecnu_mind/Public/img/LogoBulbSmall.png"></a>
 					    </div>
 					    <div class='homeHeadLogoText'>
 					    	<h1>华师智库<span>Creation & Connection</span></h1>

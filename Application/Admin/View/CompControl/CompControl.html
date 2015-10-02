@@ -40,7 +40,6 @@
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="comp-table" 
-           data-url="__URL__/getCompInfo"
            data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
            data-search="true"           
@@ -120,6 +119,15 @@
 					  </div>
 				   </div>
 				   <br>
+				   <div class="row">
+				      <div class='col-xs-9'>
+						<div class="input-group">
+				         <span class="input-group-addon">竞赛报名起止时间</span>
+				         <input type="text" class="form-control" id="compApplyDate" name="compApplyDate"value="2015-10-01-2015-10-10">
+				        </div>
+					  </div>
+				   </div>
+				   <br>
 				   <label for="comp_template">选择比赛模板</label>
 				      <select class="form-control" name="comp_template" id="comp_template">
 				         <option>无</option>
@@ -148,7 +156,7 @@
          	<div class='messagePopText'>
          		
          	</div>
-         	<div class='messagePopButton'>
+         	<div class='messagePopButton' id="btn_success">
          		OK
          	</div>        	
     	</div>	
@@ -156,7 +164,8 @@
 
 	<script type="text/javascript">
        $(document).ready(function() {
-          $('#compDate').daterangepicker(null, function(start, end, label) {
+          $('#compDate,#compApplyDate').daterangepicker(
+			{format: 'YYYY-MM-DD'}, function(start, end, label) {
             console.log(start.toISOString(), end.toISOString(), label);
           });
        });
