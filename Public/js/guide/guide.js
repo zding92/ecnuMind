@@ -21,7 +21,6 @@ function Check_Ajax(action,items,value)
     $.ajax({
         url: app_url + "/home/home/checkForm", //请求验证页面 
         type: "GET", //请求方式
-        async: false,
         data: "action=" + action + "&" + "value" + "=" + value,
         success: function (call) {
             check_result = call;     
@@ -168,7 +167,6 @@ $(document).ready(function(){
 		$.ajax({
 			url: app_url + "/Custom/guide/submitItem", //请求验证页面 
 	        type: "POST", //请求方式
-	        async: false,
 	        contentType: "application/x-www-form-urlencoded; charset=utf-8",
 	        data: $form.serialize() + '&step='+stepGuideInProgress,
 	        success: function (call) {

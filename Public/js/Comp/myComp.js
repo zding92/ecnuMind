@@ -32,7 +32,6 @@ window.operateEvents = {
     	$.ajax({
             url: row.comp_remove, //请求验证页面 
             type: "POST", //请求方式
-            async: false,
             success: function (call) 
             {
             	if (call === 'deleted') {

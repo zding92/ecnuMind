@@ -1,13 +1,13 @@
+var doughnutData;
 function getDataFromServer() {
   $.ajax({
     url: model_url + "/loadPage", //请求验证页面 
     type: "GET", //请求方式
-    async:false,
     data: "action=btn_main",
     success: function (result) {
-  
-      eval(result);
-      InitPersonalData(doughnutData, tabs);
+    	doughnutData = result;
+        eval(result);
+        InitPersonalData(doughnutData, tabs);
     }
   });
 }
@@ -60,6 +60,11 @@ function InitPersonalData(doughnutData, tabs) {
 
 	$(".box1 .person_intro").append(user_json.brief);
 
-	$(".box3").append("<div class='message'><div class='from_face'><img src='" + public_url + "/img/photo/face.png' alt='载入失败'></div><div class='from'>Admin:</div><p class='content'>我想请你吃饭~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p></div>");
+	$(".box3").append(
+			"<div class='message'>" +
+			"<div class='from_face'><img src='" + public_url + "/img/photo/face.png' alt='载入失败'></div>" +
+			"<div class='from'>Admin:</div>" +
+			"<p class='content'>我想请你吃饭~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>" +
+			"</div>");	
 }
 

@@ -253,7 +253,6 @@ $(document).ready(function () {
 	                    	$.ajax({
 	                            url: submitUrl, //请求验证页面 
 	                            type: "POST", //请求方式
-	                            async: false,
 	                            data: $('#tiaozhanForm').serialize()+'&comp_id='+CompId,
 	                            success: function (call) 
 	                            {
@@ -264,7 +263,6 @@ $(document).ready(function () {
 	                    	$.ajax({
 	                            url: submitUrl, //请求验证页面 
 	                            type: "POST", //请求方式
-	                            async: false,
 	                            data: $('#tiaozhanForm').serialize()+'&comp_item_id='+ CompItemId,
 	                            success: function (call) 
 	                            {
@@ -361,7 +359,6 @@ function checkStuid(authorNum) {
     	var author = authorNum.substring(0,7);
         $.ajax({ 
         	url: checkUrl, 
-        	async: false, 
         	data: 'student_id=' + $("#" + authorNum).val(), 
         	success: function (result) {
         		if (result == '0') {

@@ -9,7 +9,6 @@ function ability() {
 		$.ajax({
             url: app_url + "/Custom/ability/getSelfComment",
             data: handinPHP,
-            async: false,
             success: function (result) {
         		$(".abilityDetail").html(result);
             }
@@ -41,7 +40,6 @@ function ability() {
 			$.ajax({
 				url: app_url + "/Custom/ability/addAbility",
 				data: handinPHP,
-				async: false,
 				success: function(result) {
 					switch (result) {
 					case 'add_success':
@@ -291,7 +289,6 @@ function ability() {
 	            url: app_url + "/Custom/ability/checkAbility" ,//处理此功能的PHP地址，其值在ability.html中全局引用
 	            data : json2selfCommentPHP,//交给PHP处理的输入数据
 	            type: "POST", //请求方式
-	            async: false,
 	            success: function (result) {
 	            	switch (result) {
 					case 'insert_success':
@@ -321,7 +318,6 @@ function ability() {
 		function getUserAbility() {
 			$.ajax({
 	            url: app_url + "/Custom/ability/getAbility" ,
-	            async: false,
 	            dataType: 'JSON',
 	            success: function (result) {
 	            	user_ability_json = result;
@@ -334,7 +330,6 @@ function ability() {
 		// js代码从这里开始执行，请求后台生成json格式的数据
 		$.ajax({url: app_url + "/Custom/Ability/genDB",
 			type: "GET",
-	        async:false,
 	        dataType: 'JSON',
 	        success: function(result) {
 	        	ability_json = result;

@@ -15,7 +15,6 @@ $(document).ready(function () {
     	$.ajax({
     	    url: model_url + "/loadPage", //请求验证页面 
     	    type: "GET", //请求方式
-    	    async:false,
     	    data: "action=getUserJson",
     	    success: function (result) {
     	      user_json = eval("(" + result + ")");

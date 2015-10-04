@@ -52,9 +52,6 @@ class CheckForm {
 		$this->CheckNameFromDB($allData['name']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
-		$this->CheckStuIDFromDB($allData['student_id']);
-		if ($this->isIllegal() || $this->isRepeat()) return false;
-		
 		$this->CheckEmailFromDB($allData['email']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
@@ -62,11 +59,6 @@ class CheckForm {
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
 		$this->CheckPhoneFromDB($allData['phone']);
-		if ($this->isIllegal() || $this->isRepeat()) return false;
-		
-		// 装配学院系别专业信息。
-		$comboxValue=$allData['academy']."|".$allData['department']."|".$allData['major'];
-		$this->CheckCombobox($comboxValue);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
 		$this->CheckBriefFromDB($allData['brief']);
