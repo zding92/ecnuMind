@@ -48,15 +48,6 @@ class CompControlController extends CommonController {
   	// 返回添加成功
   	$this->ajaxReturn('success', 'EVAL');	
   }
-   public function Comp(){
-  	//显示__app__/home/comp/comp页面
-  	$this->display();
-  }
-  
-   public function myComp(){
-  	//显示__app__/home/comp/myComp页面
-  	$this->display();
-  }
   
   public function checkValidUser($student_id) {
   	$userModel = M('ecnu_mind.user_admin');
