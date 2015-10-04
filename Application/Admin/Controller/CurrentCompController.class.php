@@ -24,7 +24,7 @@ class CurrentCompController extends CompsinfoController {
 	
 	
 	//前台返回，checkedItemID（勾选中的行的comp_item_id的数组），judgeAction审批或获奖动作，judgeActionVal审批或获奖动作的值
-	public function judgeItem(){
+	public function judgeItem() {
 		//$checkedItemID为前台返回的checked的行的comp_item_id
 		$checkedItemID = I('post.checkedItemID');
 		//将$checkedItemID字符串（以逗号分隔）变为$checkedItemIDArray数组

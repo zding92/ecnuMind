@@ -112,6 +112,9 @@ $("#address").val(user_json.address);
 $("#phone").val(user_json.phone);
 $("#brief").val(user_json.brief);
 $("#" + (user_json.gender == '男' ? 'male' : 'female')).iCheck('check');
+
+// 第二页（个人头像上传页面不显示）
+$("#Page2").css('display', 'none');
 ///----------------------
 ///\结束数据初始化
 
