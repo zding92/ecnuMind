@@ -52,6 +52,9 @@ $(document).ready(function () {
 	                case 'btn_UserControl':
 	                	loadUserControl();
 	                break;
+	                case 'btn_Notification':
+	                	loadNotification();
+	                break;
 	                case 'btn_ChangePassword':
 	                	loadChangePassword();
 	                break;
@@ -162,7 +165,13 @@ $(document).ready(function () {
     	}
     }
     
-
+    function loadNotification() {
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='Notification_frame' id='Notification_frame'   \
+    		         src= '" + app_url + "/Admin/Notification/Notification" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=Notification_frame.document.body.scrollHeight'></iframe>")	
+    	} 
+    }
     
     function checkCookies() {
     	if (document.cookie.indexOf("PHPSESSID", 0) < 0) {
