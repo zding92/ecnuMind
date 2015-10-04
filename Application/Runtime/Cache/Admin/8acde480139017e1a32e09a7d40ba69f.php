@@ -13,41 +13,45 @@
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="/webprj/ecnu_mind/Public/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
-  <script>
-  	var getDataURL = '/webprj/ecnu_mind/index.php/Home/Comp/getCompItem';
-  </script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/jquery.base64.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="/webprj/ecnu_mind/Public/jsLib/bootstrap/ext/exportPlugin.js"></script>
   
 </head>
 
 <body style="background-color: #fff">
-  <div id="custom-toolbar"  style="width:750px;">
-  	<button type="button" class="btn btn-primary" id='btn_addComp' style="float:right">发起新的比赛</button>
-  </div>
   <div style="margin:10px 15px 15px;">
-    <div id="filter-bar"> </div>
+	<div id="filter-bar"> </div>
     <table id="comp-table" 
-           data-url="/webprj/ecnu_mind/index.php/Admin/CompControl/getCompInfo"
-           data-toolbar="#custom-toolbar" 
+           data-url="/webprj/ecnu_mind/index.php/Admin/UserControl/showAllUser"
+           data-toolbar="#filter-bar" 
            data-show-toggle="true" 
            data-search="true"           
            data-show-filter="true"
            data-striped="true"
            data-sort-name="apply_state" 
-           data-sort-order="desc">
+           data-sort-order="desc"
+           data-pagination="true"
+           data-toolbar="#custom-toolbar"
+           data-show-export="true">
       <thead>
         <tr>
-          <th data-field="comp_importance" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter">竞赛评级</th>
-          <th data-field="comp_name" data-width="400" data-align="left">竞赛名称</th>
-          <th data-field="comp_field" data-width="100" data-align="left">竞赛类型</th>
-          <th data-field="comp_template" data-width="100" data-align="left">报名预览</th>
-          <th data-field="apply_date" data-width="200" data-align="left">报名起止日期</th>
-          <th data-field="apply_state" data-width="100" data-align="left">报名状态</th>
-          <th data-field="apply_editor" data-width="100" data-align="center">修改竞赛</th>
+          <th data-field="name" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter" >姓名</th>
+          <th data-field="student_id" data-width="200" data-align="left">学号</th>
+          <th data-field="academy" data-width="200" data-align="left">学院</th>
+          <th data-field="major" data-width="200" data-align="left">专业</th>
+          <th data-field="phone" data-width="200" data-align="left">手机</th>
+          <th data-field="email" data-width="200" data-align="left">邮箱</th>
+          <th data-field="detail" data-width="50" data-align="left">详细查看</th>
+          <th data-field="user_id" data-width="50" data-align="left">user_id</th>
+          
         </tr>
       </thead>
     </table>
   </div>
-  <script src="/webprj/ecnu_mind/Public/js/Comp/Comp.js"></script>
+  
+  <script src="/webprj/ecnu_mind/Public/js/Admin/UserControl.js"></script>
 </body>
 
 </html>
