@@ -8,8 +8,17 @@ class IndexController extends Controller {
     public function index(){
     	// 判断是否存在session，如果存在直接登录
     	if (null !== session('user_id')) {
-    		if (session('user_access') === 'custom') 
-    			$this->redirect('Custom/Home/home');
+    		if (session('user_access') === 'custom') {
+    			$custom = M('ecnu_mind.user_custom');
+    			$result = $custom->field('complete_steps')->find(session('user_id'));
+    			 
+    			// 判断用户信息是否完善， 如果不完善要求用户补全
+    			if ($result['complete_steps'] < 11) {
+    				$this->redirect('Custom/Guide/guide');
+    			} else {
+    				$this->redirect('Custom/Home/home');
+    			}
+    		}
     		else if (session('user_access') === 'admin')
     			$this->redirect('Admin/Home/home');
     	}

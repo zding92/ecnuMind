@@ -2859,7 +2859,7 @@ var TreeDict = function(config) {
  * @enum
  */
 TreeDict.defaultConfig = {
-	deep : 10, //嵌套深度，此参数影响词典内存对象大小，也影响search索引性能
+	deep : 30, //嵌套深度，此参数影响词典内存对象大小，也影响search索引性能
 	data : undefined,
 	endSign : '$end$'//避免"北京"作为key被"北京市"覆盖掉，现引用结束标记概念，以区别ab和abc这样的字符
 }

@@ -14,7 +14,7 @@ class UserinfoController extends CommonController {
 			return $json_obj;
 		}
 		
-		public function comparison(){
+		private function comparison(){
 			$major = M('ecnu_mind.major');
 			$department = M('ecnu_mind.department');
 			$academy = M('ecnu_mind.academy');

@@ -137,15 +137,16 @@ body{
 	color: #0099FF;
 }
 .stepGuideForm .kitjs-form-suggestselect-input{
-	border: none;
-	border-color: #E5E5E5;
-	background: transparent;
-	color: rgba(0,0,0,0.8);
-	outline: none;
-	margin-left: 10px;
-	font-size: 45px;
-	font-family: '微软雅黑';
-	height: 60px;
+    border: none;
+    border-color: #E5E5E5;
+    background: transparent;
+    color: rgba(0,0,0,0.8);
+    outline: none;
+    margin-left: 10px;
+    font-size: 45px;
+    font-family: '微软雅黑';
+    height: 60px;
+    width: 700px;
 }
 .prev{
 	background: transparent;

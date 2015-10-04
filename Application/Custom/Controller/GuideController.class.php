@@ -7,6 +7,7 @@ class GuideController extends UserinfoController {
 		// 检查哪些列为空
 		$uid = session('user_id');
 		$customData = $custom->field('user_id,brief', true)->find($uid);
+		$customData = $this->translateToName($customData);
 		// 规定信息补全总步数
 		$customData['stepGuideNum'] = 10;	
 		$schoolJson = $this->getJson();
@@ -58,7 +59,16 @@ class GuideController extends UserinfoController {
 		$custom->department =$translateForm->where("name='".$custom->department."'")->field('department_id')->find()["department_id"];
 		$translateForm = M('ecnu_mind.major');
 		$custom->major = $translateForm->where("name='".$custom->major."'")->field('major_id')->find()["major_id"];
+		return $custom;		
+	}
+	
+	private function translateToName($custom){
+		$translateForm = M('ecnu_mind.academy');
+		$custom['academy'] = $translateForm->where("academy_id='".$custom['academy']."'")->field('name')->find()["name"];
+		$translateForm = M('ecnu_mind.department');
+		$custom['department'] =$translateForm->where("department_id='".$custom['department']."'")->field('name')->find()["name"];
+		$translateForm = M('ecnu_mind.major');
+		$custom['major'] = $translateForm->where("major_id='".$custom['major']."'")->field('name')->find()["name"];
 		return $custom;
-			
 	}
 }
