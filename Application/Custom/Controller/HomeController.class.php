@@ -145,7 +145,7 @@ class HomeController extends UserinfoController {
 		$model = M('user_custom');
 		
 		$model->field("user_id, complete_steps",true)->find(session('user_id'));
-		
+		$model->data($this->translateToName($model->data()));
 		// 构造json，并返回数据
 		$this->ajaxReturn(json_encode($model->data()), "EVAL");
 

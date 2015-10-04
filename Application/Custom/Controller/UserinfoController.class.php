@@ -29,6 +29,26 @@ class UserinfoController extends CommonController {
 			}
 			$comparison_table =json_encode($arr);
 			S('comparison_table',$comparison_table);
-			
+		}
+		
+
+		protected function translateToid($custom){
+			$translateForm = M('ecnu_mind.academy');
+			$custom->academy = $translateForm->where("name='".$custom->academy."'")->field('academy_id')->find()["academy_id"];
+			$translateForm = M('ecnu_mind.department');
+			$custom->department =$translateForm->where("name='".$custom->department."'")->field('department_id')->find()["department_id"];
+			$translateForm = M('ecnu_mind.major');
+			$custom->major = $translateForm->where("name='".$custom->major."'")->field('major_id')->find()["major_id"];
+			return $custom;
+		}
+		
+		protected function translateToName($custom){
+			$translateForm = M('ecnu_mind.academy');
+			$custom['academy'] = $translateForm->where("academy_id='".$custom['academy']."'")->field('name')->find()["name"];
+			$translateForm = M('ecnu_mind.department');
+			$custom['department'] =$translateForm->where("department_id='".$custom['department']."'")->field('name')->find()["name"];
+			$translateForm = M('ecnu_mind.major');
+			$custom['major'] = $translateForm->where("major_id='".$custom['major']."'")->field('name')->find()["name"];
+			return $custom;
 		}
 }
