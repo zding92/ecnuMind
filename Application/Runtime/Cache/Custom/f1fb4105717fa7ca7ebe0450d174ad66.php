@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Personal Main Page</title>
-<script type="text/javascript" src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/hoverTag.js"> </script>
-<script type="text/javascript" src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/home.js"> </script>
+<script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/hoverTag.js"> </script>
+<script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/home.js"> </script>
 </head>
 <body>
 
