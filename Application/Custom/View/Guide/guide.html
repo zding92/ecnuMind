@@ -8,7 +8,6 @@
   	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
   	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/> 
 	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
-	<script src='__PUBLIC__/JSON/ComboxData.js'></script>
     <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
     <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
     <script type="text/javascript">
@@ -119,9 +118,10 @@
 		var stepGuideNum = {$stepGuideNum};
 		//当前正进行到哪个stepGuide
 		var stepGuideInProgress = {$complete_steps};
-		var schoolJSON = eval('(' + '{$schoolJSON}' + ')');
+		var SchoolJSON = eval('(' + '{$schoolJSON}' + ')');
 		var academy = '{$academy == '' ? null : $academy}';
 		var department = '{$department == '' ? null : $department}';
+		alert(JSON.stringify(SchoolJSON));
 		var major = '{$major == '' ? null : $major}';
 	</script>
 	<script src="__PUBLIC__/js/guide/guide.js"></script> 

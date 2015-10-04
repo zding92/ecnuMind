@@ -178,10 +178,33 @@ class CheckForm {
 	
 	// 临时获取，以后应当从配置文件或者数据库中获取
 	private function getJson() {
-		require_once DATA_PATH.'ComboxData.php';
-		$json_obj = json_decode($json_string,TRUE);
+		$value = S('comparison_table');
+		if($value == false) {
+			$this->comparison();
+			$value = S('comparison_table');
+		}
+		$json_obj = json_decode($value,TRUE);
 		if(!is_array($json_obj)) return false;
 		return $json_obj;
+	}
+		
+	private function comparison(){
+		$Form = M('ecnu_mind.major');
+		$table = $Form->select();
+		for($major_id=1;$major_id<=count($table);$major_id++){
+			$Form = M('ecnu_mind.major');
+			$department_id = $Form->where("major_id='".$major_id."'")->field('department_id')->find()['department_id'];
+			$major_name =$Form->where("major_id='".$major_id."'")->field('name')->find()['name'];
+			$Form = M('ecnu_mind.department');
+			$academy_id = $Form->where("department_id='".$department_id."'")->field('academy_id')->find()['academy_id'];
+			$department_name = $Form->where("department_id='".$department_id."'")->field('name')->find()['name'];
+			$Form = M('ecnu_mind.academy');
+			$academy_name = $Form->where("academy_id='".$academy_id."'")->field('name')->find()['name'];
+			$arr[$academy_name][$department_name][$major_name] = $major_name;
+		}
+		$comparison_table =json_encode($arr);
+		S('comparison_table',$comparison_table);
+		
 	}
 	
 	public function isRepeat() {

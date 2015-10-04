@@ -1,0 +1,1184 @@
+[ 2015-10-04T21:31:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:31:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-04T21:31:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:31:14+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:36:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0130s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`major` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`department` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`academy` [ RunTime:0.0150s ]
+SQL: SELECT * FROM ecnu_mind.major  [ RunTime:0.0020s ]
+
+[ 2015-10-04T21:36:53+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0070s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`major` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`department` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`academy` [ RunTime:0.0070s ]
+SQL: SELECT * FROM ecnu_mind.major  [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='2' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='6' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='7' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='8' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='9' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='10' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='11' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='12' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='13' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='14' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='15' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='6' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='16' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='7' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: major_name E:\web\workspace\ecnu_mind\Application\Custom\Controller\UserinfoController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-04T21:36:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:36:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-04T21:36:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:36:56+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:37:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0060s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2015-10-04T21:37:17+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0070s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-04T21:37:36+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:37:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-10-04T21:37:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:37:37+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:41:08+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0060s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`major` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`department` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`academy` [ RunTime:0.0140s ]
+SQL: SELECT * FROM ecnu_mind.major  [ RunTime:0.0030s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='1' ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='2' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0030s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='2' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='2' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='6' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='7' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='8' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='9' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='11' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='13' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='14' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='15' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='6' ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='16' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='7' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: major_name Unknown 第 0 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined index: schoolJSON xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-04T21:41:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2015-10-04T21:41:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-10-04T21:41:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:41:33+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:41:50+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: schoolJSON xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: customData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: value xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: majorData xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: academy_name xdebug://debug-eval 第 1 行.
+NOTIC: [8] Undefined variable: departmentData xdebug://debug-eval 第 1 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2015-10-04T21:43:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:43:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-10-04T21:43:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:43:13+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:43:24+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:43:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:43:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-04T21:43:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:43:59+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:44:15+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0150s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:45:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:45:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2015-10-04T21:45:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:45:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:45:31+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:46:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:46:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-04T21:46:47+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:46:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:47:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2015-10-04T21:47:48+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0060s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.110006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:48:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0070s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2015-10-04T21:48:03+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0060s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:48:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/home.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:48:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=getUserJson
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `user_custom` [ RunTime:0.0170s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`brief`,`student_id`,`complete_steps` FROM `user_custom` WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0240s ]
+
+[ 2015-10-04T21:48:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/personal_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:48:22+08:00 ] ::1 /webprj/ecnu_mind/index.php/Custom/Home/loadPage?action=btn_main
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: initJs E:\web\workspace\ecnu_mind\Application\Custom\Controller\HomeController.class.php 第 137 行.
+
+[ 2015-10-04T21:48:30+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`major` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`department` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`academy` [ RunTime:0.0040s ]
+SQL: SELECT * FROM ecnu_mind.major  [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='2' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='2' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='6' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='8' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='9' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='10' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='11' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='13' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='14' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='5' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='3' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='15' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='6' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `department_id`,`name` FROM ecnu_mind.major WHERE ( major_id='16' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `academy_id`,`name` FROM ecnu_mind.department WHERE ( department_id='7' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `name` FROM ecnu_mind.academy WHERE ( academy_id='4' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:49:52+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0060s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-10-04T21:51:43+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0050s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-10-04T21:52:12+08:00 ] ::1 /webprj/ecnu_mind/index.php/custom/guide/guide
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `ecnu_mind`.`user_custom` [ RunTime:0.0040s ]
+SQL: SELECT `email`,`phone`,`address`,`name`,`department`,`academy`,`major`,`grade`,`gender`,`student_id`,`complete_steps` FROM ecnu_mind.user_custom WHERE `user_id` = 11 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
