@@ -77,6 +77,12 @@ $(document).ready(function () {
 	                case 'btn_find':
 	                  loadSearchPage();
 	                break;
+	                case 'btn_pro':
+	                  loadItemControl()
+	                break;
+	                case 'btn_help':
+	                  loadSeekHelp();
+	                break;
 	                default: break;
               }
             }
@@ -178,6 +184,15 @@ $(document).ready(function () {
     	}                         
     }
     
+    function loadSeekHelp()
+    {
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='SeekHelp_frame' id='SeekHelp_frame'   \
+    		         src= '" + app_url + "/Custom/SeekHelp/SeekHelp" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=SeekHelp_frame.document.body.scrollHeight' style='height:640px;' ></iframe>")	
+    	}                         
+    }
+    
     function loadAbilityPage() {
     	if (checkCookies()) {
     		$(".info_container").load("ability.html");		
@@ -191,6 +206,14 @@ $(document).ready(function () {
     	}
     }
     
+    function loadItemControl()
+    {
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='ItemControl_frame' id='ItemControl_frame'   \
+    		         src= '" + app_url + "/Custom/ItemControl/ItemControl" + "' seamless='seamless' scrolling='no'   \
+    		         onload='this.height=ItemControl_frame.document.body.scrollHeight' style='height:640px;' ></iframe>")	
+    	}                         
+    }
     
     function checkCookies() {
     	if (document.cookie.indexOf("PHPSESSID", 0) < 0) {

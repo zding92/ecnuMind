@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="toTop" content="true"><!-- 用于添加返回顶部按钮-->
         <title>ECNU Inspiration</title>
         <link rel="shortcut icon" href="/webprj/ecnu_mind/Public/img/favicon.ico">
         <!-- <link rel="shortcut icon" href="favicon.ico"> -->
@@ -11,9 +12,9 @@
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/radios.min.css" />
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.css"/> 
         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.css"/>  
-         <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/homeHead.css"/>  
+        <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/homeHead.css"/>  
         <link href="/webprj/ecnu_mind/Public/css/icheck/flat/blue.css" rel="stylesheet">
-        <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">
+        <link href="/webprj/ecnu_mind/Public/css/icheck/line/blue.css" rel="stylesheet">       
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/Chart.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/modernizr.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
@@ -21,7 +22,8 @@
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.icheck.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.mixitup.min.js"></script>
         <script src="/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/jquery.raty.js"></script>
-        <script src="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script>
+        <script src="/webprj/ecnu_mind/Public/jsLib/myAlert/myAlert.js"></script><!-- 此js用于弹出自定义的Alert -->
+        <script src="/webprj/ecnu_mind/Public/jsLib/ToTop/toTop.js"></script><!-- 此js用于添加返回顶部按钮 -->
 
 		<script type="text/javascript">
         	var public_url = "/webprj/ecnu_mind/Public";
@@ -29,7 +31,8 @@
         	var app_url = "/webprj/ecnu_mind/index.php";
     		var starOnIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-on.png"
     		var starOffIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-off.png"
-    		var starHalfIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"	
+    		var starHalfIcon = "/webprj/ecnu_mind/Public/jsLib/raty-2.7.0/lib/images/star-half.png"
+    		var toTopIcon = "/webprj/ecnu_mind/Public/jsLib/ToTop/1.png"
         </script>
         <!--<script src="/HtmlJS/Page.js"></script>-->
     </head>

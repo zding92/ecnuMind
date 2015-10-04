@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Search People</title>
-<link href="/Eclipse_For_PHP/ecnu_mind/Public/css/searchPeople.css" rel="stylesheet">
-<script src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/searchPeople.js"></script>
+<link href="/webprj/ecnu_mind/Public/css/searchPeople.css" rel="stylesheet">
+<script src="/webprj/ecnu_mind/Public/js/home/searchPeople.js"></script>
 <script>
   $(function() {
     var availableTags = [
