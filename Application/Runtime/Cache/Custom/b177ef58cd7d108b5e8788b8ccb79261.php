@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>Personal Main Page</title>
-  <link rel='stylesheet' href='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Combox/css.css'>
-  <link rel='stylesheet' href='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Combox/form.css'>
-  <link rel='Stylesheet' type='text/css' href='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>
-  <script src='/Eclipse_For_PHP/ecnu_mind/Public/JSON/ComboxData.js'></script>
-  <script src='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Combox/Combox.js'></script>
-  <script src='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Jcrop/Jcrop.js'></script>
-  <script src='/Eclipse_For_PHP/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.js'></script>
-  <script src='/Eclipse_For_PHP/ecnu_mind/Public/js/home/InitPersonalInfo.js'></script>
-  <script type="text/javascript" src="/Eclipse_For_PHP/ecnu_mind/Public/js/home/hoverTag.js"> </script>
+  <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/css.css'>
+  <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/form.css'>
+  <link rel='Stylesheet' type='text/css' href='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>
+  <script src='/webprj/ecnu_mind/Public/JSON/ComboxData.js'></script>
+  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/Combox.js'></script>
+  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/Jcrop.js'></script>
+  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.js'></script>
+  <script src='/webprj/ecnu_mind/Public/js/home/InitPersonalInfo.js'></script>
+  <script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/hoverTag.js"> </script>
 </head>
 
 <body>
 	<div class='title_box'>
 	  <div style="display:inline-block;width:15px;height:15px;">
-	    <img style="width:15px;height:15px;margin-left:-10px;" src ="/Eclipse_For_PHP/ecnu_mind/Public/img/icon/base.png">
+	    <img style="width:15px;height:15px;margin-left:-10px;" src ="/webprj/ecnu_mind/Public/img/icon/base.png">
 	  </div>
 	    基础信息编辑
 	</div>
@@ -115,7 +115,7 @@
 	      <div class='Old'>
 	        <p>当前使用</p>
 	        <div class='photo' style='width: 120px;height: 120px;left: 82px;top: 167px;'>
-	          <img src='/Eclipse_For_PHP/ecnu_mind/Public/img/photo/face.png' alt='照片载入失败'>
+	          <img src='/webprj/ecnu_mind/Public/img/photo/face.png' alt='照片载入失败'>
 	        </div>	        
 	      </div>
 	      
