@@ -10,7 +10,6 @@
  */
 
 // convert bytes into friendly format
-var Jcrop = function () {
 
 function bytesToSize(bytes) {
     var sizes = ['Bytes', 'KB', 'MB'];
@@ -117,5 +116,4 @@ function fileSelectHandler() {
 
     // read selected file as DataURL
     oReader.readAsDataURL(oFile);
-  }
-};
+}
