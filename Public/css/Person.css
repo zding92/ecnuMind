@@ -54,7 +54,7 @@ font-size: 0px;
       text-align: left;
       padding: 3px 15px 2px 30px;
       height: 15px;
-      width: 980px;
+      width: 984px;
       font-size: 10px;
       font-weight: 300;
       border: 1px solid #ddd;
@@ -382,7 +382,7 @@ font-size: 0px;
 }
 
 .info_container .Two-box{
-    width: 1800px;
+    width: 1830px;
     height: 100%;  
     position: relative;
     overflow: hidden;
@@ -390,10 +390,38 @@ font-size: 0px;
 
 .info_container .Page-box {
     position: relative;
-    width: 800px;
+    width: 1030px;
     margin: 0px 0px 0px 0px;
     float: left;
 }
+
+
+.info_container .Page-box .help{
+    position: relative;
+    width: 230px;
+    height: 350px;
+    margin: 0px auto;
+    float: right;
+    right: 20px;
+    display: inline-block;
+    border: 3px dashed #ddd;
+}
+
+.info_container .Page-box .help p{
+    margin: 15px 10px;
+    font-size: 15px;
+}
+
+.info_container .Page-box .help p span{
+ 	color: #ee0000
+}
+
+.info_container .Page-box .choice1{
+    position: relative;
+    display: inline-block;
+    left: 51px;
+}
+
 .info_container .Page-box .choice1{
     position: relative;
     display: inline-block;

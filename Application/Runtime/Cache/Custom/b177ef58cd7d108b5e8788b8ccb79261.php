@@ -6,8 +6,6 @@
   <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/css.css'>
   <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/form.css'>
   <link rel='Stylesheet' type='text/css' href='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>
-  <script src='/webprj/ecnu_mind/Public/JSON/ComboxData.js'></script>
-  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/Combox.js'></script>
   <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/Jcrop.js'></script>
   <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.js'></script>
   <script src='/webprj/ecnu_mind/Public/js/home/InitPersonalInfo.js'></script>
@@ -40,12 +38,6 @@
             <div class='form-tip' id='name-tip' style='display:none'></div>
             
             <div class='form-group'>
-              <label class='label1' for='studentid'>学号</label>
-              <input type='text' name='student_id' class='form-control' id='studentid' placeholder='请输入学号'>
-            </div>
-            <div class='form-tip' id='studentid-tip' style='display:none'></div>
-            
-            <div class='form-group'>
               <label class='label1' for='Email'>电子邮件</label>
                <input type='text' name='email' class='form-control' id='Email' placeholder='example@qq.com'>
             </div>
@@ -71,23 +63,28 @@
 	          <span>妹纸</span>
             </div>
             
-            <div class='combobox'>
-              <ul>
-                <li>
-                  <span style='margin-right: 54px;position: relative;top: -4px;'> 学院/系 </span>
-                  <select name='academy' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='academy'></select>
-                  <br>
-                  
-                  <span style='margin-right: 76px;position: relative;top: -4px;'> 系别 </span>
-                  <select name='department' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'></select>
-                  <br>
-                  
-                  <span style='margin-right: 76px;position: relative;top: -4px;'> 专业 </span>
-                  <select name='major' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'></select>
-                  
-                </li>
-              </ul>
-            </div>           
+            <div class='form-group'>
+              <label class='label1' for="schooling_system">学制</label>
+			    <select id="schooling_system" name="schooling_system" class='form-control'>
+			      <option selected = "selected">请选择学制</option>
+				  <option value="全日制本科">全日制本科</option>
+				  <option value="专业型硕士">专业型硕士</option>
+				  <option value="学术型硕士">学术型硕士</option>
+				  <option value="博士">博士（含硕博连读）</option>
+			    </select>
+            </div>
+            <div class='form-tip' id='schooling_system-tip' style='display:none'></div>
+            
+            <div class='form-group'>
+              <label class='label1' for="campus">校区</label>
+			    <select id="campus" name="campus" class='form-control'>
+			      <option selected = "selected">请选择校区</option>
+				  <option value="中山北路校区">中山北路校区</option>
+				  <option value="闵行校区">闵行校区</option>
+			    </select>
+            </div>
+            <div class='form-tip' id='campus-tip' style='display:none'></div>
+                     
             <div class='form-tip' id='combobox-tip' style='display:none'></div>
             
             <div class='form-group' style='height:190px'>
@@ -99,7 +96,16 @@
             <button type='submit' class='btn'>提交修改</button>
 	      </form>
 	    </div>
+	    
+	    <div class="help">
+	      <p style="text-align: center; color: #bb0000; font-weight: 600;">个人信息维护说明</p>
+	      <p style="color: #333;"><span>※</span> 目前暂不提供学号、学院、系别、专业等信息的修改</p>
+	      <p style="color: #333;"><span>※</span> 如果因特殊原因（比如转系），需要对不可修改的信息进行更正，请联系管理员，我们会尽快处理</p>
+	      <p style="color: #333;"><span>※</span> 如果本页的信息填写不完整，可能会导致在竞赛报名时生成的报名信息不完整</p>
+	      <p style="color: #333;"><span>※</span> 如果您对个人信息的内容有更多的建议或者意见，请联系管理员^_^</p>
+	    </div>
 	  </div>
+	  
 	  
 	  <div class='Page-box clearfix' id='Page2'>
 	    
@@ -141,10 +147,10 @@
 	        
 	      </div>
 	    </div>
+
 	  </div>
 	</div>
 	<script type="text/javascript">
-	  Combobox();
       Jcrop();
       InitPersonalInfo();
 	</script>
