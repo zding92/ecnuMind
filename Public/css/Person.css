@@ -289,19 +289,6 @@ font-size: 0px;
     display: inline-block;
 }
 
-.info_container .form-box {
-    height: auto;
-    width: 700px;
-    margin: 0px auto;
-    margin-bottom: 50px;
-    padding: 20px 0px 20px 0px;
-    border: 3px dashed #ddd;
-    position: relative;
-    display: block;
-    float: left;
-    left: 50px;
-}
-
 
 .info_container .form-box .form-group {
     margin: 15px 0px 20px 0px;
@@ -503,6 +490,18 @@ font-size: 0px;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 5px;
+}
+
+.info_container .form-box {
+    height: auto;
+    width: 700px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding: 20px 0px 20px 0px;
+    border: 3px dashed #ddd;
+    position: relative;
+    display: block;
+    left: 50px;
 }
 
 .info_container .ability_box {
