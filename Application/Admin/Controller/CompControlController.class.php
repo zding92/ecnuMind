@@ -102,7 +102,7 @@ class CompControlController extends CommonController {
   
   		} else {
   			$comp['apply_state'] = '报名结束';
-  			$comp['comp_template'] = "<a style='color:#aaa;margin:0px auto;'>报名已经结束</a>";
+  			$comp['comp_template'] = "<a style='color:#aaa;margin:0px auto;'>报名已结束</a>";
   		}
   			
   		$comp['apply_date'] = $comp['comp_apply_start_date'].' ~ '.$comp['comp_apply_end_date'];
