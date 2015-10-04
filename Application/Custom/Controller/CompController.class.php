@@ -141,7 +141,7 @@ class CompController extends CommonController {
 			$compId = $comp['comp_id'];
 			
 			// 用完以后删除该项，防止传到前台。
-			unset($comp['comp_id']);
+			//unset($comp['comp_id']);
 			
 			$compTmp = $comp['comp_template'];
 			$comp['comp_template'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';

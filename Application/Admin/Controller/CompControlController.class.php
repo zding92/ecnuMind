@@ -71,15 +71,12 @@ class CompControlController extends CommonController {
   private function assignTemplate($allComp) {
   	foreach ($allComp as $comp) {
   			
-  		$compId = $comp['comp_id'];
-  			
-  		// 用完以后删除该项，防止传到前台。
-  		unset($comp['comp_id']);
-  			
+  		$compId = $comp['comp_id'];	
   		$compTmp = $comp['comp_template'];
   		$comp['comp_template'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
-  			
+  		$comp['apply_editor'] ='<a href="'.U("Admin/CompControl/getCompInfo_data","compId=$compId","").'" target="_blank">弹出表单</a>';
   		$result[] = $comp;
+  
   	}
   	return $result;
   }
@@ -110,4 +107,19 @@ class CompControlController extends CommonController {
   	}
   	return $result;
   }
+  
+  public function getCompInfo_data($compId){
+  	$comInfoModel = M('ecnu_mind.competiton_info');
+  	$result = $comInfoModel->find($compId);
+  	$this->ajaxReturn(json_encode($result), "EVAL");
+  }
+  
+  public function saveCompInfo($compId){
+  	$info->create();
+  	$info->comp_id=$compId;
+  	$info->filter("strip_tags")->save();
+  }
+  
+  
+  
 }

@@ -26,6 +26,10 @@ class TiaozhanController extends CompController {
 // 		显示__app__/home/Tiaozhan/Tiaozhan_origin_table页面
  		$this->display('Tiaozhan/tiaozhan');
 	}
+	
+	public function TiaozhanSave($compId){
+		
+	}
 		
 	public function Tiaozhan_origin($compItemId) {
 		$this->createModel();

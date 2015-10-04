@@ -7,10 +7,14 @@ class GuideController extends UserinfoController {
 		// 检查哪些列为空
 		$uid = session('user_id');
 		$customData = $custom->field('user_id,brief', true)->find($uid);
+		$customData = $this->translateToName($customData);
 		// 规定信息补全总步数
 		$customData['stepGuideNum'] = 10;	
 		$schoolJson = $this->getJson();
+
 		$customData['schoolJSON'] = json_encode($schoolJson);
+		
+		$a = urldecode($customData['schoolJSON']);
 		$this->assign($customData);		
 		$this->display();
 	}
@@ -29,6 +33,8 @@ class GuideController extends UserinfoController {
 				$checkForm->checkOne('combobox', $checkData);
 				// 返回校验失败的院/系/专业。
 				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+				
+				$custom = $this->translateToid($custom);
 			}
 			
 			// 将学号传入session
@@ -44,5 +50,25 @@ class GuideController extends UserinfoController {
 			
 			$this->ajaxReturn('success', 'EVAL');
 		}
+	}
+	
+	private function translateToid($custom){
+		$translateForm = M('ecnu_mind.academy');
+		$custom->academy = $translateForm->where("name='".$custom->academy."'")->field('academy_id')->find()["academy_id"];
+		$translateForm = M('ecnu_mind.department');
+		$custom->department =$translateForm->where("name='".$custom->department."'")->field('department_id')->find()["department_id"];
+		$translateForm = M('ecnu_mind.major');
+		$custom->major = $translateForm->where("name='".$custom->major."'")->field('major_id')->find()["major_id"];
+		return $custom;		
+	}
+	
+	private function translateToName($custom){
+		$translateForm = M('ecnu_mind.academy');
+		$custom['academy'] = $translateForm->where("academy_id='".$custom['academy']."'")->field('name')->find()["name"];
+		$translateForm = M('ecnu_mind.department');
+		$custom['department'] =$translateForm->where("department_id='".$custom['department']."'")->field('name')->find()["name"];
+		$translateForm = M('ecnu_mind.major');
+		$custom['major'] = $translateForm->where("major_id='".$custom['major']."'")->field('name')->find()["name"];
+		return $custom;
 	}
 }
