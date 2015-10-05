@@ -12,9 +12,6 @@ class GuideController extends UserinfoController {
 		$customData['stepGuideNum'] = 10;	
 		$schoolJson = $this->getJson();
 
-		$customData['schoolJSON'] = json_encode($schoolJson);
-		
-		$a = urldecode($customData['schoolJSON']);
 		$this->assign($customData);		
 		$this->display();
 	}
@@ -51,5 +48,4 @@ class GuideController extends UserinfoController {
 			$this->ajaxReturn('success', 'EVAL');
 		}
 	}
-
 }

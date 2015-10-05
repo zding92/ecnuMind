@@ -6,8 +6,8 @@
   <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/css.css'>
   <link rel='stylesheet' href='/webprj/ecnu_mind/Public/jsLib/jquery/Combox/form.css'>
   <link rel='Stylesheet' type='text/css' href='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.css'>
-  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/Jcrop.js'></script>
   <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/jquery.Jcrop.min.js'></script>
+  <script src='/webprj/ecnu_mind/Public/jsLib/jquery/Jcrop/Jcrop.js'></script>
   <script src='/webprj/ecnu_mind/Public/js/home/InitPersonalInfo.js'></script>
   <script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/hoverTag.js"> </script>
 </head>
@@ -27,7 +27,7 @@
 	    <div class='head'>
 	      <p>Infomation</p>
 	    </div>
-	    <div class='form-box'>
+	    <div class='form-box'  style="float: left;">
 	      <form id='form_base'>            
 	    	
 	    	<div class='form-group'>
@@ -117,7 +117,7 @@
 	      <p>Photo</p>
 	    </div>
 	    
-	    <div class='form-box'>
+	    <div class='form-box' >
 	      <div class='Old'>
 	        <p>当前使用</p>
 	        <div class='photo' style='width: 120px;height: 120px;left: 82px;top: 167px;'>
@@ -147,11 +147,16 @@
 	        
 	      </div>
 	    </div>
-
+		<div class="help">
+	      <p style="text-align: center; color: #bb0000; font-weight: 600;">照片上传说明</p>
+	      <p style="color: #333;"><span>※</span> 请不要上传超过200x200的照片</p>
+	      <p style="color: #333;"><span>※</span> 请使用真实的、且能看清面部的本人照片</p>
+	      <p style="color: #333;"><span>※</span> 您可以在选择图片完成后进行裁剪操作</p>
+	      <p style="color: #333;"><span>※</span> 严禁使用违规违法图片</p>
+	    </div>
 	  </div>
 	</div>
 	<script type="text/javascript">
-      Jcrop();
       InitPersonalInfo();
 	</script>
 </body>
