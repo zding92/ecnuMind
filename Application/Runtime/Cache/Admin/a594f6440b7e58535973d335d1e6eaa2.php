@@ -65,6 +65,7 @@
 		           <a href="#CompControl" id="btn_CompControl" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/prjinfo.png" alt="error"></div>比赛管理</a>
 		           <a href="#UserControl" id="btn_UserControl" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/find.png" alt="error"></div>用户管理</a>
 		           <a href="#ChangePassWord" id="btn_ChangePassword" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/help.png" alt="error"></div>安全设置</a>
+		           <a href="#Notification" id="btn_Notification" class="clickble"><div class="icon"><img src="/webprj/ecnu_mind/Public/img/icon/message.png" alt="error"></div>发送通知</a>
 		       </div>
 		       <div class="info_container">
 		       </div>	

@@ -3,8 +3,8 @@ var tips = document.getElementById('tips');
 var user = document.getElementById('login_user');  
 var password = document.getElementById('login_pwd');
 var sendstr = "username=" + user.value + "&password=" + password.value;
-window.onload = function () {	
-    btn.onclick = function () {
+$(document).ready(function () {	
+    $('#login-button').click(	function () {
         var isValidate = false;
         if (!user.value.match(/^[a-zA-Z0-9\u4E00-\u9FA5][0-9a-zA-Z\u4E00-\u9FA5]{3,15}/)) {
             tips.innerHTML = '<font color="red">账号格式不符合，请重新输入</font>';
@@ -53,22 +53,22 @@ window.onload = function () {
 		}
         
         if (isValidate) {
-            $.ajax({
+            $.ajax({           	
                 url: login_url, //请求验证页面 
                 type: "POST", //请求方式
-                data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val() + "&verify=" + $("#verify").val(),
+                data: "username=" + $("#login_user").val() + "&password=" + $("#login_pwd").val(),// + "&verify=" + $("#verify").val(),
                 success: function (call) {
                     handleReturn(call);          	         
                 }
             });
         }
-    }
-}
+    });
+});
 
 document.onkeydown = function(e){ 
     var ev = document.all ? window.event : e;
     if(ev.keyCode==13) {
-    	setTimeout(function () { $("#btn_lgn" ).click(); }, 20);
+    	setTimeout(function () { $("#login-button" ).click(); }, 20);
      }
 }
 

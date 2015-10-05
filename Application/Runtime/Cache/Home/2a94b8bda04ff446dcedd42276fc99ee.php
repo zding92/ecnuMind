@@ -41,7 +41,7 @@
 			
 			<div class="help" style="display:none">?</div> 		
 		<div class="ui">
-		  <input class="ui-input" type="text" />
+		  <input class="ui-input" type="text" disabled="true"/>
 		  <span class="ui-return">↵</span>
 		</div>
 		<div class="overlay">
@@ -90,10 +90,12 @@
 			<div class="wrapper">	
 				<div class="container">
 					<h2>WELCOME</h2>
-					<form class="form">
-						<input type="text" placeholder="Username">
-						<input type="password" placeholder="Password">
-						<button type="submit" id="login-button">Login</button>
+					<form class="form loginForm">
+						<input type="text" placeholder="Username" name="user" id="login_user">
+						<input type="password" placeholder="Password" name="pwd" id="login_pwd">
+						<button id="login-button" class="button" type="button" value="登录">Login</button>
+						<div id="registerTip" style="height: 10px;color: black;margin-left:135px;">没有账号？注册</div>
+						<div id="tips" style="height: 10px;color: red;margin-top: 10px;"></div>
 					</form>
 				</div>				
 				<ul class="bg-bubbles">

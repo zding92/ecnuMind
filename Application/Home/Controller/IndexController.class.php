@@ -108,14 +108,14 @@ class IndexController extends Controller {
     	// 构造用户数据基础模型
     	$user = M('ecnu_mind.user_base');
     	
-    	// 如果是注册验证是否存在用户名，则不进行验证码校验
-    	if ('register' !== I('post.action')) {
-    		// 检查验证码是否正确
-    		$code = I('post.verify');
-    		$verify = new \Think\Verify();
-    		if (!$verify->check($code,''))
-    			$this->ajaxReturn("verify_error", "EVAL");
-    	}
+//     	// 如果是注册验证是否存在用户名，则不进行验证码校验
+//     	if ('register' !== I('post.action')) {
+//     		// 检查验证码是否正确
+//     		$code = I('post.verify');
+//     		$verify = new \Think\Verify();
+//     		if (!$verify->check($code,''))
+//     			$this->ajaxReturn("verify_error", "EVAL");
+//     	}
     	
     	// 获取post方式传来的username和password
     	$username = I('post.username');
