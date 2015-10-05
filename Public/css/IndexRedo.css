@@ -212,20 +212,7 @@ form button:hover {
   -webkit-animation-delay: 11s;
           animation-delay: 11s;
 }
-.wrapper h2{
-	font-size: 40px;
-}
 
-.indexPage1H2{
-	width: 100%;
-	text-align: center;
-	font-size: 70px;
-	color: black;
-	position: fixed;
-	font-family: 微软雅黑;
-	margin-top: 350px;
-	display: none;
-}
 
 @-webkit-keyframes square {
   0% {
@@ -246,4 +233,20 @@ form button:hover {
     -webkit-transform: translateY(-700px) rotate(600deg);
             transform: translateY(-700px) rotate(600deg);
   }
+}
+
+
+.wrapper h2{
+	font-size: 40px;
+}
+
+.indexPage1H2{
+	width: 100%;
+	text-align: center;
+	font-size: 70px;
+	color: black;
+	position: fixed;
+	font-family: 微软雅黑;
+	margin-top: 350px;
+	display: none;
 }
