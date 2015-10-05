@@ -35,6 +35,43 @@ class HomeController extends UserinfoController {
 	}
 	
 	/**
+	 * 载入个人主页读取通知的方法
+	 */
+	public function loadMessage() {
+		$Data = M("ecnu_mind.user_custom");	// 构造用户数据基础模型
+		$Note = M("ecnu_mind.notification");
+
+		$username = session("user_id");//读取当前用户ID
+		$condition['user_id'] = $username;
+		//根据user_id找到对应的academy_id
+
+		$noteSeleted = $Data
+					  ->where($condition)
+		              ->field('academy')
+		              ->find();
+
+		//根据academy_id找到对应的行
+		$limitedNote = $Note
+				  ->where("academy_id = $noteSeleted[academy]")
+				  ->select();
+		//二维数组的行数
+
+		$i = 0;
+		//遍历limitedNote:存放指定数目的note
+
+		foreach($limitedNote as $eachNote) {
+			//returnToFront为返回至前台的数组
+			$result['note_time'] = $eachNote['note_time'];
+			$result['note_detail'] = $eachNote['note_detail'];
+			$result['note_academy'] = $eachNote['academy_id'];
+			$returnToFront[$i] = $result;
+			$i++;
+		}
+		$this->ajaxReturn(json_encode($returnToFront),'EVAL');
+		
+	}
+	
+	/**
 	 * 个人信息维护后台验证。
 	 */
 	public function  checkForm() {
