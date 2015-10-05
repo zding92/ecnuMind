@@ -17,6 +17,7 @@ $("#btn_edit").click(function () {
             right: "800px"
         }, 300, function () {
             $("#Page2").css('left', '800px');
+            $("#Page2 .form-box").css('float', 'left');
             $("#Page1").css('display', 'none');
             btn_valid = true;
         });
@@ -32,6 +33,7 @@ $("#btn_photo").click(function () {
             right: "0px"
         }, 300, function () {
             $("#Page2").css('display', 'none');
+            $("#Page2 .form-box").css('float', '');
             btn_valid = true;
         });
     }
