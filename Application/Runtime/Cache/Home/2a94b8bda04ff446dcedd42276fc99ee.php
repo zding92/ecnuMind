@@ -10,7 +10,14 @@
 	<link href="/webprj/ecnu_mind/Public/css/IndexRoll.css" rel="stylesheet">
 	<link href="/webprj/ecnu_mind/Public/css/jquery-ui.css" rel="stylesheet">
     <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/HomePages.css" /> 
-    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/IndexSection2.css" /> 
+    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/IndexSection2.css" />
+    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/css/IndexRedo.css" />
+    
+    <!-- 点阵字使用的css -->
+    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/DotText/normalize.css" />
+    <link rel="Stylesheet" type="text/css" href="/webprj/ecnu_mind/Public/jsLib/DotText/style.css" />
+    
+     
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.js"></script>
     <script src="/webprj/ecnu_mind/Public/jsLib/jquery_ui/jquery-ui.js"></script>
 	<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
@@ -25,65 +32,80 @@
 <body>
 	<section class="section-wrap">
 		<div class="section section-1">
-			<div id="formbackground">  
-			<img src="/webprj/ecnu_mind/Public/img/back_large.jpg" style="width: auto;height: auto" alt="图片载入失败">
-			</div> 
-					
-			<div id="Part1">
-			  <div id="logo">
-			    <div id="logo_1">ECNU</div>
-			    <div id="logo_2">华师</div>
-			    <div id="logo_3">人才项目智库</div>
-			  </div>
-			
-			  <div id="lgn_body" class="roundedRectangle"> 
-			  <ul class="tabs">
-			    <li>
-			        <input type="radio" name="tabs" id="tab1" checked onclick="DisplayLogin()">
-			        <label for="tab1" style="border-top-right-radius:0px">登录</label>
-			    </li>
-			    <li>
-			        <input type="radio" name="tabs" id="tab2" onclick="DisplayRegister()">
-			        <label for="tab2" style="border-top-left-radius:0px ">注册</label>
-			    </li>
-			</ul> 
-			    <div style="height: 70px"></div>
-			    <div id="Login" style="visibility: visible">
-				    <form>
-				       <div style="margin-top: 30px">
-				         <p><input id="login_user" type="text" name="user" style="text-align: left" placeholder="账号/学号/昵称" /></p>
-				         <p><input id="login_pwd" type="password" name="pwd" style="text-align: left;margin-top: -1px;" placeholder="密码"/></p>
-					     <p id="captcha-container" style="padding: 5px 0px 0px 0px;">  
-		 			  	 	<input id="verify" style ="width:140px;height:40px;float:left" placeholder="验证码" type="text">                  
-					  		<img width="150px" class="left15" height="40px" alt="验证码" src="/webprj/ecnu_mind/index.php/Home/Index/verifyCreate" title="点击刷新"> 
-						 </p> 	
-					   </div>
-				       <input id="btn_lgn" class="button" type="button" value="登录" onmouseout="OutColor(this)" onmouseover="OverColor(this)" onmousedown="DownColor(this)" onmouseup="UpColor(this)" />
-				       <br>
-				   
-				       <div id="tips" style="height: 10px"></div>
-				       <a href="http://www.qq.com" style="color: rgba(30,30,30,0.8);font-size: 12px;margin: -10px 0px 0px 90px;position: absolute">忘记密码？</a>
-				    </form>
-			    </div>
-			    <div id="Register" style="visibility: hidden">
-				    <form>
-				       <div style="margin-top: 30px">
-				         <p><input id="register_user" type="text" name="user" style="text-align: left;margin-top: -1px" placeholder="账号/学号/昵称"/></p>
-				         <div id="chk_user_no" style="margin: 12px 0px 0px 5px;position: absolute"></div>
-				         <div id="chk_user_yes" style="margin: -28px 0px 0px 320px;position: absolute"></div>
-				         <p id="user_tips" style="font-family: '微软雅黑';letter-spacing: 1px;font-size: 14px;color: rgba(30, 30, 30, 0.7);margin-left: 30px;margin-top: 10px;position: absolute"></p>
-				         <p><input id="register_pwd" type="password" name="pwd" style="text-align: left;margin-top: -1px" placeholder="密码"/></p>
-				         <p><input id="register_pwdre" type="password" name="pwdrepeat" style="text-align: left;margin-top: -1px" placeholder="请重复输入密码"/></p>
-				         <div id="chk_pwd_no" style="margin: 12px 0px 0px 5px;position: absolute"></div>
-				         <div id="chk_pwd_yes" style="margin: -28px 0px 0px 320px;position: absolute"></div>
-				         <p id="pwd_tips" style="font-family: '微软雅黑';letter-spacing: 1px;font-size: 14px;color: rgba(30, 30, 30, 0.7);margin-left: 30px;margin-top: 10px;position: absolute"></p>
-				         <p id="safe_tips" style="font-family: '微软雅黑';font-weight: 900;letter-spacing: 1px;font-size: 14px;color: rgba(30, 30, 30, 0.7);margin-left: 120px;margin-top: 30px;position: absolute"></p>
-				       </div>
-				       <input id="btn_reg" class="button" type="button" value="注册" onmouseout="OutColor(this)" onmouseover="OverColor(this)" onmousedown="DownColor(this)" onmouseup="UpColor(this)" />
-				    </form>
-			    </div>			 
-			  </div>
-			</div>
+		
+		<!-- 点阵文字 -->    
+		<div class="canvasContainer" style="height:600px;width:100%">
+			<canvas class="canvas"></canvas>
+			<div class="help" style="display:none">?</div> 		
+		<div class="ui">
+		  <input class="ui-input" type="text" />
+		  <span class="ui-return">↵</span>
+		</div>
+		<div class="overlay">
+		  <div class="tabs">
+		    <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+		
+		    <div class="tabs-panels">
+		      <ul class="tabs-panel commands">
+		        <li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+		        <li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+		        <li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+		        <li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+		        <li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>		
+		        <li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+		      </ul>		
+		      <div class="tabs-panel ui-details">
+		        <div class="ui-details-content">
+		          <h1>Shape Shifter</h1>
+		          <p>
+		            An experiment by <a href="//www.kennethcachia.com" target="_blank">Kenneth Cachia<a/>.<br/>
+		            <a href="//fortawesome.github.io/Font-Awesome/#icons-new" target="_blank">Font Awesome</a> is being used to render all #icons.
+		          </p>		
+		          <br/><p>Visit <a href="http://www.kennethcachia.com/shape-shifter/?a=#icon thumbs-up" target="_blank">Shape Shifter</a> to use icons.</p>
+		        </div>
+		      </div>		
+		      <div class="tabs-panel ui-share">
+		        <div class="ui-share-content">
+		          <h1>Sharing</h1>
+		          <p>Simply add <em>?a=</em> to the current URL to share any static or animated text. Examples:</p>
+		          <p>
+		            <a href="http://www.kennethcachia.com/shape-shifter?a=Hello" target="_blank">www.kennethcachia.com/shape-shifter?a=Hello</a><br/>
+		            <a href="http://www.kennethcachia.com/shape-shifter?a=Hello|#countdown 3" target="_blank">www.kennethcachia.com/shape-shifter?a=Hello|#countdown 3</a>
+		          </p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div><!-- 点阵文字 -->
+		</div> 
+		
+		
+		    
+		 
+		   
+			<!-- 登陆行 -->
+			<div class="wrapper">	
+				<div class="container">
+					<h2>WELCOME</h2>
+					<form class="form">
+						<input type="text" placeholder="Username">
+						<input type="password" placeholder="Password">
+						<button type="submit" id="login-button">Login</button>
+					</form>
+				</div>				
+				<ul class="bg-bubbles">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+			</div><!-- wrapper -->
 		</div>
 		
 		<div class="section section-2">
@@ -133,6 +155,9 @@
 	<!-- <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
 	<script src="/webprj/ecnu_mind/Public/jsLib/jquery/jquery.min.js"></script>
 	<script src="/webprj/ecnu_mind/Public/js/index/IndexRoll.js"></script> <!-- 整体网页的上下滑动翻转，包括立即体验点击返回顶部 -->
-	<script src="/webprj/ecnu_mind/Public/js/index/verify.js"></script> 
+	<script src="/webprj/ecnu_mind/Public/js/index/verify.js"></script>
+	
+	<!-- 点阵字使用的css -->
+	<script src="/webprj/ecnu_mind/Public/jsLib/DotText/index.js"></script> 
 </body>
 </html>
