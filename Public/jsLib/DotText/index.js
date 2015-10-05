@@ -19,12 +19,12 @@ var S = {
         i = action.indexOf('?a=');
 
     S.Drawing.init('.canvas');
-    document.body.classList.add('body--ready');
+    //document.body.classList.add('body--ready');
 
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('寻找梦想？|欢迎来到|华师智库');
+      S.UI.simulate('欢迎来到|华师智库|');
     }
 
     S.Drawing.loop(function () {
@@ -32,6 +32,7 @@ var S = {
     });
   }
 };
+
 
 
 S.Drawing = (function () {
@@ -103,7 +104,7 @@ S.UI = (function () {
       currentAction,
       resizeTimer,
       time,
-      maxShapeSize = 15,
+      maxShapeSize = 10,
       firstAction = true,
       sequence = [],
       cmd = '#';
@@ -213,7 +214,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 5000, sequence.length);
+    }, 3000, sequence.length);
   }
 
   function checkInputWidth(e) {
@@ -384,7 +385,7 @@ S.Dot = function (x, y) {
   this.e = 0.07;
   this.s = true;
 
-  this.c = new S.Color(0, 0, 0, this.p.a);
+  this.c = new S.Color(50,144,200, this.p.a);
 
   this.t = this.clone();
   this.q = [];
@@ -487,7 +488,7 @@ S.ShapeBuilder = (function () {
   var gap = 13,
       shapeCanvas = document.createElement('canvas'),
       shapeContext = shapeCanvas.getContext('2d'),
-      fontSize = 500,
+      fontSize = 250,
       fontFamily = '微软雅黑';
 
   function fit() {
@@ -719,6 +720,7 @@ S.Shape = (function () {
     }
   }
 }());
-
-
 S.init();
+
+
+

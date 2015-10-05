@@ -29,13 +29,16 @@
 	</style>
 	<![endif]-->
 </head>
-<body>
+<body style="min-width:1024px;min-height:768px;">
 	<section class="section-wrap">
 		<div class="section section-1">
 		
 		<!-- 点阵文字 -->    
-		<div class="canvasContainer" style="height:600px;width:100%">
-			<canvas class="canvas"></canvas>
+		<div class="canvasContainer" style="height:60%;width:100%;margin:0 auto;">
+		    <img src="__PUBLIC__/img/largeLogo.png" style="position:absolute">
+		    <h2 class="indexPage1H2">智库，每个人享有机会的乐土</h2>
+			<canvas class="canvas" style="height:100%;width:100%"></canvas>
+			
 			<div class="help" style="display:none">?</div> 		
 		<div class="ui">
 		  <input class="ui-input" type="text" />
@@ -157,7 +160,10 @@
 	<script src="__PUBLIC__/js/index/IndexRoll.js"></script> <!-- 整体网页的上下滑动翻转，包括立即体验点击返回顶部 -->
 	<script src="__PUBLIC__/js/index/verify.js"></script>
 	
-	<!-- 点阵字使用的css -->
+	<!-- 点阵字使用的js -->
 	<script src="__PUBLIC__/jsLib/DotText/index.js"></script> 
+	
+	<!-- 主页使用的js -->
+	<script src="__PUBLIC__/js/index/index.js"></script> 
 </body>
 </html>
