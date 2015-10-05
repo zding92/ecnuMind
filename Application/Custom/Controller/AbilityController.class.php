@@ -12,19 +12,21 @@ class AbilityController extends CommonController{
 			// 获取第一级能力设置
 			$model_f = M('ecnu_mind.field', null);
 			$field = $model_f->field('id,name')->select();
-
+			
 			$list1 = array();
 			foreach ($field as $f) {
 				// 获取第二级能力设置
 				$model_d = M('ecnu_mind.direction', null);
 				$condition['Field_id'] = $f['id'];
 				$direction = $model_d->field('id,name')->where($condition)->select();
-					
+				
 				$list2 = array();
 				foreach ($direction as $d) {
 					// 获取第三级能力设置
 					$model_a = M('ecnu_mind.ability', null);
 					$condition_2['Direction_id'] = $d['id'];
+					$condition_2['state'] = 'y';
+					$condition_2['_logic'] = 'AND';
 					$temp = $model_a->field('name')->where($condition_2)->select();
 					// urlencode 与 urldecode解决中文编码的问题
 					foreach ($temp as $k => $t) {
@@ -33,18 +35,18 @@ class AbilityController extends CommonController{
 					}
 					$list2[urlencode($d['name'])] = $temp;
 				}
+				
 				$list1[urlencode($f['name'])] = $list2;
 			}
 			// 缓存文件10分钟
 			S('ability_table',urldecode(json_encode($list1)),array('type'=>'file','expire'=>600));
 		}
-		
 		// 调试
 		//$str1 = urldecode(json_encode($list1).";");
 		// 返回json格式的数据
 		return $this->ajaxReturn(S('ability_table'), "EVAL");
 	}
-	
+	                                        
 public function getAbility() {
 		$userAbility = M('ecnu_mind.user_has_ability', null);
 		$result = $userAbility->field('Ability_name')->select(session('user_id'));

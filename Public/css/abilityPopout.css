@@ -11,7 +11,7 @@
 	filter:alpha(opacity=40);
 	display:none
 }
-.theme-popover {
+.theme-popover, .new-popover  {
 	z-index:9999;
 	position:fixed;
 	top:50%;
@@ -70,7 +70,7 @@
 	vertical-align: top;
 	color: white;
 }
-.theme-popover .close{
+.theme-popover .close, .new-popover .close {
 	display: inline;
 	font-size: 18px;
 	line-height: 18px;
@@ -79,8 +79,12 @@
 	margin-right: 4px;
 	margin-left: 4px;
 }
-.theme-popover .close:hover{
+.theme-popover .close, .new-popover .close {
 	color: #6fbce1;
+}
+.ability_head p{
+	display: inline-block;
+	float: left;
 }
 .popoutLine1Text{
 	margin-top: 25px;
@@ -221,8 +225,110 @@
 	margin-top: 70px;
 	margin-left: 45px;
 }
+.addAbilityPopLine1{
+	height: 75px;
+	width: 100%;
+	background-color: #2b99ce;
+}
+.addAbilityPopLine2{
+	height: 75px;
+	width: 100%;
+	background-color: #d2d2d2;
+}
+.addAbilityPopSelectDiv{
+	width: 100%;
+	height: 75px;
+	vertical-align: middle;
+	padding-top: 20px;
+	font-size: 25px;
+}
+.addAbilityPopSelectDiv select{
+	outline: none;
+	border: none;
+	font-size: 25px;
+	min-width: 255px;
+	font-family: 微软雅黑;
+	font-weight: 200;
+}
+.addAbilityPopSelectDiv1{
+	display: inline;
+	margin-right: 50px;
+	margin-left: 35px;
+}
+.addAbilityPopSelectDiv2{
+	display: inline;
+}
+.addAbilityPopLine3{
+	height: 75px;
+	width: 100%;
+	font-size: 25px;
+	font-family: 微软雅黑;
+	font-weight: 200;
+	background-color: #2ecc71;
+}
+.addAbilityName{
+	padding-top: 20px;
+	padding-left: 35px;
+}
+.addAbilityName label{
+	font-size: 25px;
+	font-family: 微软雅黑;
+    font-weight: 200;
+    color: #ffffff;
+}
+.addAbilityName input{
+	min-width: 255px;
+	font-size: 25px;
+	font-family: 微软雅黑;
+    font-weight: 200;
+}
+.addAbilityPopLine4{
+	height: 240px;
+	width: 100%;
+	background-color: #fff;
+} 
+.abilityDetailHeadImg{
+	display: inline;
+}
+.abilityDetailHeadText{
+	display: inline;
+}
+.abilityDetailHeadText h1{
+	font-size: 24px;
+	color: #757575;
+	position: absolute;
+	left: 75px;
+	top: 250px;
+	line-height: 0px; /*两个div的下边框对齐*/
+}
 
-
-
-
-
+.newAbilityDiv{
+	display: inline-flex;
+    float: right;
+    padding: 15px 146px 0px 0px;
+}
+.newAbilityHint{
+	font-family: 微软雅黑;
+	font-size: 14px;
+	font-weight: normal;
+	color: black;
+	margin: 0px auto;
+	margin-top: 7px;
+}
+.newAbilityIcon{
+	padding-top: 5px;
+	text-align: center;
+	letter-spacing: 0px;
+	border: 0px;
+	outline: none;
+	width: 180px;
+	height: 30px;
+	font-size: 17px;
+	color: #fff;
+	font-weight: 100;
+	font-family: "微软雅黑";
+	background: rgba(32, 210, 95, 0.85);
+	border-radius: 0px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}

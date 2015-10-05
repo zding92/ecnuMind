@@ -59,7 +59,8 @@ $("#register_user").blur(function () {
     $.ajax({
         url: login_url, //请求验证页面 
         type: "POST", //请求方式,
-        data: "username=" + $("#register_user").val() + "&password=" + "", 
+        data: "username=" + $("#register_user").val() + "&password=" + "&action=register", 
+        async: false,
         success: function (data) { //请求成功时执行操作
             if (data == 'user_noexist') {
                 if (flag_log) {
@@ -249,7 +250,7 @@ $("#register_pwdre").keyup(function () {
 
 $("#btn_reg").click(function () {
     $("#register_user").blur();
-    $("#register_pwdre").blur()
+    $("#register_pwdre").blur();
     if ( valid ) {
         $.ajax({
         	//请求验证页面
@@ -257,6 +258,7 @@ $("#btn_reg").click(function () {
             //请求方式
             type: "POST", 
             data: "username=" + $("#register_user").val() + "&password=" + $("#register_pwdre").val(),
+            async: false,
             //请求成功时执行操作
             success: function (call) { 
             	switch (call) {

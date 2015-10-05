@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Personal Main Page</title>
-<script type="text/javascript" src="__PUBLIC__/js/home/hoverTag.js"> </script>
-<script type="text/javascript" src="__PUBLIC__/js/home/home.js"> </script>
+<script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/hoverTag.js"> </script>
+<script type="text/javascript" src="/webprj/ecnu_mind/Public/js/home/home.js"> </script>
 </head>
 <body>
 
 	<div class="box1">
 		<div class="title_box">
 			<div style="display:inline-block;width:15px;height:15px;">
-				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/myinfo.png">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="/webprj/ecnu_mind/Public/img/icon/myinfo.png">
 			</div>我的信息
 		</div>
 		<div class="photo"></div>
@@ -24,7 +24,7 @@
 	<div class="box2">
 		<div class="title_box">
 			<div style="display:inline-block;width:15px;height:15px;">
-				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/myinfo.png">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="/webprj/ecnu_mind/Public/img/icon/myinfo.png">
 			</div>能力概览
 		</div>
 		<div class="Chart">
@@ -57,7 +57,7 @@
 	<div class="box3">
 		<div class="title_box" id="title_box" style="margin-bottom:20px">
 			<div style="display:inline-block;width:15px;height:15px;">
-				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/message.png">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="/webprj/ecnu_mind/Public/img/icon/message.png">
 			</div>站内通知
 			<div style="display:inline-block;width:80px;height:15px;float:right;padding-right:30px;position:relative;cursor:pointer" id='showMore' onclick="showMore()">显示更多</div>
 		</div>
