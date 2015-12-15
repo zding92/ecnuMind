@@ -10,6 +10,7 @@ $('document').ready(function(){
 		url : modelUrl + "/getPersonalInfo",
 		dataType: "JSON",
 		success : function(result) {
+			$("#load").css("display","none");
 			SchoolJSON = result[0];
 			user_json = result[1];
 			Combobox();
