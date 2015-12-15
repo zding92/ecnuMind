@@ -213,7 +213,7 @@ class Think {
      * @param mixed $e 异常对象
      */
     static public function appException($e) {
-        $error = array();
+         $error = array();
         $error['message']   =   $e->getMessage();
         $trace              =   $e->getTrace();
         if('E'==$trace[0]['function']) {

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+  <meta charset="UTF-8">
+  <title>Personal Main Page</title>
+  <link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
+  <link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Personalinfo.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/radios.min.css" />
+  <link href="__PUBLIC__/css/icheck/flat/blue.css" rel="stylesheet">
+  <link href="__PUBLIC__/css/icheck/line/blue.css" rel="stylesheet">
+  <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
+  <script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
+  <script src="__PUBLIC__/jsLib/jquery/jquery.icheck.js"></script>
+  <script src='__PUBLIC__/js/home/InitPersonalInfo.js'></script>
+  <script type="text/javascript">
+  	var modelUrl = "__URL__";
+  	var homeUrl = "__APP__/Custom/Home/home";
+
+  </script>
+</head>
+
+<body>
+	<div class='title_box'>
+	  <div style="display:inline-block;width:15px;height:15px;">
+	    <img style="width:15px;height:15px;margin-left:-10px;" src ="__PUBLIC__/img/icon/base.png">
+	  </div>
+	    基础信息编辑
+	</div>
+	  <div class='Page-box clearfix' id='Page1'>
+	    <div class='head'>
+	      <p>我的信息</p>
+	    </div>
+	    <div class='form-box'  style="float: left;">
+	      <form id='form_base'>            
+	    	
+	    	<div class='form-group'>
+              <label class='label1' for='name'>姓名</label>
+              <input type='text' name='name' class='form-control' id='name' placeholder='请输入真实姓名'>
+              <label for='checkName'></label>
+            </div>
+            <div class='form-tip' id='name-tip' style='display:none'></div>
+            
+            <div class='form-group'>
+              <label class='label1' for='Email'>电子邮件</label>
+              <input type='text' name='email' class='form-control' id='Email' placeholder='example@qq.com'>
+            </div>
+            <div class='form-tip' id='Email-tip' style='display:none'></div>         
+   
+            <div class='form-group'>
+              <label class='label1' for='address'>地址</label>
+              <input type='text' name='address' class='form-control' id='address' placeholder='请输入你在学校的联系地址'>
+            </div>
+            <div class='form-tip' id='address-tip' style='display:none'></div>
+            
+            <div class='form-group'>
+              <label class='label1' for='phone'>联系电话</label>
+              <input type='text' name='phone' class='form-control' id='phone' placeholder='请输入手机号码'>
+            </div>
+            <div class='form-tip' id='phone-tip' style='display:none'></div>   
+            
+            <div class='form-group' style='text-align:center;font-size: 15px;font-weight: 700;color: rgba(120,120,120,0.9)'>
+	          <label class='privacyLabel'>隐私选项</label>
+	          <input type='radio' class='sexbox' id='show' value='S' name='hidden_privacy'>
+	          <span>显示通讯方式</span>
+	          <input type='radio' class='sexbox' id='hide' value='H' name='hidden_privacy'>
+	          <span>隐藏通讯方式</span>
+            </div>
+                              
+            <div class='form-group' style='text-align:center;font-size: 15px;font-weight: 700;color: rgba(120,120,120,0.9)'>
+	          <label class='label1'>性别</label>
+	          <input type='radio' class='sexbox' id='male' value='男' name='gender'>
+	          <span>汉纸</span>
+	          <input type='radio' class='sexbox' id='female' value='女' name='gender'>
+	          <span>妹纸</span>
+            </div>
+                        
+            <div class='combobox'>
+              <ul>
+                <li>
+                  <span style='margin-right: 49px;position: relative;top: -4px;'> 学院/系 </span>
+                  <select name='academy' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='academy'></select>
+                  <br>               
+                  <span style='margin-right: 72px;position: relative;top: -4px;'> 系别 </span>
+                  <select name='department' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'></select>
+                  <br>                 
+                  <span style='margin-right: 72px;position: relative;top: -4px;'> 专业 </span>
+                  <select name='major' class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'></select>                
+                </li>
+              </ul>
+            </div>
+            <div class='form-tip' id='combobox-tip' style='display:none'></div>
+            
+            <div class='form-group'>
+              <label class='label1' for="schooling_system">学制</label>
+			    <select id="schooling_system" name="schooling_system" class='form-control'>
+				  <option value="全日制本科">全日制本科</option>
+				  <option value="专业型硕士">专业型硕士</option>
+				  <option value="学术型硕士">学术型硕士</option>
+				  <option value="博士">博士（含硕博连读）</option>
+			    </select>
+            </div>
+            <div class='form-tip' id='schooling_system-tip' style='display:none'></div>
+            
+            <div class='form-group'>
+              <label class='label1' for="campus">校区</label>
+			    <select id="campus" name="campus" class='form-control'>
+				  <option value="中山北路校区">中山北路校区</option>
+				  <option value="闵行校区">闵行校区</option>
+			    </select>
+            </div>
+            <div class='form-tip' id='campus-tip' style='display:none'></div>
+            
+            <div class='form-group' style='height:150px'>
+              <label class='label1' for='brief'>个人简介</label>
+              <textarea type='text' name='brief' class='form-control' id='brief' placeholder='请在100字内简单介绍一下自己吧。可以说明一下自己擅长哪些技术~当然也可以谈谈兴趣爱好~' ></textarea>
+              <!--<p style='color:red'>100字以内</p>-->
+            </div>
+            <div class='form-tip' id='brief-tip' style='display:none;position:relative'></div>
+            
+            <button type='submit' class='btn'>提交修改</button>
+	      </form>
+	    </div>
+	    
+	    <div class="help">
+	      <p style="text-align: center; color: #bb0000; font-weight: 600;">个人信息维护说明</p>
+	      <p style="color: #333;"><span>※</span> 目前暂不提供学号信息的修改</p>
+	      <p style="color: #333;"><span>※</span> 如果因特殊原因需要对不可修改的信息进行更正，请联系管理员(网站最下方的联系我们可看到管理员联系方式)，我们会尽快处理</p>
+	      <p style="color: red;"><span>※</span> 如果本页的信息填写不完整，可能会导致在竞赛报名时生成的报名信息错误</p>
+	      <p style="color: #333;"><span>※</span> 如果您对个人信息的内容有更多的建议或者意见，请联系管理员^_^</p>
+	    </div>
+	  </div>
+</body>
+</html>

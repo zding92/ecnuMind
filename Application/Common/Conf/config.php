@@ -9,4 +9,10 @@ return array(
 	'DB_PORT'=>3306,// 端口
 	'DB_CHARSET'=>'utf8',// 数据库字符集	
 	'VAR_FILTERS'=>'stripslashes,strip_tags,trim',
+	'URL_ROUTER_ON'   => true,
+	'URL_ROUTE_RULES'=>array(
+		'/^user$/' => 'Custom/home/home',
+		'/^guide$/'=> 'Custom/Guide/guide',
+		'/^admin$/'=> 'Admin/home/home',
+	),
 );

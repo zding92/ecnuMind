@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+	<meta charset="UTF-8">
+	<title>Personal Main Page</title>
+
+	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Personmain.css" />
+	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
+	<!-- <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/hover_card-7.x-1.1/stylesheets/hover_card.css"/> -->
+	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
+	<script src="__PUBLIC__/jsLib/jquery/Chart.js"></script>
+	<script src="__PUBLIC__/jsLib/jquery_ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/home/InitPersonalMain.js"> </script>
+	<!-- <script type="text/javascript" src="__PUBLIC__/jsLib/hover_card-7.x-1.1/javascripts/hover_card.js"> </script> -->
+	
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/tooltipster-master/css/tooltipster.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/tooltipster-master/css/themes/tooltipster-noir.css" />
+	<script type="text/javascript" src="__PUBLIC__/jsLib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		var model_url = "__URL__";
+		var public_url = "__PUBLIC__";
+		var starOnIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-on.png"
+		var starOffIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-off.png"
+		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png"
+	    var toTopIcon = "__PUBLIC__/jsLib/ToTop/1.png"
+	</script>
+</head>
+<body>
+
+	<div class="box1">
+		<div class="title_box">
+			<div style="display:inline-block;width:15px;height:15px;float: left;">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/myinfo.png">
+			</div>我的信息
+		</div>
+		<div class="photo"><img src="__PUBLIC__/img/photo/{$user_id}/face.png?timeTmp={$time}" alt='照片载入失败'></div>
+		<div class="personMainDetail">
+			<div class="personMainUpperShell">
+				<div class="personMainName">{$name}</div>
+				<div class="personMainGender">
+					<img src="__PUBLIC__/img/{$gender=='男'? 'male':'female'}.png" alt='照片载入失败'>
+				</div>
+			</div>
+			<div class="personMainDetailLeft">
+				<div class="personMainDetailLeft-line"><b>专业：</b>{$major}</div>
+				<div class="personMainDetailLeft-line"><b>学号：</b>{$student_id}</div>
+				<div class="personMainDetailLeft-line"><b>邮箱：</b>{$email}</div>
+				<div class="personMainDetailLeft-line"><b>手机：</b>{$phone}</div>
+			</div>
+			<div class="personMainDetailRight">
+				<div class="personMainDetailRight-line"><b>学历：</b>{$schooling_system}</div>
+				<div class="personMainDetailRight-line"><b>年级：</b>{$grade}</div>
+				<div class="personMainDetailRight-line"><b>校区：</b>{$campus}</div>
+				<div class="personMainDetailRight-line"><b>地址：</b>{$address}</div>
+			</div>
+		</div>
+		<!--
+		<div class="welcome">
+		  <p>{$name}</p>
+		  <p>{$major}</p>	
+		</div>
+		<div class="line_vertical"></div>
+		<p style="display: inline-block;position: relative;left: 120px;font-size: 14px;top: -59px;border-bottom: 2px solid #ddd;width: 90px;text-align: center;">个人简介</p>
+		<p class="person_intro">{$brief}</p>
+		 -->
+	</div>
+
+	<div class="box2">
+		<div class="title_box">
+			<div style="display:inline-block;width:15px;height:15px;float: left;">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/myinfo.png">
+			</div>能力概览
+		</div>
+		<div class="Chart">
+			<div class="Chart_info">
+				<p style="font-size: 10px;color: #0080ff;text-align:center">tips:鼠标悬浮在图上以显示详细能力信息~</p>
+				<canvas id="chart-area" width="300" height="300" style="width: 240px; height: 240px;"></canvas>
+			</div>
+			<div class="tips">
+				<!-- 等待InitPersonalMain.js生成div -->
+			</div>
+			<div class="detail">
+				<div id="default">
+					请单击左侧饼图以查看能力详情
+				</div>
+				<!-- 等待InitPersonalMain.js生成div -->
+			</div>
+		</div>
+	</div>
+
+	<div class="box3">
+		<div class="title_box" id="title_box" style="margin-bottom:10px">
+			<div style="display:inline-block;width:15px;height:15px;float: left;">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/message.png">
+			</div>管理员通知
+			<div class="from" id="unreadAdmin" style="display:inline-block;height:15px;float:right;padding-right:30px;position:relative">距离您上次登录有<span id="unreadMsg" style="color:#1D7EB1"></span>条未读消息</div>
+		</div>
+	</div>
+	<div class="box4">
+		<div class="message" id="messageTip" style="display:inherit;height:10px;margin-bottom:0px;top:-20px;">
+			<div class="unreadMsg" id='showMoreFromAdmin' onclick="showMoreForAdmin()">显示更多</div>
+		</div>
+	</div>
+	<div class="box5">
+		<div class="title_box" id="title_box_user" style="margin-bottom:10px">
+			<div style="display:inline-block;width:15px;height:15px;float: left;">
+				<img style="width:15px;height:15px;margin-left: -10px;" src="__PUBLIC__/img/icon/message.png">
+			</div>站内信
+			<div class="from" id="unreadUser" style="display:inline-block;height:15px;float:right;padding-right:30px;position:relative">距离您上次登录有<span id="unreadMsgFromUser" style="color:#1D7EB1"></span>条未读消息</div>
+		</div>
+	</div>
+	<div class="box6">
+		<div class="message" id="messageTipFromUser" style="display:inherit;height:10px;margin-bottom:0px;top:-20px;">
+			<div class="unreadMsg" id='showMoreFromUser' onclick="showMoreForUser()">显示更多 </div>
+		</div>
+	</div>
+	<div class='messagePopOut' style='display:none'>
+	   	<div class='messagePopText'>
+	   		
+	   	</div>
+	   	<div class='messagePopButton'>
+	   		OK
+	   	</div>  
+    </div>
+
+	<script type="text/javascript">
+	  getDataFromServer();
+	</script>
+
+	
+	
+</body>
+</html>

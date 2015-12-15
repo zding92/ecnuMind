@@ -4,11 +4,6 @@ use Think\Controller;
 use Admin\Common\Controller\CommonController;
 
 class CompsinfoController extends CommonController {
-	protected function returnAdminAccess() {
-		// 如果管理员是最高权限。前台显示院系过滤框。
-		if (session('access_id') == 0) $this->assign('admin_access', 'all');
-		else $this->assign('admin_access', 'academy');
-	}
 	
 	/**
 	 *  检索条件: 由权限和竞赛状态决定。
@@ -18,14 +13,11 @@ class CompsinfoController extends CommonController {
 	protected function getCompsByCondition($condition){
 	  	$compItemModel = M('ecnu_mind.competition_main');
 		$compInfoModel = M('ecnu_mind.competition_info');
-				
+		
+		
 		// $allCompItem为competition_main 表格中的所有行，
 		// 取"comp_item_id,comp_item_name,author1_name,owner_academy,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
-		// 并且由前台分页工具决定载入的数量。
-		$allCompItem = $compItemModel
-					   ->where($condition)
-					   ->field('comp_participant_id',true)
-					   ->select();
+		$allCompItem = $compItemModel->where($condition)->field('comp_participant_id',true)->select();
 		
 		//返回二维数组的行数
 		$i = 0;		
@@ -44,7 +36,7 @@ class CompsinfoController extends CommonController {
 			$returnItemInfo['comp_prize'] = $eachCompItem['comp_prize'];
 			$returnItemInfo['comp_item_name'] = $eachCompItem['comp_item_name'];
 			$returnItemInfo['comp_author1'] = $eachCompItem['author1_name'];
-			$returnItemInfo['apply_department'] = $eachCompItem['owner_academy'];
+			$returnItemInfo['apply_academy'] = $eachCompItem['apply_academy'];
 			// 已经结束的竞赛仅显示年份，未结束的显示具体时间并且返回未结束的状态
 			if ($condition['comp_state'] == '已结束')
 				$returnItemInfo['comp_date'] = substr($eachCompItem['apply_date'],0,4).'年';
@@ -57,6 +49,12 @@ class CompsinfoController extends CommonController {
 			$returnItemInfo['comp_item_id'] = $eachCompItem['comp_item_id'];
 			$returnItemInfo['comp_type_id'] = $eachCompItem['comp_type_id'];
 			
+			$comp_item_id = $eachCompItem['comp_item_id'];
+
+	        $comp_item_name = $eachCompItem['comp_item_name'];
+			//$returnItemInfo['comp_item_name'] = "<a href='".U("Custom/$comp_template/$comp_template"."Origin","compItemId=$comp_item_id","")."' target='_blank'>$comp_item_name</a>";
+			$returnItemInfo['comp_item_name'] = "<a href='".U("Admin/ItemView/ItemView","comp_item_id=$comp_item_id","")."' target='_blank'>$comp_item_name</a>";
+				
 			$returnToFront[$i] = $returnItemInfo;
 			$i++;
 		}	

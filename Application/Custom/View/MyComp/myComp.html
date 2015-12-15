@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="__PUBLIC__/jsLib/SweetAlert/sweetalert.css" type='text/css'>
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
+  
+  <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table-filter.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/bs-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/jsLib/SweetAlert/sweetalert.min.js"></script>
+  
+  <style type="text/css">
+  	p.tips {
+	    color: red;
+	}
+	
+	input#finalFiles {
+	    margin: 10px 0px;
+	}
+  </style>
+  
+</head>
+
+<body style="background-color: #fff">
+  <div style="margin:10px 15px 15px;">
+    <div id="filter-bar"> </div>
+    <table id="comp-table" 
+           data-toolbar="#filter-bar" 
+           data-show-toggle="true" 
+           data-search="true"           
+           data-show-filter="true"
+           data-striped="true"
+           data-sort-name="apply_state" 
+           data-sort-order="desc">
+      <thead>
+        <tr>
+          <th data-field="comp_name" data-width="200" data-align="left" data-sortable="true">竞赛名称</th>
+          <th data-field="comp_item_name" data-width="350" data-align="left">题目</th>
+          <th data-field="apply_date" data-width="100" data-align="left" data-sortable="true">报名时间</th>
+          <th data-field="comp_state" data-width="100" data-align="left" data-sortable="true">当前状态</th>
+          <th data-field="comp_prize" data-width="100" data-align="left" data-sortable="true">获奖情况</th>
+          <th data-field="operate" data-align="left" data-halign="center" data-formatter="operateFormatter" data-events="operateEvents">操作</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel" style='font-family:微软雅黑'>
+              	竞赛作品提交
+            </h4>
+         </div>
+         <div class="modal-body">
+            <p class='tips'>*作品请打包成zip或者rar格式压缩包上传，不能超过20M<br>*如果您已经上传过附件，再次上传则会覆盖上次的附件</p>
+            <form id="fileUploadForm" method="post" action='__URL__/finalSubmit' enctype="multipart/form-data">  
+                <p class='tips'>已上传的报名文件（点击文件名可下载）：<a class="fileAlreadyExisted" style="cursor:pointer;margin: 15px 0px;">未提交作品，请点击下方“选择文件”进行提交</a> </p>
+                <input type='text' id='comp_item_id' name='comp_item_id' style='display:none'>
+                <input type="file" id="finalFiles" class="finalFiles" name="finalFiles">
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal">关闭
+            </button>
+            <button type="button" class="btn btn-primary" id="submit">
+               提交
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+  
+  <script type="text/javascript">
+    var dataUrl = '__URL__/getCompItem';
+    var finalSubmitStatus = '{$submitFinalSuccess}';
+  </script>
+  <script>
+    $(document).ready(function() {
+    	switch (finalSubmitStatus) {
+		case "success":
+			swal('成功','作品提交成功', 'success');
+			break;
+		case "not_in_date":
+			swal('认证错误', '请在竞赛正式开始以后，结束以前提交作品', 'error');
+			break;
+		case "not_access":
+			swal('认证错误', '您没有该竞赛的提交权限', 'error');
+			break;
+		case "not_agree":
+			swal('认证错误', '您不能在未审批的情况下提交作品', 'error');
+			break;
+		case "empty":
+			swal('认证错误', '文件不能为空', 'error');
+			break;
+		default:
+			break;
+		}
+    });
+  </script>
+  <script src="__PUBLIC__/js/Comp/myComp.js"></script>
+</body>
+
+</html>

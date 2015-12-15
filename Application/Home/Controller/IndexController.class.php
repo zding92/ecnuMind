@@ -14,13 +14,13 @@ class IndexController extends Controller {
     			 
     			// 判断用户信息是否完善， 如果不完善要求用户补全
     			if ($result['complete_steps'] < 11) {
-    				$this->redirect('Custom/Guide/guide');
+    				$this->redirect('/guide');
     			} else {
-    				$this->redirect('Custom/Home/home');
+    				$this->redirect('/user');
     			}
     		}
     		else if (session('user_access') === 'admin')
-    			$this->redirect('Admin/Home/home');
+    			$this->redirect('/admin');
     	}
     	// 不存在的话显示登陆界面
         $this->display();
@@ -81,24 +81,12 @@ class IndexController extends Controller {
     		// 操作数据库->添加数据，并获取主键
     		$id = $user->filter('strip_tags')->add();
     		session('user_id', $id);
+    		session("user_access", "custom");
+    		session("login_time", time());
     	} else {
     		// 根据模型自动验证，如果存在相同用户名返回'exist'。
     		$this->ajaxReturn($user->getError(), "EVAL");
     	}
-    }
-    
-    /**
-     *  生成验证码
-     */
-    public function verifyCreate(){
-    	$Verify = new \Think\Verify();
-    	$Verify->fontSize = 22;
-    	$Verify->length   = 4;
-    	$Verify->useNoise = true;
-    	$Verify->codeSet = '0123456789';
-    	$Verify->imageW = 150;
-    	$Verify->imageH = 50;
-		$Verify->entry();
     }
     
     /**
@@ -118,8 +106,8 @@ class IndexController extends Controller {
 //     	}
     	
     	// 获取post方式传来的username和password
-    	$username = I('post.username');
-    	$password = I('post.password');
+    	$username = I('post.username','','trim,htmlspecialchars,strip_tags');
+    	$password = I('post.password','','trim,htmlspecialchars,strip_tags');
     	 
     	// sql查询： SELECT password,username FROM user_custom where username='username';
     	$condition['username'] = $username;

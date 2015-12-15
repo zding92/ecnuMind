@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+body{
+	font-family: "微软雅黑";
+}
+
+ul.nav-tabs{
+    width: 140px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+ul.nav-tabs li:first-child{
+    border-top: none;
+}
+ul.nav-tabs li a{
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+ul.nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+ul.nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+ul.nav-tabs.affix{
+    top: 30px; /* Set the top position of pinned element */
+}
+ul.nav-button.affix{
+    top: 210px; /* Set the top position of pinned element */
+}
+
+.saveBtn {
+    width: 140px;
+    text-align: left;
+    padding-left: 40px;
+    letter-spacing: 20px;
+    margin-top: 40px;
+}
+
+button{
+	border:0;
+	outline:none;
+	margin-top: 20px;
+}
+
+form p {
+	margin-top: 20px;
+}	
+
+textarea#b {
+    width: 100%;
+    height: 300px;
+    padding: 10px 10px;
+    resize: none;
+    font-family: 微软雅黑;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+label.memberLabel {
+    float: left;
+    position: relative;
+    top: 2px;
+    width: 90px;
+}
+
+#memberInfo input {
+    margin-bottom: 30px;
+}
+
+.deleteParticipant{
+	float:left;
+	margin: 0px 10px 0px 0px;
+	border-radius: 4px;
+}
+
+form div{
+	margin-bottom: 100px;
+}
+
+span.memberErr {
+    color: red;
+    margin-left: 20px;
+}
+
+span.participantInfo {
+    margin-left: 20px;
+}
+
+input#comp_item_name {
+    width: 300px;
+}
+
+label.nameLabel {
+    float: left;      
+    position: relative;      
+    top: 2px;      
+    width: 90px;
+}
+#newParticipant{
+	padding-top: 6px;
+    height: 36px;
+}
+#peopleCnt{
+	left: 10px;
+    position: relative;
+    top: 10px;
+}
+#attachement a{
+	font-size: 20px;
+	cursor: pointer;
+}
+ul#tips {
+    margin: 20px 0px;
+}
+p.tips {
+  color: #d9534f;
+  line-height: 25px;
+}
+
+input#compApplyFile {
+    margin: 25px 0px;
+}
+p.fileTips{
+	color: #f0ad4e;
+  	line-height: 25px;
+}

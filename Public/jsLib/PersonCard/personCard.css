@@ -1,0 +1,318 @@
+@CHARSET "UTF-8";
+@CHARSET "UTF-8";
+.tableContent{
+	margin-left: 50px;
+    margin-right: 20px;
+    
+	/* height: 369px; */
+}
+.tableBackground1st{
+	height: 350px;
+    
+	/* background-color: cornflowerblue; */
+}
+.tableBackground2ed{
+	width: 70px;
+	height: 350px;
+	background-color: #1597d4;
+	position: absolute;
+	z-index: 1;
+}
+.tableBackground2ed i.glyphicon.glyphicon-envelope {
+	color: white;
+	font-size: 35px;
+	left: 17px;
+	top: 240px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.tableBackground2ed i.glyphicon.glyphicon-envelope:hover {
+	font-size: 40px;
+}
+.tableHead{
+	width: inherit;
+    height: 90px;
+    
+	/* top: 5px; */
+    
+	background-color: white;
+    position: relative;
+}
+.tableHeadImage{
+    height: 70px;
+    width: 70px;
+    left: 35px;
+    top: 10px;
+    border-radius: 40px;
+    border-color: #fff;
+    background-color: white;
+    border-style: solid;
+    border-width: 5px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+.tableHeadImage img{
+	height: 100%;
+	width: 100%;
+}
+.tableHeadName{
+    height: 35px;
+    width: auto;
+    left: 115px;
+    top: 10px;
+    background-color: white;
+    position: absolute;
+    font-family: 微软雅黑;
+    font-size: 20px;
+    color: #7e8c8d;
+    margin: 0px 0px;
+}
+.tableHeadBrief{
+	height: 35px;
+	width: auto;
+	left: 120px;
+	top: 45px;
+	background-color: white;
+	position: absolute;
+	font-size: 12px;
+	font-family: 微软雅黑;
+	color: #7e8c8d;
+}
+.tableBtn{
+	top: 15px;
+	right: 23px;
+	position: absolute;
+}
+.tableBtnNotification{
+	top: 15px;
+    right: 111px;
+    position: absolute;
+}
+.detailContent{
+	position: absolute;
+	top: 75px;
+	left: 145px;
+	width: 300px;
+	height: 150px;
+	background-color: white;
+	/* border-radius: 10px; */
+	border: 1px solid #E0E0E0;
+	overflow: auto;
+	display: inline-block;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.contactContent{
+	position: absolute;
+	top: 240px;
+	left: 145px;
+	width: 300px;
+	height: 95px;
+	background-color: white;
+	/* border-radius: 10px; */
+	border: 1px solid #E0E0E0;
+	overflow: auto;
+	display: inline-block;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.defaultContactContent {
+	position: absolute;
+	top: 240px;
+	left: 145px;
+	width: 300px;
+	height: 95px;
+	background-color: rgba(240,240,240,0.3);
+	border: 1px solid #E0E0E0;
+	display: inline-block;
+	padding-top: 30px;
+	padding-left: 20px;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    color: rgba(120,120,120,0.5);
+}
+.tableContent{
+	padding-top: 10px;
+}
+.tableFoot{
+	position: relative;
+    width: inherit;
+    margin-top: 15px;
+    height: 50px;
+    
+	background-color: white;
+}
+.tableFootIcon{
+	width: 35px;
+    height: 35px;
+    bottom: 8px;
+    left: 18px;
+    background-color: blue;
+    position: absolute;
+}
+.tableFootLabel{
+	width: 50px;
+    height: 25px;
+    left: 90px;
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    border-style: double;
+    border-radius: 2px;
+}
+.tableBackgroundRight{
+    height: inherit;
+    border: 2px solid #E0E0E0;
+    background-color: white;
+}
+.tableHeadGender {
+    height: 20px;
+    width: 20px;
+    /* position: absolute; */
+    /* left: 212px; */
+    z-index: 3;
+    margin: 0px 0px;
+    display: inline-block;
+    /* box-sizing: initial; */
+}
+
+.tableBackground2ed i.glyphicon.glyphicon-plus {
+    color: white;      
+    font-size: 38px;     
+     left: 17px;      
+    top: 220px;      
+    cursor: pointer;      
+    transition: all 0.3s ease-in-out;
+}
+
+.tableBackground2ed i.glyphicon.glyphicon-plus:hover { 
+    font-size: 43px;     
+}
+
+.tableContent p {
+    margin: 0 0 5px;
+}
+
+.detailContentTitle {
+    display: inline-block;
+    position: absolute;
+    left: 120px;
+    top: 75px;
+    height: 150px;
+    padding-left: 5px;
+    padding-top: 30px;
+    width: 25px;
+    background-color: #1597d4;
+    font-family: 黑体;
+    color: white;
+}
+
+.contactContentTitle {
+    display: inline-block;
+    position: absolute;
+    left: 120px;
+    top: 240px;
+    height: 95px;
+    padding: 5px;
+    width: 25px;
+    background-color: #1597d4;
+    font-family: 黑体;
+    color: white;
+}
+.abilityColorTable{
+	position: absolute;
+	display: inline-block;
+	/* right: 259px; */
+	/* top: 80px; */
+	border: 1px solid #ddd;
+	padding: 5px 2px 5px 8px;
+	height: auto;
+	width: auto;
+	max-height: 56px;
+	max-width: 425px;
+	overflow: auto;
+}
+.abilityDetail{
+	position: relative;
+	display: inline-block;
+	/* right: 70px; */
+	top: 75px;
+	padding: 5px 2px 5px 8px;
+	height: 185px;
+	width: 425px;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: rgba(120,120,120,0.5);
+	background-color: rgba(240,240,240,0.3);
+	overflow-y:auto;
+}
+.tableBackgroundRight .abilityDetail  p{
+	margin: 5px 10px 5px 10px;
+    padding: 3px 10px 4px 10px;
+    width: auto;
+    font-family: Arial '微软雅黑';
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    border: 1px dotted rgba(255,255,255,0.8);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.box-word{
+    border: none;
+    padding: 0px;
+    height: auto;
+    width: auto; 
+    display: inline-block;
+}
+
+.box{
+    border: none;
+    padding: 0px;
+    height: 15px;
+    width: 20px; 
+    display: inline-block;
+}
+
+.word{
+    border: none;
+    padding: 0px 4px;
+    font-size: 14px;
+    top: -2px;
+    position: relative;
+    display: inline-block;
+}
+
+.usrAbilityContainer {
+    position: relative;
+    display: inline-block;
+    float: right;
+    top: -17px;
+    left: -50px;
+    height: 258px;
+    width: 430px;
+}
+
+.abilityNone {
+    color: #000;
+    position: relative;
+    top: 65px;
+    margin: 0px 125px;
+    font-size: 24px;
+}

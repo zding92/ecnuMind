@@ -33,6 +33,15 @@ class CheckForm {
 			case 'phone':
 				$this->CheckPhoneFromDB($value);
 				break;
+			case 'academy':
+				$this->CheckAcademy($value);
+				break;
+			case 'department':
+				$this->CheckDepartment($value);
+				break;
+			case 'major':
+				$this->CheckCombobox($value);
+				break;
 			case 'combobox':
 				$this->CheckCombobox($value);
 				break;
@@ -64,12 +73,15 @@ class CheckForm {
 		$this->CheckBriefFromDB($allData['brief']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
+		$this->CheckCombobox($allData['academy'].'|'.$allData['department'].'|'.$allData['major']);
+		if ($this->isIllegal() || $this->isRepeat()) return false;
+		
 		// 全部验证通过，返回true.
 		return true;
 	}
 
 	private function CheckNameFromDB($value){
-		if(!preg_match("/^[\x{4e00}-\x{9fa5}]{2,4}$/u",$value))
+		if(!preg_match("/^(?:[\x{4e00}-\x{9fa5}]|[a-zA-Z]){2,20}$/u",$value))
 		{
 			$this->illegal = true;
 		}else{
@@ -108,7 +120,7 @@ class CheckForm {
 	}
 	
 	private function CheckAddressFromDB($value) {
-		if(strlen($value)>30)
+		if(strlen($value)>200)
 		{
 			$this->illegal = true;
 		}else{
@@ -129,6 +141,31 @@ class CheckForm {
 			}
 			$this->repeat = false;
 		}
+	}
+	
+	private function CheckAcademy($value) {
+		$json_obj = $this->getJson();
+		if($json_obj[$value]=="") {
+			$this->illegal = true;
+			$this->illegalInfo = 'academy';
+		} else $this->illegal = false;
+	}
+	
+	private function CheckDepartment($value) {
+		$json_obj = $this->getJson();
+		$token=strtok($value,"|");
+		$academy=$token;
+		$token=strtok("|");
+		$department=$token;
+		
+		if($json_obj[$academy]=="") {
+			$this->illegal = true;
+			$this->illegalInfo = 'academy';
+		}
+		elseif($json_obj[$academy][$department]=="") {
+			$this->illegal = true;
+			$this->illegalInfo = 'department';
+		} else $this->illegal = false;
 	}
 	
 	private function CheckCombobox($value) {
@@ -157,11 +194,11 @@ class CheckForm {
 			$this->illegal = true;
 			$this->illegalInfo = 'major';
 		}
-		else 	$this->illegal = false;
+		else $this->illegal = false;
 	}
 	
 	private function CheckBriefFromDB($value) {
-		if(!preg_match('/^.{0,300}$/',$value))
+		if(!preg_match('/^.{0,400}$/',$value))
 		{
 			$this->illegal = true;
 		}

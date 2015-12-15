@@ -77,6 +77,7 @@
 
 .fixed-table-container .bs-checkbox {
     text-align: center;
+    vertical-align: middle;
 }
 
 .fixed-table-container .bs-checkbox .th-inner {

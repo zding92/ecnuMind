@@ -21,5 +21,10 @@ class CommonController extends Controller{
 			$this->error("对不起，登陆超时，请重新登录", U('/'));
 		}
 	}
+	protected function returnAdminAccess() {
+		// 如果管理员是最高权限。前台显示院系过滤框。
+		if (session('access_id') == 0) $this->assign('admin_access', 'all');
+		else $this->assign('admin_access', 'academy');
+	}
 }
 ?>

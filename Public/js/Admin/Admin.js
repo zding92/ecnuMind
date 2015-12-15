@@ -49,6 +49,10 @@ $(document).ready(function () {
 	                	loadCompControl();
 	                break;
 	                
+	                case 'btn_AbilityControl':
+	                	loadAbilityControl();
+	                break;
+	                
 	                case 'btn_UserControl':
 	                	loadUserControl();
 	                break;
@@ -126,7 +130,7 @@ $(document).ready(function () {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='HistoryItem_frame' id='HistoryItem_frame'   \
     		         src= '" + app_url + "/Admin/HistoryItem/HistoryItem" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=HistoryItem_frame.document.body.scrollHeight'></iframe>")	
+    		         onload='this.height=1000'></iframe>")	
     	} 
     }
 
@@ -135,7 +139,8 @@ $(document).ready(function () {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='CurrentComp_frame' id='CurrentComp_frame'   \
     		         src= '" + app_url + "/Admin/CurrentComp/CurrentComp" + "' seamless='seamless' scrolling='no'   \
-    		         onload='this.height=CurrentComp_frame.document.body.scrollHeight'></iframe>")	
+    		         onload='this.height=1000'></iframe>")
+                     	
     	} 
     }
     
@@ -144,7 +149,16 @@ $(document).ready(function () {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='CompControl_frame' id='CompControl_frame'   \
    		         src= '" + app_url + "/Admin/CompControl/CompControl" + "' seamless='seamless' scrolling='no' \
-   		         onload='this.height=CompControl_frame.document.body.scrollHeight'></iframe>")			
+   		         onload='this.height=1000'></iframe>")			
+    	}
+    }
+    
+    //载入比赛管理页面
+    function loadAbilityControl(){
+    	if (checkCookies()) {
+    		$(".info_container").append("<iframe class='iframe' name='AbilityControl_frame' id='AbilityControl_frame'   \
+   		         src= '" + app_url + "/Admin/AbilityControl/AbilityControl" + "' seamless='seamless' scrolling='no' \
+   		         onload='this.height=AbilityControl_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
   
@@ -152,7 +166,7 @@ $(document).ready(function () {
     function loadUserControl(){
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='UserControl_frame' id='UserControl_frame'   \
-   		         src= '" + app_url + "/Admin/UserControl/UserControl" + "' seamless='seamless' scrolling='no' \
+   		         src= '" + app_url + "/Admin/UserControl/userControl" + "' seamless='seamless' scrolling='no' \
    		         onload='this.height=UserControl_frame.document.body.scrollHeight'></iframe>")			
     	}
     }
@@ -168,7 +182,7 @@ $(document).ready(function () {
     function loadNotification() {
     	if (checkCookies()) {
     		$(".info_container").append("<iframe class='iframe' name='Notification_frame' id='Notification_frame'   \
-    		         src= '" + app_url + "/Admin/Notification/Notification" + "' seamless='seamless' scrolling='no'   \
+    		         src= '" + app_url + "/Admin/Notification/notification" + "' seamless='seamless' scrolling='no'   \
     		         onload='this.height=Notification_frame.document.body.scrollHeight'></iframe>")	
     	} 
     }
@@ -188,6 +202,11 @@ $(document).ready(function () {
 	//进入管理员界面，默认进入HistoryItem
 	$('#btn_history').trigger('click');
 	location = '#HistoryItem';
+	
+	//when click the “联系我们” at the bottom of the page
+    $(".homeBottom p").click(function(){
+        myAlert("管理员邮箱：zding92@126.com");
+    });
 });
 
 $(document).ready(function(){

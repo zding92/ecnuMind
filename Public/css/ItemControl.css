@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+.EmployLine1{
+	color: white;
+	font-size: 40px;
+	font-family: 微软雅黑;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+.EmployLine2{
+	color: rgb(248, 219, 76);
+	font-size: 40px;
+	font-family: 微软雅黑;
+	position: absolute;
+	top: 180px;
+	left: 300px;
+}
+.EmployLine3{
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	font-family: 微软雅黑;
+	position: absolute;
+	top: 281px;
+	left: 160px;
+}
+.EmployLine4{
+	color: rgb(255, 255, 255);
+	font-size: 40px;
+	font-family: 微软雅黑;
+	position: absolute;
+	top: 385px;
+	left: 220px;
+}
+.EmployLine5{
+	color: rgb(163, 163, 163);
+	font-size: 25px;
+	font-family: 微软雅黑;
+	position: absolute;
+	top: 515px;
+	left: 530px;
+}

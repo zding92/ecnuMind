@@ -1,0 +1,134 @@
+@charset "utf-8";
+html { overflow: scroll; /* height: auto; */ position: relative; float: left;}/*强制显示浏览器滚动条*/
+
+body{
+	margin:0 auto;
+	height: auto;
+	position: relative;
+	font-family: 微软雅黑;
+}
+.abilitySearch{
+	margin-bottom: 0px;
+	display:inline;
+}
+
+.abilitySearchFormText{
+	height: 30px;
+    width: 200px;
+    background-color: lavender;
+    border-style: groove;
+    border-width: 3px;
+    outline: 0px;
+    position: relative;
+    margin-top: 10px;
+}
+.abilitySearchFormLabel{
+	max-width: 100%;
+    font-weight: 700;
+    margin-top: 10px;
+    display: inline-block;
+    margin-left:15px;
+	margin-right: 15px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+.abilitySearchFormBtn{
+	top: 3px;
+    height: 29px;
+    background-color: #26b1fc;
+    border: 0px;
+    outline: 0px;
+    color: white;
+    font-size: 20;
+    font-family: 微软雅黑;
+    width: 125px;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 2px;
+}
+.abilityAdd{
+	display:inline;
+	margin-left: 222px;
+}
+.abilityAddLabel{
+    font-size: 18px;
+	
+}
+.abilityAddBtn{
+	top: 2px;
+    height: 29px;
+    background-color: #26b1fc;
+    border: 0px;
+    outline: 0px;
+    color: white;
+    font-size: 17px;
+    font-family: 微软雅黑;
+    width: 125px;
+    display: inline-block;
+    position: relative;
+}
+.abilityAddImg{
+	
+}
+.container{
+	height:auto;
+	width:1030px;
+	position: relative;
+	min-height: 640px;
+	background-color: rgba(0,0,0,0);
+	padding: 0px;
+}
+
+.DirContainer{
+	padding-bottom:50px;
+}
+
+.backBtn {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(50,150,225,0.8);
+    color: #fff;
+    border-radius: 5px;
+    height: 44px;
+    font-size: 22px;
+    margin-top: 35px;
+    float:right;
+    margin-right: 60px;
+}
+.backBtn:hover{
+	cursor:pointer;
+	background:#3DA0DB;
+}
+
+.icheckbox_line-blue.abilityItemTag {
+    display: inline-block;
+    font-family: 微软雅黑;
+    height: 28px;
+}
+
+.searchResult {
+    height: auto;
+    position: relative;
+    float: left;
+    padding-bottom: 0px;
+    margin-top: 20px;
+}
+
+p.searchResultTitle {
+    font-size: 40;
+    color: rgba(100,200,200,0.8);
+    display: inline-block;
+    padding-top: 10px;
+    float: left;
+    margin-left: 55px;
+    margin-top: 20px;
+}
+
+p.notFound {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 100;
+    position: absolute;
+    top: 100px;
+    left: 55px;
+}

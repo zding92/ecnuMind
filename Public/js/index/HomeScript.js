@@ -3,12 +3,12 @@
 //      .button()
 //});
  function DisplayLogin() {
-   document.getElementById('Register').style.visibility = "hidden";
-   document.getElementById('Login').style.visibility = "visible";
+   document.getElementById('Register').style.display = "none";
+   document.getElementById('Login').style.display = "block";
 }
 function DisplayRegister() {
-  document.getElementById('Login').style.visibility = "hidden";
-  document.getElementById('Register').style.visibility = "visible";
+  document.getElementById('Login').style.display = "none";
+  document.getElementById('Register').style.display = "block";
 }
 function OverColor(obj) {
   obj.style.backgroundColor = '#0090ff';

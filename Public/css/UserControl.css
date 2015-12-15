@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+.personMainModal{
+	display: none;
+	background-color: white;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-color: #2b99ce;
+	border-style: solid;
+	border-width: 2xp;
+	width: 1030px;
+}
+.personMainModal-close{
+	width: 144px;
+	height: 30px;
+	background-color: #2b99ce;
+	color: white;
+	text-align: center;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	position: relative;
+	top: 30px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.personMainModal .title_box {
+	/* margin: 0px 0px auto; */
+	background-color: rgba(240,240,240,0.8);
+	color: #45484d;
+	text-align: left;
+	padding: 3px 15px 2px 15px;
+	height: 25px;
+	width: 1020px;
+	font-size: 10px;
+	font-weight: 300;
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	display: block;
+	letter-spacing: 5px;
+	vertical-align: top;
+}
+
+.personMainUpperShell .personMainName {
+	position: relative;
+	display: inline-block;
+}
+.personMainUpperShell .personMainGender {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	display: inline-block;
+}
+
+.personMainModal .box1 {
+	height: 200px;
+	width: auto;
+	padding-bottom: 25px;
+}
+
+.personMainModal #default {
+	padding: 30px 0px;
+	margin: 0px auto;
+}
+
+.personMainModal .Chart .detail {
+	left: 535px;
+	width: 304px;
+	height: 200px;
+}

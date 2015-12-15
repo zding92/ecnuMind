@@ -1,10 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
   <meta charset="utf-8" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/Note.css"/>
   
   <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
@@ -13,8 +17,11 @@
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
+  
   <script>
   	var getDataURL = '__APP__/Home/Comp/getCompItem';
+	var admin = "{$admin_access}";
   </script>
 </head>
 
@@ -25,7 +32,7 @@
   <div style="margin:10px 15px 15px;">
     <div id="filter-bar"> </div>
     <table id="note-table" 
-           data-url="__URL__/"
+   		   data-url="__URL__/getNoteInfo"
            data-toolbar="#custom-toolbar" 
            data-show-toggle="true" 
            data-search="true"           
@@ -37,13 +44,42 @@
         <tr>
           <th data-field="note_id" data-width="100" data-align="left">通知ID</th>
           <th data-field="user_id" data-width="100" data-align="left">管理员ID</th>
-          <th data-field="note_time" data-width="100" data-align="left">通知时间</th>
-          <th data-field="note_title" data-width="400" data-align="left">通知标题</th>
-          <th data-field="note_detail" data-width="200" data-align="left">通知内容</th>
+          <th data-field="note_time" data-width="200" data-align="left" data-sortable="true">通知时间</th>
+          <th data-field="note_title" data-width="300" data-align="left">通知标题</th>
+          <th data-formatter="detailFormatter" data-events="detailEvents" data-width="100" data-align="left">通知内容</th>
+          <th data-field="operate" data-width="100" data-formatter="removeFormatter" data-events="removeEvents">操作</th>
+    </tr>
         </tr>
       </thead>
     </table>
   </div>
+  
+  <div class="modal fade" id="detailModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" 
+	               aria-hidden="true">×
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	通知内容
+	            </h4>
+	         </div>
+	         <div class="modal-body" id="detailShowContent">
+	          
+			</div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-default" 
+	               data-dismiss="modal">关闭
+	            </button>
+	            <button type="button" class="btn btn-primary" id='sendConfirm' data-dismiss="modal" >
+	              确认
+	            </button>
+	         </div>
+	      </div>
+	   </div>
+	</div>
   
   <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" 
 	   aria-labelledby="myModalLabel" aria-hidden="true">
@@ -58,32 +94,20 @@
 	            </h4>
 	         </div>
 	         <div class="modal-body">
-	         <form class="bs-example bs-example-form" role="form" id="addNoteForm">
-	         	<div class="row">
-	         		<div class='col-xs-6' id="recipient">
-					      <label for="academy" >选择收件院系</label>
-					      <select class="form-control" name="academy" id="academy">
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>
-					         <option>信息科学技术学院</option>   
-					      </select>	
-					  </div>
-	         	</div>
+	         <form class="bs-example bs-example-form" role="form" id="addNoteForm">				
+	         <div class="input-group">
+	         	<button class="btn btn-default" style="position:absolute;" type="button" id='recipient' data-toggle="modal" data-target="#recipientModal" style="display:none;">选择收件院系</button>
+				<p class="academySelected" id="academySelected"> </p>
+				</div>
 	         	<br>
 	         	<div class="input-group">
 			         <span class="input-group-addon">标题</span>
-			         <input type="text" class="form-control comp_sponsor" name="admin_note_title" maxlength="30" placeholder="填写标题">
+			         <input type="text" class="form-control comp_sponsor" id="admin_note_title" maxlength="30" placeholder="填写标题">
 			      </div>
 			    <br>
 			    <div class="input-group">
 			    	<span class="input-group-addon">内容</span>
-			    	<textarea class="form-control comp_sponsor" name="admin_note_detail" style="resize:none;width:500px;height:250px" maxlength="500" placeholder="填写内容"></textarea>
+			    	<textarea class="form-control comp_sponsor" id="admin_note_detail" style="resize:none;width:500px;height:250px" maxlength="500" placeholder="填写内容"></textarea>
 			    </div>  
 	         </form>
 			</div>
@@ -98,7 +122,54 @@
 	      </div>
 	   </div>
 	</div>
-
+	
+	
+	<div class="modal fade" id="recipientModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	           <button type="button" class="close" data-dismiss="modal" 
+	               aria-hidden="true">×
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	选择收件院系
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	           <div style="margin:10px 15px 15px;">
+	           		<div id="recipient-bar"> </div>
+	        		<div id="recipient-filter"> </div>
+	         		<table id="recipient-table"
+	         		   data-url="__URL__/showRecipient"
+	         		   data-toolbar="#recipient-bar"
+	         		   data-search="true"
+	         		   data-striped="true"
+	         		   data-show-filter="true"
+	         		   data-click-to-select="true">
+	         		<thead>
+	         			<tr>
+	         				<th data-field="state" data-checkbox="true"></th>
+	         				<th data-field="name">学院名称</th>
+	         				<th data-field="academy_id"></th>
+	         			</tr>
+	         		</thead>
+	         	</table>          
+	           </div>	
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" id='recipient_close' class="btn btn-default" 
+	               data-dismiss="modal" onclick="btnOnclick(this.id)">关闭
+	            </button>
+	            <button type="button" class="btn btn-primary" id='recipientConfirm' data-dismiss="modal" onClick="btnOnclick(this.id)">
+	               确认
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+	   </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	
 	
 	<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" 
 	   aria-labelledby="myModalLabel" aria-hidden="true">
@@ -119,14 +190,25 @@
 	            <button type="button" class="btn btn-default" 
 	               data-dismiss="modal">关闭
 	            </button>
-	            <button type="button" class="btn btn-primary" id='noteConfirm' data-dismiss="modal" onclick=>
+	            <button type="button" class="btn btn-primary" id='noteConfirm' data-dismiss="modal" onclick="btnOnclick(this.id)">
 	               确认
 	            </button>
 	         </div>
 	      </div><!-- /.modal-content -->
 	   </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+	
+	<div class='messagePopOut' style='display:none'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+   </div>
   <script src="__PUBLIC__/js/Admin/Notification.js"></script>
+   <script>var notification_url = "__URL__/noteSave";</script>
+   <script>var remove_url = "__URL__/noteRemove";</script>
 </body>
 
 </html>

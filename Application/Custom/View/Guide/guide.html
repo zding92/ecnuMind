@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>【华师智库】完善个人信息</title>	
+	<meta name="renderer" content="webkit">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+	<meta charset="UTF-8">
+	<title>【华师智库】完善个人信息</title>	
 	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
   	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
   	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
@@ -25,17 +27,17 @@
 		<div class='stepGuideInnerContainer'>
 			<h1>您叫什么名字？</h1>
 			<form stepGuide='1' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<input type='text' class='stepGuideText' name='name' value='{$name}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='2' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
-				<input type='text' class='stepGuideText'  name='student_id' value='{$student_id}'>
+				
+				<input type='text' class='stepGuideText'  name='student_id'  value='{$student_id}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='3' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<select class='stepGuideText'  name='gender'>
 					<option label=""></option>
 					<option label="男" {$gender == '男' ? 'selected = "selected"' : ''}>男</option>
@@ -44,37 +46,37 @@
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='4' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<input type='text' class='stepGuideText'  name=email value='{$email}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='5' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<input type='text' class='stepGuideText'  name='address' value='{$address}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='6' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<input type='text' class='stepGuideText'  name='phone' value='{$phone}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='7' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<select class='kitjs-form-suggestselect stepGuideSelect1' style='margin-bottom: 10px;' id='academy'  name='academy'></select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='8' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'  name='department'></select>				
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='9' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'  name='major'></select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='10' class='stepGuideForm'>
-				<input type='button' class='prev' value='←'>
+				
 				<select class='stepGuideText'  name='grade'>
 					<option label=""></option>
 					<option label="大一" {$grade == '大一' ? 'selected = "selected"' : ''}>大一</option>

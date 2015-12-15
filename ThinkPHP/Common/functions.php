@@ -1548,3 +1548,57 @@ function think_filter(&$value){
 function in_array_case($value,$array){
     return in_array(strtolower($value),array_map('strtolower',$array));
 }
+
+
+/***
+ * 将文件上传至服务器
+ * @param $rootPath 文件上传至服务器的根目录
+ * @param $savePath 文件上传至服务器的根目录下的子目录
+ * @param $saveName	文件名
+ * @param $autoDel	自动删除目标路径所有文件(覆盖式保存)
+ */
+function uploadFile($rootPath,$savePath,$saveName){
+	$upload = new \Think\Upload();// 实例化上传类
+	$upload->maxSize   =     20971520 ;// 设置附件上传大小
+	$upload->exts      =     array('rar','zip');// 设置附件上传类型
+	$upload->rootPath  =     $rootPath; // 设置附件上传根目录
+	$upload->savePath  =     $savePath; // 设置附件上传（子）目录
+	$upload->saveName  =     $saveName; // 设置附件上传文件名
+	$upload->autoSub   =     false;     // 不自动使用子目录保存上传文件
+
+	//根据标志位清空目标文件夹
+	delDirAndFile($rootPath.$savePath);
+	
+	// 上传文件
+	$info   =   $upload->upload();
+// 	if(!$info) {// 上传错误提示错误信息
+// 		//$this->error($upload->getError());
+// 		echo("failed");
+// 	}else{// 上传成功
+// 		//$this->success('上传成功！');
+// 		echo("上传成功！");
+// 	}
+}
+
+
+//循环删除目录和文件函数
+/***
+ * 删除指定文件夹及其内所有文件、文件夹
+ * @param unknown $dirName 指定文件夹
+ */
+function delDirAndFile( $dirName )
+{
+	if ( $handle = opendir( "$dirName" ) ) {
+		while ( false !== ( $item = readdir( $handle ) ) ) {
+			if ( $item != "." && $item != ".." ) {
+				if ( is_dir( "$dirName/$item" ) ) {
+		   			delDirAndFile( "$dirName/$item" );
+				} else {
+		   			unlink("$dirName/$item");
+				}
+			}
+		}
+		closedir( $handle );
+		//if( rmdir( $dirName ) )echo "成功删除目录： $dirName<br />\n";
+	}
+}

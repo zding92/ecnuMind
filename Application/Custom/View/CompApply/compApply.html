@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+	<meta charset="UTF-8">
+	<title>竞赛报名</title>
+	<link rel="stylesheet" href="__PUBLIC__/jsLib/SweetAlert/sweetalert.css" type='text/css'>
+	<link href="__PUBLIC__/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/compApply.css" rel="stylesheet">
+	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/home/compApply.js"></script>
+	<script src="__PUBLIC__/jsLib/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/jsLib/SweetAlert/sweetalert.min.js"></script>
+	<script>
+		var model = "__URL__";
+		var publicUrl = "__PUBLIC__";
+		var comp_item_file_url="__PUBLIC__/CompItemApply/";
+		var addSuccess = {$addSuccess};
+		var submitMode = "{$submitMode}";
+	</script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="container">	
+	<div class="jumbotron">
+        <h1>{$compName}  报名系统</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" id="myNav">
+                <li class="active"><a href="#section-1">竞赛说明</a></li>
+                <li><a href="#section-2">基本信息</a></li>
+                <li><a href="#section-3">参赛作品简介</a></li>
+                <li><a href="#section-4">附件提交/查看</a></li>
+            </ul>
+            <ul class="nav nav-stacked nav-button"   id="saveBtn">
+            	<li><button class='btn btn-success btn-lg saveBtn'>保存</button></li>
+            </ul>
+            
+            
+        </div>
+        
+        <div class="col-xs-9">
+          <form id="applyForm" method="post">
+            <h2 id="section-1">竞赛说明</h2>
+            <div style="border-top: 1px solid #ddd">
+              <p id="introduction">
+                	{$comp_brief}
+                	<br>
+                	<br>
+                	<br>
+                	<b style="color:red">时间节点</b><br>
+                	竞赛时间:{$comp_start_date}~{$comp_end_date}<br>
+                	报名时间:{$comp_apply_start_date}~{$comp_apply_end_date}
+                	<br>
+                	<b style="color:red">竞赛主办方:</b><br>
+                	{$comp_sponsor}
+                	<br>
+                	<b style="color:red">竞赛官方网站:</b><br>
+                	{$comp_official_website}
+              </p>
+            </div>
+   
+            <h2 id="section-2">基本信息</h2>
+            <div style="border-top: 1px solid #ddd">
+              <p class='tips'>
+            	填写作品名称时请注意：<br>
+            	※如果比赛类型为现场即时竞赛，那么作品名称可以不填。<br>
+            	※作品名请不要超过30个汉字/60个其他字符<br>
+            	<br>
+            	<br>
+            	填写作者学号时请注意：<br>
+            	※参赛队员必须全体注册本系统，否则学号无法识别。<br>
+            	※请务必保证您（当前填写报名表所用账号）的学号必须包含在参赛者当中。<br>
+            	※最后打个广告^_^，如果您仍未找到参赛伙伴，不妨看看本站的“寻找队友”功能（首页->左侧导航栏->寻找队友）。<br>
+            	<br>
+              </p>
+              <p>
+              	<label class='nameLabel' for='comp_item_name' style="width:125px">作品名称</label>
+                <input type='text' placeholder='竞赛作品名称，如果是比赛现场作品，可以不填'  name='comp_item_name'  id='comp_item_name'>
+              </p>
+              <p id="memberInfo">
+              	<label class='memberLabel' for='a1' style="width:125px">第一参赛者</label>
+              	<input type='text' placeholder='请输入作者学号'  name='a1'  id='a1'>
+              	<br>
+              	<button type="button" class="btn btn-primary btn-lg" id="newParticipant">
+				  <!-- <span class="glyphicon glyphicon-plus"></span>  -->+ 添加参与者
+				</button>
+				<label class="pCount" id="peopleCnt"><span id="pIndex">1</span>/<span id="pMax">{$comp_max_people}</span></label>
+              </p>
+            </div>
+            <h2 id="section-3">参赛作品简介</h2>
+            <div style="border-top: 1px solid #ddd">
+              <p class='tips'>
+            	填写参赛作品简介时请注意：<br>
+            	※如果比赛类型为现场即时竞赛，那么作品简介可以不填。<br>
+            	※作品简介是第一轮审核老师的第一印象，请务必认真填写。但不宜过长。<br>
+            	<br>
+              </p>
+              <p id="brief">
+                <textarea placeholder='请输入作品简介，如果是比赛现场作品，可以不填'  name='b'  id='b'></textarea>
+              </p>
+            </div>
+          </form>
+          
+          <form id="fileUploadForm" method="post" action='__URL__/submitForm' enctype="multipart/form-data">        
+            <h2 id="section-4">报名附件提交/查看</h2> 
+            <div style="border-top: 1px solid #ddd;margin-top:15px;">
+              <p class='tips'>
+            	上传报名附件时请注意：<br>
+            	※如果是现场即时竞赛，同时无报名表格的话，可以不上传<br>
+            	※您应当在竞赛报名筛选界面下载该项比赛的附件（一般含有竞赛说明文件和报名表），认真填写附件中的报名表，再将报名表压缩传（zip,rar等）。<br><br>
+            	※上传文件大小不得超过20M<br>
+            	※您只能上传一份附件，如果再次上传则会覆盖之前的附件<br>
+            	<br>
+              </p>
+              <p class='fileTips'>已上传的报名文件（点击文件名可下载）：<a class="fileAlreadyExisted" style="cursor:pointer;margin: 15px 0px;">无上传文件，请在下方选择文件，并点击左边的保存按钮</a></p> 
+              <input type="text" id="comp_id" name="comp_id" value="{$comp_id}" style="display:none">	
+              <input type="text" id="comp_item_id" name="comp_item_id" value="{$comp_item_id}" style="display:none">	
+              <input type="file" id="compApplyFile" class="compApplyFile" name="compApplyFile">
+            </div>
+          </form>
+       </div>
+    </div>
+</div>
+<div style="height:200px"></div>
+</body>
+</html>	

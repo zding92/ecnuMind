@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+.academySelected{
+	position: inherit;
+    font-size: 17px;
+    left: 125px;
+    width: 445px;
+    height: 32px;
+    word-break: break-all;
+    overflow: hidden;
+    padding-top: 7px;
+    text-overflow: ellipsis;
+    white-space: pre;
+}

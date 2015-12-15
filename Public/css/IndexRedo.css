@@ -41,14 +41,15 @@ body :-ms-input-placeholder {
   background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   opacity: 1;
-  position: absolute;
-  top: 80%;
+  position: fixed;
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: 40%;
-  margin-top: -200px;
-  overflow: hidden;
+  height: 260px;
+  /* margin-top: -200px; */
+  /* overflow: hidden; */
 
+  float: left;
 }
 
 .wrapper.form-success .container h1 {
@@ -57,10 +58,10 @@ body :-ms-input-placeholder {
           transform: translateY(85px);
 }
 .container {
-  max-width: 600px;
+  max-width: 400px;
   margin: 0 auto;
-  padding: 40px 0;
-  height: 400px;
+  /* padding-top: 40px; */
+  height: 100%;
   text-align: center;
 }
 .container h1 {
@@ -72,8 +73,9 @@ body :-ms-input-placeholder {
   font-weight: 200;
 }
 form {
-  padding: 20px 0;
+  padding: 0px;
   position: relative;
+  height: 80%;
   z-index: 2;
 }
 form input {
@@ -111,24 +113,28 @@ form button {
   background-color: white;
   border: 0;
   padding: 10px 15px;
-  color: #53e3a6;
+  color: rgba(83, 98, 227, 0.74);
   border-radius: 3px;
-  width: 250px;
+  width: 123px;
   cursor: pointer;
+  font-family: 黑体;
   font-size: 18px;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
+  margin-bottom: 10px;
+  /* text-align: center; */
 }
 form button:hover {
   background-color: #f5f7f9;
 }
 .bg-bubbles {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 30%;
   z-index: 1;
+  /* float: left; */
 }
 .bg-bubbles li {
   position: absolute;
@@ -139,7 +145,7 @@ form button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   bottom: -160px;
   -webkit-animation: square 25s infinite;
-  animation: square 25s infinite;
+  animation: square 15s infinite;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
 }
@@ -238,6 +244,8 @@ form button:hover {
 
 .wrapper h2{
 	font-size: 40px;
+	position: relative;
+	margin: 30px auto;
 }
 
 .indexPage1H2{
@@ -245,8 +253,9 @@ form button:hover {
 	text-align: center;
 	font-size: 70px;
 	color: black;
-	position: fixed;
+	position: absolute;
 	font-family: 微软雅黑;
-	margin-top: 350px;
+	bottom: 35%;
+	min-width: 1100px;
 	display: none;
 }

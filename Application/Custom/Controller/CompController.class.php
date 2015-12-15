@@ -7,11 +7,6 @@ class CompController extends CommonController {
 		$this->display();
 	}
 	
-	public function myComp(){
-		//显示__app__/home/comp/myComp页面
-		$this->display();
-	}
-	
 	public function checkValidUser($student_id) {
 		$userModel = M('ecnu_mind.user_custom');
 		$user = $userModel->where("student_id=$student_id")->field('id,$student_id,username,brief,password',true)->find();
@@ -28,85 +23,45 @@ class CompController extends CommonController {
 			
 		$allComp = $this->assignTemplate($allComp);
 		$allComp = $this->checkDate($allComp);	
+		$allComp = $this->getCompFile($allComp);
 		$this->ajaxReturn(json_encode($allComp), "EVAL");
 	}
 	
-	/**
-	 * 获取个人竞赛信息（不包含具体内容，仅返回竞赛名称等最基本信息）
-	 */
-	public function getCompItem() {
-		$compItemModel = M('ecnu_mind.competition_main');
-		$compInfoModel = M('ecnu_mind.competition_info');
 	
-		// 设置查询条件
-		$map['comp_participant_id'] = array('like', '%'.session('user_studentid').'%') ;
-		
-		// 获取报名的基本信息
-		$compBaseInfo = $compItemModel
-		               				->where($map)
-							   		->field('comp_type_id,comp_item_id,apply_date,comp_state')
-				               		->select();
-		
-		$compModels = array();
-		
-		foreach ($compBaseInfo as $compBase) {
-			// 获得该项竞赛的基本信息
-			$compinfo =	$compInfoModel
-						->where('comp_id='.$compBase['comp_type_id'])
-						->field("comp_name,comp_template")
-						->find();
-			
-			// 竞赛模板名+_info为数据库表名。
-			$compModelName = $compinfo['comp_template'].'_info';
-			
-			// 将所有竞赛报名信息表实例化成数组,如果数组中包含该表对象，则跳过实例化。
-			if (!isset($compModels[$compModelName])) {
-				$compModels[$compModelName] = M($compModelName);
+	/***
+	 * 获取$dir文件夹内的文件名
+	 * @param unknown $dir
+	 */
+	public function getFileNameFromDir($dir){
+		//$dir = I("post.dir");
+		$fileNames = "empty";
+		$fileNamesCnt = 0;
+		$dir = iconv("UTF-8","gb2312",$dir);
+		//如果dir是文件夹
+		if (is_dir($dir))
+		{
+			if ($dh = opendir($dir))
+			{
+				while (($file = readdir($dh)) !== false)
+				{
+					$fileNames = $file;
+					$fileNames=iconv("gb2312","UTF-8",$fileNames);
+				}
+				closedir($dh);
 			}
-			
-			// 根据表名获取其模型对象。
-			$compDetailModel = $compModels[$compModelName];
-			
-			// 根据模板名称和竞赛报名ID获得详细信息
-			$returnItem = $compDetailModel
-			              ->where($compBase)
-			              ->field("comp_item_name")
-			              ->find();
-			
-			/// 添加其他竞赛信息
-			
-			// 装配template的url
-			$compTmp = $compinfo['comp_template'];			
-			
-			// 返回竞赛名和竞赛报名日期和报名当前状态。
-			$returnItem['comp_name'] = $compinfo['comp_name'];
-			$returnItem['apply_date'] = $compBase['apply_date'];
-			$returnItem['comp_state'] = $compBase['comp_state'];
-			
-			$returnItem['comp_template'] = 
-				U("Custom/$compTmp/$compTmp"."_modify","compItemId=".$compBase['comp_item_id'],"");
-			
-			$returnItem['comp_view'] = 
-				U("Custom/$compTmp/$compTmp"."_origin","compItemId=".$compBase['comp_item_id'],"");
-			
-			$returnItem['comp_remove'] =
-			U("Custom/$compTmp/$compTmp"."Remove","compItemId=".$compBase['comp_item_id'],"");
-			
-			$returnItem['comp_item_id'] = $compBase['comp_item_id'];
-			
-			$result[] = $returnItem; 
 		}
-		
-		$this->ajaxReturn(json_encode($result), "EVAL");
-		
+		return($fileNames);
 	}
 	
 	protected function registerComp($participant) {
 		$compItemModel = M('ecnu_mind.competition_main');
-		$regValue = I('post.');
+		$regValue = I('post.','','stripslashes,strip_tags,trim');
 		
 		// 将学号数组转化为学号字串
 		$participantStr = implode(',', $participant);
+		
+		// 加载竞赛所属院系
+		$compItemInfo['comp_owner'] = M('ecnu_mind.competition_info')->find($regValue['comp_id'])['comp_owner'];
 		
 		// 构造竞赛报名主表所需要的两个外键
 		$compItemInfo['comp_type_id'] = $regValue['comp_id'];
@@ -122,16 +77,20 @@ class CompController extends CommonController {
 		
 		// 添加第一作者姓名和所属学院
 		$compItemInfo['author1_name'] = $author1Info['name'];
-		$compItemInfo['owner_academy'] = $author1Info['academy'];
+		$compItemInfo['apply_academy'] = $author1Info['academy'];
 		
 		// 添加竞赛项目名称
 		$compItemInfo['comp_item_name'] = $regValue['comp_item_name'];		
 		
+		// 添加竞赛项目简介
+		$compItemInfo['comp_item_brief'] = $regValue['b'];
+		//$compItemInfo['comp_item_brief'] = str_ireplace("\r\n","<br>",$regValue['b']);
+		
 		// 获取全站唯一的用户个人报名ID
-		$compId = $compItemModel->data($compItemInfo)->filter('strip_tags')->add();
+		$compItemId = $compItemModel->data($compItemInfo)->add();
 		
 		// 返回给单项竞赛报名页面后台这个唯一的ID
-		return $compId;
+		return $compItemId;
 	}
 
 	
@@ -139,12 +98,8 @@ class CompController extends CommonController {
 		foreach ($allComp as $comp) {
 			
 			$compId = $comp['comp_id'];
-			
-			// 用完以后删除该项，防止传到前台。
-			unset($comp['comp_id']);
-			
-			$compTmp = $comp['comp_template'];
-			$comp['comp_template'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
+					
+			$comp['comp_template'] = '<a href="'.U("Custom/CompApply/compApply","compId=$compId","").'" target="_blank">点此报名</a>';
 			
 			$result[] = $comp;
 		}
@@ -178,6 +133,25 @@ class CompController extends CommonController {
 		return $result;
 	}
 	
+	/***
+	 * 获取所有比赛数组，添加一个comp_file属性，表明此比赛的附件文件名
+	 * @param unknown $allComp
+	 */
+	private function getCompFile($allComp){
+		//返回的数组
+		$result = array();
+		//查找文件的根目录
+		$fileRoot = "./Public/CompForm/";
+		foreach ($allComp as $comp){	
+			//$searchDir为查找文件的目录，为根目录加上$comp['comp_id']
+			$searchDir = $fileRoot.$comp['comp_id'];
+			//添加comp_file项，并查找文件
+			$comp['comp_file'] = $this->getFileNameFromDir($searchDir);
+			$result[] = $comp;
+		}
+		return $result;
+	}
+	
 	protected function deleteComp($compItemId) {
 		$compModel = M('ecnu_mind.competition_main');
 		$compModel->delete($compItemId);
@@ -196,7 +170,8 @@ class CompController extends CommonController {
 		
 		// 添加第一作者姓名和所属学院
 		$compItemModel->author1_name = $author1Info['name'];
-		$compItemModel->owner_academy = $author1Info['academy'];
+		
+		$compItemModel->apply_academy = $author1Info['academy'];
 		
 		$compItemModel->filter('strip_tags')->save();
 	}

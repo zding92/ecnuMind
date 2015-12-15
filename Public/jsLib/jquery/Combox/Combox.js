@@ -14,8 +14,6 @@
 
 var b1, b2, b3;
 
-
-
 var Combobox = function () {
    var inputname_i = 0;
    var inputname = new Array('academy', 'department', 'major');
@@ -3465,8 +3463,8 @@ transform: function () {
             $('#academy').val($('#academy').prev().val());
             $('#department').val($('#department').prev().val());
             $('#major').val($('#major').prev().val());
-            if ($('#academy').val() != "" && $('#department').val() != "" && $('#major').val() != "")
-                Checkform_Combobox();
+            if ($('#academy').val() != "" && $('#department').val() != "" && $('#major').val() != "") {}
+                //Checkform_Combobox();
             else if ($('#academy').val() == "" && $('#department').val() == "" && $('#major').val() == "") {
                 $('#academy').prev().removeAttr('style');
                 $('#department').prev().removeAttr('style');

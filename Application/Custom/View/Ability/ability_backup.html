@@ -1,0 +1,211 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/css/ability.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/icheck/line/blue.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/abilityPopout.css" rel="stylesheet">
+	
+	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/tooltipster-master/css/tooltipster.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/tooltipster-master/css/themes/tooltipster-noir.css" />
+	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/jsLib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+    <script src="__PUBLIC__/jsLib/jquery/jquery.icheck.js"></script>
+	<script src="__PUBLIC__/jsLib/jquery/jquery.mixitup.min.js"></script>
+	<script src="__PUBLIC__/js/home/InitAbilityChooser.js"></script>
+    <script src="__PUBLIC__/js/home/abilityNew.js"></script>
+    <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
+	<script>
+	    var app_url = "__APP__";
+		var starOnIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-on.png";
+		var starOffIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-off.png";
+		var starHalfIcon = "__PUBLIC__/jsLib/raty-2.7.0/lib/images/star-half.png";
+		var selfCommentJSON = '__PUBLIC__/JSON/selfComment.dat';
+	</script>
+	
+</head>
+<body>
+		<div class="loading">
+			<img class="loading_gif" style="margin: 0px 187px;" src="__PUBLIC__/img/cloud.gif"/>
+		</div>
+		<div class="ability_container" style="display:none;">
+		  <div class="title_box">个人能力编辑</div>
+          <div class="ability_head"><p>选择领域</p></div>  
+          <div id="L1" class="ability_box">
+            <div class="tags hvr-radial-out active L1_all" id="L1_all">全部</div>
+          </div>
+          <div class="ability_head"><p>选择方向</p></div> 
+          <div id="L2" class="ability_box">
+            <div class="tags_1 hvr-radial-out active L2_all" id="L2_all">全部</div>
+          </div>
+          <div class="ability_head">
+	          <p>选择能力</p>
+	         <!--  <div class="newAbilityDiv">
+				  <div class="newAbilityHintDiv">
+				  	  <p class="newAbilityHint">点击此处添加自定义能力→</p>
+				  </div>
+				  <div class="newAbilityIconDiv">
+			          <img class="newAbilityIcon" src="__PUBLIC__/img/newAbility.png">
+		          </div>
+	          </div>
+	           -->
+	           <div class="newAbilityDiv">
+		           <p class="newAbilityHint">没发现需要的能力？</p>
+		           <div class="newAbilityIcon">+添加自定义能力</div>
+		       </div>
+          </div>
+          <form id="L3_form">
+            <div id="L3" class="ability_box">
+            </div>
+          </form>
+          
+           <!-- 此DIV为个人能力弹出窗口 -->
+          <div class="theme-popover"> 
+		  	<div class="popoutLine1">
+		  		<p class="popoutAbilityName">高速PCB设计</p>
+		  		<img src="__PUBLIC__/img/popout/popoutLine1Right.png" alt="error">
+		  		<div class="popoutLine1Right"> 
+		  			<div class="popoutLine1Text">
+			  			<div class="close popoutLine1Save">保存</div> |
+			  			<div class="close popoutLine1Cancel">取消</div>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="popoutLine2">
+		  		<p class="popoutLine2Line1">
+		  			<b>0人</b>会这项能力
+		  		</p>
+		  		<div class="popoutLine2Line2">
+		  			能力标签：<b>通信工程、电子工程、数字电路</b>
+		  		</div>
+		  	</div>
+		  	<div class="popoutLine3">
+		  		<div class="popoutLine3Green">
+		  			<div class="popoutLine3GreenText line3GreenUnselected">√</div>
+		  		</div>
+		  		<div class="popoutLine3Red">
+		  			<div class="popoutLine3RedText line3Selected line3RedSelected"><b>目前未掌握</b>（若已掌握该能力，请点击绿色按钮）</div>
+		  		</div>
+		  		
+		  	</div>
+		  	<div class="popoutLine4">
+		  		<div class="abilityDetailHead">
+		  			<img src="__PUBLIC__/img/popout/abilityDetailHead.png" alt="error">
+		  			<h1>能力详细说明</h1>
+		  		</div>
+		  		<div class="abilityDetailContainer" style="z-index:99">
+			  		<form>
+			  			 <textarea class="abilityDetail" id="abilityDetail" placeholder="在此添加经历或认证，进一步说明此项能力"></textarea>
+			  		</form>
+			  		<div class="selfDetailTextCount">
+			  			剩余<span id="selfDetailTextCount" class="font-size:x-large">100</span>个字
+			  		</div>
+		  		</div>
+
+		  	</div>
+		  </div>
+
+          <!-- 此DIV为自定义能力窗口 -->
+          <div class="new-popover">
+		  	<div class="addAbilityPopLine1">
+		  		<p class="popoutAbilityName">添加自定义能力</p>
+		  		<img src="__PUBLIC__/img/popout/popoutLine1Right.png" alt="error">
+		  		<div class="popoutLine1Right"> 
+		  			<div class="popoutLine1Text">
+			  			<div class="close popoutLine1Save">保存</div> |
+			  			<div class="close popoutLine1Cancel">取消</div>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	
+		  	<div class="newAbilityContainer" >
+		  	  	<div class="addAbilityPopLine2">
+					<div class="addAbilityPopSelectDiv">
+						<div class="addAbilityPopSelectDiv1">
+						<label class="abilityNewLabel" >领域</label>
+							<div class="selectMask">								
+								<select id="cmbProvince"></select>
+							</div>
+						</div>
+						<div class="addAbilityPopSelectDiv2">		
+							<label class="abilityNewLabel">方向</label>
+							<div class="selectMask">
+								<select id="cmbCity"></select>
+							</div>
+						</div>
+						  <select id="cmbArea" style="display:none"></select>
+					</div>
+			  	</div>
+			  	<div class="addAbilityPopLine3">
+			  		<div class="addAbilityName">
+					  	<label class="abilityNewLabel" style="margin-left:0px;">能力</label>
+				  		<input id="newAbilityName" type="text" placeholder="请输入你要添加的能力">
+			  		</div>
+			  	</div>
+			  	<div class="addAbilityPopLine4">
+			  		
+			  		<div class="abilityDetailContainer" style="z-index:99">
+				  		<form>
+				  			 <textarea class="abilityDetail" id="newAbilityDetail" placeholder="在此添加经历或认证，进一步说明此项能力"></textarea>
+				  		</form>
+				  		<div class="selfDetailTextCount">
+			  			剩余<span id="selfDetailTextCountNew" style="font-size:x-large">100</span>个字
+			  			</div>
+			  		</div>
+			  	</div>
+		  	</div>
+
+		  </div>
+
+          <!-- 此DIV为推荐能力窗口 -->
+		  <div class="recommend-popover" style="display: none;">
+		  		<div class="similarAbilityPopLine1">
+			  		<div class="similarAbilityPopLine1Left">
+			  			<p class="similarAbilityTitle">相似的能力</p>
+			  		</div>
+			  		<img src="__PUBLIC__/img/popout/popoutLine1Right.png" alt="error">
+			  		<div class="similarAbilityPopLine1Right"> 
+			  			<div class="popoutLine1Text">
+				  			<div class="close popoutLine1Cancel">取消</div>
+			  			</div>
+			  		</div>
+		  		</div>
+		  	
+			  	<div class="similarAbilityContainer">
+				  	<div class="similarAbilityPopLine2">
+				  		<div class="similarAbilityPrompt">
+				  		根据您的提交信息，我们为您推荐以下能力<br>
+				  		请 <b>任选一个</b> 继续编辑
+				  		</div>
+				  	</div>
+				  	<div class="similarAbilityPopLine3">
+				  		<div class="similarAbilityGallery" style="z-index:99">
+				  		</div>
+				  	</div>
+				  	<div class="similarAbilityPopLine4">
+				  		<div class="oldAbilityText">
+				  			没有发现想要添加的能力？
+				  		</div>
+				  		<div class="oldAbilityButton">
+				  			继续添加自定义能力
+				  		</div>
+				  	</div>
+		  		</div>
+		  </div>
+		  
+		  <!-- 此DIV为弹出窗口之下的遮罩 -->
+		  <div class="theme-popover-mask"></div>
+		 <div class='messagePopOut' style='display:none;z-index:10000'>
+         	<div class='messagePopText'>
+         		
+         	</div>
+         	<div class='messagePopButton'>
+         		OK
+         	</div>        	
+  		 </div>	
+		
+  		<script type="text/javascript"> ability(); </script>
+	</body>
+</html>         
+         
+          

@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 .theme-popover-mask {
-	z-index: 9998;
+	z-index: 8998;
 	position:fixed;
 	top:0;
 	left:0;
@@ -11,8 +11,43 @@
 	filter:alpha(opacity=40);
 	display:none
 }
-.theme-popover, .new-popover  {
+
+.theme-popover .abilityDetail {
+    padding: 10px;      
+    width: 682px;      
+    height: 200px;     
+    border: solid;            
+    border-color: #ddd;      
+    border-width: 2px;      
+    margin-left: 60px;      
+    margin-top: 20px;      
+    font-size: 20px;      
+    border-radius: 4px;      
+    font-family: "Microsoft Yahei";      
+    outline: none;
+}
+
+.abilityDetail:hover {
+    border: 3px solid #aaa;
+}
+
+.theme-popover {
 	z-index:9999;
+	position:fixed;
+	top:50%;
+	left:50%;
+	width:800px;
+	height:580px;
+	margin:-250px 0 0 -400px;
+	border-radius:5px;
+	border: solid 0px #666;
+	background-color:#fff;
+	display:none;
+	box-shadow: 0 0 10px #666;
+}
+
+.new-popover  {
+	z-index:8999;
 	position:fixed;
 	top:50%;
 	left:50%;
@@ -20,7 +55,7 @@
 	height:500px;
 	margin:-250px 0 0 -400px;
 	border-radius:5px;
-	border:solid 2px #666;
+	border: solid 0px #666;
 	background-color:#fff;
 	display:none;
 	box-shadow: 0 0 10px #666;
@@ -34,43 +69,59 @@
 	height: 120px;
 	width: 100%;
 	background-color: #d2d2d2;
+	position: relative;
 }
 .popoutLine3{
 	height: 65px;
 	width: 100%;
 	background-color: white;
+	font-family: "Microsoft Yahei";
 }
 .popoutLine4{
 	height: 240px;
 	width: 100%;
 	background-color: #fff;
+	font-family: "Microsoft Yahei";
 } 
-.popoutAblityName{
+.popoutAbilityName{
 	color:  #fff;
 	font-size: 30px;
-	width: 500px;
+	width: 510px;
 	margin-left: 30px;
 	margin-top: 16px;
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
+	float: left;
+    font-family: Microsoft Yahei;
 }
 .popoutLine1 img{
-	display: inline;
-	width: auto;
+	display: inline-block;
+	width: 79px;
 	height: 75px;
 	margin-left: 0px;
+	float: left;
 }
-.popoutLine1Right{
+.popoutLine1 .popoutLine1Right{
 	height: 75px;
-	width: 186px;
+	width: 185px;
 	background-color: #1f749d;
 	display: inline-block;
-	margin-left: -5px;
+	margin-left: -4px;
 	vertical-align: top;
 	color: white;
 }
-.theme-popover .close, .new-popover .close {
+.addAbilityPopLine1 .popoutLine1Right{
+	height: 75px;
+	width: 185px;
+	background-color: #1f749d;
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: top;
+	color: white;
+	float: right;
+}
+.theme-popover .closure, .new-popover .closure {
 	display: inline;
 	font-size: 18px;
 	line-height: 18px;
@@ -78,8 +129,9 @@
 	color: white;
 	margin-right: 4px;
 	margin-left: 4px;
+    font-family: Microsoft Yahei;
 }
-.theme-popover .close, .new-popover .close {
+.theme-popover .closure, .new-popover .closure {
 	color: #6fbce1;
 }
 .ability_head p{
@@ -88,14 +140,15 @@
 }
 .popoutLine1Text{
 	margin-top: 25px;
-	margin-left: 45px;
+	margin-left: 32px;
 }
 .popoutLine3Green{
-	display: inline-block;
+	/* display: block; */
 	width: 100px;
 	height: 65px;
 	position: absolute;
 	background-color: #2ecc71;
+	overflow: visible !important;
 }
 .popoutLine3Red{
 	display: inline-block;
@@ -119,62 +172,73 @@
 	font-size: 30px;
 }
 .line3RedSelected{
-	margin-right: 120px;
-	margin-top: 10px;
+	margin-right: 165px;
+	margin-top: 15px;
 }
 .line3RedUnselected{
 	margin-right: 35px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 .line3GreenUnselected{
-	margin-left: 40px;
-	margin-top: 10px;
+	margin-left: 35px;
+	margin-top: 15px;
 }
 .line3GreenSelected{
-	margin-left: 185px;
-	margin-top: 10px;
+	margin-left: 200px;
+	margin-top: 15px;
+	overflow: hidden;
 }
-.abilityDetail{
-	padding-left: 10px;
-	padding-top: 10px;
-	width: 740px;
-	height: 150px;
+.new-popover .abilityDetail{
+	padding: 10px;
+	width: 607px;
+	height: 192px;
 	border: solid;
-	border-color: #2b99ce;
-	border-width: 0px;
-	margin-left: 25px; 
+	background-color: #f9f9f9;
+	border-color: #ddd;
+	border-width: 2px;
+	margin-left: 70px; 
+	margin-top: 20px;
 	font-size: 20px;
-	font-family: 微软雅黑;
+	border-radius: 4px;
+	font-family: "Microsoft Yahei";
 	outline:none;	
 }
-.abilityDetail:focus{
+.new-popover .abilityDetail:focus{
 	border-width: 2px;	
 }
- textarea{
+.selfDetailTextCount{
+	margin-top: -6%;
+    margin-left: 80%;
+}
+textarea{
  	resize:none;
  }
 .popoutLine2Line1{
+	margin: 0 auto;
 	font-size: 24px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	color: #444647;
-	text-align: -webkit-center;
-	margin-bottom: 15px;
+	text-align: center;
+	width: 300px;
+	height: 70px;
 }
 .popoutLine2Line1 b{
 	color: #2b99ce;
 	font-size: 40px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	font-weight: normal;
 }
 .popoutLine2Line2{
 	font-size: 24px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	color: #444647;
 	text-align: -webkit-center;
+	/* float: left; */
+	/* top: 50%; */
 }
 .popoutLine2Line2 b{
 	font-size: 24px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	color: #2b99ce;
 	font-weight: normal;
 }
@@ -207,7 +271,7 @@
 	display: none;
 	position: absolute;
 	left: 25px;
-	top: 325px;
+	top: 318px;
 	/*z-index: 99;*/
 }
 .abilityDetailCover img{
@@ -219,7 +283,7 @@
 	color: white;
 	display: inline;
 	font-size: 24px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	font-weight: normal;
 	position: absolute;
 	margin-top: 70px;
@@ -233,27 +297,29 @@
 .addAbilityPopLine2{
 	height: 75px;
 	width: 100%;
-	background-color: #d2d2d2;
+	/* background-color: #d2d2d2; */
 }
 .addAbilityPopSelectDiv{
 	width: 100%;
 	height: 75px;
 	vertical-align: middle;
-	padding-top: 20px;
+	padding-top: 30px;
 	font-size: 25px;
+    font-family: Microsoft Yahei;	
 }
 .addAbilityPopSelectDiv select{
 	outline: none;
 	border: none;
-	font-size: 25px;
-	min-width: 255px;
-	font-family: 微软雅黑;
+	min-width: 260px;
+	font-family: "Microsoft Yahei";
+	background-color: #1f749d;
+	color: white;
+	padding: 4px 10px;
+	font-size: 20px;
 	font-weight: 200;
 }
 .addAbilityPopSelectDiv1{
 	display: inline;
-	margin-right: 50px;
-	margin-left: 35px;
 }
 .addAbilityPopSelectDiv2{
 	display: inline;
@@ -262,28 +328,34 @@
 	height: 75px;
 	width: 100%;
 	font-size: 25px;
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	font-weight: 200;
-	background-color: #2ecc71;
+	/* background-color: #2ecc71; */
 }
 .addAbilityName{
 	padding-top: 20px;
-	padding-left: 35px;
+	padding-left: 15px;
 }
 .addAbilityName label{
 	font-size: 25px;
-	font-family: 微软雅黑;
-    font-weight: 200;
-    color: #ffffff;
+	font-family: "Microsoft Yahei";
+    
+	font-weight: 500;
+    
+	color: #aaa;
 }
 .addAbilityName input{
-	min-width: 255px;
-	font-size: 25px;
-	font-family: 微软雅黑;
+    min-width: 603px;
+    font-size: 20px;
+    font-family: "Microsoft Yahei";
     font-weight: 200;
+    padding: 4px 10px;
+    border: none;
+    color: #fff;
+    background-color: #1f749d;
 }
 .addAbilityPopLine4{
-	height: 240px;
+	height: 235px;
 	width: 100%;
 	background-color: #fff;
 } 
@@ -300,7 +372,9 @@
 	left: 75px;
 	top: 250px;
 	line-height: 0px; /*两个div的下边框对齐*/
+	font-family: Microsoft Yahei;
 }
+
 
 .newAbilityDiv{
 	display: inline-flex;
@@ -308,7 +382,7 @@
     padding: 15px 146px 0px 0px;
 }
 .newAbilityHint{
-	font-family: 微软雅黑;
+	font-family: "Microsoft Yahei";
 	font-size: 14px;
 	font-weight: normal;
 	color: black;
@@ -326,9 +400,173 @@
 	font-size: 17px;
 	color: #fff;
 	font-weight: 100;
-	font-family: "微软雅黑";
+	font-family: "Microsoft Yahei";
 	background: rgba(32, 210, 95, 0.85);
 	border-radius: 0px;
 	cursor: pointer;
 	margin-bottom: 10px;
+}	
+
+.newAbilityContainer {
+    margin: 16px 43px;
+    height: 387px;
+    border: 3px dashed #ccc;
+}
+
+.abilityNewLabel {
+	margin-left: 15px;
+	color: #aaa;
+}
+
+.addAbilityName input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.addAbilityName input:-moz-placeholder { 
+    color:    #fff;
+}
+.addAbilityName input::-moz-placeholder{ 
+    color:    #fff;
+}
+.addAbilityName input:-ms-input-placeholder { 
+    color:    #fff;
+}
+
+.selectMask {
+    display: inline-block;
+}
+
+.new-popover .abilityDetail:hover {
+    border: 3px solid #aaa;
+}
+
+.recommend-popover {
+    z-index: 8999;
+    position: fixed;
+    top: 62%;
+    left: 66%;
+    width: 480px;
+    height: 299px;
+    margin: -250px 0 0 -400px;
+    border-radius: 5px;
+    border: solid 0px #666;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 0 10px #666;
+}
+.popoutLine1 .popoutLine1Right{
+	height: 75px;
+	width: 185px;
+	background-color: #1f749d;
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: top;
+	color: white;
+}
+.similarAbilityPopLine1 {
+    height: 75px;
+    width: 100%;
+    background-color: #2b99ce;
+}
+
+.similarAbilityTitle {
+    color: #fff;
+    font-size: 30px;
+    width: 270px;
+    margin-left: 30px;
+    margin-top: 16px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    float: left;
+    font-family: Microsoft Yahei;
+}
+.similarAbilityPopLine1 img{
+	display: inline-block;
+	width: 79px;
+	height: 75px;
+	margin-left: 0px;
+	float: left;
+}
+.similarAbilityPopLine1Right{
+	height: 75px;
+	width: 105px;
+	background-color: #1f749d;
+	display: inline-block;
+	margin-left: -4px;
+	vertical-align: top;
+	color: white;
+}
+.similarAbilityPopLine1Right .popoutLine1Cancel {
+	display: inline;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #6fbce1;
+    margin-right: 4px;
+    margin-left: 4px;
+    font-family: Microsoft Yahei;
+}
+
+.similarAbilityPopLine2 {
+    height: auto;
+    padding-top: 17px;
+}
+
+.similarAbilityPrompt {
+    font-family: 微软雅黑;
+    font-size: 16px;
+    /* display: inline; */
+    /* float: left; */
+    margin-left: 30px;
+    line-height: 26px;
+    /* background-color: chocolate; */
+}
+
+.similarAbilityPrompt b{
+	color: #1f749d;
+}
+
+.similarAbilityPopLine3 {
+    margin: 8px 33px 2px 29px;
+    height: 90px;
+    border: dashed;
+    border-color: #ddd;
+    /* border-width: 2px; */
+    border-radius: 4px;
+    /* padding: 100px; */
+    overflow-y: auto;
+}
+
+.similarAbilityPopLine4 {
+    padding-left: 148px;
+    padding-right: 20px;
+    padding-top: 13px;
+}
+
+.oldAbilityText {
+    display: inline-block;
+    /* float: right; */
+    font-family: 微软雅黑;
+    font-size: 13px;
+    margin-left: -45px;
+}
+
+.oldAbilityButton {
+    display: inline-block;
+    padding-top: 5px;
+    text-align: center;
+    letter-spacing: 0px;
+    border: 0px;
+    outline: none;
+    width: 180px;
+    height: 30px;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 100;
+    font-family: "Microsoft Yahei";
+    background: rgba(32, 210, 95, 0.85);
+    border-radius: 0px;
+    cursor: pointer;
+    margin-top: -5px;
 }

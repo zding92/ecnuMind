@@ -17,7 +17,7 @@ $(function(){
 	$table = $("#comp-table").bootstrapTable({
 		striped: true,
 		pagination: true,
-		height: 600,
+		height: 900,
 		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
 		if (initialFlag) {
@@ -26,7 +26,7 @@ $(function(){
 			
 			// 如果管理员是校级管理员，显示院系过滤框
 			if (admin == 'all') 
-				table_filter.bootstrapTableFilter('enableFilter', 'apply_department');
+				table_filter.bootstrapTableFilter('enableFilter', 'apply_academy');
 			
 			//点击下拉选择的整体，能够选中勾选框
 			$('.dropdown-menu li a :input').click(function(e){

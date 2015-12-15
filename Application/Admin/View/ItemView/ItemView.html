@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="renderer" content="webkit">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+	<meta charset="UTF-8">
+	<title>竞赛报名</title>
+	<link href="__PUBLIC__/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link href="__PUBLIC__/css/compApply.css" rel="stylesheet">
+	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/home/compApply.js"></script>
+	<script src="__PUBLIC__/jsLib/bootstrap/bootstrap.min.js"></script>
+	<script>
+		var model = "__URL__";
+		var publicUrl = "__PUBLIC__"
+		var comp_item_file_url="__PUBLIC__/CompItemApply/"
+		var addSuccess = {$addSuccess};
+		var submitMode = "{$submitMode}";
+	</script>
+	<style type="text/css">
+	    /* Custom Styles */
+	    ul.nav-tabs{
+	        width: 140px;
+	        margin-top: 20px;
+	        border-radius: 4px;
+	        border: 1px solid #ddd;
+	        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+	    }
+	    ul.nav-tabs li{
+	        margin: 0;
+	        border-top: 1px solid #ddd;
+	    }
+	    ul.nav-tabs li:first-child{
+	        border-top: none;
+	    }
+	    ul.nav-tabs li a{
+	        margin: 0;
+	        padding: 8px 16px;
+	        border-radius: 0;
+	    }
+	    ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+	        color: #fff;
+	        background: #0088cc;
+	        border: 1px solid #0088cc;
+	    }
+	    ul.nav-tabs li:first-child a{
+	        border-radius: 4px 4px 0 0;
+	    }
+	    ul.nav-tabs li:last-child a{
+	        border-radius: 0 0 4px 4px;
+	    }
+	    ul.nav-tabs.affix{
+	        top: 30px; /* Set the top position of pinned element */
+	    }
+	</style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+<div class="container">	
+	<div class="jumbotron">
+        <h1>查看《{$comp_item_name}》</h1>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" id="myScrollspy">
+            <ul class="nav nav-tabs nav-stacked" id="myNav">
+                <li class="active"><a href="#section-1">基本信息</a></li>
+                <li><a href="#section-2">参赛作品简介</a></li>
+                <li><a href="#section-3">附件提交</a></li>
+            </ul>
+        </div>
+        
+        <div class="col-xs-9">
+          <form id="applyForm" method="post">
+            <h2 id="section-1">基本信息</h2>
+            <div style="border-top: 1px solid #ddd">
+              <p>
+              	<label class='nameLabel' for='comp_item_name' style="width:125px">作品名称</label>
+                <h4>{$comp_item_name}</h4>
+              </p>
+              <p id="memberInfo">
+              	<label class='memberLabel' for='a1' style="width:125px">参赛者</label>
+              	<foreach name="participantInfo" item="participantInfo">
+              		
+              		{$participantInfo.student_id}
+              		{$participantInfo.participantName}
+              		{$participantInfo.participantAcademy}
+              		<br>
+              		
+              	</foreach>
+              </p>
+            </div>
+            <h2 id="section-2">参赛作品简介</h2>
+            <div style="border-top: 1px solid #ddd">
+              <p id="brief">
+                {$comp_item_brief}
+              </p>
+            </div>
+          </form>
+          
+          <form id="fileUploadForm" method="post" action='__URL__/submitForm' enctype="multipart/form-data">  
+            <h2 id="section-3">附件</h2>
+            <a class="fileAlreadyExisted" style="cursor:pointer;margin: 15px 0px;"
+            	{$comp_item_filename=="无附件文件"? "" : "href='__PUBLIC__/CompItemApply/$comp_item_id/$comp_item_filename'"}
+            >{$comp_item_filename}</a>  
+          </form>
+       </div>
+    </div>
+</div>
+<div style="height:200px"></div>
+</body>
+</html>	

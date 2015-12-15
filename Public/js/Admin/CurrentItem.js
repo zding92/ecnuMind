@@ -19,23 +19,10 @@ function starSorter(a, b) {
 
 $(function(){
 	var initialFlag = true;
-	 getRows = function () {
-         var rows = [];
-
-         for (var i = 0; i < 10; i++) {
-             rows.push({
-                 id: id,
-                 name: 'test' + id,
-                 price: '$' + id
-             });
-             id++;
-         }
-         return rows;
-     };
 	$table = $("#comp-table").bootstrapTable({
-		striped: true,
 		pagination: true,
-		height: 600,
+		striped: true,
+		height: 900,
 		pageSize: 20
 	}).on('load-success.bs.table', function (e, data) {
 		if (initialFlag) {
@@ -43,13 +30,19 @@ $(function(){
 			table_filter.bootstrapTableFilter('enableFilter', 'comp_state');
 			
 			// 将第九列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第9列)，隐藏，更新表）
-			$table.bootstrapTable('toggleColumn', 9, false, true);
+			// $table.bootstrapTable('toggleColumn', 8, false, true);
 			// 将第十列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第10列)，隐藏，更新表）
-			$table.bootstrapTable('toggleColumn', 10, false, true);
+			$table.bootstrapTable('toggleColumn', 9, false, true);
 			
 			// 如果管理员是校级管理员，显示院系过滤框
 			if (admin == 'all') 
-				table_filter.bootstrapTableFilter('enableFilter', 'apply_department');
+				table_filter.bootstrapTableFilter('enableFilter', 'apply_academy');
+							
+			if (state == 'not_exist') {
+				alert('您选择的用户（们）的附件不存在！');
+				state = null;
+			}
+				
 			
 			//点击下拉选择的整体，能够选中勾选框
 			$('.dropdown-menu li a :input').click(function(e){
@@ -166,6 +159,22 @@ function btnOnClick(id){
 			});
 			
 			break;
+			
+		 case 'downloadApply':
+			 //alert("downloadApply clicked"+ checkedItemID);	
+			 var compStr = "checkedItemID=" + checkedItemID + "&action=CompItemApply";
+			 if (checkedItemID != '')
+				 location.href =  groupDownload_url + "?" + compStr;
+			 else 
+				 alert('请选择要下载的对象');
+			break;
+		 case 'downloadFinal':
+			 var compStr = "checkedItemID=" + checkedItemID + "&action=CompItemFinal";
+			 if (checkedItemID != '')
+				 location.href =  groupDownload_url + "?" + compStr;
+			 else 
+				 alert('请选择要下载的对象');
+			break;
 		default:
 			break;	
 	}
@@ -180,6 +189,13 @@ function handleReturn(call) {
 		break;
 	case 'unseleceted':
 		myAlert("没有选中任何竞赛");
+		break;
+	case 'DownLoaded':
+		myAlert("下载成功");
+		$('#comp-table').bootstrapTable('refresh',null);//刷新表格
+		break;
+	case 'FileNotFound':
+		myAlert("未找到下载文件");
 		break;
 	default:
 		break;

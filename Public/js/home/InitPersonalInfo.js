@@ -1,7 +1,31 @@
+var user_json;
+var SchoolJSON;
+
+function autoResize() {
+	$("#Personalinfo_frame",parent.document).css("height",$("body").height() + "px");
+};
+
+$('document').ready(function(){
+	$.ajax({
+		url : modelUrl + "/getPersonalInfo",
+		dataType: "JSON",
+		success : function(result) {
+			SchoolJSON = result[0];
+			user_json = result[1];
+			Combobox();
+			InitPersonalInfo();
+		}
+	})
+});
+
 function InitPersonalInfo() {
 	
 ///\ 初始化相关事件响应函数
 ///---------------------
+$("#checkName").click(function () {
+  $("#checkName").val($("#checkName").val() == "false" ? "true" : "false");
+});
+
 var btn_valid = true;
 
 $('.sexbox').iCheck({
@@ -17,7 +41,6 @@ $("#btn_edit").click(function () {
             right: "800px"
         }, 300, function () {
             $("#Page2").css('left', '800px');
-            $("#Page2 .form-box").css('float', 'left');
             $("#Page1").css('display', 'none');
             btn_valid = true;
         });
@@ -33,7 +56,6 @@ $("#btn_photo").click(function () {
             right: "0px"
         }, 300, function () {
             $("#Page2").css('display', 'none');
-            $("#Page2 .form-box").css('float', '');
             btn_valid = true;
         });
     }
@@ -54,9 +76,11 @@ $("#form_base").submit(function (ev) {
     ev.preventDefault();
     var submit_value = "";
     var changed = false;
-    $("#form_base input,textarea,select").each(function () {
+    $("#form_base input[class!='kitjs-form-suggestselect-input'],select,textarea").each(function () {
         var Items = $(this);
         if ($(this).attr('name') == 'gender' && !$(this).parent().hasClass('checked'))
+            return;
+        if ($(this).attr('name') == 'hidden_privacy' && !$(this).parent().hasClass('checked'))
             return;
         if (isChanged(Items)) {
             changed = true;
@@ -66,15 +90,17 @@ $("#form_base").submit(function (ev) {
     // 如何相对于一开始没有改变，则不提交。
     if (changed == true) {
         $.ajax({
-            url: model_url + "/submitModify", //请求验证页面 
+            url: modelUrl + "/submitModify", //请求验证页面 
             type: "GET", //请求方式
+            async: false,
             data: submit_value,
             success: function (call) {
                 if (call == 'failed') alert('表单有误，请仔细检查后再提交！');
                 else {
                     alert('修改成功！');
                     // 跳转回主页，待修改。
-                    location.href = model_url + '/home';
+                    parent.location.href = homeUrl;
+                    parent.location.hash = '#main';
                 }
             }
         });
@@ -86,18 +112,32 @@ $("#form_base").submit(function (ev) {
 
 ///\根据user_json初始化数据
 ///----------------------
+//Combobox初始化值
+b3.transform();
+b1.formEl.name = 'academy';
+b1.formEl.id = 'academy';
+b1.inputEl.value = user_json.academy;
+b1.formEl.value = user_json.academy;
+b2.formEl.name = 'department';
+b2.formEl.id = 'department';
+b2.inputEl.value = user_json.department;
+b2.formEl.value = user_json.department;
+b3.formEl.name = 'major';
+b3.formEl.id = 'major';
+b3.formEl.value = user_json.major;
+b3.inputEl.value = user_json.major;
+
 //普通Input输入框及按钮初始化值
 $("#name").val(user_json.name);
+$("#studentid").val(user_json.student_id);
 $("#Email").val(user_json.email);
 $("#address").val(user_json.address);
 $("#phone").val(user_json.phone);
 $("#brief").val(user_json.brief);
-$("#schooling_system").val(user_json.schooling_system);
 $("#campus").val(user_json.campus);
+$("#schooling_system").val(user_json.schooling_system);
 $("#" + (user_json.gender == '男' ? 'male' : 'female')).iCheck('check');
-
-// 第二页（个人头像上传页面不显示）
-$("#Page2").css('display', 'none');
+$("#" + (user_json.hidden_privacy == 'S' ? 'show' : 'hide')).iCheck('check');
 ///----------------------
 ///\结束数据初始化
 
@@ -107,8 +147,9 @@ function Check_Ajax(action,items,value)
 {
     var check_result;
     $.ajax({
-        url: model_url + "/checkForm", //请求验证页面 
+        url: modelUrl + "/checkForm", //请求验证页面 
         type: "GET", //请求方式
+        async: false,
         data: "action=" + action + "&" + "value" + "=" + value,
         success: function (call) {
             check_result = call;     
@@ -118,22 +159,43 @@ function Check_Ajax(action,items,value)
 }
 
 function Checkform_name(obj){
-    if (obj.val().length > 4||obj.val().length < 2) {
+
+    var call = Check_Ajax("name", "name", $("#name").val());
+    if(call == 'illegal')
+    {
         $("#name").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-        $("#name-tip").html('姓名长度为2~4字');
-        $("#name-tip").slideDown("fast");
+        $("#name-tip").html('名字只包含汉字或英文，长度少于20个字符');
+        $("#name-tip").slideDown("fast");                  
+    }else{
+        $("#name").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
+        $("#name-tip").slideUp("fast");               
+        $("#name-tip").html("");
+   }
+}
+
+function Checkform_studentid(obj){
+    if (obj.val().length!=11) {
+        $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+        $("#studentid-tip").html('请输入11位学号');
+        $("#studentid-tip").slideDown("fast");
     }else {
-        var call = Check_Ajax("name", "name", $("#name").val());
-        if(call == 'illegal')
-        {
-            $("#name").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-            $("#name-tip").html('名字只包含汉字');
-            $("#name-tip").slideDown("fast");                  
+        var call = Check_Ajax("student_id", "student_id", $("#studentid").val());
+        if (call == 'repeat') {
+            $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+            $("#studentid-tip").html('该学号已存在，如果存在他人注册的情况请联系管理员');
+            $("#studentid-tip").slideDown("fast");
         }else{
-            $("#name").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
-            $("#name-tip").slideUp("fast");               
-            $("#name-tip").html("");
-       }
+            if(call == 'illegal')
+            {
+                $("#studentid").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
+                $("#studentid-tip").html('请输入正确的学号');
+                $("#studentid-tip").slideDown("fast");                  
+            }else{
+                $("#studentid").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
+                $("#studentid-tip").slideUp("fast");               
+                $("#studentid-tip").html("");
+            }
+        }
     };
 }
 
@@ -163,7 +225,7 @@ function Checkform_address(){
             if(call == 'illegal')
             {
                 $("#address").css({'outline-color':'#ff0000','border':'2px solid #ff0000'});
-                $("#address-tip").html('地址最长为30个字符');
+                $("#address-tip").html('地址最长为100个字符/50个汉字');
                 $("#address-tip").slideDown("fast");                  
             }else{
                 $("#address").css({'outline-color':'#00ff00','border':'2px solid #00ff00'});
@@ -192,6 +254,42 @@ function Checkform_Phone(){
         };
 }
 
+Checkform_Combobox=function(){
+        var call = Check_Ajax("combobox", "combobox", $("#academy").val()+'|'+$("#department").val()+'|'+$("#major").val());
+        switch(call)
+        {
+            case 'academy':
+                $("#academy").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
+                $("#department").prev().removeAttr('style');
+                $("#major").prev().removeAttr('style');
+                $("#combobox-tip").html('请填写正确学院/系别（应与选择框中的待选项完全一致）');
+                $("#combobox-tip").slideDown("fast");
+                break;
+            case 'department':
+                $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
+                $("#department").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
+                $("#major").prev().removeAttr('style');
+                $("#combobox-tip").html('请填写正确系别（应与选择框中的待选项完全一致）');
+                $("#combobox-tip").slideDown("fast");
+                break;
+            case 'major':
+                $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
+                $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });    
+                $("#major").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
+                $("#combobox-tip").html('请填写正确专业（应与选择框中的待选项完全一致）');
+                $("#combobox-tip").slideDown("fast");
+                break;
+            case 'legal':
+                $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
+                $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
+                $("#major").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
+                $("#combobox-tip").slideUp("fast");
+                $("#combobox-tip").html('');
+                break;
+            default: break;
+        }
+}
+
 function Checkform_Brief(){
       var call = Check_Ajax("brief", "brief", $("#brief").val());
           if(call == 'illegal')
@@ -211,6 +309,9 @@ function Checkform(obj){
     {
         case 'name':
             Checkform_name(obj);
+            break;
+        case 'studentid':
+            Checkform_studentid(obj);
             break;
         case 'Email':
             Checkform_Email();
@@ -236,21 +337,6 @@ function isChanged($obj){
 
 var isValidCheck;
 
-$('#form_base .form-group input,textarea,select').keyup(function (ev) {
-    var CheckItems = $(this);
-    if (isValidCheck != undefined) {
-        clearTimeout(isValidCheck);
-    }
-    if ($(this).val() != "" && isChanged(CheckItems)) {
-        isValidCheck = setTimeout(function () { Checkform(CheckItems) }, 1000);
-    }
-    else {
-        var tips = '#' + $(this).attr('id') + "-tip";
-        $(this).removeAttr('style');
-        $(tips).slideUp("fast");
-        $(tips).html("");
-    }
-})
 
 $('#form_base .form-group input,textarea,select').blur(function () {
 
@@ -267,6 +353,9 @@ $('#form_base .form-group input,textarea,select').blur(function () {
         $(tips).slideUp("fast");
         $(tips).html("");
     }
+    setTimeout(function(){
+    	autoResize();
+    }, 500);
 })
 ///-----------------------------------
 ///\表单验证方法声明结束

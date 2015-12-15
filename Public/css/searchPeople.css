@@ -2,141 +2,241 @@
 html { overflow: scroll; }/*强制显示浏览器滚动条*/
 body{
 	font-family: 微软雅黑;
+	margin: 0px auto;
+	min-height: 700px;
 }
-/*.typeSearch{
-	margin: 0 auto;
-	width: 450px;
-	height: 30px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #2b99ce;	
-}*/
-.typeSearch{
-	margin: 0 auto;
-	width: 250px;
-	height: 18px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #aeabab;
-	float: right;
-	margin-right: 50px;
-	margin-top: 4px;	
-}
-.addConstraint{
-	height: 36px;
-	background: #2b99ce;
-	border: none;
-	line-height: 1;
-	color: #fff;
-	font-size: 16px;
-	cursor: pointer;
-	margin-left: -6px;
-	font-family: "微软雅黑";
-}
-.ui-widget{
-	margin-top: 50px;
-	margin-left: 220px;
-}
-.s-title {
-	border-bottom: 1px solid #DDD;
-	border-top: 1px solid #DDD;
-	background: #F1F1F1;
-	line-height: 34px;
-	height: auto;
-	width: 1000px;
-	zoom: 1;
-	font-size: 17px;
-	padding-left: 25px;
-	vertical-align：middle;
-}
-.s-title p{
-	font-size: 14px;
-	font-familiy: "微软雅黑";
-	display: inline;
-}
-.s-title p b{
-	font-size: 1.2em;
-	font-familiy: "微软雅黑";
-	display: inline;
-	color:#2b99ce;
-	margin-right: 20px;
-}
-.searchPeoplePart2Row{
-	position: relative;
-	line-height: 34px;
-	border-bottom: 1px solid #DDD;
-	height: 200px;
-	max-height: 200px;
-	height: auto;
-	overflow-y: scroll;
-	width: 1000px;
-	padding-left: 25px;
 
+ul.dropdown-menu.abilitySearchBox {
+    width: 1032px;
+    position: absolute;
+    left: -68px;
 }
-.searchPeoplePart2C1{
-	width: 100px;
-	padding-left: 25px;
-	font-size: 14px;
+
+ul.dropdown-menu.academySearchBox {
+    width: 1032px;
+    position: absolute;
+    left: -223px;
+}
+
+.conditionContainer {
+    position: relative;
+}
+
+.searchTitle{
+	margin: -25px 10px;
+    display: inline-block;
+    font-family: 黑体;
+    font-size: 20px;
+	position: absolute;
+	top: 50%;
+	height: 50px;
+	width: 50px;
+	border-radius: 50px;
+	padding: 11px 0px;
+	color: white;
+	text-align: center;
+	background-color: rgba(60,60,60,0.4);
+}
+
+.fieldTitle {
+    background-color: rgba(50,180,238,0.8);
+}
+
+.directionTitle {
+    background-color: rgba(224,40,50,0.5);
+}
+
+.abilityTitle {
+    background-color: rgba(166,194,50,0.8);
+}
+
+.academyTitle {
+    background-color: rgba(145,153,238,0.8);
+}
+
+.departmentTitle {
+    background-color: rgba(91,157,22,0.5);
+}
+
+.majorTitle {
+    background-color: rgba(47,199,222,0.8);
+}
+
+.searchContent {
+    height: 100px;
+    width: 950px;
+    display: inline-block;
+    left: 70px;
+    position: relative;
+}
+
+.selectedCondition{
+	height: 50px;
+	background: rgb(212, 212, 212);
 	position: relative;
-	display: inline-flex;
-	line-height: 34px;
+	/* z-index: 10; */
+	color: rgb(57, 57, 57);
+	font-family: 微软雅黑;
+	font-size: 16px;
 }
-#L2 .searchPeopleTag{
-	display: none;
+.divider {
+height: 1px;
+margin: 9px 0;
+overflow: hidden;
+background-color: #e5e5e5;
 }
-.searchPeopleTags{
-	display: inline-table;
-	margin-left: 25px;
-}
-.searchPeopleTag{
-	display: inline-flex;
+.searchTag{
+	height: 30px;
 	width: auto;
-	min-width: 80px;
-	margin-right: 50px;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	color: #2098d1;
+	background: #fff;
+	margin: 5px 2px;
+	display: inline-block;
+	cursor: pointer;
 }
-input[type=checkbox]+label{
-	font-size: 14px;
+
+.searchTag:hover{
+	background: #E9E9E9;
+	color: #2098d1;
 }
-.searchPeoplePart2RowHead{
-	position: relative;
-	line-height: 34px;
-	height: auto;
-	width: 1030px;
-	padding-left: 25px;
-	font-size: 14px;
+
+.TagActive{
+	color:#fff;
+	background:#2098d1;
+}
+
+.TagActive:hover{
+	color: #fff;
+    background: #42A4D2;
+}
+
+.titleTag{
+	height: 30px;
+	width: auto;
+	font-size: 16px;
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	color: red;
+	background: #fff;
+	margin: 5px 2px;
+	display: inline-block;	
 }
 .selectedTags{
-	position: relative;
-	display: inline-table;
-}
-.selectedTag{
-	background-color: white;
-	position: relative;
-	width:auto;
-	height:28px;
-	border-style: solid;
-	border-width: 1px;
-	border-color: #9b9b9b;
-	text-align: center;
-	font-size: 14px;
-	vertical-align: middle;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-right: 20px;
-	padding-top: 0px;
-	padding-left: 3px;
-	padding-right: 3px;
+	display: inline-block;
+	background-color: rgb(21, 151, 212);
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	cursor: pointer;
-	display: inline-flex;
-	line-height: 28px;
-
-	transition:all 0.3s ease-in-out ;
-	-moz-transition:width 2s; /* Firefox 4 */
-	-webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
-	-o-transition:width 2s; /* Opera */
+	margin-right: 10px;
 }
-.selectedTag:hover{
-	border-color: #2b99ce;
+
+div#searchResult {
+    height: auto;
+    width: 210px;
+    position: absolute;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(70,112,199,0.8);
+    z-index: 99;
+}
+
+p.resultTag {
+    color: white;
+    display: inline-block;
+    margin: 5px 5px;
+    cursor: pointer;
+    padding: 4px 4px 4px 4px;
+    /* background-color: rgba(189,182,186,0.8); */
+}
+
+p.resultTag:hover {
+    background-color: rgba(189,182,186,0.8); 
+}
+
+p.resultTag:hover {
+    background-color: rgba(189,182,186,0.8); 
+}
+
+.searchResultNull {
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 30px;
+}
+
+.searchResultTitle {
+    color: #fafafa;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p.searchResultDivide {
+    background-color: #fafafa;
+    height: 1px;
+    width: 172px;
+    margin-left: 10px;
+    margin-top: 17px;
+}
+
+.searchResultClose {
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+form#searchTextForm {
+    margin: 5px 0px 0px 0px;
+}
+
+input.selectInput.combo-input.text-input {
+    height: 39px;
+}
+
+input#searchText {
+    width: 250px;      height: 43px;
+}
+
+body {
+    overflow-x: hidden;
+}
+.theme-popover-mask {
+	z-index: 8000;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#000;
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	display:none
+}
+
+.showMoreText {
+    margin-bottom: 30px;
+    margin-left: 44%;
+    background-color: #428bca;
+    width: 75px;
+    padding-left: 6px;
+    color: white;
+    border-color: #285e8e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p.tips {
+    color: red;
+    font-family: 黑体;
+    font-weight: 100;
 }

@@ -22,7 +22,7 @@ function checkRange($age) {
 	} else return true;
 }
 
-// 验证名字长度
+// 验证名字合法性
 function checkName($name) {
 	$length = strlen($name);
 	if ($length > 20) return false;
@@ -58,3 +58,51 @@ function isNumOrConnectchar($value) {
 	if (preg_match('/^(?:[0-9\-])+$/',$value)) return true;
 	else return false;
 }
+
+function checkPwd($pwd) {
+	if (preg_match('/^([a-zA-Z0-9._*]){6,20}$/',$pwd)) return true;
+	return false;
+}
+
+function mbstringToArray($str,$charset) {
+	$strlen=mb_strlen($str);
+	while($strlen){
+		$array[]=mb_substr($str,0,1,$charset);
+		$str=mb_substr($str,1,$strlen,$charset);
+		$strlen=mb_strlen($str);
+	}
+	return $array;
+}
+
+function str_split_utf8($str){
+	$split=1;
+	$array=array();
+	for($i=0;$i<strlen($str);) {
+		$value=ord($str[$i]);
+		if($value>127){
+			if($value>=192&&$value<=223) $split=2;
+			elseif($value>=224 && $value<=239) $split=3;
+			elseif($value>=240 && $value<=247) $split=4;
+		}else{
+			$split=1;
+		}
+		$key=NULL;
+		for($j=0;$j<$split;$j++,$i++){
+			$key.=$str[$i];
+		}
+		array_push($array,$key);
+	}
+	return $array;
+}
+
+/**
+ * 为数组形式的字符加上单引号
+ */
+function sqlPreHandle($strArray) {
+	foreach ($strArray as $key=>$val) {
+		$strArray[$key] = "'$val'";
+	}
+	return $strArray;
+}
+
+

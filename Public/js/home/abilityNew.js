@@ -3,40 +3,49 @@
 
 var provinceList = Array();
 
+var ability_json;
+
 function transform() {
+	$.ajax({url: app_url + "/Custom/ability/genDB",
+		async: false,
+		type: "GET",
+        dataType: 'JSON',
+        success: function(result) {
+        	ability_json = result;
+        	var cnt1 = 0;
+        	
+        	for (o1 in ability_json) {
+        		
+        		var cityListArray = Array();
+        		var cnt2 = 0;
+        		
+        		for (o2 in ability_json[o1]) {
+        			
+        			var areaListArray = Array();
+        			var cnt3 = 0;
+        			
+        			for (o3 in ability_json[o1][o2]) {
+        				areaListArray[cnt3] = ability_json[o1][o2][o3]['name'];
+        				cnt3++;
+        			}
+        			cityListItem = new Object();
+        			cityListItem.name = o2;
+        			cityListItem.areaList = areaListArray;
 
-	var cnt1 = 0;
-	
-	for (o1 in ability_json) {
-		
-		var cityListArray = Array();
-		var cnt2 = 0;
-		
-		for (o2 in ability_json[o1]) {
-			
-			var areaListArray = Array();
-			var cnt3 = 0;
-			
-			for (o3 in ability_json[o1][o2]) {
-				areaListArray[cnt3] = ability_json[o1][o2][o3]['name'];
-				cnt3++;
-			}
-			cityListItem = new Object();
-			cityListItem.name = o2;
-			cityListItem.areaList = areaListArray;
+        			cityListArray[cnt2] = cityListItem;
+        			cnt2++;
+        		}
+        		
+        		var provinceListItem = new Object();
+        		provinceListItem.name = o1;
+        		provinceListItem.cityList = cityListArray;
+        		
+        		provinceList[cnt1] = provinceListItem;
+        		cnt1++;
 
-			cityListArray[cnt2] = cityListItem;
-			cnt2++;
-		}
-		
-		var provinceListItem = new Object();
-		provinceListItem.name = o1;
-		provinceListItem.cityList = cityListArray;
-		
-		provinceList[cnt1] = provinceListItem;
-		cnt1++;
-
-	}
+        	}
+        }
+	});
 }
 
 var addressInit = function(_cmbProvince, _cmbCity, _cmbArea, defaultProvince, defaultCity, defaultArea)

@@ -16,7 +16,7 @@ class TiaozhanController extends CompController {
 		$this->display();
 	}
 	
-	public function Tiaozhan_modify($compItemId) {
+	public function TiaozhanModify($compItemId) {
 		$this->createModel();
 		$this->checkValid($compItemId);		
  		$tiaozhanData = $this->getTiaozhanData($compItemId);
@@ -27,7 +27,7 @@ class TiaozhanController extends CompController {
  		$this->display('Tiaozhan/tiaozhan');
 	}
 		
-	public function Tiaozhan_origin($compItemId) {
+	public function TiaozhanOrigin($compItemId) {
 		$this->createModel();
 		$this->checkValid($compItemId);
 		
@@ -134,12 +134,13 @@ class TiaozhanController extends CompController {
 	 */
 	private function getTiaozhanData($compItemId, $returnAuthorDetail=FALSE) {
 		$tiaozhanData = $this->tiaozhanModel->find($compItemId);
+
+		$custom = M('user_custom');
 		
 		// 检测是否需要返回用户详细信息。
 		if ($returnAuthorDetail) {
 			foreach ($tiaozhanData as $key => $val) {
 				if (preg_match('/author[1-6]_id$/',$key) && isset($val)) {
-					$custom = M('user_custom');
 					$key = str_replace('id', 'info', $key);
 					$tiaozhanData[$key] = 
 						$custom->where("student_id=$val")->field("brief,user_id,complete_steps", true)->find(); 
@@ -149,7 +150,7 @@ class TiaozhanController extends CompController {
 		
 		// 将所有null转为空字符返回
 		$tiaozhanData = $this->replaceNullOfId($tiaozhanData);
-
+		
 		// 返回指定B表的内容
 		$tiaozhanData = $this->clearBTable($tiaozhanData);
 		
@@ -197,9 +198,13 @@ class TiaozhanController extends CompController {
 	 * 检查用户权限。
 	 */
 	private function checkAccess($checkData, $errorInfo) {
+		// 如果用户是管理员，不检测权限，默认通过。
+		if ("admin" == session("user_access")) return;
+		
 		$studentId = session('student_id');
 		$key = array_search($studentId, $checkData);
-		if (!preg_match('/author[1-6]_id$/',$key)) {
+		
+		if (!preg_match('/a[1-9]$/',$key)) {
 			$this->ajaxReturn($errorInfo, 'EVAL');
 		}
 	}

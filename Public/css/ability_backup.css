@@ -1,0 +1,198 @@
+html { overflow: scroll; /* height: auto; */ position: relative; float: left;}/*强制显示浏览器滚动条*/
+
+body{
+	margin:0 auto;
+	height: auto;
+	position: relative;
+	/* float: left; */
+}
+
+.title_box{
+    margin: 0px 0px auto;
+    background-color: rgba(240,240,240,0.8);
+    color: #45484d;
+    text-align: left;
+    padding: 3px 15px 2px 30px;
+    height: 15px;
+    width: 984px;
+    font-size: 10px;
+    font-weight: 300;
+    border: 1px solid #ddd;
+    display: block;
+    letter-spacing: 5px;
+    vertical-align: top;
+}
+
+
+ .ability_box {
+    height: auto;
+    min-height: 37px;
+    width: 700px;
+    max-height: 110px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0px auto;
+    padding: 10px 10px 10px 20px;
+    border: 3px dashed #ddd;
+    position: relative;
+    display: block;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+ #L1 div.active{
+    background: #2098d1;
+    cursor: pointer;
+    color: #fff;
+}
+
+ #L2 div.active{
+    background: #2098d1;
+    cursor: pointer;
+    color: #fff;
+}
+
+ #L3 {
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 280px;
+    min-height: 280px;
+    margin-bottom: 20px;
+}
+ #L4 {
+    max-height: 250px;
+    overflow-x: hidden;
+    min-height: 250px;
+}
+ #L5 {
+    max-height: 200px;
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+
+ .ability_head{
+    height: 50px;
+    width: auto;
+    margin: 0px auto;
+    padding: 0px 0px 0px 40px;
+    position: relative;
+}
+
+ .ability_head > p{
+    font-size: 30px;
+    margin: 0px auto;
+    font-family: "Microsoft Yahei";
+    color: #aaa;
+    position: relative;
+    display: inline-block;
+    padding: 10px 0px 0px 0px;
+    letter-spacing: 5px;
+}
+
+/*
+ .ability_head #left-li{
+	position: relative;
+	float: left;
+    margin: 0px auto;
+    padding: 10px 0px 0px 0px;
+    display: inline-flex;
+	list-style-type:none;
+	font-size: 30px;
+    font-family: Microsoft Yahei;
+    color: #aaa;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 5px;
+}
+#right-li{
+	position: relative;
+	float: right;
+	margin: 0px auto;
+	padding: 10px 0px 0px 0px;
+	display: inline-flex;
+}
+*/
+
+ .tags {
+    height: 26px;
+    width: auto;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    color: #2098d1;
+    background: #fff;
+    margin: 5px 2px;
+    display: inline-block;
+}
+
+ .tags_1 {
+    height: 18px;
+    width: auto;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    color: #2098d1;
+    background: #fff;
+    margin: 5px 2px;
+    display: none;
+}
+
+.hvr-radial-out {
+    vertical-align: middle;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+    font-family: "Microsoft Yahei";
+}
+
+.hvr-radial-out:hover {
+    cursor: pointer;
+    background: #ddd;
+}
+    
+.iframe {
+    border: 0px;
+    width: 1032px;     
+}
+
+.headAbilityDetail{
+	margin-bottom: 5px;
+}
+.save_button{
+          padding: 0px 0px 0px 20px;
+          vertical-align: central;
+          text-align: center;
+          letter-spacing:20px;
+          border: 0px;
+          outline: none;          
+          width: 150px;
+          height: 40px;
+          font-size: 20px;
+          color: #fff; 
+          font-weight: 100;
+          font-family: "Microsoft Yahei";
+          background: #0080FF; 
+          border-radius: 0px;  
+          cursor: pointer;
+          margin-left: 420px;
+          margin-bottom: 50px;
+}
+.abilityStar{
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-bottom: 10px;
+}
+.homeBottom{
+	margin-left: 870px;
+}
+
+#L3_form {
+    margin: 0 auto;  
+    height: 335px; 
+    position: relative;
+}

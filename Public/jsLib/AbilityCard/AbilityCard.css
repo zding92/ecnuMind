@@ -1,0 +1,73 @@
+@CHARSET "UTF-8";
+
+.abilityCard{
+	height: auto;
+    
+    
+	position: relative;
+    
+    
+    
+	float: left;
+	width: 100%;
+    margin-bottom: 20px;
+    
+	/* margin-left: 52px !important; */
+}
+.abilityCardDirection{
+	width: 200px;
+    
+	height: 100%;
+    
+	padding: 27px;
+	background-color: rgba(10,118,255,0.62);
+    
+	color: white;
+	position: relative;
+    
+	display: inline-flex;
+	vertical-align: middle;
+	float: left;
+	margin-left: 60px;
+	font-family:"微软雅黑"
+}
+.abilityCardDirectionLabel{
+	height: auto;
+	margin: 0px auto;
+	position: relative;
+	font-size: 18px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	top: 50%;
+	margin-top: -9px;
+}
+.abilityCardSeparator{
+	background-color: black;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+}
+.abilityCardAbility{
+    color: white;
+	background-color: rgba(50,50,50,.5);
+    width: 710px;
+    padding: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	font-family:"微软雅黑";
+    min-height: 54px;
+}
+.abilityLabel {
+    /* top: 50%; */
+    /* border-width: 2px; */
+    /* border-style: groove; */
+    display: inline-block;
+    /* margin: 5px 5px; */
+    padding: 4px 4px 4px 20px;
+    min-width: 80px;
+    height: 26px;
+}

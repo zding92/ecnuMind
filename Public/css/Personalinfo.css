@@ -1,0 +1,281 @@
+html { overflow: hidden; height: auto; position: relative;}/*ǿ����ʾ������������*/
+
+body{
+	margin:0 auto;
+	height: auto;
+	position: relative;
+	background-color: #fff;
+	float: left;
+}
+
+.title_box{
+    margin: 0px 0px auto;
+    background-color: rgba(240,240,240,0.8);
+    color: #45484d;
+    text-align: left;
+    padding: 3px 15px 2px 15px;
+    height: 15px;
+    width: 1000px;
+    font-size: 10px;
+    font-weight: 300;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    display: block;
+    letter-spacing: 5px;
+    float: left;
+    vertical-align: top;
+}
+
+ .head {
+    height: 50px;
+    width: auto;
+    margin: 0px auto;
+    padding: 20px 200px 20px 0px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+ .head p {
+    text-align: center;
+    font-size: 40px;
+    margin: 0px auto;
+    font-family: cursive;
+    position: relative;
+    display: inline-block;
+}
+
+
+ .form-box .form-group {
+    margin: 15px 0px 20px 0px;
+    width: 100%;
+    height: 35px;
+}
+
+ .form-box .form-group .label1 {
+    font-weight: 700;
+    font-size: 15px;
+    padding: 10px;
+    color: rgba(120,120,120,0.9);
+    text-align: left;
+    position: absolute;
+    left: 160px;
+    z-index: 1;
+}
+
+
+.form-control {
+    font-family: "΢���ź�" Arial;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 20px 10px 20px;
+    width: 230px;
+    position: relative;
+    left: 40%;
+}
+
+ .form-box .combobox {
+    position: relative;
+    /* top: 0px; */
+    /* left: 169px; */
+    font-weight: 700;
+    width: 360px;
+    font-size: 15px;
+    text-align: center;
+    padding: 0px 170px;
+    color: rgba(120,120,120,0.9);
+}
+
+ .form-group span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    top: 5px;
+    left: 47px;
+    color: rgba(120,120,120,0.9);
+    position: relative;
+    margin: 10px 50px 10px 15px;
+}   
+
+ #brief{
+    height: 130px;
+    text-align: start;
+    max-height: 130px;
+    max-width: 230px;
+    word-break:break-all;
+    word-wrap:break-word ;
+}
+
+ .btn{
+    position: relative;
+    display: block;
+    left: 278px;
+    top: 10px;
+    height: 40px;
+    width: 274px;
+    color: #fff;
+    border: none;
+    background: #2b99ce;
+    font-family: '΢���ź�';
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+ .btn:hover{
+    background: #3ba9de;
+}
+
+ .Two-box{
+    width: 1830px;
+    height: 100%;  
+    position: relative;
+    overflow: hidden;
+}
+
+ .Page-box {
+    width: 1030px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+}
+
+
+ .Page-box .help{
+    position: relative;
+    width: 230px;
+    height: 350px;
+    margin: 0px auto;
+    float: right;
+    right: 20px;
+    display: inline-block;
+    border: 3px dashed #ddd;
+}
+
+ .Page-box .help p{
+    margin: 15px 10px;
+    font-size: 15px;
+}
+
+ .Page-box .help p span{
+ 	color: #ee0000
+}
+
+ .Page-box .choice1{
+    position: relative;
+    display: inline-block;
+    left: 51px;
+}
+
+ .Page-box .choice1{
+    position: relative;
+    display: inline-block;
+    left: 51px;
+}
+
+ .Page-box .choice2{
+    position: relative;
+    display: inline-block;
+    left: 595px;
+}
+
+ .Page-box .btn_change {
+    width: 160px;
+    height: 40px;
+    color: #fff;
+    border: none;
+    background: #2b99ce;
+    font-family: '΢���ź�';
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ .Page-box #btn_edit:hover {
+    background: #3ba9de;
+}
+
+ .Old {
+    width: 41%;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    height: 400px;
+    border-right: 3px dashed #ddd;
+}
+
+ .Old p {
+    display: inline-block;
+    position: absolute;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+    width: 130px;
+    top: 120px;
+    left: 80px;
+}
+
+ .New {
+    display: inline-block;
+    position: relative;
+    width: 55%;
+    height: 410px;
+    float: right;
+}
+
+ #image_file{
+    height: 40px;
+    width: 160px;
+    z-index: 1;
+    position: absolute;
+    opacity: 0;
+}
+
+ .photo-edit {
+    display: none;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    
+}
+
+ .photo_error{
+    position: relative;
+    top: 50px;
+    color: #ff6a00;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+ .form-box {
+    height: auto;
+    width: 700px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding: 20px 0px 30px 0px;
+    border: 3px dashed #ddd;
+    position: relative;
+    display: block;
+    left: 50px;
+}
+
+div.form-tip {
+    text-align: left;
+    padding-left: 280px;
+    font-family: ΢���ź�;
+    color: rgba(255,50,50,0.7);
+}
+label.privacyLabel {
+    font-weight: 700;  
+    font-size: 15px;  
+    padding: 10px;  
+    color: rgba(120,120,120,0.9);  
+    text-align: left;  
+    position: relative;  
+    left: 42px;  
+    top: 5px;
+    margin-right: 32px;
+    z-index: 1;
+}

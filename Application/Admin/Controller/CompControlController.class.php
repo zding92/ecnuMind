@@ -2,10 +2,45 @@
 namespace Admin\Controller;
 use Think\Controller;
 use Admin\Common\Controller\CommonController;
+
 class CompControlController extends CommonController {
 	
+
   public function CompControl(){
+  	$this->assign('addSuccess', 'false');
     $this->display();
+  }
+  
+  public function removeComp(){
+  	$compModel = M("ecnu_mind.competition_info",null);//实例化数据库模型
+  	$removeCompId = I('post.removeCompId');//取得前台所传需要删除comp_item_id
+  	$compModel->where("comp_id = $removeCompId")->delete();//删除数据
+  	//delDirAndFile("./Public/CompForm/25");
+  	$this->deldir("./Public/CompForm/25");
+  	$this->ajaxReturn("removeSuccess","EVAL");
+  }
+  
+  public function deldir($dir) {
+  	//先删除目录下的文件：
+  	$dh=opendir($dir);
+  	while ($file=readdir($dh)) {
+  		if($file!="." && $file!="..") {
+  			$fullpath=$dir."/".$file;
+  			if(!is_dir($fullpath)) {
+  				unlink($fullpath);
+  			} else {
+  				deldir($fullpath);
+  			}
+  		}
+  	}
+  
+  	closedir($dh);
+  	//删除当前文件夹：
+  	if(rmdir($dir)) {
+  		return true;
+  	} else {
+  		return false;
+  	}
   }
   
   public function addComp(){
@@ -13,23 +48,15 @@ class CompControlController extends CommonController {
   	
   	$compDate = I("post.compDate");
   	$compApplyDate = I("post.compApplyDate");
-  	$compTemplate = I("post.comp_template");
-  	
+  	  	
   	$DataToSql = I("post.");
+  	//strtr($DataToSql[comp_brief],"\r\n","<br>");
+  	$DataToSql[comp_brief] = str_ireplace("\r\n","<br>",$DataToSql[comp_brief]);
+  	
   	//删除$DataToSql中比赛起始时间项
   	unset($DataToSql['compDate']); 
   	//删除$DataToSql中比赛报名起始时间项
   	unset($DataToSql['compApplyDate']);
-  	//删除$DataToSql中比赛模板项
-  	unset($DataToSql['comp_template']);
-  	
-  	switch ($compTemplate){
-  		case '挑战杯' : $DataToSql['comp_template'] = 'Tiaozhan';
-  		break;
-  		default:break;
-  	}
-  	
-  	
   	
   	//将I函数拿到的比赛时间整体拆分成数组，中间以-分隔
   	$compDateArray = explode('-', $compDate);
@@ -42,11 +69,29 @@ class CompControlController extends CommonController {
   	//将生成的$compDateArray数组中对应项组成新的comp_apply_start_date和comp_apply_end_date字符串
   	$DataToSql['comp_apply_start_date'] = $compApplyDateArray[0].'-'.$compApplyDateArray[1].'-'.$compApplyDateArray[2];
   	$DataToSql['comp_apply_end_date'] = $compApplyDateArray[3].'-'.$compApplyDateArray[4].'-'.$compApplyDateArray[5];
+
+  	$DataToSql['comp_owner'] = session("access_id");
   	
-  	//添加此比赛数据进数据库
-  	$compInfoModel->data($DataToSql)->add();
-  	// 返回添加成功
-  	$this->ajaxReturn('success', 'EVAL');	
+  	if ($DataToSql['comp_id']==''){
+  		//添加此比赛数据进数据库，并取回添加之后的主键值为compPK
+  		$compPK = $compInfoModel->data($DataToSql)->add();
+  		$this->assign('success', 'add');
+  	}else{
+  		$compPK = $DataToSql['comp_id'];
+  		$compInfoModel->save($DataToSql);
+  		$this->assign('success', 'update');
+  	}
+
+  	
+  	//将上传的文件放置在./Public/CompForm目录下的$compPK目录下
+  	uploadFile('./Public/CompForm',"/$compPK/",$DataToSql['comp_name']);
+  	
+  	
+  	  	
+  	// 重新显示CompControl页面
+  	$this->display("CompControl");
+	// 返回添加成功
+//  $this->ajaxReturn('success', 'EVAL');	
   }
   
   public function checkValidUser($student_id) {
@@ -61,11 +106,18 @@ class CompControlController extends CommonController {
   
   public function getCompInfo() {
   	$compModel = M('ecnu_mind.competition_info');
-  	$allComp = $compModel->select();
-  		
-  	$allComp = $this->assignTemplate($allComp);
+  	$condition['comp_owner'] = session('access_id');
+  	$allComp = $compModel->where($condition)->select();
+
   	$allComp = $this->checkDate($allComp);
   	$this->ajaxReturn(json_encode($allComp), "EVAL");
+  }
+  
+  public function  getACompInfo(){
+  	$compModel = M('ecnu_mind.competition_info');
+  	$aCompInfo = $compModel->find(I('post.getCompId'));
+  	$this->ajaxReturn(json_encode($aCompInfo));
+  	
   }
   
   private function assignTemplate($allComp) {
@@ -76,8 +128,7 @@ class CompControlController extends CommonController {
   		// 用完以后删除该项，防止传到前台。
   		unset($comp['comp_id']);
   			
-  		$compTmp = $comp['comp_template'];
-  		$comp['comp_template'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
+  		$comp['comp_del'] = '<a href="'.U("Custom/$compTmp/$compTmp","compId=$compId","").'" target="_blank">点此报名</a>';
   			
   		$result[] = $comp;
   	}
@@ -95,16 +146,13 @@ class CompControlController extends CommonController {
   			
   		if ($today < $compStartDay) {
   			$comp['apply_state'] = '未开始';
-  			$comp['comp_template'] = "<a style='color:#aaa;margin:0px auto;'>报名未开始</a>";
   
   		} elseif ($today > $compStartDay && $today < $compEndDay) {
   			$comp['apply_state'] = '正在报名';
   
   		} else {
   			$comp['apply_state'] = '报名结束';
-  			$comp['comp_template'] = "<a style='color:#aaa;margin:0px auto;'>报名已结束</a>";
-  		}
-  			
+  		}  			
   		$comp['apply_date'] = $comp['comp_apply_start_date'].' ~ '.$comp['comp_apply_end_date'];
   		$result[] = $comp;
   	}

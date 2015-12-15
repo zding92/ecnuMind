@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+  <meta charset="utf-8" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table-filter.css" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/jsLib/dateRangerPicker/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="__PUBLIC__/jsLib/dateRangerPicker/daterangepicker-bs3.css"/>
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/>
+  <!-- 禁用全选框 -->
+  <style type="text/css">
+  	input[name="btSelectAll"]{
+		display: none;
+    }
+  </style>
+
+  <script src="__PUBLIC__/jslib/jquery/jquery.min.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap.min.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table-filter.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/bs-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
+  <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script src="__PUBLIC__/jsLib/dateRangerPicker/moment.js"></script>
+  <script src="__PUBLIC__/jsLib/dateRangerPicker/daterangepicker.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/tableExport.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/html2canvas.js"></script>
+  <script src="__PUBLIC__/jsLib/bootstrap/ext/exportPlugin.js"></script>
+  <script src="__PUBLIC__/jsLib/myAlert/myAlert.js"></script>
+
+  <script>
+	var addCompURL = '__APP__/Admin/CompControl/addComp'
+  	var getDataURL = '__APP__/Home/Comp/getCompItem';
+  	var abilityChange_url = "__URL__/abilityJudge";
+  </script>
+  <!-- 
+   -->
+</head>
+
+<body style="background-color: #fff">
+
+  <div id="custom-toolbar"  style="width:700px;">
+  	<div class="btn-group" style="float:right;margin-right:10px;">
+	   <button type="button" class="btn btn-default dropdown-toggle" 
+	      data-toggle="dropdown">
+	      对勾选能力进行审批<span class="caret"></span>
+	   </button>
+	   <ul class="dropdown-menu" role="menu" >
+	      <li><a href="#" data-toggle="modal" data-target="#abilityModal" id="approved" onclick="btnOnClick(this.id)">通过</a></li>
+	      <li><a href="#" data-toggle="modal" data-target="#abilityModal" id="disapproved" onclick="btnOnClick(this.id)">不通过</a></li>
+	   </ul>
+	</div>	<!-- btn-group 的/div -->
+  </div>
+  <div style="margin:10px 15px 15px;">
+    <div id="filter-bar"> </div>
+    <table id="ability-table" 
+		   data-url="__APP__/Admin/AbilityControl/showAllAbility"
+           data-toolbar="#custom-toolbar" 
+           data-show-toggle="true" 
+           data-search="true"           
+           data-show-filter="true"
+           data-striped="true"
+           data-sort-name="apply_state" 
+           data-sort-order="desc"
+           data-show-export="true">
+      <thead>
+        <tr>
+		  <th data-field="state" data-checkbox="true" style="vertical-align: middle"></th>
+          <th data-field="ability_name" data-width="400" data-align="left">能力名称</th>
+          <th data-field="direction_name" data-align="center" data-sortable="true">所属方向</th>
+          <th data-field="field_name" data-width="190" data-align="center" data-sortable="true">所属领域</th>
+          <th data-field="ori_ability_status" data-formatter="operateFormatter" data-align="center" data-events="operateEvents">详细说明</th>
+          <th data-field="ability_status" data-align="center" data-sortable="true">审核状态</th>
+          <th data-field="ability_id" data-align="center" >能力编号</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <!-- 模态框（prizeModal） -->
+	<div class="modal fade" id="abilityModal" tabindex="-1" role="dialog" 
+	   aria-labelledby="myModalLabel" aria-hidden="true">
+	   <div class="modal-dialog">
+	      <div class="modal-content">
+	         <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" 
+	               aria-hidden="true">×
+	            </button>
+	            <h4 class="modal-title" id="myModalLabel">
+	              	提示
+	            </h4>
+	         </div>
+	         <div class="modal-body">
+	            您确定进行此能力审批的操作么？
+	         </div>
+	         <div class="modal-footer">
+	            <button type="button" class="btn btn-default" 
+	               data-dismiss="modal">关闭
+	            </button>
+	            <button type="button" class="btn btn-primary" id='abilityConfirm' data-dismiss="modal" onclick="btnOnClick(this.id)">
+	               提交更改
+	            </button>
+	         </div>
+	      </div><!-- /.modal-content -->
+	   </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+    
+    <div class='messagePopOut' style='display:none'>
+    	<div class='messagePopText'>
+        </div>
+        <div class='messagePopButton'>
+        	OK
+        </div>        	
+     </div>	
+
+	<script type="text/javascript">
+       $(document).ready(function() {
+          $('#compDate,#compApplyDate').daterangepicker(
+			{format: 'YYYY-MM-DD'}, function(start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+          });
+       });
+   </script>
+  <script src="__PUBLIC__/js/Admin/AbilityControl.js"></script>
+
+</body>
+
+</html>

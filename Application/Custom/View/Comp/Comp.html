@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
   <meta charset="utf-8" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap.min.css" />
   <link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap/bootstrap-table.css" />
@@ -13,6 +15,11 @@
   <script src="__PUBLIC__/jslib/bootstrap/bootstrap-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/plugin-bs-table.js"></script>
   <script src="__PUBLIC__/jslib/bootstrap/ext/bootstrap-table-zh-CN.js"></script>
+  <script type="text/javascript">
+  	var model = "__URL__";
+  	var publicUrl = "__PUBLIC__";
+  	var compFormUrl = "__PUBLIC__/CompForm/";
+  </script>
   
 </head>
 
@@ -31,11 +38,12 @@
       <thead>
         <tr>
           <th data-field="comp_importance" data-width="100" data-align="left" data-sortable="true" data-sorter="starSorter">竞赛评级</th>
-          <th data-field="comp_name" data-width="400" data-align="left">竞赛名称</th>
+          <th data-field="comp_name" data-width="350" data-align="left">竞赛名称</th>
           <th data-field="comp_field" data-width="100" data-align="left">竞赛类型</th>
           <th data-field="comp_template" data-width="100" data-align="left">报名链接</th>
-          <th data-field="apply_state" data-width="0" data-sortable="true" data-order="desc" data-align="left">报名状态</th>
+          <th data-field="operate" data-formatter="operateFormatter" data-width="50">附件下载</th>
           <th data-field="apply_date" data-width="200" data-align="center">报名起止日期</th>
+          <th data-field="apply_state" data-width="0" data-sortable="true" data-order="desc" data-align="left">报名状态</th>
         </tr>
       </thead>
     </table>
