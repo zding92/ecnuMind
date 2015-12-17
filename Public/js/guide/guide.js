@@ -201,7 +201,7 @@ function loadAcademy(result) {
 		if (academyCnt == 0) continue;
 		$(".academySearchSelect").append('<option class="searchTag academyTag"value="'+result[academyCnt]+'">'+result[academyCnt]+'</option>');
 	}
-	initJquerySelect(".academySearchSelect");
+	initJquerySelect("#academySearchSelect");
 }
 
 /***
@@ -210,8 +210,7 @@ function loadAcademy(result) {
  */
 function initJquerySelect(selector){
 
-		$(selector)
-		.comboSelect()
+	 $("#academySearchSelect").comboSelect()
 
      /**
       * on Change
