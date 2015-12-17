@@ -96,6 +96,7 @@ body{
 	float: right;
 	cursor: pointer;
 	margin-right: 5px;
+	display: inline-block;
 	outline: none;
 	margin-top: -25px;
 }
@@ -162,5 +163,14 @@ body{
 	margin-right: 5px;
 	outline: none;
 	margin-top: -25px;
-	
+}
+.combo-select {
+    border-radius: 3px;
+    position: relative;
+    width: 400px;
+    font: 100% Helvetica, Arial, Sans-serif;
+    border: 1px #ccc solid;
+    margin: 10px auto;
+    margin-left: 200px;
+    display: inline-block;
 }

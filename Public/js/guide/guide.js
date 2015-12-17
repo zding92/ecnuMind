@@ -15,22 +15,34 @@ var question = ['您的真实姓名是？',
                 '您来自哪个专业？',
                 '您当前的年级？'];
 
-document.onkeydown = function(e){ 
-    var ev = document.all ? window.event : e;
-    if(ev.keyCode==13) {
-    	$("[stepGuide='"+stepGuideInProgress+"'] .next" ).trigger('click');
-     }
-}
+///***
+// * 回车激活下一步
+// */
+//document.onkeydown = function(e){ 
+//    var ev = document.all ? window.event : e;
+//    if(ev.keyCode==13) {
+//    	$("[stepGuide='"+stepGuideInProgress+"'] .next" ).trigger('click');
+//     }
+//}
 
 $(document).ready(function(){
-	Combobox();
-	b3.transform();
-	b1.formEl.name = 'academy';
-	b1.formEl.id = 'academy';
-	b2.formEl.name = 'department';
-	b2.formEl.id = 'department';
-	b3.formEl.name = 'major';
-	b3.formEl.id = 'major';
+	// 获取所有的院列表
+	$.ajax({
+		url:app_url + "/Custom/Guide/getAllAcademy",
+		type:"GET",
+		success:function(result){
+			loadAcademy(result);
+		}
+	});
+	
+//	Combobox();
+//	b3.transform();
+//	b1.formEl.name = 'academy';
+//	b1.formEl.id = 'academy';
+//	b2.formEl.name = 'department';
+//	b2.formEl.id = 'department';
+//	b3.formEl.name = 'major';
+//	b3.formEl.id = 'major';
 	
 	// 如果中断在学院/系别/专业三栏中，下次登录必然从学院开始
 	if (stepGuideInProgress == 8 ||	 stepGuideInProgress == 9)
@@ -177,6 +189,92 @@ $(document).ready(function(){
 	}
 	
 })
+
+/***
+ * 将所有学院读取在result中之后，在html中插入所有学院的option
+ */
+function loadAcademy(result) {
+	allAcademy = result;	
+	var academyCnt = 0;
+	for (academyCnt in result){
+		if (academyCnt == 0) continue;
+		$(".academySearchSelect").append('<option class="searchTag academyTag"value="'+result[academyCnt]+'">'+result[academyCnt]+'</option>');
+	}
+	initJquerySelect(".academySearchSelect");
+}
+
+/***
+ * 实现自动补全下拉插件初始化
+ * @param selector 在哪个selector中实现自动补全下拉插件
+ */
+function initJquerySelect(selector){
+
+		$(selector)
+		.comboSelect()
+
+     /**
+      * on Change
+      */
+     
+     $('.js-select').change(function(e, v){
+         $('.idx').text(e.target.selectedIndex)
+         $('.val').text(e.target.value)
+     })
+
+     /**
+      * Open select
+      */
+     
+     $('.js-select-open').click(function(e){
+       $('.js-select').focus()
+       e.preventDefault();
+     })
+
+     /**
+      * Open select
+      */    
+     $('.js-select-close').click(function(e){
+       $('.js-select').trigger('comboselect:close')
+       e.preventDefault();
+     })
+     
+     /**
+      * Option Clicked
+      */ 
+     $('.academySearchForm .option-item').click(function(){
+ 		var academyText = $(this).text();
+ 		addAcademyTag(academyText);
+     })
+     
+     /**
+      * Disenable Submit Event
+      */
+     $('.academySearchForm').submit(function(e){
+    	 e.preventDefault();
+     })
+
+     
+//     /**
+//      * 注册学院选择的回车事件
+//      */
+//     $('.academySearchForm').on("keydown", '.selectInput', function(e) {
+//    	 //如果是回车事件
+//    	 if(e.keyCode==13){
+//    		 //如果输入框中的内容是全部学院之一
+//    		 if(jQuery.inArray($('.selectInput').val(), allAcademy)!=-1){
+//    			 //将输入框中的内容以academyTag的形式加入selectedConditionRow
+//    			 addAcademyTag($('.selectInput').val()); 
+//    		 }    			  
+//    	}
+//     })
+     
+//     $(':not(.combo-dropdown)').click(function(){
+//    	 alert(":not(.combo-dropdown) clicked");
+//    	 $(".combo-dropdown").css("display","none");
+//     })
+     
+     
+}
 
 
 

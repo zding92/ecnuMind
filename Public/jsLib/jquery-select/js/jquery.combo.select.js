@@ -175,10 +175,7 @@
 					return o+='<li class="option-group">'+this.label+'</li>'
 				}
 
-				if(!e.value) {
-					p = e.innerHTML;
-					return;
-				}
+				if(!e.value) p = e.innerHTML
 
 				o+='<li class="'+(this.disabled? self.settings.disabledClass : "option-item") + ' ' +(k == self.selectedIndex? self.settings.selectedClass : '')+ '" data-index="'+(k)+'" data-value="'+this.value+'">'+ (this.innerHTML) + '</li>'
 
@@ -198,7 +195,7 @@
 			 * Append Input
 			 */
 
-			this.$input = $('<input type="text"' + (isMobile? 'tabindex="-1"': '') + ' placeholder="'+p+'" class="selectInput '+ this.settings.inputClass + '">').appendTo(this.$container)
+			this.$input = $('<input type="text"' + (isMobile? 'tabindex="-1"': '') + ' placeholder="'+p+'" class="'+ this.settings.inputClass + '">').appendTo(this.$container)
 
 			/* Update input text */
 

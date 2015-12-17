@@ -7,7 +7,7 @@
 	<title>【华师智库】完善个人信息</title>	
 	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/css.css'>
   	<link rel='stylesheet' href='__PUBLIC__/jsLib/jquery/Combox/form.css'>
-  	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+  	
   	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/myAlert/myAlert.css"/> 
 	<script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script> 
     <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
@@ -15,6 +15,12 @@
     <script type="text/javascript">
    		var app_url = "__APP__";
     </script>
+    
+	<!-- 以下库用于输入检索的select option -->
+	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/jquery-select/css/combo.select.css" />
+	
+	<link rel="Stylesheet" type="text/css" href="__PUBLIC__/css/guide.css"/>
+  
 </head>
 <body>
 	<div class='stepGuideHeader'>
@@ -62,17 +68,21 @@
 			</form>
 			<form stepGuide='7' class='stepGuideForm'>
 				
-				<select class='kitjs-form-suggestselect stepGuideSelect1' style='margin-bottom: 10px;' id='academy'  name='academy'></select>
+				<!-- <select class='kitjs-form-suggestselect stepGuideSelect1' style='margin-bottom: 10px;' id='academy'  name='academy'></select> -->
+				<select name="academy" required class="academySearchSelect">
+					<option value="">输入关键字查找学院</option>
+				</select>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='8' class='stepGuideForm'>
 				
-				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'  name='department'></select>				
+				<!-- <select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='department'  name='department'></select>	 -->			
+				<input type='text' class='stepGuideText'  name='department' value='{$department}'>
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='9' class='stepGuideForm'>
-				
-				<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'  name='major'></select>
+				<input type='text' class='stepGuideText'  name='major' value='{$major}'>
+				<!--<select class='kitjs-form-suggestselect' style='margin-bottom: 10px;' id='major'  name='major'></select>	 -->
 				<input type='button' class='stepGuideSubmit next' value='→'>				
 			</form>
 			<form stepGuide='10' class='stepGuideForm'>
@@ -126,5 +136,41 @@
 		var major = '{$major == '' ? null : $major}';
 	</script>
 	<script src="__PUBLIC__/js/guide/guide.js"></script> 
+	<script src="__PUBLIC__/jsLib/jquery-select/js/jquery.combo.select.js"></script>
+	<script>
+		$(function(){
+
+			$('select')
+			.comboSelect()
+
+      /**
+       * on Change
+       */
+      
+      $('.js-select').change(function(e, v){
+          $('.idx').text(e.target.selectedIndex)
+          $('.val').text(e.target.value)
+      })
+
+      /**
+       * Open select
+       */
+      
+      $('.js-select-open').click(function(e){
+        $('.js-select').focus()
+        e.preventDefault();
+      })
+
+      /**
+       * Open select
+       */
+      
+      $('.js-select-close').click(function(e){
+        $('.js-select').trigger('comboselect:close')
+        e.preventDefault();
+      })
+      
+		})
+	</script>
 </body>
 </html>
