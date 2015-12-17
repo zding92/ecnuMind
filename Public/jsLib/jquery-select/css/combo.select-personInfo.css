@@ -7,11 +7,12 @@
  */
 .combo-select {
   position: relative;
-  max-width: 300px;
+  max-width: 272px;
+  margin-left: 280px;
   margin-bottom: 15px;
   font: 100% Helvetica, Arial, Sans-serif;
   border: 1px #A9A9A9 solid;
-  margin: 0px auto;
+  /* margin: 0px auto; */
   border-radius: 0px;
   }
   .combo-select .combo-input {
