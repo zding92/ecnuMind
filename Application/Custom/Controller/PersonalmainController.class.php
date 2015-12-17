@@ -10,7 +10,7 @@ class PersonalmainController extends UserinfoController {
 		$personalMainInfo = $this->getBaseinfo("complete_steps,unreadmsg_admin_num",true);
 		
 		// 如果不存在该用户的头像文件夹，使用默认头像
-		if (!is_dir("Public/img/photo/".$personalMainInfo['user_id'])) {
+		if (!file_exists("Public/img/photo/".$personalMainInfo['user_id']."/face.png")) {
 			$personalMainInfo['user_id'] = "default";
 		} else {
 			// 添加时间戳防止浏览器缓存头像图片导致修改完头像后无法立刻显示
@@ -71,7 +71,7 @@ class PersonalmainController extends UserinfoController {
 			$result['note_sender'] = $User->where("user_id = $temp")
 											  ->field('name')
 											  ->find()['name'];
-		    if (!is_dir("Public/img/photo/".$temp)) {
+		    if (!file_exists("Public/img/photo/".$temp."/face.png")) {
 		   	  $result['photo_path'] = "default";
 		    } else {
 		  	  $result['photo_path'] = $temp;

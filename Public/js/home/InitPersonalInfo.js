@@ -14,9 +14,7 @@ $('document').ready(function(){
 		dataType: "JSON",
 		success : function(result) {
 			$("#load").css("display","none");
-			SchoolJSON = result[0];
-			user_json = result[1];
-			Combobox();
+			user_json = result;
 			InitPersonalInfo();
 		}
 	})
@@ -80,10 +78,14 @@ $("#image_file").mouseout(function(){
 //表单提交事件。
 $("#form_base").submit(function (ev) {
     ev.preventDefault();
+    if ($("#academy").val() == '') {
+    	alert('学院不得为空，且选项必须包含在下拉框中')
+    }
     var submit_value = "";
     var changed = false;
     $("#form_base input[class!='kitjs-form-suggestselect-input'],select,textarea").each(function () {
         var Items = $(this);
+        if (!$(this).attr('name')) return;
         if ($(this).attr('name') == 'gender' && !$(this).parent().hasClass('checked'))
             return;
         if ($(this).attr('name') == 'hidden_privacy' && !$(this).parent().hasClass('checked'))
@@ -101,8 +103,11 @@ $("#form_base").submit(function (ev) {
             async: false,
             data: submit_value,
             success: function (call) {
-                if (call == 'failed') alert('表单有误，请仔细检查后再提交！');
-                else {
+                if (call == 'failed') {
+                	alert('表单有误，请仔细检查后再提交！');
+                } else if(call == 'academy') {
+                	alert('学院一栏必须填写，且应当与下拉框中的选项一致');
+                } else {
                     alert('修改成功！');
                     // 跳转回主页，待修改。
                     parent.location.href = homeUrl;
@@ -273,8 +278,8 @@ function Checkform_Phone(){
         };
 }
 
-Checkform_Combobox=function(){
-        var call = Check_Ajax("combobox", "combobox", $("#academy").val()+'|'+$("#department").val()+'|'+$("#major").val());
+Checkform_Academy=function(){
+        var call = Check_Ajax("academy", "academy", $("#academy").val());
         switch(call)
         {
             case 'academy':
@@ -282,20 +287,6 @@ Checkform_Combobox=function(){
                 $("#department").prev().removeAttr('style');
                 $("#major").prev().removeAttr('style');
                 $("#combobox-tip").html('请填写正确学院/系别（应与选择框中的待选项完全一致）');
-                $("#combobox-tip").slideDown("fast");
-                break;
-            case 'department':
-                $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-                $("#department").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
-                $("#major").prev().removeAttr('style');
-                $("#combobox-tip").html('请填写正确系别（应与选择框中的待选项完全一致）');
-                $("#combobox-tip").slideDown("fast");
-                break;
-            case 'major':
-                $("#academy").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });
-                $("#department").prev().css({ 'outline-color': '#00ff00', 'border': '2px solid #00ff00' });    
-                $("#major").prev().css({ 'outline-color': '#ff0000', 'border': '2px solid #ff0000' });
-                $("#combobox-tip").html('请填写正确专业（应与选择框中的待选项完全一致）');
                 $("#combobox-tip").slideDown("fast");
                 break;
             case 'legal':
@@ -344,6 +335,9 @@ function Checkform(obj){
         case 'brief':
             Checkform_Brief();
             break;
+        case 'academy':
+            Checkform_Academy();
+            break;
         default:break;
     }
 }  
@@ -358,7 +352,7 @@ var isValidCheck;
 
 
 $('#form_base .form-group input,textarea,select').blur(function () {
-
+    if (!$(this).attr('id')) return; 
     if (isValidCheck != undefined) {
         clearTimeout(isValidCheck);
     }

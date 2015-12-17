@@ -13,8 +13,6 @@ class GuideController extends UserinfoController {
 		
 		// 规定信息补全总步数
 		$customData['stepGuideNum'] = 10;	
-		$schoolJson = $this->getSchoolJson();
-		$customData['schoolJSON'] = json_encode($schoolJson);
 		$this->assign($customData);		
 		$this->display();
 	}

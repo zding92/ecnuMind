@@ -8,7 +8,7 @@ class PersonalPhotoController extends UserinfoController {
 	public function personalphoto(){
 		$personalId= $this->getBaseinfo("user_id")["user_id"];
 		// 如果不存在该用户的头像文件夹，使用默认头像
-		if (is_dir("Public/img/photo/$personalId")) {
+		if (file_exists("Public/img/photo/$personalId/face.png")) {
 			$return["photo_id"] = $personalId;
 			// 添加时间戳防止浏览器缓存头像图片导致修改完头像后无法立刻显示
 			$return["time"] = time();

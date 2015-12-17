@@ -11,10 +11,8 @@ class PersonalinfoController extends UserinfoController {
 	}	
 	
 	public function getPersonalInfo() {
-		$schoolJson = $this->getSchoolJson();
 		$personalinfo = $this->getBaseinfo('student_id,complete_steps',true);
-		$return[0] = $schoolJson;
-		$return[1] = $personalinfo;
+		$return = $personalinfo;
 		$this->ajaxReturn(json_encode($return),"EVAL");
 	}
 	
@@ -67,7 +65,8 @@ class PersonalinfoController extends UserinfoController {
 		if (isset($_SESSION['user_id'])) {
 			// 如果存在会话，才开始校验，否则直接退出。
 			$allData['user_id'] = session('user_id');
-			if ($checkForm->checkAll($allData)) {
+			$checkResult = $checkForm->checkAll($allData);
+			if ($checkResult == true) {
 				if ($this->updateInfo($allData)) {
 					// 写入数据库成功
 					$this->ajaxReturn(json_encode($allData), "EVAL");
@@ -77,8 +76,10 @@ class PersonalinfoController extends UserinfoController {
 				}
 			} else {
 				// 后台校验不通过，暂时都通过compelete变量回馈。
-				// 日后应当细分错误信息。
-				$this->ajaxReturn('failed', "EVAL");
+				if ($checkResult == false)				
+					$this->ajaxReturn('failed', "EVAL");
+				else 
+					$this->ajaxReturn('academy', "EVAL");
 			}
 		} else {
 			$this->ajaxReturn('failed', "EVAL");

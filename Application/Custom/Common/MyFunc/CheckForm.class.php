@@ -73,8 +73,8 @@ class CheckForm {
 		$this->CheckBriefFromDB($allData['brief']);
 		if ($this->isIllegal() || $this->isRepeat()) return false;
 		
-		$this->CheckCombobox($allData['academy'].'|'.$allData['department'].'|'.$allData['major']);
-		if ($this->isIllegal() || $this->isRepeat()) return false;
+		$this->CheckAcademy($allData['academy']);
+		if ($this->isIllegal() || $this->isRepeat()) return 'academy';
 		
 		// 全部验证通过，返回true.
 		return true;
@@ -144,8 +144,9 @@ class CheckForm {
 	}
 	
 	private function CheckAcademy($value) {
-		$json_obj = $this->getJson();
-		if($json_obj[$value]=="") {
+		$academyArr = $this->getJson();
+		$key = array_search($value, $academyArr);
+		if($key == null) {
 			$this->illegal = true;
 			$this->illegalInfo = 'academy';
 		} else $this->illegal = false;
@@ -207,33 +208,24 @@ class CheckForm {
 	
 	// 临时获取，以后应当从配置文件或者数据库中获取
 	private function getJson() {
-		$value = S('comparison_table');
+		$value = S("allAcademy");
 		if($value == false) {
 			$this->comparison();
-			$value = S('comparison_table');
+			$value = S("allAcademy");
 		}
-		$json_obj = json_decode($value,TRUE);
-		if(!is_array($json_obj)) return false;
-		return $json_obj;
+		return $value;
 	}
 		
 	private function comparison(){
-		$Form = M('ecnu_mind.major');
-		$table = $Form->select();
-		for($major_id=1;$major_id<=count($table);$major_id++){
-			$Form = M('ecnu_mind.major');
-			$department_id = $Form->where("major_id='".$major_id."'")->field('department_id')->find()['department_id'];
-			$major_name =$Form->where("major_id='".$major_id."'")->field('name')->find()['name'];
-			$Form = M('ecnu_mind.department');
-			$academy_id = $Form->where("department_id='".$department_id."'")->field('academy_id')->find()['academy_id'];
-			$department_name = $Form->where("department_id='".$department_id."'")->field('name')->find()['name'];
-			$Form = M('ecnu_mind.academy');
-			$academy_name = $Form->where("academy_id='".$academy_id."'")->field('name')->find()['name'];
-			$arr[$academy_name][$department_name][$major_name] = $major_name;
-		}
-		$comparison_table =json_encode($arr);
-		S('comparison_table',$comparison_table);
+		$aForm = M('ecnu_mind.academy');
 		
+		$table = $aForm->select();
+		for($i=0;$i<=count($table);$i++){
+			$academy_name = $table[$i]['name'];
+			$arr[] = $academy_name;
+		}
+		
+		S("allAcademy",$arr, array('type'=>'file','expire'=>3600));
 	}
 	
 	public function isRepeat() {

@@ -31,12 +31,13 @@
   border: none;
   width: 100%;
   box-sizing: border-box;
-  padding: 12px;
-  padding-right: 60px;
+  padding: 12px 20px;
+  /* padding-right: 60px; */
   border-radius: 0;
   background-color: #fdfdfd;
   color: black;
   font-size: 14px;
+  font-weight: 400;
   font-family: "微软雅黑";
   }
   .combo-input:focus {
