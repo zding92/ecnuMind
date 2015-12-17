@@ -85,6 +85,24 @@ class PersonalinfoController extends UserinfoController {
 		}
 	}
 	
+	//通过缓存（生成缓存）显示所有学院
+	public function getAllAcademy(){
+		//如果不存在所有学院的缓存，则生成缓存
+		if (!S("allAcademy")){
+			$allAcademyModel = M("ecnu_mind.academy",null);
+			$allAcademy = $allAcademyModel->select();
+			$academyToFrontCnt = 0;
+			foreach ($allAcademy as $allAcademyRow){
+				$academyToFront[$academyToFrontCnt] = $allAcademyRow["name"];
+				$academyToFrontCnt++;
+			}
+			//添加缓存，缓存生存时间，1小时
+			S("allAcademy", $academyToFront, array('type'=>'file','expire'=>3600));
+		}
+	
+		$this->ajaxReturn(S("allAcademy"));
+	}
+	
 	/**
 	 * 更新数据库
 	 */

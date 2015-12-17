@@ -5,6 +5,9 @@ function autoResize() {
 	$("#Personalinfo_frame",parent.document).css("height",$("body").height() + "px");
 };
 
+//是否所有的院系下拉框加载完毕
+var academyReady = false;
+
 $('document').ready(function(){
 	$.ajax({
 		url : modelUrl + "/getPersonalInfo",
@@ -17,6 +20,8 @@ $('document').ready(function(){
 			InitPersonalInfo();
 		}
 	})
+	
+
 });
 
 function InitPersonalInfo() {
@@ -114,19 +119,19 @@ $("#form_base").submit(function (ev) {
 ///\根据user_json初始化数据
 ///----------------------
 //Combobox初始化值
-b3.transform();
-b1.formEl.name = 'academy';
-b1.formEl.id = 'academy';
-b1.inputEl.value = user_json.academy;
-b1.formEl.value = user_json.academy;
-b2.formEl.name = 'department';
-b2.formEl.id = 'department';
-b2.inputEl.value = user_json.department;
-b2.formEl.value = user_json.department;
-b3.formEl.name = 'major';
-b3.formEl.id = 'major';
-b3.formEl.value = user_json.major;
-b3.inputEl.value = user_json.major;
+//b3.transform();
+//b1.formEl.name = 'academy';
+//b1.formEl.id = 'academy';
+//b1.inputEl.value = user_json.academy;
+//b1.formEl.value = user_json.academy;
+//b2.formEl.name = 'department';
+//b2.formEl.id = 'department';
+//b2.inputEl.value = user_json.department;
+//b2.formEl.value = user_json.department;
+//b3.formEl.name = 'major';
+//b3.formEl.id = 'major';
+//b3.formEl.value = user_json.major;
+//b3.inputEl.value = user_json.major;
 
 //普通Input输入框及按钮初始化值
 $("#name").val(user_json.name);
@@ -137,8 +142,21 @@ $("#phone").val(user_json.phone);
 $("#brief").val(user_json.brief);
 $("#campus").val(user_json.campus);
 $("#schooling_system").val(user_json.schooling_system);
+//alert(user_json.academy);
+//$(".academy_sys #academy").val(user_json.academy);
+$(".academy_sys #department").val(user_json.department);
+$(".academy_sys #major").val(user_json.major);
 $("#" + (user_json.gender == '男' ? 'male' : 'female')).iCheck('check');
 $("#" + (user_json.hidden_privacy == 'S' ? 'show' : 'hide')).iCheck('check');
+
+// 获取所有的院列表
+$.ajax({
+	url:app_url + "/Custom/Personalinfo/getAllAcademy",
+	type:"GET",
+	success:function(result){
+		loadAcademy(result);
+	}
+});
 ///----------------------
 ///\结束数据初始化
 
@@ -361,5 +379,95 @@ $('#form_base .form-group input,textarea,select').blur(function () {
 ///-----------------------------------
 ///\表单验证方法声明结束
 };
+
+
+
+/***
+ * 实现自动补全下拉插件初始化
+ * @param selector 在哪个selector中实现自动补全下拉插件
+ */
+function initJquerySelect(selector){
+
+	 $(".academySearchSelect").comboSelect()
+
+     /**
+      * on Change
+      */
+     
+     $('.js-select').change(function(e, v){
+         $('.idx').text(e.target.selectedIndex)
+         $('.val').text(e.target.value)
+     })
+
+     /**
+      * Open select
+      */
+     
+     $('.js-select-open').click(function(e){
+       $('.js-select').focus()
+       e.preventDefault();
+     })
+
+     /**
+      * Open select
+      */    
+     $('.js-select-close').click(function(e){
+       $('.js-select').trigger('comboselect:close')
+       e.preventDefault();
+     })
+     
+     /**
+      * Option Clicked
+      */ 
+     $('.academySearchForm .option-item').click(function(){
+ 		var academyText = $(this).text();
+ 		addAcademyTag(academyText);
+     })
+     
+     /**
+      * Disenable Submit Event
+      */
+     $('.academySearchForm').submit(function(e){
+    	 e.preventDefault();
+     })
+
+     
+//     /**
+//      * 注册学院选择的回车事件
+//      */
+//     $('.academySearchForm').on("keydown", '.selectInput', function(e) {
+//    	 //如果是回车事件
+//    	 if(e.keyCode==13){
+//    		 //如果输入框中的内容是全部学院之一
+//    		 if(jQuery.inArray($('.selectInput').val(), allAcademy)!=-1){
+//    			 //将输入框中的内容以academyTag的形式加入selectedConditionRow
+//    			 addAcademyTag($('.selectInput').val()); 
+//    		 }    			  
+//    	}
+//     })
+     
+//     $(':not(.combo-dropdown)').click(function(){
+//    	 alert(":not(.combo-dropdown) clicked");
+//    	 $(".combo-dropdown").css("display","none");
+//     })
+     academyReady = true;
+	 //$(".academy_sys #academy").val(user_json.academy);
+     
+}
+
+/***
+ * 将所有学院读取在result中之后，在html中插入所有学院的option
+ */
+function loadAcademy(result) {
+	allAcademy = result;	
+	var academyCnt = 0;
+	for (academyCnt in result){
+		if (academyCnt == 0) continue;
+		$(".academySearchSelect").append('<option class="searchTag academyTag"value="'+result[academyCnt]+'">'+result[academyCnt]+'</option>');
+	}
+	
+	$(".academy_sys #academy").val(user_json.academy);
+	initJquerySelect("#academySearchSelect");
+}
 
 

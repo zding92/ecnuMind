@@ -15,12 +15,18 @@
   <script src='__PUBLIC__/jsLib/jquery/Combox/Combox.js'></script>
   <script src="__PUBLIC__/jsLib/jquery/jquery.min.js"></script>
   <script src="__PUBLIC__/jsLib/jquery/jquery.icheck.js"></script>
-  <script src='__PUBLIC__/js/home/InitPersonalInfo.js'></script>
+  
   <script type="text/javascript">
   	var modelUrl = "__URL__";
   	var homeUrl = "__APP__/Custom/Home/home";
-
+  	var app_url = "__APP__";
   </script>
+  
+  
+  <!-- 以下库用于输入检索的select option -->
+  
+  <link rel="Stylesheet" type="text/css" href="__PUBLIC__/jsLib/jquery-select/css/combo.select-personInfo.css" />
+  
 </head>
 
 <body>
@@ -87,8 +93,9 @@
 	          <input type='radio' class='sexbox' id='female' value='女' name='gender'>
 	          <span>妹纸</span>
             </div>
-                        
-            <<div class='combobox'>
+             
+                    
+          	<div class='combobox'>
               <ul>
                 <li>
                   <span style='margin-right: 49px;position: relative;top: -4px;'> 学院/系 </span>
@@ -102,7 +109,28 @@
                 </li>
               </ul>
             </div>
+                 
+             
             <div class='form-tip' id='combobox-tip' style='display:none'></div>
+            <div class='form-group academy_sys'>
+            	<label class='label1' for="academy">学院/系</label>
+            	<select name='academy' class='academy form-control academySearchSelect' style='margin-bottom: 10px;' id='academy'>
+					<option value="">输入关键字查找学院</option>
+            	</select>
+                <br> 
+            </div>
+            <div class='form-group academy_sys'>
+            	<label class='label1' for="department">系别</label>
+            	<input type='text' name='department' class='form-control' id='department' placeholder='请输入系别'>
+                <br> 
+            </div>
+            <div class='form-group academy_sys'>
+            	<label class='label1' for="major">专业</label>
+            	<input type='text' name='major' class='form-control' id='major' placeholder='请输入专业'>
+                <br> 
+            </div>
+            
+            
             
             <div class='form-group'>
               <label class='label1' for="schooling_system">学制</label>
@@ -143,5 +171,7 @@
 	      <p style="color: #333;"><span>※</span> 如果您对个人信息的内容有更多的建议或者意见，请联系管理员^_^</p>
 	    </div>
 	  </div>
+	<script src="__PUBLIC__/jsLib/jquery-select/js/jquery.combo.select.js"></script>
+	<script src='__PUBLIC__/js/home/InitPersonalInfo.js'></script>
 </body>
 </html>
