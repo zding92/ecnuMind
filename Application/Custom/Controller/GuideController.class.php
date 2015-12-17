@@ -43,22 +43,29 @@ class GuideController extends UserinfoController {
 		if (!$custom->create()) {
 			$this->ajaxReturn($custom->getError(), 'EVAL');
 		} else {
-			if (isset($custom->major)) {
-				$checkForm = new \Custom\Common\MyFunc\CheckForm();
-				$checkData = $custom->academy."|".$custom->department."|".$custom->major;
-				$checkForm->checkOne('major', $checkData);
-				// 返回校验失败的院/系/专业。
-				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
-			} else if(isset($custom->department)) {
-				$checkForm = new \Custom\Common\MyFunc\CheckForm();
-				$checkData = $custom->academy."|".$custom->department;
-				$checkForm->checkOne('department', $checkData);
-				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
-			} else if (isset($custom->academy)) {
-				$checkForm = new \Custom\Common\MyFunc\CheckForm();
-				$checkForm->checkOne('academy', $custom->academy);
-				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
-			} 
+// 			if (isset($custom->major)) {
+// 				$checkForm = new \Custom\Common\MyFunc\CheckForm();
+// 				$checkData = $custom->academy."|".$custom->department."|".$custom->major;
+// 				$checkForm->checkOne('major', $checkData);
+// 				// 返回校验失败的院/系/专业。
+// 				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+// 			} else if(isset($custom->department)) {
+// 				$checkForm = new \Custom\Common\MyFunc\CheckForm();
+// 				$checkData = $custom->academy."|".$custom->department;
+// 				$checkForm->checkOne('department', $checkData);
+// 				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+// 			} else if (isset($custom->academy)) {
+// 				$checkForm = new \Custom\Common\MyFunc\CheckForm();
+// 				$checkForm->checkOne('academy', $custom->academy);
+// 				if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+//			} 
+			
+			//验证学院
+			if (isset($custom->academy)) {
+								$checkForm = new \Custom\Common\MyFunc\CheckForm();
+								$checkForm->checkOne('academy', $custom->academy);
+								if ($checkForm->isIllegal()) $this->ajaxReturn($checkForm->illegalInfo, 'EVAL');
+			}
 			
 			// 将学号传入session
 			if (isset($custom->student_id)) {

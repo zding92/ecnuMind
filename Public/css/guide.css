@@ -167,10 +167,11 @@ body{
 .combo-select {
     border-radius: 3px;
     position: relative;
-    width: 400px;
+    max-width: 700px;
+    width: 700px;
     font: 100% Helvetica, Arial, Sans-serif;
-    border: 1px #ccc solid;
-    margin: 10px auto;
-    margin-left: 200px;
+    border: 0px #ccc solid;
+    margin: 0px auto;
+    margin-left: 25px;
     display: inline-block;
 }
