@@ -12,6 +12,7 @@ class CustomModel extends Model {
 			array('phone','checkPhone','phone_error',2,'function'),
 			array('gender','checkGender','gender_error',2,'function'),
 			array('student_id','','student_id_exist',2,'unique'),
+			array('grade','checkGrade','grade_error',2,'function'),
 			array('student_id','checkStudentId','student_id_error',2,'function'),
 	);
 }
