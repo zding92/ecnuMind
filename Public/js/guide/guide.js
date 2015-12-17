@@ -105,16 +105,18 @@ $(document).ready(function(){
 	
 	$('.next').click(function(){
 		if (stepGuideInProgress <= stepGuideNum){
-			if ($(this).parent().find(":text,select").val() !== ''){//如果表单项如果完整填写
-				if ($(this).parent().attr('stepGuide') == '8') {
-					submitItem($("[stepGuide='7'],[stepGuide='8']"));
-				} else if($(this).parent().attr('stepGuide') == '9'){
-					submitItem($("[stepGuide='7'],[stepGuide='8'],[stepGuide='9']"));
-				} else
+			if ($(this).parent().attr('stepGuide') == '3' || $(this).parent().attr('stepGuide') == '7' || $(this).parent().attr('stepGuide') == '10') {
+				if ($(this).parent().find("select").val() !== ''){
 					submitItem($(this).parent());
-			}
-			else{//如果表单项如果没有完整填写
-				$('.stepGuideError').text('请完整填写后再提交哦~');
+				}else{//如果表单项如果没有完整填写
+					myAlert('请正确的填写表格');
+				}
+			} else {
+				if ($(this).parent().find(":text").val() !== ''){
+					submitItem($(this).parent());
+				}else{//如果表单项如果没有完整填写
+					myAlert('请正确的填写表格');
+				}
 			}
 		}
 	});	
@@ -141,8 +143,7 @@ $(document).ready(function(){
 		        		case  'student_id_exist' : myAlert('此学号已经被注册');break;	
 		        		case  'student_id_error' : myAlert('请正确输入学号');break;	
 		                case 'academy' : myAlert('请填写正确学院/系别（应与选择框中的待选项完全一致）');break;	
-		                case 'department' : myAlert('请填写正确系别（应与选择框中的待选项完全一致）');break;	
-		                case 'major' : myAlert('请填写正确专业（应与选择框中的待选项完全一致）');break;	
+		                case 'grade_error' : myAlert('请填写正确年级（应与选择框中的待选项完全一致）');break;	
 		                default: break;
 	        		}
 	        		

@@ -64,6 +64,11 @@ function checkPwd($pwd) {
 	return false;
 }
 
+function checkGrade($grade) {
+	if (preg_match('/^(大一|大二|大三|大四|研一|研二|研三|博士){1}$/', $grade)) return true;
+	return false;
+}
+
 function mbstringToArray($str,$charset) {
 	$strlen=mb_strlen($str);
 	while($strlen){
