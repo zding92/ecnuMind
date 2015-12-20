@@ -13,12 +13,16 @@ class CurrentCompController extends CompsinfoController {
     
 	public function showAllCurrentItem(){
 		// 如果不存在（或超时--10分钟）该管理员权限能查看范围内的、且已结束竞赛的信息缓存，则重新从数据库载入。
-	  		$condition['comp_state'] = array('in','待审批,审批通过,审批未通过,正在进行');
-	  		
-	  		$condition['comp_owner'] = session('access_id');
-	  		
-	  		// 根据条件获取返回前台的信息。
-	  		$returnToFront = $this->getCompsByCondition($condition);
+  		$condition['comp_state'] = array('in','待审批,审批通过,审批未通过,正在进行');
+  		
+		// 权限设置
+  		if (session('access_id') != 0) {
+		    $academyName = M('ecnu_mind.academy')->find(session('access_id'))['name'];
+		    $condition['_string'] = "comp_owner = '".session('access_id')."' OR (comp_owner = '0' AND apply_academy = '".$academyName."')";
+	    }
+  		
+  		// 根据条件获取返回前台的信息。
+  		$returnToFront = $this->getCompsByCondition($condition);
 	  		
 	  		// 2分钟更新一次缓存  		
   		$this->ajaxReturn(json_encode($returnToFront),'EVAL');

@@ -18,7 +18,10 @@ class HistoryItemController extends CompsinfoController {
 	  		$condition['comp_state'] = '已结束';
 	  		
 	  		// 权限设置
-	  		$condition['comp_owner'] = session('access_id');
+	  		if (session('access_id') != 0) {
+			    $academyName = M('ecnu_mind.academy')->find(session('access_id'))['name'];
+			    $condition['_string'] = "comp_owner = '".session('access_id')."' OR (comp_owner = '0' AND apply_academy = '".$academyName."')";
+		    }
 	  		
 	  		// 根据条件获取返回前台的信息。
 	  		$returnToFront = $this->getCompsByCondition($condition);
