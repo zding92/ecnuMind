@@ -86,6 +86,7 @@ class CompApplyController extends CompController {
 		
 		//将上传的文件放置在./Public/CompItemApply目录下的$compItemID目录下，如果fileName为空，不调用此函数。 
 		if ($fileName != '') {
+			//$fileName = iconv("UTF-8","gb2312",$fileName);
 			uploadFile('./Public/CompItemApply',"/$compItemID/","$fileName");
 		}
 
@@ -134,7 +135,8 @@ class CompApplyController extends CompController {
 				{
 					//echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
 					$fileNames = $file;
-					$fileNames=iconv("gb2312","UTF-8",$fileNames);
+//   					$fileNames = iconv("gb2312","UTF-8",$fileNames);
+					$fileNames = iconv("GBK","UTF-8",$fileNames);
 				}
 				closedir($dh);
 			}
