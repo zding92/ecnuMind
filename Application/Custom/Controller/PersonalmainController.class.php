@@ -109,7 +109,7 @@ class PersonalmainController extends UserinfoController {
 						 ->field('academy_id')
 						 ->find();
 		
-		$map['academy_id'] = array('like',array('%!0!%','%!'.$academySelected['academy_id'].'!%'),'OR');
+		$map['academy_id'] = array('like',array('!0!','%!'.$academySelected['academy_id'].'!%'),'OR');
 		//根据academy_id找到对应的行
 		$unReadMsgFromAdminLength = $noteSelected['unreadmsg_admin_num'];
 		//加载时未读消息数目

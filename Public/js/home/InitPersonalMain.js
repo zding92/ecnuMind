@@ -32,8 +32,8 @@ function getUserMessage(IsDocReadyLoading){
 	    dataType:"JSON",
 	    success: function (result) {
 	    	if(result[0] == "finished"){
-	    		finishedForAdmin = true;
-	    		offsetForAdmin = 0;
+	    		finishedForUser = true;
+	    		offsetForUser = 0;
 	    		messageResize();
 	    		if (IsDocReadyLoading != true)
 	    			window.parent.myAlert("没有更多的消息了！");
