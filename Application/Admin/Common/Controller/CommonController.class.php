@@ -20,11 +20,19 @@ class CommonController extends Controller{
 			// 跳转回网站根目录（/）
 			$this->error("对不起，登陆超时，请重新登录", U('/'));
 		}
+		
+		$dh=opendir("E:\CompItemApply");
+		echo $dh;
+
 	}
 	protected function returnAdminAccess() {
 		// 如果管理员是最高权限。前台显示院系过滤框。
 		if (session('access_id') == 0) $this->assign('admin_access', 'all');
 		else $this->assign('admin_access', 'academy');
+	}
+	
+	protected function getNoFileComp(){
+		
 	}
 }
 ?>

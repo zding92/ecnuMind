@@ -29,7 +29,7 @@
 </head>
 
 <body style="background-color: #fff">
-  <div id="custom-toolbar"  style="width:700px;">
+  <div id="custom-toolbar"  style="width:655px;">
   	<div class="btn-group" style="float:right;margin-right:5px;">
 	   <button type="button" class="btn btn-default dropdown-toggle" 
 	      data-toggle="dropdown">
@@ -56,7 +56,7 @@
   	<div class="btn-group" style="float:right;">
 	   <button type="button" class="btn btn-default dropdown-toggle" 
 	      data-toggle="dropdown">
-	      对勾选项授奖<span class="caret"></span>
+	      勾选项授奖<span class="caret"></span>
 	   </button>
 	   <ul class="dropdown-menu" role="menu" >
 	      <li><a href="#" data-toggle="modal" data-target="#prizeModal" id="country1" onclick="btnOnClick(this.id)">全国一等奖</a></li>
@@ -84,18 +84,22 @@
            data-click-to-select="true" 
            data-sort-order="desc"
            data-show-export="true"
+           data-show-columns="true"
     	   >           
       <thead>
         <tr>
           <th data-field="state" data-checkbox="true" style="vertical-align: middle"></th>
-          <th data-field="comp_item_id" data-align="center" data-valign="middle">项目ID</th>
+          <th data-field="comp_item_id" data-align="center" data-valign="middle" data-sortable="true">ID</th>
           <th data-field="comp_name" data-width="200" data-valign="middle">竞赛名称</th>
           <th data-field="comp_item_name" data-width="230" data-valign="middle">项目名称</th>
           <th data-field="apply_academy" data-width="150" data-align="center" data-valign="middle">第一作者院系</th>
           <th data-field="comp_author1"  data-align="center" data-valign="middle">第一作者</th>
+          <th data-field="comp_authorphone"  data-align="center" data-valign="middle">一作手机</th>
           <th data-field="comp_prize" data-align="center" data-valign="middle">竞赛名次</th>
-          <th data-field="comp_date" data-align="center" data-valign="middle">申报时间</th>
+          <th data-field="comp_date" data-align="center" data-visible="false" data-valign="middle">申报时间</th>
           <th data-field="comp_state"  data-align="center" data-valign="middle">审批情况</th>
+          <th data-field="apply_state"  data-align="center" data-valign="middle">报名</th>
+		  <th data-field="final_state"  data-align="center" data-valign="middle">作品</th>
           <th data-field="comp_type_id" >comp_type_id</th>
         </tr>
       </thead>

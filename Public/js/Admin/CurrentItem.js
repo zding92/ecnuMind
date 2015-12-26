@@ -32,7 +32,7 @@ $(function(){
 			// 将第九列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第9列)，隐藏，更新表）
 			// $table.bootstrapTable('toggleColumn', 8, false, true);
 			// 将第十列隐藏（参数：切换列显示状态（toggleColumn）, 第N列(第10列)，隐藏，更新表）
-			$table.bootstrapTable('toggleColumn', 9, false, true);
+			$table.bootstrapTable('toggleColumn', 12, false, true);
 			
 			// 如果管理员是校级管理员，显示院系过滤框
 			if (admin == 'all') 

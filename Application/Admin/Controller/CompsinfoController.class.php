@@ -13,11 +13,12 @@ class CompsinfoController extends CommonController {
 	protected function getCompsByCondition($condition){
 	  	$compItemModel = M('ecnu_mind.competition_main');
 		$compInfoModel = M('ecnu_mind.competition_info');
+		$userModel = M('ecnu_mind.user_custom');
 		
 		
 		// $allCompItem为competition_main 表格中的所有行，
 		// 取"comp_item_id,comp_item_name,author1_name,owner_academy,comp_type_id,apply_date,comp_state,comp_prize"列的二维数组
-		$allCompItem = $compItemModel->where($condition)->field('comp_participant_id',true)->select();
+		$allCompItem = $compItemModel->where($condition)->select();
 		
 		//返回二维数组的行数
 		$i = 0;		
@@ -25,11 +26,37 @@ class CompsinfoController extends CommonController {
 		//遍历$allHistoryItem的每一行，每一行成为一个一维数组$eachHistoryItem
 		foreach ($allCompItem as $eachCompItem) {
 			
+			
+			
 			// 获得该项竞赛的基本信息,在competition_info表中，找到对应的comp_type_id的行，取出其conp_name和comp_template
 			$compinfo =	$compInfoModel
 						->where('comp_id='.$eachCompItem['comp_type_id'])
 						->field("comp_name")
 						->find();
+			
+			
+ 			//第一作者学号
+ 			$firstAuthorNum = explode(",",$eachCompItem['comp_participant_id'])[0];
+ 			//获取第一作者的手机
+ 			$firstAuthorPhone = $userModel->where('student_id='.$firstAuthorNum)->find()["phone"];	
+ 			$returnItemInfo['comp_authorphone'] = $firstAuthorPhone;
+ 			
+ 			//获取附件文件
+ 			$applyFile = $this->getFileNameFromDir("./Public/CompItemApply/".$eachCompItem["comp_item_id"]."/");
+			$finalFile = $this->getFileNameFromDir("./Public/CompItemFinal/".$eachCompItem["comp_item_id"]."/");
+			//判断是否存在报名表
+ 			if(($applyFile==null)||($applyFile=="..")){
+ 				$returnItemInfo['apply_state'] = "X";
+ 			}else{
+ 				$returnItemInfo['apply_state'] = "√";
+ 			}
+ 			//判断是否存在作品
+ 			if(($finalFile==null)||($finalFile=="..")){
+ 				$returnItemInfo['final_state'] = "X";
+ 			}else{
+ 				$returnItemInfo['final_state'] = "√";
+ 			}
+
 						
 			//$returnToFront为返回到前台的二维数组变量
 			$returnItemInfo['comp_name'] = $compinfo['comp_name'];
@@ -60,4 +87,26 @@ class CompsinfoController extends CommonController {
 		}	
 		return $returnToFront;
   	}
+  	public function getFileNameFromDir($dir){
+  		$fileNames = "";
+  		$fileNamesCnt = 0;
+  		$dir = iconv("UTF-8","gb2312",$dir);
+  		//如果dir是文件夹
+  		if (is_dir($dir))
+  		{
+  			if ($dh = opendir($dir))
+  			{
+  				while (($file = readdir($dh)) !== false)
+  				{
+  					//echo "filename: $file : filetype: " . filetype($dir . $file) . "\n";
+  					$fileNames = $file;
+  					$fileNames=iconv("gb2312","UTF-8",$fileNames);
+  				}
+  				closedir($dh);
+  			}
+  		}
+  		return $fileNames;
+  	}
 }
+
+
